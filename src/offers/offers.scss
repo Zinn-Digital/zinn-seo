@@ -1,0 +1,158 @@
+// What Zinn® sells, beside a finding and on SEO → Services (stage C3). Loaded with this plugin's
+// admin screen only, never on a visitor's page. ⛔ Logical properties only (the RTL build is
+// generated from this file); colours from the kit's tokens, with fallbacks, so dark stays readable.
+
+.zseo-offers {
+	display: grid;
+	gap: 12px;
+	margin-block-start: 12px;
+
+	&.is-grid {
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 18em), 1fr));
+		margin-block-start: 0;
+	}
+}
+
+.zseo-offer {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding-block: 12px;
+	padding-inline: 14px;
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-inline-start: 3px solid var(--zak-accent, #2271b1);
+	border-radius: 4px;
+	background: var(--zak-surface, #fff);
+	color: var(--zak-text, #1d2327);
+	min-inline-size: 0;
+	overflow-wrap: anywhere;
+
+	&.is-compact {
+		background: transparent;
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+.zseo-offer__eyebrow {
+	font-size: 12px;
+	color: var(--zak-muted, #50575e);
+}
+
+.zseo-offer__title {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.zseo-offer__body,
+.zseo-offer__small,
+.zseo-offer__note {
+	color: var(--zak-muted, #50575e);
+	line-height: 1.5;
+}
+
+.zseo-offer__small {
+	font-size: 12px;
+}
+
+.zseo-offer__products {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 6px;
+
+	li {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 4px 8px;
+	}
+}
+
+.zseo-offer__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+}
+
+.zseo-offer__filters {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 12em), 1fr));
+	gap: 12px 16px;
+	align-items: end;
+}
+
+.zseo-offer__listings,
+.zseo-offer__orders {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 10px;
+}
+
+.zseo-offer__listing,
+.zseo-offer__order {
+	display: grid;
+	gap: 6px;
+	padding-block: 10px;
+	border-block-end: 1px solid var(--zak-border, #dcdcde);
+	overflow-wrap: anywhere;
+}
+
+.zseo-offer__packages {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+
+	.components-button {
+		block-size: auto;
+		min-block-size: 32px;
+		white-space: normal;
+		text-align: start;
+	}
+}
+
+.zseo-offer__status {
+	display: inline-block;
+	padding-block: 1px;
+	padding-inline: 6px;
+	border-radius: 3px;
+	font-size: 12px;
+	background: var(--zak-border, #dcdcde);
+	color: var(--zak-text, #1d2327);
+
+	&.is-good {
+		background: #d7f0dd;
+		color: #135e24;
+	}
+
+	&.is-warn {
+		background: #fcf0d0;
+		color: #6b4a00;
+	}
+
+	&.is-bad {
+		background: #fbe0e0;
+		color: #8a1f1f;
+	}
+}
+
+.zseo-offer__placement {
+	display: grid;
+	gap: 8px;
+	max-inline-size: 36em;
+}
+
+.zseo-offer__modal {
+	max-inline-size: min(100vw - 32px, 720px);
+
+	.components-modal__content {
+		overflow-wrap: anywhere;
+	}
+}

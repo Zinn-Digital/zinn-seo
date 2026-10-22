@@ -1,0 +1,13 @@
+/* How-to. */
+.__PREFIX__-howto{margin-block:1.5em}
+.__PREFIX__-howto__facts{display:flex;flex-wrap:wrap;gap:.5em 1.5em;margin:0 0 1em}
+.__PREFIX__-howto__facts dt{font-size:.85em;opacity:.75}
+.__PREFIX__-howto__facts dd{margin:0;font-weight:700}
+.__PREFIX__-howto__needs{margin-block-end:1em}
+.__PREFIX__-howto__label{margin:0 0 .3em;font-weight:700}
+.__PREFIX__-howto__needs ul{margin:0;padding-inline-start:1.2em}
+.__PREFIX__-howto__steps{margin:0;padding-inline-start:1.4em}
+.__PREFIX__-howto__step{margin-block:.9em}
+.__PREFIX__-howto__step>p{margin:.2em 0}
+.__PREFIX__-howto__name{font-weight:700}
+.__PREFIX__-howto__step img{display:block;max-inline-size:100%;block-size:auto;margin-block-start:.5em;border-radius:6px}

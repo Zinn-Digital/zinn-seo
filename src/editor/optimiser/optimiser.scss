@@ -1,0 +1,276 @@
+// The live content optimiser (zs-766), inside the content analysis panel.
+// ⛔ Logical properties only (the RTL build is generated from this file).
+
+.zseo-opt {
+	--zseo-opt-good: var(--zseo-good, #007017);
+	--zseo-opt-ok: var(--zseo-ok, #8a6100);
+	--zseo-opt-bad: var(--zseo-bad, #b32d2e);
+	--zseo-opt-muted: var(--zseo-na, #646970);
+	--zseo-opt-line: #dcdcde;
+	--zseo-opt-track: #f0f0f1;
+
+	.components-base-control {
+		margin-block-end: 8px;
+	}
+}
+
+.zseo-opt-market {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	gap: 8px;
+}
+
+.zseo-opt-head {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-block: 8px 12px;
+}
+
+.zseo-opt-ring {
+	--zseo-opt-c: var(--zseo-opt-muted);
+	flex: 0 0 auto;
+	display: grid;
+	place-items: center;
+	inline-size: 64px;
+	block-size: 64px;
+	border-radius: 50%;
+	background: conic-gradient(var(--zseo-opt-c) calc(var(--zseo-opt) * 1%), var(--zseo-opt-track) 0);
+
+	span {
+		display: grid;
+		place-items: center;
+		inline-size: 50px;
+		block-size: 50px;
+		border-radius: 50%;
+		background: #fff;
+		color: #1d2327;
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	&.is-good {
+		--zseo-opt-c: var(--zseo-opt-good);
+	}
+
+	&.is-ok {
+		--zseo-opt-c: var(--zseo-opt-ok);
+	}
+
+	&.is-bad {
+		--zseo-opt-c: var(--zseo-opt-bad);
+	}
+}
+
+.zseo-opt-parts {
+	flex: 1 1 auto;
+	min-inline-size: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		display: grid;
+		grid-template-columns: minmax(0, 5.5em) minmax(0, 1fr) 3em;
+		align-items: center;
+		gap: 6px;
+		font-size: 12px;
+	}
+
+	li > span:last-child {
+		text-align: end;
+	}
+}
+
+.zseo-opt-bar {
+	block-size: 6px;
+	border-radius: 3px;
+	background: linear-gradient(to right, var(--zseo-opt-good) calc(var(--zseo-opt) * 1%), var(--zseo-opt-track) 0);
+
+	[dir="rtl"] & {
+		background: linear-gradient(to left, var(--zseo-opt-good) calc(var(--zseo-opt) * 1%), var(--zseo-opt-track) 0);
+	}
+}
+
+.zseo-opt-note {
+	margin-block: 6px;
+	color: #50575e;
+	overflow-wrap: anywhere;
+}
+
+.zseo-opt-muted {
+	color: var(--zseo-opt-muted);
+	font-size: 12px;
+}
+
+.zseo-opt-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-block: 8px;
+
+	.components-button {
+		white-space: normal;
+		block-size: auto;
+		min-block-size: 36px;
+		text-align: start;
+	}
+}
+
+.zseo-opt-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	margin-block: 12px 8px;
+
+	button {
+		padding-block: 4px;
+		padding-inline: 8px;
+		border: 1px solid var(--zseo-opt-line);
+		border-radius: 12px;
+		background: transparent;
+		color: inherit;
+		font: inherit;
+		font-size: 12px;
+		cursor: pointer;
+
+		&.is-active {
+			border-color: #2271b1;
+			background: #2271b1;
+			color: #fff;
+		}
+
+		&:focus-visible {
+			outline: 2px solid #2271b1;
+			outline-offset: 1px;
+		}
+	}
+}
+
+.zseo-opt-terms,
+.zseo-opt-checks,
+.zseo-opt-outline {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.zseo-opt-term {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+	padding-block: 4px;
+	border-block-end: 1px solid var(--zseo-opt-line);
+
+	&__text {
+		min-inline-size: 0;
+		overflow-wrap: anywhere;
+	}
+
+	&__count {
+		flex: 0 0 auto;
+		color: var(--zseo-opt-muted);
+		font-variant-numeric: tabular-nums;
+	}
+
+	&.is-missing &__text {
+		color: var(--zseo-opt-bad);
+	}
+
+	&.is-under &__text {
+		color: var(--zseo-opt-ok);
+	}
+
+	&.is-over &__text {
+		color: var(--zseo-opt-bad);
+		text-decoration: line-through;
+	}
+}
+
+.zseo-opt-checks li {
+	position: relative;
+	padding-block: 4px;
+	padding-inline-start: 18px;
+	border-block-end: 1px solid var(--zseo-opt-line);
+	overflow-wrap: anywhere;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset-inline-start: 2px;
+		inset-block-start: 10px;
+		inline-size: 8px;
+		block-size: 8px;
+		border-radius: 50%;
+		background: var(--zseo-opt-bad);
+	}
+
+	&.is-good::before {
+		background: var(--zseo-opt-good);
+	}
+
+	&.is-mentioned::before {
+		background: var(--zseo-opt-ok);
+	}
+}
+
+.zseo-opt-pages {
+	margin: 0;
+	padding-inline-start: 20px;
+
+	li {
+		padding-block: 4px;
+		overflow-wrap: anywhere;
+	}
+
+	summary {
+		cursor: pointer;
+	}
+
+	&__title {
+		font-weight: 600;
+	}
+}
+
+.zseo-opt-outline li {
+	padding-block: 2px;
+
+	&.is-h3 {
+		padding-inline-start: 12px;
+	}
+
+	&.is-h4,
+	&.is-h5,
+	&.is-h6 {
+		padding-inline-start: 24px;
+	}
+}
+
+.zseo-opt-help {
+	margin-block: 12px 0;
+}
+
+// Elementor's panel is dark.
+.elementor-panel .zseo-opt {
+	--zseo-opt-line: #3f444b;
+	--zseo-opt-track: #3f444b;
+
+	.zseo-opt-note {
+		color: inherit;
+	}
+
+	.zseo-opt-muted {
+		color: #c3c4c7;
+	}
+}
+
+// The WordPress admin colour scheme can be dark (a dark-mode plugin, or the OS through one):
+// keep the contrast.
+@media (prefers-color-scheme: dark) {
+
+	.is-dark-theme .zseo-opt,
+	.zseo-opt.is-dark {
+		--zseo-opt-line: #3f444b;
+		--zseo-opt-track: #3f444b;
+	}
+}

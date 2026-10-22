@@ -1,0 +1,8 @@
+/* Local business. */
+.__PREFIX__-local{margin-block:1.5em;padding:1em 1.2em;border:1px solid color-mix(in srgb,currentColor 18%,transparent);border-radius:10px;display:grid;gap:.6em}
+.__PREFIX__-local__name{margin:0;font-weight:700;font-size:1.1em}
+.__PREFIX__-local__address{font-style:normal}
+.__PREFIX__-local__contact{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.3em 1.2em;overflow-wrap:anywhere}
+.__PREFIX__-local__hours{border-collapse:collapse;inline-size:100%;max-inline-size:28em}
+.__PREFIX__-local__hours caption{text-align:start;font-weight:700;padding-block-end:.3em}
+.__PREFIX__-local__hours th,.__PREFIX__-local__hours td{text-align:start;padding:.2em .6em .2em 0;border-block-end:1px solid color-mix(in srgb,currentColor 10%,transparent);font-weight:400}

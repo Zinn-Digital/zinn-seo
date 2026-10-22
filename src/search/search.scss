@@ -1,0 +1,250 @@
+// Search performance (stage P11). Loaded with this plugin's admin screen only (zs-155).
+// ⛔ Logical properties only (the RTL build is generated from this file); colours from the kit's
+// tokens so the dark scheme stays readable.
+
+.zseo-search {
+
+	.zseo-two {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		gap: 16px;
+
+		@media (min-width: 960px) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	.zseo-period {
+		min-inline-size: 180px;
+	}
+
+	.zseo-delta {
+		display: block;
+		font-size: 12px;
+		font-weight: 400;
+
+		&.is-up {
+			color: #007017;
+		}
+
+		&.is-down {
+			color: #b32d2e;
+		}
+
+		&.is-flat {
+			color: var(--zak-muted, #50575e);
+		}
+	}
+
+	.zseo-rating {
+		display: block;
+		font-size: 12px;
+		font-weight: 400;
+		color: var(--zak-muted, #50575e);
+	}
+
+	.zseo-stats__item {
+
+		&.is-good {
+			border-inline-start: 4px solid #007017;
+		}
+
+		&.is-needs_improvement {
+			border-inline-start: 4px solid #996800;
+		}
+
+		&.is-poor {
+			border-inline-start: 4px solid #b32d2e;
+		}
+	}
+
+	.zseo-badge {
+		display: inline-block;
+		padding-block: 2px;
+		padding-inline: 8px;
+		border-radius: 999px;
+		font-size: 12px;
+		border: 1px solid var(--zak-border, #dcdcde);
+		max-inline-size: 100%;
+		overflow-wrap: anywhere;
+
+		&.is-good,
+		&.is-done {
+			border-color: #007017;
+			color: #007017;
+		}
+
+		&.is-poor {
+			border-color: #b32d2e;
+			color: #b32d2e;
+		}
+
+		&.is-needs_improvement,
+		&.is-measuring {
+			border-color: #996800;
+			color: #996800;
+		}
+	}
+
+	.zseo-chart {
+		margin: 0;
+
+		&__svg {
+			display: block;
+			inline-size: 100%;
+			block-size: 160px;
+			direction: ltr;
+			border: 1px solid var(--zak-border, #dcdcde);
+			border-radius: 8px;
+			background: var(--zak-surface, #fff);
+		}
+
+		&__clicks {
+			fill: none;
+			stroke: var(--zak-accent, #3858e9);
+			stroke-width: 2;
+		}
+
+		&__position {
+			fill: none;
+			stroke: #996800;
+			stroke-width: 1.5;
+			stroke-dasharray: 4 3;
+		}
+
+		&__mark {
+			stroke: #b32d2e;
+			stroke-width: 1;
+			stroke-dasharray: 2 2;
+			vector-effect: non-scaling-stroke;
+		}
+
+		&__legend {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 4px 16px;
+			margin-block-start: 6px;
+			font-size: 12px;
+		}
+
+		&__key::before {
+			content: "";
+			display: inline-block;
+			inline-size: 14px;
+			block-size: 3px;
+			margin-inline-end: 6px;
+			vertical-align: middle;
+			background: var(--zak-accent, #3858e9);
+		}
+
+		&__key.is-position::before {
+			background: #996800;
+		}
+
+		&__key.is-mark::before {
+			inline-size: 2px;
+			block-size: 12px;
+			background: #b32d2e;
+		}
+	}
+
+	.zseo-pages,
+	.zseo-templates,
+	.zseo-reviews,
+	.zseo-causes {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.zseo-pages__item,
+	.zseo-templates__item,
+	.zseo-review {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		padding-block: 12px;
+		border-block-end: 1px solid var(--zak-border, #dcdcde);
+		min-inline-size: 0;
+	}
+
+	.zseo-causes > li {
+		padding-block: 6px;
+		padding-inline-start: 12px;
+		border-inline-start: 3px solid #996800;
+		margin-block-end: 6px;
+	}
+
+	.zseo-rewrite {
+		min-inline-size: 220px;
+
+		&__row {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 4px 12px;
+		}
+
+		&__text {
+			flex: 1 1 12em;
+			min-inline-size: 0;
+			overflow-wrap: anywhere;
+		}
+	}
+
+	.zseo-boxes,
+	.zseo-variant {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		min-inline-size: 0;
+	}
+
+	.zseo-variant {
+		padding: 12px;
+		border: 1px solid var(--zak-border, #dcdcde);
+		border-radius: 8px;
+	}
+
+	.zseo-brief {
+		padding: 12px;
+		border-radius: 8px;
+		border: 1px dashed var(--zak-border, #dcdcde);
+	}
+
+	.zseo-connected {
+		margin: 0;
+		overflow-wrap: anywhere;
+	}
+}
+
+.zak-shell.is-dark .zseo-search {
+
+	.zseo-delta.is-up,
+	.zseo-badge.is-good,
+	.zseo-badge.is-done {
+		color: #68de7c;
+		border-color: #68de7c;
+	}
+
+	.zseo-delta.is-down,
+	.zseo-badge.is-poor {
+		color: #ff8085;
+		border-color: #ff8085;
+	}
+
+	.zseo-badge.is-needs_improvement,
+	.zseo-badge.is-measuring {
+		color: #f0c33c;
+		border-color: #f0c33c;
+	}
+
+	.zseo-chart__position,
+	.zseo-chart__key.is-position::before {
+		stroke: #f0c33c;
+		background: #f0c33c;
+	}
+}

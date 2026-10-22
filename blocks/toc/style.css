@@ -1,0 +1,7 @@
+/* Table of contents: plain anchors. */
+.__PREFIX__-toc{margin-block:1.5em;padding:.8em 1.1em;border:1px solid color-mix(in srgb,currentColor 18%,transparent);border-radius:8px}
+.__PREFIX__-toc__title{margin:0 0 .4em;font-weight:700}
+summary.__PREFIX__-toc__title{cursor:pointer;margin:0}
+.__PREFIX__-toc__box[open] summary.__PREFIX__-toc__title{margin-block-end:.4em}
+.__PREFIX__-toc__list,.__PREFIX__-toc__list ul,.__PREFIX__-toc__list ol{margin:0;padding-inline-start:1.2em}
+.__PREFIX__-toc__list li{margin-block:.15em}

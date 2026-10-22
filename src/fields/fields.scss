@@ -1,0 +1,76 @@
+// The classic editor meta box and term screens. ⛔ Logical properties only.
+
+.zseo-fields .zseo-field {
+	margin-block: 0 12px;
+}
+
+.zseo-check {
+	display: block;
+	margin-block: 4px;
+}
+
+.zseo-image {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+}
+
+.zseo-image__preview {
+	max-inline-size: 200px;
+	max-block-size: 120px;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+}
+
+.zseo-count {
+	display: block;
+	margin-block-start: 4px;
+	color: #646970;
+	font-size: 12px;
+
+	&.is-over {
+		color: #b32d2e;
+	}
+}
+
+.zseo-term-heading h2 {
+	margin: 1em 0 0;
+}
+
+// The Users list: how an author's page shows in search (zs-756).
+.zseo-pill {
+	display: inline-block;
+	padding-block: 1px;
+	padding-inline: 8px;
+	border-radius: 999px;
+	font-size: 12px;
+	line-height: 1.6;
+	background: #f0f0f1;
+	color: #1d2327;
+
+	&--ok {
+		background: #e6f4ea;
+		color: #0a5c2b;
+	}
+
+	&--warn {
+		background: #fcf0d6;
+		color: #6b4a00;
+	}
+
+	&--info {
+		background: #e5effa;
+		color: #0a4b78;
+	}
+
+	&--muted {
+		background: #f0f0f1;
+		color: #50575e;
+	}
+}
+
+// A suggested text put in the field to change (zs-757).
+[data-zseo-fill] {
+	cursor: text;
+}

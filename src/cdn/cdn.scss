@@ -1,0 +1,27 @@
+.zseo-cdn {
+	.zseo-cdn__month {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 4px 16px;
+		margin: 0;
+
+		dt {
+			color: #50575e;
+		}
+
+		dd {
+			margin: 0;
+			font-variant-numeric: tabular-nums;
+		}
+	}
+
+	.zseo-cdn__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	code {
+		overflow-wrap: anywhere;
+	}
+}

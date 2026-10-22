@@ -1,0 +1,12 @@
+/* Article index: one box at the top of a post, open and close with no script. */
+.__PREFIX__-index{margin-block:1.5em}
+.__PREFIX__-index__box{border:1px solid color-mix(in srgb,currentColor 18%,transparent);border-radius:8px;padding:.25em 1.1em}
+.__PREFIX__-index__title{cursor:pointer;font-weight:700;padding-block:.6em;list-style-position:inside}
+.__PREFIX__-index__body{padding-block-end:.8em}
+.__PREFIX__-index__facts{display:flex;flex-wrap:wrap;gap:.25em 1.25em;margin:0 0 .75em;font-size:.9em;opacity:.8}
+.__PREFIX__-index .__PREFIX__-tldr{margin-block:.25em .75em}
+.__PREFIX__-index-toc__title{margin:.5em 0 .25em;font-weight:700}
+.__PREFIX__-index-toc__list,.__PREFIX__-index-toc__list ul,.__PREFIX__-index-toc__list ol{margin:0;padding-inline-start:1.2em}
+.__PREFIX__-index-toc__list li{margin-block:.15em}
+.__PREFIX__-tldr__title{margin:0 0 .3em;font-weight:700}
+.__PREFIX__-tldr ul{margin:0;padding-inline-start:1.2em}

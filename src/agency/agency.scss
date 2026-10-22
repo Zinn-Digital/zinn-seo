@@ -1,0 +1,158 @@
+// Agency screens (stage P12): logical properties only, house tokens, no global selectors.
+
+.zseo-agency,
+.zseo-reports,
+.zseo-tasks,
+.zseo-pages {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	min-inline-size: 0;
+}
+
+.zseo-h2 {
+	margin: 0;
+	font-size: 1.15em;
+}
+
+.zseo-h3 {
+	margin: 0;
+	font-size: 1em;
+}
+
+.zseo-plain-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		padding-block: 4px;
+		overflow-wrap: anywhere;
+	}
+}
+
+.zseo-brand-colour {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	max-inline-size: 100%;
+	overflow: hidden;
+
+	legend {
+		font-weight: 600;
+		margin-block-end: 8px;
+	}
+
+	.components-color-picker {
+		max-inline-size: 100%;
+	}
+}
+
+.zseo-tasks__bar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px;
+
+	> .zseo-h2 {
+		flex: 1 1 auto;
+	}
+}
+
+.zseo-tasks__list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.zseo-task {
+	border-inline-start: 4px solid var(--zak-border, #dcdcde);
+
+	&.is-overdue {
+		border-inline-start-color: #b32d2e;
+	}
+
+	&.is-done {
+		opacity: 0.75;
+	}
+}
+
+.zseo-task__head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 4px 12px;
+}
+
+.zseo-task__title {
+	margin: 0;
+	font-size: 1em;
+	overflow-wrap: anywhere;
+}
+
+.zseo-task__meta,
+.zseo-task__detail {
+	color: var(--zak-muted, #50575e);
+	margin: 0;
+	overflow-wrap: anywhere;
+}
+
+.zseo-task__comments p {
+	margin-block: 0 8px;
+	overflow-wrap: anywhere;
+}
+
+.zseo-task-modal {
+	max-inline-size: min(640px, calc(100vw - 32px));
+}
+
+.zseo-report-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.zseo-report-list__item {
+	padding-block-end: 12px;
+	border-block-end: 1px solid var(--zak-border, #dcdcde);
+	min-inline-size: 0;
+
+	p {
+		margin-block: 6px 0;
+		overflow-wrap: anywhere;
+	}
+}
+
+.zseo-report-list__head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px 16px;
+}
+
+.zseo-report-list__summary {
+	white-space: pre-line;
+}
+
+.zseo-details > summary {
+	cursor: pointer;
+	font-weight: 600;
+	overflow-wrap: anywhere;
+}
+
+.zseo-file {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 12px;
+
+	input[type="file"] {
+		max-inline-size: 100%;
+	}
+}

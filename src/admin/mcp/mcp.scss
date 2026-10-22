@@ -1,0 +1,47 @@
+// Settings → AI agents. Logical properties only (RTL, CLAUDE.md §2.7).
+.zseo-agents {
+	.zseo-row-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	.zseo-pre {
+		white-space: pre-wrap;
+		overflow-wrap: anywhere;
+		max-inline-size: 100%;
+		margin-block: 4px 0;
+	}
+
+	code {
+		overflow-wrap: anywhere;
+	}
+}
+
+// The shared MCP panel (src/mcp-kit, generated): its client configuration and tool names are
+// long unbroken strings; at 360 px they pushed the page sideways (568 px). They wrap here.
+.zseo-agents .zd-mcp-panel {
+	pre,
+	textarea,
+	input[type="text"] {
+		max-inline-size: 100%;
+	}
+
+	pre {
+		white-space: pre-wrap;
+		overflow-wrap: anywhere;
+	}
+
+	ul,
+	li,
+	code {
+		overflow-wrap: anywhere;
+		min-inline-size: 0;
+	}
+}
+
+// A notice keeps its light background in the dark scheme, so its text stays dark: the kit's dark
+// text colour (#f0f0f1) on the warning's #fef8ee was 1.07:1 (axe, WordPress 6.4, P13 harness).
+.zseo-agents .components-notice__content {
+	color: #1e1e1e;
+}

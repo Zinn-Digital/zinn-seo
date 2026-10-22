@@ -1,0 +1,11 @@
+/* FAQ: <details>, no script. */
+.__PREFIX__-faq{margin-block:1.5em}
+.__PREFIX__-faq__item{border-block-end:1px solid color-mix(in srgb,currentColor 15%,transparent);padding-block:.4em}
+summary.__PREFIX__-faq__q{cursor:pointer;list-style:none;display:flex;align-items:baseline;gap:.6em}
+summary.__PREFIX__-faq__q::-webkit-details-marker{display:none}
+summary.__PREFIX__-faq__q::before{content:"+";font-weight:700;inline-size:1em;flex:none;text-align:center}
+.__PREFIX__-faq__item[open] summary.__PREFIX__-faq__q::before{content:"−"}
+.__PREFIX__-faq__q,.__PREFIX__-faq__qh{margin:0;font-size:1.05em;line-height:1.35}
+.__PREFIX__-faq__a{padding-block:.3em .5em;padding-inline-start:1.6em}
+.__PREFIX__-faq__a>p{margin:0}
+.__PREFIX__-faq__a>p+p{margin-block-start:.6em}

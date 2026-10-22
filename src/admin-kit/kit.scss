@@ -1,0 +1,541 @@
+/* Generated from wp/packages/zinn-admin-kit/src/js/kit.scss by wp/bin/build-admin-kit.php. Edit the package, never this copy. */
+// The admin kit's styles. Loaded only on the plugin's own admin page (CLAUDE.md §2.22).
+// ⛔ Logical properties only (RTL, §2.7). Colours are tokens; the accent follows the user's WordPress
+// admin colour scheme through `--wp-admin-theme-color`, light and dark swap the neutrals only.
+
+.zak-shell {
+	--zak-bg: #fff;
+	--zak-surface: #fff;
+	--zak-text: #1e1e1e;
+	--zak-muted: #50575e;
+	--zak-border: #dcdcde;
+	--zak-accent: var(--wp-admin-theme-color, #3858e9);
+	--zak-ok: #00a32a;
+	--zak-gap: 16px;
+
+	background: var(--zak-bg);
+	color: var(--zak-text);
+	padding: var(--zak-gap);
+	margin-block-start: 12px;
+	margin-inline-end: 20px;
+	border-radius: 8px;
+	max-inline-size: 1200px;
+	box-sizing: border-box;
+
+	&.is-dark {
+		--zak-bg: #1e1e1e;
+		--zak-surface: #2c2c2c;
+		--zak-text: #f0f0f1;
+		--zak-muted: #c3c4c7;
+		--zak-border: #3c434a;
+		--zak-link-dark: #9ec2ff;
+
+		.components-card,
+		.components-card__header,
+		.components-card__body,
+		// A host's own settings are PANELS, not cards: left white, the shell's light text sat on
+		// them unreadable (axe color-contrast in dark mode, 2026-09-28).
+		.components-panel,
+		.components-panel__header,
+		.components-panel__body {
+			background: var(--zak-surface);
+			color: var(--zak-text);
+			border-color: var(--zak-border);
+		}
+
+		.components-panel__body-toggle.components-button,
+		.components-panel__body-title,
+		.components-tab-panel__tabs-item {
+			color: var(--zak-text);
+		}
+
+		.components-panel__arrow {
+			fill: var(--zak-text);
+		}
+
+		// WordPress's own help text (`p.description`, #646970) is 2.5:1 on the dark surface (axe
+		// color-contrast, the AI agents panel on the PBS Settings screen, 2026-10-05).
+		.components-base-control__help,
+		.components-form-token-field__help,
+		.description {
+			color: var(--zak-muted);
+		}
+
+		// The admin accent (#3858e9 by default) is 3.2:1 on the dark surface; links and
+		// tertiary/link buttons take a lighter tint of it so they stay above 4.5:1.
+		// `.button-link` is WordPress's own link-styled <button> (the AI agents panel's OAuth
+		// "Disconnect", 2.48:1 — live axe on demo.tranzly.io, the one site with a connected app).
+		a,
+		.button-link,
+		.components-button.is-tertiary,
+		.components-button.is-link,
+		.components-external-link {
+			color: var(--zak-link-dark);
+		}
+
+		// Secondary buttons ("Save key", "Save caps") drew the accent text and outline on the
+		// dark surface at 2.48:1 (axe color-contrast, Tranzly Engines screen, 2026-10-04).
+		.components-button.is-secondary:not(:disabled) {
+			color: var(--zak-link-dark);
+			box-shadow: inset 0 0 0 1px var(--zak-link-dark);
+		}
+
+		// The header's icon buttons (colour scheme, help, …) are plain `components-button`s whose
+		// icon inherits WordPress's dark default, so on the dark shell they were invisible until
+		// hovered (owner review, 2026-09-28). Every state takes a dark token: 13:1 at rest,
+		// 9:1 on hover/focus against the shell, above the 3:1 a non-text control needs.
+		.zak-header__tools .components-button {
+			color: var(--zak-text);
+
+			svg {
+				fill: currentColor;
+			}
+
+			&:hover,
+			&:focus,
+			&:focus-visible,
+			&[aria-expanded="true"] {
+				color: var(--zak-link-dark);
+			}
+		}
+
+		.components-button.is-tertiary.is-pressed,
+		.components-button.is-tertiary[aria-current="page"] {
+			color: #fff;
+		}
+
+		.components-base-control__label,
+		.components-checkbox-control__label,
+		label,
+		legend {
+			color: var(--zak-text);
+		}
+
+		input,
+		select,
+		textarea {
+			background: #1e1e1e;
+			color: var(--zak-text);
+			border-color: var(--zak-border);
+		}
+
+		// @wordpress/components draw their fields in wrappers, not on the <input> itself.
+		.components-input-control__container,
+		.components-select-control__input,
+		.components-text-control__input,
+		.components-textarea-control__input {
+			background: #1e1e1e;
+			color: var(--zak-text);
+		}
+
+		.components-input-control__input {
+			color: var(--zak-text);
+		}
+
+		.components-input-control__backdrop {
+			border-color: var(--zak-border);
+		}
+	}
+}
+
+.zak-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--zak-gap);
+	margin-block-end: var(--zak-gap);
+
+	h1 {
+		margin: 0;
+		font-size: 1.6em;
+		color: inherit;
+	}
+}
+
+.zak-header__title,
+.zak-header__tools {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.zak-badge {
+	background: var(--zak-accent);
+	color: #fff;
+	border-radius: 999px;
+	padding-block: 2px;
+	padding-inline: 10px;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.zak-version,
+.zak-muted {
+	color: var(--zak-muted);
+}
+
+.zak-nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	border-block-end: 1px solid var(--zak-border);
+	padding-block-end: 8px;
+	margin-block-end: var(--zak-gap);
+}
+
+.zak-main {
+	min-block-size: 200px;
+	// A grid or flex child's default min-size is its content, so one wide table used to push the
+	// whole shell past its container (owner review 2026-09-28). 0 lets it shrink and scroll instead.
+	min-inline-size: 0;
+
+	// Spacing between controls, so a run of checkboxes or fields is not packed edge to edge. The
+	// @wordpress/components defaults leave a checkbox list with no gap at all inside a card.
+	.components-base-control,
+	.components-checkbox-control,
+	.components-toggle-control,
+	.components-radio-control {
+		margin-block-end: 16px;
+	}
+
+	.components-checkbox-control__label,
+	.components-toggle-control .components-form-toggle + label {
+		margin-inline-start: 8px;
+	}
+
+	// A host table that is wider than the screen scrolls inside its own box rather than
+	// overflowing the card around it (phone widths especially).
+	table:not(.zak-table) {
+		display: block;
+		max-inline-size: 100%;
+		overflow-x: auto;
+	}
+
+	// A host's own tab strip (Tranzly's settings has four long tab names) and its rows of fields
+	// (the add-a-language row) wrap onto a second line on a phone rather than pushing the page
+	// sideways. @wordpress/components' Flex never wraps on its own. Wrapping only happens when a
+	// row would overflow, so a row that fits is unchanged.
+	.components-tab-panel__tabs,
+	.components-flex {
+		flex-wrap: wrap;
+	}
+
+	// A long button label (the trial button in Arabic is wider than a phone) wraps inside the
+	// button instead of pushing the page sideways. WordPress buttons are one fixed-height line
+	// by default, so the height has to follow the text.
+	.components-button {
+		max-inline-size: 100%;
+		white-space: normal;
+		block-size: auto;
+		min-block-size: 36px;
+		text-align: start;
+	}
+
+	img,
+	video {
+		max-inline-size: 100%;
+		block-size: auto;
+	}
+}
+
+// A host plugin's own screen (its settings) fills the shell like every kit screen does: a
+// standalone settings page may cap its width, but inside the shell the cap left most of the
+// window empty beside a narrow column ("container too narrow", owner review 2026-09-28).
+.zak-host {
+	min-inline-size: 0;
+
+	// `.zak-shell .zak-host > *` outranks a host's single-class root (`.pbs-admin`), whatever
+	// order the two stylesheets load in — equal specificity let the later file win.
+	.zak-shell & > * {
+		max-inline-size: none;
+		margin-inline: 0;
+	}
+}
+
+.zak-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+	gap: var(--zak-gap);
+	align-items: start;
+}
+
+.zak-card--wide {
+	grid-column: 1 / -1;
+}
+
+.zak-stack {
+	display: flex;
+	flex-direction: column;
+	gap: var(--zak-gap);
+}
+
+.zak-card__title {
+	margin: 0;
+	font-size: 1.1em;
+	color: inherit;
+}
+
+.zak-cross.is-active .zak-card__title::before {
+	content: "✓ ";
+	color: var(--zak-ok);
+}
+
+.zak-facts {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	gap: 4px 16px;
+	margin: 0 0 12px;
+
+	dt {
+		font-weight: 600;
+	}
+
+	dd {
+		margin: 0;
+	}
+}
+
+.zak-links,
+.zak-list,
+.zak-plans,
+.zak-promo__more {
+	margin: 0;
+	padding-inline-start: 1.2em;
+
+	li {
+		margin-block-end: 6px;
+	}
+}
+
+.zak-links {
+	list-style: none;
+	padding-inline-start: 0;
+}
+
+.zak-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-block-start: 12px;
+}
+
+.zak-status.is-ok::before {
+	content: "● ";
+	color: var(--zak-ok);
+}
+
+.zak-details {
+	margin-block: 8px 12px;
+}
+
+.zak-pre {
+	max-block-size: 320px;
+	overflow: auto;
+	background: rgba(0, 0, 0, 0.04);
+	padding: 8px;
+	white-space: pre-wrap;
+	word-break: break-word;
+	text-align: start;
+}
+
+.zak-fieldset {
+	border: 1px solid var(--zak-border);
+	border-radius: 4px;
+	padding: 12px;
+	margin-block: 12px;
+}
+
+.zak-login {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	gap: 8px;
+	align-items: end;
+	margin-block-end: 12px;
+}
+
+.zak-steps {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	list-style: none;
+	margin: 0 0 16px;
+	padding: 0;
+
+	li {
+		padding-block: 2px;
+		padding-inline: 8px;
+		border-radius: 4px;
+		border: 1px solid var(--zak-border);
+		color: var(--zak-muted);
+	}
+
+	.is-current {
+		border-color: var(--zak-accent);
+		color: var(--zak-text);
+		font-weight: 600;
+	}
+
+	.is-done {
+		color: var(--zak-ok);
+	}
+}
+
+.zak-table-wrap {
+	overflow-x: auto;
+}
+
+.zak-table {
+	inline-size: 100%;
+	border-collapse: collapse;
+
+	th,
+	td {
+		text-align: start;
+		padding-block: 6px;
+		padding-inline: 8px;
+		border-block-end: 1px solid var(--zak-border);
+	}
+}
+
+// ⛔ A phone has no room for a feature column plus four plan columns: the comparison scrolled
+// sideways inside its card and cut the Business and Agency columns off (measured 2026-10-08 at
+// 360 px, zinn_seo_browser.mjs). Below 600 px each row becomes a small card: its first cell on a
+// line of its own, every other cell a labelled tile (the label is the cell's own `data-label`,
+// which DataList writes from the column heading), so nothing is hidden and nothing scrolls.
+@media (max-width: 600px) {
+	.zak-table-wrap {
+		overflow-x: visible;
+	}
+
+	.zak-table {
+		thead {
+			position: absolute;
+			inline-size: 1px;
+			block-size: 1px;
+			overflow: hidden;
+			clip-path: inset(50%);
+			white-space: nowrap;
+		}
+
+		tbody,
+		tr {
+			display: block;
+		}
+
+		tr {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+			gap: 4px 8px;
+			padding-block: 8px;
+			border-block-end: 1px solid var(--zak-border);
+		}
+
+		td {
+			border: 0;
+			padding: 0;
+		}
+
+		td:first-child,
+		td.zak-table__check + td {
+			grid-column: 1 / -1;
+			font-weight: 600;
+		}
+
+		td.zak-table__check {
+			grid-column: 1 / -1;
+		}
+
+		td:not(:first-child):not(.zak-table__check + td)::before {
+			content: attr(data-label);
+			display: block;
+			font-size: 11px;
+			color: var(--zak-muted);
+		}
+	}
+}
+
+.zak-list__toolbar,
+.zak-list__bulk,
+.zak-list__pages {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	align-items: end;
+	margin-block: 8px;
+}
+
+.zak-list__pages {
+	align-items: center;
+}
+
+.zak-list__empty {
+	color: var(--zak-muted);
+}
+
+.zak-yes {
+	color: var(--zak-ok);
+	font-weight: 700;
+}
+
+.zak-no {
+	color: var(--zak-muted);
+}
+
+.zak-tour-target {
+	outline: 3px solid var(--zak-accent);
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+.zak-tour-popover .components-popover__content,
+.zak-tour-float {
+	padding: 12px;
+	max-inline-size: 320px;
+}
+
+.zak-tour-float {
+	position: fixed;
+	inset-block-end: 24px;
+	inset-inline-end: 24px;
+	background: var(--zak-surface, #fff);
+	color: var(--zak-text, #1e1e1e);
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-radius: 8px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+	z-index: 100000;
+}
+
+.zak-tour-title {
+	margin-block: 0 8px;
+	font-size: 1em;
+}
+
+.zak-tour__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	align-items: center;
+	margin-block-start: 8px;
+}
+
+.zak-tour__count {
+	color: var(--zak-muted, #50575e);
+	margin-inline-end: auto;
+}
+
+@media (max-width: 600px) {
+	.zak-shell {
+		margin-inline-end: 10px;
+		padding: 10px;
+	}
+}
+
+// A white-labelled shell: the agency's logo beside its name (sized to the heading).
+.zak-header__logo {
+	display: block;
+	max-block-size: 32px;
+	max-inline-size: 160px;
+	inline-size: auto;
+	object-fit: contain;
+}

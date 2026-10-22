@@ -1,0 +1,222 @@
+// Move from another SEO plugin (stage P6).
+// ⛔ Logical properties only; colours from the kit's tokens so the dark scheme stays readable.
+
+.zseo-move {
+	.zseo-card-title {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 10px;
+		margin: 0;
+		font-size: 14px;
+	}
+
+	h2 {
+		margin-block: 0 6px;
+	}
+
+	// WordPress colours headings for a light page; inside the shell they follow its text
+	// colour (the dark scheme showed them as dark on dark).
+	h2,
+	h3,
+	legend,
+	summary,
+	.zseo-move-from {
+		color: var(--zak-text, #1d2327);
+	}
+
+	.zseo-move-n {
+		display: inline-flex;
+		flex: none;
+		align-items: center;
+		justify-content: center;
+		inline-size: 26px;
+		block-size: 26px;
+		border-radius: 50%;
+		border: 1px solid var(--zak-border, #dcdcde);
+		background: var(--zak-bg, #f0f0f1);
+		color: var(--zak-text, #1d2327);
+		font-size: 13px;
+		font-weight: 600;
+	}
+
+	.zseo-move-step.is-now .zseo-move-n {
+		border-color: var(--zak-accent, #3858e9);
+		background: var(--zak-accent, #3858e9);
+		color: #fff;
+	}
+
+	.zseo-move-step.is-done .zseo-move-n {
+		border-color: #007017;
+		background: #007017;
+		color: #fff;
+	}
+
+	.zseo-move-step.is-todo {
+		opacity: 0.78;
+	}
+
+	// The preflight's findings: a mark, then the sentence (it wraps under itself, not the mark).
+	.zseo-move-checks {
+		display: grid;
+		gap: 8px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			display: flex;
+			align-items: flex-start;
+			gap: 10px;
+			margin: 0;
+			color: var(--zak-text, #1d2327);
+			overflow-wrap: anywhere;
+		}
+	}
+
+	.zseo-move-mark {
+		display: inline-flex;
+		flex: none;
+		align-items: center;
+		justify-content: center;
+		inline-size: 20px;
+		block-size: 20px;
+		border-radius: 50%;
+		font-size: 12px;
+		font-weight: 700;
+		color: #fff;
+		background: #007017;
+	}
+
+	.zseo-move-checks .is-note .zseo-move-mark {
+		background: var(--zak-accent, #3858e9);
+	}
+
+	.zseo-move-checks .is-stop .zseo-move-mark {
+		background: #b32d2e;
+	}
+
+	.zseo-move-sources {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+		gap: 10px;
+		margin: 0;
+		padding: 0;
+		border: 0;
+
+		legend {
+			margin-block-end: 8px;
+			padding: 0;
+		}
+	}
+
+	.zseo-move-source {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 8px;
+		padding: 12px;
+		border: 1px solid var(--zak-border, #dcdcde);
+		border-radius: 6px;
+		background: var(--zak-surface, #fff);
+		cursor: pointer;
+
+		&.is-picked {
+			border-color: var(--zak-accent, #3858e9);
+			box-shadow: 0 0 0 1px var(--zak-accent, #3858e9);
+		}
+
+		input {
+			margin: 0;
+		}
+	}
+
+	.zseo-move-source__name {
+		flex: 1 1 auto;
+		min-inline-size: 0;
+		font-weight: 600;
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-move-from {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 8px;
+		margin: 0;
+		font-size: 15px;
+	}
+
+	.zseo-chip {
+		border: 1px solid var(--zak-border, #dcdcde);
+		background: var(--zak-bg, #f0f0f1);
+		color: var(--zak-text, #1d2327);
+		font-size: 12px;
+	}
+
+	.zseo-move-progress {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.zseo-move-bar {
+		inline-size: 100%;
+		block-size: 8px;
+		accent-color: var(--zak-accent, #3858e9);
+	}
+
+	.zseo-move-page {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		min-inline-size: 0;
+
+		.zseo-address {
+			font-size: 12px;
+			overflow-wrap: anywhere;
+		}
+	}
+
+	.zseo-move-value {
+		display: block;
+		max-block-size: 6.5em;
+		overflow: auto;
+		overflow-wrap: anywhere;
+
+		&:focus-visible {
+			outline: 2px solid var(--wp-admin-theme-color, #3858e9);
+			outline-offset: 2px;
+		}
+	}
+
+	.zseo-move-diffs .zseo-table td {
+		vertical-align: top;
+	}
+
+	.zseo-totals dt {
+		font-size: 12px;
+	}
+
+	.zseo-totals dd {
+		margin: 0;
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	.zseo-details summary {
+		cursor: pointer;
+	}
+
+	.zseo-changes li + li {
+		margin-block-start: 4px;
+	}
+}
+
+.zak-shell.is-dark .zseo-move {
+	.zseo-move-step.is-done .zseo-move-n {
+		border-color: #68de7c;
+		background: #68de7c;
+		color: #10291a;
+	}
+}

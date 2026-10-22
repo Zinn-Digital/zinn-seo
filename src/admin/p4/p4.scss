@@ -1,0 +1,380 @@
+// Fix it, Content and Links screens (stage P4).
+// ⛔ Logical properties only; greys from the kit's tokens so the dark scheme
+// stays readable.
+
+.zseo-pill {
+	display: inline-block;
+	min-inline-size: 2.5em;
+	padding-block: 1px;
+	padding-inline: 8px;
+	border-radius: 10px;
+	background: #f0f0f1;
+	color: #1d2327;
+	font-weight: 600;
+	text-align: center;
+
+	&.is-good {
+		background: #d8f0dd;
+		color: #0a5c1f;
+	}
+
+	&.is-ok {
+		background: #fcf0d0;
+		color: #6b4800;
+	}
+
+	&.is-bad {
+		background: #fbe0de;
+		color: #8a1f11;
+	}
+}
+
+.zseo-tag {
+	display: inline-block;
+	margin-inline-start: 6px;
+	padding-block: 0;
+	padding-inline: 6px;
+	border-radius: 9px;
+	background: #fcf0d0;
+	color: #6b4800;
+	font-size: 11px;
+	font-weight: 600;
+	vertical-align: middle;
+}
+
+.zseo-cell-title {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 4px 6px;
+	min-inline-size: 0;
+	overflow-wrap: anywhere;
+
+	.zseo-muted {
+		flex-basis: 100%;
+		font-size: 12px;
+	}
+}
+
+.zseo-filters {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 12px 16px;
+
+	.components-base-control {
+		min-inline-size: 14rem;
+	}
+}
+
+.zseo-chip {
+	margin: 0;
+	padding-block: 4px;
+	padding-inline: 10px;
+	border-radius: 14px;
+	background: var(--zak-surface-2, #f0f0f1);
+}
+
+.zseo-job {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+
+	.components-spinner {
+		margin: 0;
+	}
+}
+
+.zseo-table {
+	inline-size: 100%;
+	border-collapse: collapse;
+	border: 1px solid var(--zak-border, #dcdcde);
+
+	thead th {
+		border-block-end: 1px solid var(--zak-border, #dcdcde);
+		font-weight: 600;
+	}
+
+	tbody tr + tr {
+		border-block-start: 1px solid var(--zak-border, #dcdcde);
+	}
+
+	th,
+	td {
+		padding-block: 8px;
+		padding-inline: 10px;
+		text-align: start;
+		vertical-align: top;
+		overflow-wrap: anywhere;
+	}
+}
+
+.zseo-issues {
+	font-size: 12px;
+}
+
+.zseo-totals {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+	gap: 12px;
+	margin: 0;
+
+	div {
+		padding: 12px;
+		border: 1px solid var(--zak-border, #dcdcde);
+		border-radius: 8px;
+	}
+
+	dt {
+		color: var(--zak-muted, #50575e);
+	}
+
+	dd {
+		margin: 0;
+		font-size: 24px;
+		font-weight: 700;
+	}
+}
+
+.zseo-dups {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.zseo-dup {
+	padding-block: 10px;
+	border-block-end: 1px solid var(--zak-border, #dcdcde);
+	overflow-wrap: anywhere;
+
+	&__value {
+		margin-block: 0 6px;
+		font-weight: 600;
+	}
+
+	ul {
+		margin-block: 0;
+		margin-inline-start: 1.25em;
+		list-style: disc;
+	}
+}
+
+.zseo-autolink {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+	gap: 8px 16px;
+	padding: 12px;
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-radius: 8px;
+}
+
+.zseo-checks-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 16px;
+	grid-column: 1 / -1;
+}
+
+.zseo-broken {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&__item {
+		padding-block: 12px;
+		border-block-end: 1px solid var(--zak-border, #dcdcde);
+	}
+
+	&__url {
+		margin-block: 0 4px;
+		font-weight: 600;
+		overflow-wrap: anywhere;
+	}
+
+	&__do {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		gap: 8px;
+	}
+}
+
+.zseo-help pre {
+	max-inline-size: 100%;
+	overflow-x: auto;
+	padding: 10px;
+	border-radius: 6px;
+	background: var(--zak-surface-2, #f6f7f7);
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+}
+
+// Fix it.
+.zseo-fixit__bar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 16px;
+	margin-block-end: 16px;
+}
+
+.zseo-fixit__summary {
+	flex: 1 1 16rem;
+	margin: 0;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.zseo-fixit__list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.zseo-fix {
+	border-inline-start: 4px solid var(--zak-border, #dcdcde);
+
+	&.is-high {
+		border-inline-start-color: #d63638;
+	}
+
+	&.is-mid {
+		border-inline-start-color: #dba617;
+	}
+
+	&.is-low {
+		border-inline-start-color: #72aee6;
+	}
+
+	&__head {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px 12px;
+		font-size: 12px;
+		color: var(--zak-muted, #50575e);
+	}
+
+	&__level {
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.03em;
+	}
+
+	&.is-high &__level {
+		color: #b32d2e;
+	}
+
+	&__title {
+		margin-block: 6px 4px;
+		font-size: 15px;
+		overflow-wrap: anywhere;
+	}
+
+	&__detail {
+		margin-block: 0 8px;
+		color: var(--zak-muted, #50575e);
+	}
+
+	&__items {
+		margin-block: 0 8px;
+		margin-inline-start: 1.25em;
+		list-style: disc;
+	}
+
+	&__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+}
+
+.zak-shell.is-dark {
+
+	.zseo-pill {
+		background: #2c3338;
+		color: #f0f0f1;
+
+		&.is-good {
+			background: #0f3d1d;
+			color: #b8e6bf;
+		}
+
+		&.is-ok {
+			background: #4a3800;
+			color: #f5e6ab;
+		}
+
+		&.is-bad {
+			background: #4d1416;
+			color: #ffc9c9;
+		}
+	}
+
+	.zseo-tag {
+		background: #4a3800;
+		color: #f5e6ab;
+	}
+
+	.zseo-fix.is-high .zseo-fix__level {
+		color: #ff8085;
+	}
+}
+
+// Below 600 px a table becomes one card per row, each cell with its
+// column's label.
+@media (max-width: 600px) {
+
+	.zseo-table {
+
+		thead {
+			position: absolute;
+			inline-size: 1px;
+			block-size: 1px;
+			overflow: hidden;
+			clip-path: inset(50%);
+		}
+
+		tr {
+			display: block;
+			padding-block: 8px;
+			border-block-end: 1px solid var(--zak-border, #dcdcde);
+		}
+
+		td {
+			display: grid;
+			grid-template-columns: minmax(6rem, 35%) 1fr;
+			gap: 8px;
+			padding-block: 4px;
+
+			justify-items: start;
+
+			&::before {
+				content: attr(data-label);
+				font-weight: 600;
+			}
+		}
+	}
+
+	.zseo-filters .components-base-control {
+		min-inline-size: 0;
+		inline-size: 100%;
+	}
+}
+
+// The issue explained by AI (zs-545).
+.zseo-fix__plain {
+	margin-block: 8px;
+	padding: 8px 12px;
+	border-inline-start: 3px solid var(--zak-accent, #3858e9);
+	background: var(--zak-bg, #f6f7f7);
+	overflow-wrap: anywhere;
+
+	p {
+		margin-block: 0 6px;
+	}
+
+	ol {
+		margin-block: 0;
+	}
+}

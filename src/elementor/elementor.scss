@@ -1,0 +1,68 @@
+// Elementor's SEO panel. ⛔ Logical properties only.
+
+.zseo-el-snippet {
+	padding: 10px 12px;
+	border: 1px solid #d5d8dc;
+	border-radius: 4px;
+	background: #fff;
+	overflow-wrap: anywhere;
+
+	&__url {
+		color: #006621;
+		font-size: 12px;
+	}
+
+	&__title {
+		color: #1a0dab;
+		font-size: 15px;
+		line-height: 1.3;
+	}
+
+	&__desc {
+		color: #4d5156;
+		font-size: 12px;
+		line-height: 1.5;
+	}
+}
+
+.zseo-el-checks,
+.zseo-el-schema {
+	margin: 8px 0 0;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+
+	li {
+		padding-inline-start: 14px;
+		position: relative;
+		margin-block: 3px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset-inline-start: 0;
+			inset-block-start: 5px;
+			inline-size: 7px;
+			block-size: 7px;
+			border-radius: 50%;
+			background: #00a32a;
+		}
+
+		&.is-warn::before {
+			background: #dba617;
+		}
+
+		&.is-bad::before {
+			background: #d63638;
+		}
+
+		&.is-info::before {
+			background: #8c8f94;
+		}
+	}
+}
+
+.zseo-el-heading {
+	margin: 10px 0 0;
+	font-weight: 600;
+}

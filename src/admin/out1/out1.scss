@@ -1,0 +1,136 @@
+// Links › Outbound links (zs-779, stage OUT1).
+// ⛔ Logical properties only; colours from the kit's tokens, so the dark
+// scheme stays readable.
+
+.zseo-out {
+	min-inline-size: 0;
+}
+
+.zseo-out__totals {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 20px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.zseo-out__do,
+.zseo-out__bulk {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 8px 12px;
+	margin-block: 6px;
+}
+
+.zseo-out__filters .components-base-control {
+	min-inline-size: 10rem;
+}
+
+.zseo-out__sites,
+.zseo-out__linklist {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.zseo-out__site {
+	padding-block: 12px;
+	border-block-end: 1px solid var(--zak-border, #dcdcde);
+	overflow-wrap: anywhere;
+
+	p {
+		margin-block: 0 6px;
+	}
+}
+
+.zseo-out__host strong {
+	font-size: 1.05em;
+}
+
+.zseo-out__status.is-live {
+	background: #d8f0dd;
+	color: #0a5c1f;
+}
+
+.zseo-out__status.is-broken,
+.zseo-tag.is-warn {
+	background: #fbe0de;
+	color: #8a1f11;
+}
+
+.zseo-out__status.is-none,
+.zseo-out__status.is-blocked {
+	background: #f0f0f1;
+	color: #1d2327;
+}
+
+.zseo-out__links {
+	margin-block-start: 8px;
+	padding-inline-start: 12px;
+	border-inline-start: 3px solid var(--zak-border, #dcdcde);
+}
+
+.zseo-out__link {
+	padding-block: 8px;
+	border-block-end: 1px dashed var(--zak-border, #dcdcde);
+
+	p {
+		margin-block: 0 4px;
+	}
+}
+
+.zseo-out__url,
+.zseo-out__preview code {
+	overflow-wrap: anywhere;
+	font-family: monospace;
+	font-size: 12px;
+}
+
+.zseo-out__url {
+	text-align: start;
+	unicode-bidi: plaintext;
+}
+
+.zseo-out__editor {
+	display: grid;
+	gap: 8px;
+	margin-block-start: 8px;
+	padding: 10px 12px;
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-radius: 8px;
+	background: var(--zak-surface, #fff);
+}
+
+.zseo-out__rels {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 16px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+	legend {
+		margin-block-end: 4px;
+	}
+}
+
+.zseo-out__preview dl {
+	margin: 0;
+
+	dt {
+		font-weight: 600;
+	}
+
+	dd {
+		margin-inline-start: 0;
+		margin-block-end: 6px;
+	}
+
+	code {
+		display: block;
+		padding: 6px 8px;
+		white-space: pre-wrap;
+	}
+}

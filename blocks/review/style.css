@@ -1,0 +1,16 @@
+/* Review box. */
+.__PREFIX__-review{margin-block:1.5em;padding:1em 1.2em;border:1px solid color-mix(in srgb,currentColor 18%,transparent);border-radius:10px}
+.__PREFIX__-review__head{display:flex;align-items:center;gap:1em;flex-wrap:wrap}
+.__PREFIX__-review__head>div{flex:1 1 12em;min-inline-size:0}
+.__PREFIX__-review__head img{inline-size:64px;block-size:64px;object-fit:cover;border-radius:6px}
+.__PREFIX__-review__item{margin:0;font-weight:700;font-size:1.1em}
+.__PREFIX__-review__summary{margin:.2em 0 0;opacity:.85}
+.__PREFIX__-review__score{margin:0;white-space:nowrap}
+.__PREFIX__-review__score strong{font-size:2em;line-height:1}
+.__PREFIX__-review__criteria{list-style:none;margin:1em 0 0;padding:0;display:grid;gap:.45em}
+.__PREFIX__-review__criteria li{display:grid;grid-template-columns:minmax(6em,1fr) 2fr auto;align-items:center;gap:.75em}
+.__PREFIX__-review__bar{block-size:.5em;border-radius:1em;background:linear-gradient(to right,currentColor var(--zd-w,0%),color-mix(in srgb,currentColor 15%,transparent) var(--zd-w,0%))}
+[dir=rtl] .__PREFIX__-review__bar{background:linear-gradient(to left,currentColor var(--zd-w,0%),color-mix(in srgb,currentColor 15%,transparent) var(--zd-w,0%))}
+.__PREFIX__-review__verdict{margin-block-start:1em}
+.__PREFIX__-review__verdict>p{margin:0}
+.__PREFIX__-review__verdict>p+p{margin-block-start:.6em}

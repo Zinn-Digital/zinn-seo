@@ -1,0 +1,8 @@
+/* Pros and cons: side by side, stacked on narrow screens. */
+.__PREFIX__-pc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15em),1fr));gap:1em;margin-block:1.5em}
+.__PREFIX__-pc__col{padding:.9em 1.1em;border-radius:8px;border:1px solid color-mix(in srgb,currentColor 15%,transparent)}
+.__PREFIX__-pc__col--pros{border-block-start:4px solid #1a7f37}
+.__PREFIX__-pc__col--cons{border-block-start:4px solid #cf222e}
+.__PREFIX__-pc__title{margin:0 0 .4em;font-weight:700}
+.__PREFIX__-pc ul{margin:0;padding-inline-start:1.2em}
+.__PREFIX__-pc li{margin-block:.2em}

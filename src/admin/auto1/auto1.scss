@@ -1,0 +1,120 @@
+// Fix it on autopilot (zs-767, stage AUTO1).
+// ⛔ Logical properties only; colours from the kit's tokens,
+// so the dark scheme stays readable.
+
+.zseo-auto {
+	min-inline-size: 0;
+}
+
+.zseo-auto__h {
+	margin: 0;
+	font-size: 1.15em;
+}
+
+.zseo-auto__start,
+.zseo-auto__estimate {
+	padding: 12px 16px;
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-radius: 8px;
+	background: var(--zak-surface, #fff);
+}
+
+.zseo-auto__actions,
+.zseo-auto__filters {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 12px;
+	margin: 0;
+}
+
+.zseo-auto__filters .components-base-control {
+	min-inline-size: 12rem;
+}
+
+.zseo-auto__kinds {
+	display: grid;
+	gap: 6px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.zseo-auto__job p {
+	margin-block: 4px;
+}
+
+.zseo-auto__items {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.zseo-auto__item {
+	padding-block: 12px;
+	border-block-end: 1px solid var(--zak-border, #dcdcde);
+	overflow-wrap: anywhere;
+
+	p {
+		margin-block: 0 6px;
+	}
+}
+
+.zseo-auto__change {
+	margin: 0 0 8px;
+
+	> div {
+		display: grid;
+		grid-template-columns: minmax(8rem, max-content) 1fr;
+		gap: 4px 12px;
+	}
+
+	dt {
+		font-weight: 600;
+	}
+
+	dd {
+		margin: 0;
+		min-inline-size: 0;
+	}
+}
+
+.zseo-auto__before {
+	color: var(--zak-muted, #646970);
+	text-decoration: line-through;
+}
+
+.zseo-auto__after {
+	font-weight: 500;
+}
+
+.zseo-auto__edit {
+	display: grid;
+	gap: 8px;
+	margin-block: 8px;
+}
+
+.zseo-auto__manual ul {
+	margin-block: 8px 0;
+	padding-inline-start: 20px;
+	list-style: disc;
+}
+
+@media (max-width: 600px) {
+
+	.zseo-auto__change > div {
+		grid-template-columns: 1fr;
+	}
+
+	.zseo-auto__filters .components-base-control {
+		min-inline-size: 100%;
+	}
+}
+
+// Column names wrap between words, never inside one ("Approv ed").
+.zseo-auto .zseo-auto__report .zseo-table th,
+.zseo-auto .zseo-auto__estimate .zseo-table th {
+	overflow-wrap: normal;
+	word-break: normal;
+	hyphens: auto;
+}

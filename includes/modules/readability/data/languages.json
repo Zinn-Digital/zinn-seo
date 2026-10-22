@@ -1,0 +1,285 @@
+{
+	"$comment": "Readability data per language (Zinn SEO zs-003). Keys are WordPress locale bases (the part before _). unit: word|char. sentence_max: longest easy sentence in the unit. transitions: connecting words and phrases (lower case; matched as whole words, or as substrings for unspaced scripts). passive: either {aux, participle (regex), irregular, window} — an auxiliary followed within `window` words by a participle — or {sentence} — a regex on the sentence. flesch: a reading-ease formula id (Readability::FLESCH). vowels: the syllable vowels for that formula. Any language not listed gets every script-neutral check, and its transition words from the translated list in the plugin's own catalogue.",
+	"en": {
+		"unit": "word", "sentence_max": 20, "flesch": "en", "vowels": "aeiouy", "silent_e": true,
+		"transitions": ["accordingly", "additionally", "afterwards", "also", "although", "as a result", "because", "besides", "but", "consequently", "conversely", "finally", "first", "firstly", "for example", "for instance", "furthermore", "hence", "however", "in addition", "in contrast", "in fact", "in other words", "in short", "in summary", "indeed", "instead", "likewise", "meanwhile", "moreover", "namely", "nevertheless", "next", "nonetheless", "on the other hand", "otherwise", "overall", "second", "secondly", "similarly", "since", "so", "specifically", "still", "subsequently", "then", "therefore", "thus", "to sum up", "ultimately", "unless", "whereas", "while", "yet"],
+		"passive": {
+			"aux": ["am", "is", "are", "was", "were", "be", "been", "being", "get", "gets", "got", "gotten", "getting"],
+			"participle": "/^\\p{L}{2,}(ed|en)$/u",
+			"irregular": ["arisen", "awoken", "beaten", "become", "begun", "bent", "bet", "bitten", "bled", "blown", "bought", "bound", "broken", "brought", "built", "burnt", "burst", "caught", "chosen", "clung", "come", "cost", "crept", "cut", "dealt", "done", "drawn", "dreamt", "driven", "drunk", "dug", "eaten", "fallen", "fed", "felt", "fled", "flung", "flown", "forbidden", "forgotten", "forgiven", "frozen", "found", "fought", "given", "gone", "grown", "hung", "had", "heard", "hidden", "hit", "held", "hurt", "kept", "known", "laid", "led", "left", "lent", "let", "lit", "lost", "made", "meant", "met", "paid", "put", "quit", "read", "ridden", "rung", "risen", "run", "said", "seen", "sought", "sold", "sent", "set", "sewn", "shaken", "shed", "shot", "shown", "shut", "sung", "sunk", "slain", "slept", "slid", "spoken", "spent", "spun", "spread", "stolen", "stuck", "stung", "struck", "sworn", "swept", "swum", "taken", "taught", "torn", "told", "thought", "thrown", "understood", "woken", "worn", "woven", "wept", "won", "wound", "written", "withdrawn"],
+			"except": ["open", "even", "often", "seven", "eleven", "children", "garden", "kitchen", "chicken", "token", "listen", "happen", "golden", "hidden", "sudden", "heaven", "women", "men", "then", "when", "need", "seed", "speed", "feed", "bed", "red", "shed", "indeed", "hundred", "wed", "ted", "fred", "breed", "greed", "weed", "naked", "wicked", "sacred", "kindred", "rugged", "ragged", "beloved", "learned", "aged", "blessed", "crooked"],
+			"window": 3
+		},
+		"starts_ignore": ["the", "a", "an"]
+	},
+	"de": {
+		"unit": "word", "sentence_max": 20, "flesch": "de", "vowels": "aeiouyäöü",
+		"transitions": ["abschließend", "allerdings", "also", "anschließend", "außerdem", "beispielsweise", "da", "dadurch", "daher", "danach", "dann", "darum", "dennoch", "deshalb", "deswegen", "doch", "ebenso", "einerseits", "andererseits", "endlich", "erstens", "zweitens", "folglich", "ferner", "gleichzeitig", "hingegen", "insbesondere", "jedoch", "kurz gesagt", "nämlich", "obwohl", "schließlich", "so", "sodass", "somit", "stattdessen", "trotzdem", "weil", "während", "weiterhin", "zudem", "zuerst", "zum beispiel", "zusammenfassend", "zwar"],
+		"passive": {
+			"aux": ["werde", "wirst", "wird", "werden", "werdet", "wurde", "wurdest", "wurden", "wurdet", "worden", "würde", "würden"],
+			"participle": "/^(ge\\p{L}{3,}(t|en)|\\p{L}{3,}iert)$/u",
+			"irregular": [],
+			"except": ["gegen", "gestern", "gerne", "genug", "gerade", "gesamt", "gelegentlich", "gemeinsam"],
+			"window": 12
+		},
+		"starts_ignore": ["der", "die", "das", "ein", "eine"]
+	},
+	"fr": {
+		"unit": "word", "sentence_max": 20, "flesch": "fr", "vowels": "aeiouyàâäéèêëîïôöùûüÿœæ",
+		"transitions": ["ainsi", "alors", "après", "aussi", "bref", "car", "cependant", "certes", "c'est-à-dire", "d'abord", "d'ailleurs", "de plus", "donc", "en effet", "en outre", "en résumé", "enfin", "ensuite", "en conclusion", "en revanche", "néanmoins", "or", "par conséquent", "par contre", "par exemple", "pourtant", "puis", "quand", "toutefois", "tandis que", "parce que", "bien que", "premièrement", "deuxièmement", "finalement", "également", "notamment", "de même", "au contraire"],
+		"passive": {
+			"aux": ["suis", "es", "est", "sommes", "êtes", "sont", "étais", "était", "étions", "étiez", "étaient", "été", "être", "sera", "seront", "serait", "seraient", "fut", "furent", "soit", "soient"],
+			"participle": "/^\\p{L}{2,}(é|ée|és|ées|i|ie|is|ies|u|ue|us|ues|it|ite|its|ites|ert|erte|erts|ertes)$/u",
+			"irregular": ["fait", "faite", "faits", "faites", "pris", "prise", "mis", "mise", "dit", "dite", "écrit", "écrite"],
+			"except": ["très", "plus", "aussi", "ici", "lui", "tout", "tous", "sur", "pour", "puis", "parmi", "aussitôt", "assis", "ceci", "celui", "aujourd'hui", "déjà", "là", "jamais", "aucun", "chacun", "commun", "connu", "inconnu", "été"],
+			"window": 2
+		},
+		"starts_ignore": ["le", "la", "les", "un", "une", "l'", "des"]
+	},
+	"es": {
+		"unit": "word", "sentence_max": 25, "flesch": "es", "vowels": "aeiouyáéíóúü",
+		"transitions": ["además", "así", "así que", "aunque", "asimismo", "con todo", "de hecho", "de modo que", "debido a", "en cambio", "en conclusión", "en primer lugar", "en resumen", "en segundo lugar", "entonces", "es decir", "finalmente", "igualmente", "luego", "mientras", "no obstante", "o sea", "para empezar", "pero", "por consiguiente", "por ejemplo", "por eso", "por lo tanto", "por otra parte", "por otro lado", "porque", "pues", "sin embargo", "también", "ya que", "incluso", "primero", "después"],
+		"passive": {
+			"aux": ["es", "son", "fue", "fueron", "era", "eran", "será", "serán", "sido", "ser", "sería", "serían", "sea", "sean", "está", "están", "estaba", "estaban"],
+			"participle": "/^\\p{L}{2,}(ado|ada|ados|adas|ido|ida|idos|idas)$/u",
+			"irregular": ["hecho", "hecha", "hechos", "hechas", "dicho", "dicha", "escrito", "escrita", "visto", "vista", "puesto", "puesta", "abierto", "abierta", "cubierto", "cubierta", "roto", "rota", "vuelto", "vuelta", "muerto", "muerta", "resuelto", "resuelta"],
+			"except": ["nada", "todo", "toda", "todos", "todas", "lado", "estado", "pasado", "cuidado", "vida", "comida", "salida", "medida", "partida", "ciudad", "nido", "ruido", "sentido", "contenido", "partido"],
+			"window": 2
+		},
+		"starts_ignore": ["el", "la", "los", "las", "un", "una"]
+	},
+	"it": {
+		"unit": "word", "sentence_max": 25, "flesch": "it", "vowels": "aeiouyàèéìíîòóùú",
+		"transitions": ["allora", "anche", "anzi", "benché", "cioè", "comunque", "di conseguenza", "dunque", "in effetti", "in conclusione", "in primo luogo", "in secondo luogo", "infatti", "infine", "inoltre", "invece", "insomma", "intanto", "ma", "mentre", "nonostante", "oltre a ciò", "per esempio", "ad esempio", "perché", "perciò", "pertanto", "poi", "poiché", "quindi", "tuttavia", "pure", "dopo", "prima", "in sintesi", "d'altra parte"],
+		"passive": {
+			"aux": ["è", "sono", "sei", "siamo", "siete", "era", "erano", "fu", "furono", "sarà", "saranno", "sarebbe", "stato", "stata", "stati", "state", "viene", "vengono", "veniva", "venivano", "venne", "vennero", "verrà", "verranno"],
+			"participle": "/^\\p{L}{2,}(ato|ata|ati|ate|uto|uta|uti|ute|ito|ita|iti|ite)$/u",
+			"irregular": ["fatto", "fatta", "fatti", "fatte", "detto", "detta", "scritto", "scritta", "preso", "presa", "messo", "messa", "visto", "vista", "aperto", "aperta", "chiuso", "chiusa"],
+			"except": ["stato", "stata", "stati", "state", "dato", "data", "lato", "mercato", "risultato", "vita", "città", "tutto", "tutta", "tutti", "tutte", "subito", "sito", "dito", "minuto", "minuti"],
+			"window": 2
+		},
+		"starts_ignore": ["il", "lo", "la", "i", "gli", "le", "un", "una", "l'"]
+	},
+	"pt": {
+		"unit": "word", "sentence_max": 25, "flesch": "pt", "vowels": "aeiouyáâãàéêíóôõúü",
+		"transitions": ["além disso", "assim", "assim que", "contudo", "dessa forma", "desse modo", "embora", "em primeiro lugar", "em segundo lugar", "em resumo", "em suma", "enfim", "então", "entretanto", "finalmente", "igualmente", "isto é", "logo", "mas", "no entanto", "ou seja", "pois", "por conseguinte", "por exemplo", "por isso", "porém", "porque", "portanto", "também", "todavia", "visto que", "já que", "primeiro", "depois", "por outro lado"],
+		"passive": {
+			"aux": ["é", "são", "foi", "foram", "era", "eram", "será", "serão", "sido", "ser", "seria", "seriam", "seja", "sejam", "está", "estão", "estava", "estavam"],
+			"participle": "/^\\p{L}{2,}(ado|ada|ados|adas|ido|ida|idos|idas)$/u",
+			"irregular": ["feito", "feita", "feitos", "feitas", "dito", "dita", "escrito", "escrita", "visto", "vista", "posto", "posta", "aberto", "aberta", "coberto", "coberta", "aceito", "aceita", "entregue", "pago", "paga", "ganho", "gasto"],
+			"except": ["nada", "todo", "toda", "todos", "todas", "lado", "estado", "passado", "cuidado", "vida", "comida", "saída", "medida", "partida", "sentido", "conteúdo", "partido", "ruído"],
+			"window": 2
+		},
+		"starts_ignore": ["o", "a", "os", "as", "um", "uma"]
+	},
+	"nl": {
+		"unit": "word", "sentence_max": 20, "flesch": "nl", "vowels": "aeiouyáéíóúäëïöüèà",
+		"transitions": ["aangezien", "bijvoorbeeld", "bovendien", "daarna", "daarnaast", "daarom", "daardoor", "dan", "dus", "echter", "eerst", "eveneens", "evenzo", "kortom", "maar", "namelijk", "net als", "niettemin", "omdat", "ondanks", "ook", "samenvattend", "ten eerste", "ten tweede", "tenslotte", "terwijl", "toch", "uiteindelijk", "vervolgens", "want", "zodat", "zoals", "al met al", "met andere woorden", "in plaats daarvan", "anderzijds"],
+		"passive": {
+			"aux": ["word", "wordt", "worden", "werd", "werden", "geworden", "zal worden", "is", "zijn", "was", "waren"],
+			"participle": "/^(ge\\p{L}{3,}(d|t|en)|\\p{L}{3,}eerd)$/u",
+			"irregular": [],
+			"except": ["geen", "gewoon", "geleden", "gedurende", "geheel", "genoeg", "gemiddeld", "gezond", "geld", "geduld"],
+			"window": 12
+		},
+		"starts_ignore": ["de", "het", "een"]
+	},
+	"sv": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["alltså", "andra", "även", "bland annat", "dessutom", "därefter", "därför", "då", "eftersom", "emellertid", "eller", "exempelvis", "faktiskt", "först", "följaktligen", "för det första", "för det andra", "för att", "förutom", "i stället", "kort sagt", "likaså", "men", "medan", "slutligen", "så", "sammanfattningsvis", "samtidigt", "sedan", "till exempel", "trots", "trots att", "ändå", "också"],
+		"passive": { "sentence": "/(?<![\\p{L}])(blir|blev|blivit|bli)\\s+\\p{L}{3,}(ad|at|ade|ed|ad|en|et|na|da|ta)\\b|\\b\\p{L}{3,}(ades|ats|as|es|ts|des)(?![\\p{L}])/u" },
+		"starts_ignore": ["en", "ett", "den", "det"]
+	},
+	"da": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["altså", "bagefter", "derefter", "derfor", "desuden", "dog", "eftersom", "endelig", "for eksempel", "fordi", "først", "følgelig", "i stedet", "imidlertid", "kort sagt", "men", "mens", "også", "samtidig", "sidst", "til sidst", "til gengæld", "trods", "alligevel", "således", "for det første", "for det andet", "på den anden side", "herudover", "sammenfattende"],
+		"passive": { "sentence": "/(?<![\\p{L}])(bliver|blev|blevet|blive)\\s+\\p{L}{3,}(et|t|en)\\b|\\b\\p{L}{3,}(es|edes)(?![\\p{L}])/u" },
+		"starts_ignore": ["en", "et", "den", "det"]
+	},
+	"nb": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["altså", "deretter", "derfor", "dessuten", "dessverre", "dog", "etterpå", "for eksempel", "fordi", "først", "følgelig", "i stedet", "imidlertid", "kort sagt", "likevel", "men", "mens", "også", "samtidig", "til slutt", "til gjengjeld", "tross", "således", "for det første", "for det andre", "på den andre siden", "oppsummert", "ettersom"],
+		"passive": { "sentence": "/(?<![\\p{L}])(blir|ble|blitt|bli)\\s+\\p{L}{3,}(et|t|d|en)\\b|\\b\\p{L}{3,}(es)(?![\\p{L}])/u" },
+		"starts_ignore": ["en", "ei", "et", "den", "det"]
+	},
+	"fi": {
+		"unit": "word", "sentence_max": 15,
+		"transitions": ["aluksi", "edelleen", "ensin", "ensinnäkin", "esimerkiksi", "eli", "kuitenkin", "koska", "lisäksi", "lopuksi", "myös", "niin", "nimittäin", "silti", "siksi", "siis", "sitten", "sen sijaan", "toisaalta", "toiseksi", "tämän vuoksi", "vaikka", "yhteenvetona", "joten", "kuten", "sekä", "mutta"],
+		"passive": { "sentence": "/\\b\\p{L}{2,}(taan|tään|ttiin|tiin|ttu|tty|ttava|ttävä|ttaisiin|ttäisiin)(?![\\p{L}])/u" },
+		"starts_ignore": []
+	},
+	"pl": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["a więc", "ale", "bowiem", "chociaż", "dlatego", "dodatkowo", "jednak", "jednakże", "mianowicie", "na przykład", "następnie", "natomiast", "ponadto", "ponieważ", "po pierwsze", "po drugie", "podsumowując", "poza tym", "przede wszystkim", "również", "także", "tak więc", "tymczasem", "wreszcie", "więc", "zatem", "zwłaszcza", "w końcu", "w rezultacie", "z drugiej strony", "mimo to", "oprócz tego"],
+		"passive": {
+			"aux": ["jest", "są", "był", "była", "było", "byli", "były", "będzie", "będą", "zostaje", "zostają", "został", "została", "zostało", "zostali", "zostały", "zostanie", "zostaną", "bywa"],
+			"participle": "/^\\p{L}{2,}(any|ana|ane|ani|ony|ona|one|eni|ęty|ęta|ęte|ęci|ty|ta|te|ci)$/u",
+			"irregular": [],
+			"except": ["ten", "ta", "te", "ci", "inny", "inna", "inne", "inni", "cały", "pany", "zdany"],
+			"window": 3
+		},
+		"starts_ignore": []
+	},
+	"cs": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["a proto", "ale", "avšak", "dále", "jelikož", "kromě toho", "konečně", "například", "naopak", "navíc", "nejdříve", "nicméně", "proto", "protože", "přesto", "především", "rovněž", "také", "takže", "tedy", "totiž", "zatímco", "za prvé", "za druhé", "zkrátka", "závěrem", "jinými slovy", "na druhou stranu"],
+		"passive": {
+			"aux": ["je", "jsou", "byl", "byla", "bylo", "byli", "byly", "bude", "budou", "jsem", "jsme", "jste"],
+			"participle": "/^\\p{L}{2,}(án|ána|áno|áni|ány|en|ena|eno|eni|eny|it|ita|ito|iti|ity|ut|uta|uto|uti|uty)$/u",
+			"irregular": [],
+			"except": ["den", "ten", "jen", "ven", "plán", "pán"],
+			"window": 3
+		},
+		"starts_ignore": []
+	},
+	"sk": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["ale", "avšak", "ďalej", "keďže", "konečne", "napríklad", "naopak", "navyše", "najprv", "napokon", "nakoniec", "no", "okrem toho", "pretože", "preto", "predovšetkým", "takisto", "tiež", "teda", "totiž", "zatiaľ čo", "po prvé", "po druhé", "skrátka", "na záver", "inými slovami"],
+		"passive": {
+			"aux": ["je", "sú", "bol", "bola", "bolo", "boli", "bude", "budú"],
+			"participle": "/^\\p{L}{2,}(aný|aná|ané|aní|ený|ená|ené|ení|tý|tá|té|tí)$/u",
+			"irregular": [],
+			"except": [],
+			"window": 3
+		},
+		"starts_ignore": []
+	},
+	"ru": {
+		"unit": "word", "sentence_max": 15, "flesch": "ru", "vowels": "аеёиоуыэюя",
+		"transitions": ["во-первых", "во-вторых", "в-третьих", "в итоге", "в результате", "в то же время", "впрочем", "в частности", "главное", "далее", "затем", "значит", "итак", "к тому же", "кроме того", "наконец", "например", "напротив", "однако", "поэтому", "потому что", "так как", "таким образом", "также", "тем не менее", "то есть", "хотя", "поскольку", "следовательно", "между тем", "помимо этого", "одним словом", "иначе говоря", "с одной стороны", "с другой стороны"],
+		"passive": {
+			"sentence": "/(?<![\\p{L}])\\p{L}{3,}(ан|ана|ано|аны|ян|яна|яно|яны|ен|ена|ено|ены|ён|ит|ита|ито|иты)(?=\\s|$|[,.;:!?])(?<!ит)(?![\\p{L}])/u"
+		},
+		"starts_ignore": []
+	},
+	"uk": {
+		"unit": "word", "sentence_max": 15, "flesch": "ru", "vowels": "аеєиіїоуюя",
+		"transitions": ["по-перше", "по-друге", "в результаті", "водночас", "далі", "до того ж", "зокрема", "згодом", "крім того", "наприклад", "нарешті", "натомість", "однак", "проте", "отже", "тому", "тому що", "оскільки", "також", "таким чином", "тобто", "хоча", "все ж", "з одного боку", "з іншого боку", "іншими словами", "підсумовуючи"],
+		"passive": {
+			"sentence": "/(?<![\\p{L}])\\p{L}{2,}(аний|ана|ане|ані|яний|яна|яне|ені|ений|ена|ене|ений|ено|ано|ито|уто)(?![\\p{L}])/u"
+		},
+		"starts_ignore": []
+	},
+	"tr": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["ancak", "aslında", "ayrıca", "bu nedenle", "bu yüzden", "bununla birlikte", "çünkü", "dahası", "diğer yandan", "fakat", "örneğin", "öncelikle", "özellikle", "sonuç olarak", "sonra", "sonunda", "üstelik", "ve", "yine de", "yani", "zira", "kısacası", "ilk olarak", "ikinci olarak", "son olarak", "buna rağmen", "böylece", "dolayısıyla", "ama", "halbuki"],
+		"passive": { "sentence": "/(?<![\\p{L}])\\p{L}{2,}(ıldı|ildi|uldu|üldü|ılır|ilir|ulur|ülür|ılmış|ilmiş|ulmuş|ülmüş|ılan|ilen|ulan|ülen|ılacak|ilecek|ulacak|ülecek|ınır|inir|unur|ünür|ındı|indi|undu|ündü)(?![\\p{L}])/u" },
+		"starts_ignore": []
+	},
+	"ar": {
+		"unit": "word", "sentence_max": 25,
+		"transitions": ["أولا", "أولاً", "ثانيا", "ثانياً", "ثالثا", "ثم", "بعد ذلك", "لذلك", "لذا", "لأن", "بالإضافة إلى", "إضافة إلى ذلك", "علاوة على ذلك", "كذلك", "أيضا", "أيضاً", "لكن", "ولكن", "بينما", "مع ذلك", "رغم ذلك", "على الرغم من", "في المقابل", "على سبيل المثال", "مثلا", "مثلاً", "أي", "بمعنى آخر", "باختصار", "في النهاية", "أخيرا", "أخيراً", "نتيجة لذلك", "وبالتالي", "إذن", "حيث", "كما", "من ناحية أخرى", "خلاصة القول"],
+		"passive": { "sentence": "/(?<![\\p{L}])(تم|تمت|يتم|تتم|سيتم|ستتم|قد تم|لم يتم|جرى|يجري)\\s+\\p{L}{2,}|(?<![\\p{L}])\\p{L}*ُ\\p{L}ِ\\p{L}*/u" },
+		"starts_ignore": []
+	},
+	"he": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["אבל", "אולם", "אחר כך", "אך", "בנוסף", "בסופו של דבר", "בעוד", "בקיצור", "דהיינו", "כלומר", "כמו כן", "כי", "לבסוף", "לכן", "לדוגמה", "למשל", "לעומת זאת", "מאחר ש", "מכיוון ש", "על כן", "עם זאת", "ראשית", "שנית", "תחילה", "יתר על כן", "בניגוד לכך", "כתוצאה מכך", "לסיכום", "גם"],
+		"starts_ignore": []
+	},
+	"fa": {
+		"unit": "word", "sentence_max": 25,
+		"transitions": ["ابتدا", "اما", "اگرچه", "بنابراین", "به علاوه", "بعد", "پس", "پس از آن", "در نتیجه", "در نهایت", "در حالی که", "زیرا", "علاوه بر این", "مثلا", "مثلاً", "به عنوان مثال", "همچنین", "یعنی", "با این حال", "از سوی دیگر", "از این رو", "به طور خلاصه", "سپس", "چون", "هرچند", "در ضمن", "اولاً", "دوماً"],
+		"passive": { "sentence": "/\\p{L}+ه\\s+(شد|شده|شدند|شده‌اند|شده است|می‌شود|میشود|می‌شوند|خواهد شد|خواهند شد)(?![\\p{L}])/u" },
+		"starts_ignore": []
+	},
+	"id": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["akhirnya", "akan tetapi", "bahkan", "contohnya", "dengan demikian", "di samping itu", "jadi", "karena", "kemudian", "lalu", "maka", "meskipun", "misalnya", "namun", "oleh karena itu", "pertama", "kedua", "sebaliknya", "sedangkan", "selain itu", "selanjutnya", "sehingga", "singkatnya", "tetapi", "walaupun", "yaitu", "yakni", "juga", "sebagai contoh", "kesimpulannya"],
+		"starts_ignore": []
+	},
+	"ms": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["akhirnya", "akan tetapi", "bahkan", "contohnya", "dengan itu", "di samping itu", "jadi", "kerana", "kemudian", "lalu", "maka", "walaupun", "misalnya", "namun", "oleh itu", "pertama", "kedua", "sebaliknya", "sedangkan", "selain itu", "seterusnya", "sehingga", "ringkasnya", "tetapi", "iaitu", "juga", "sebagai contoh", "kesimpulannya"],
+		"starts_ignore": []
+	},
+	"hu": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["azonban", "bár", "de", "ezért", "ezenkívül", "először", "végül", "például", "hiszen", "illetve", "is", "mert", "mivel", "pedig", "tehát", "továbbá", "viszont", "vagyis", "azaz", "másodszor", "ugyanakkor", "összefoglalva", "emellett", "ennek ellenére", "egyrészt", "másrészt", "röviden"],
+		"starts_ignore": ["a", "az", "egy"]
+	},
+	"ro": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["astfel", "adică", "apoi", "așadar", "atunci", "totuși", "deci", "de asemenea", "de exemplu", "de pildă", "deoarece", "dar", "însă", "în primul rând", "în al doilea rând", "în concluzie", "în plus", "în schimb", "în timp ce", "în final", "pe de altă parte", "prin urmare", "pentru că", "fiindcă", "mai întâi", "totodată", "cu toate acestea", "pe scurt"],
+		"passive": {
+			"aux": ["este", "sunt", "era", "erau", "fost", "fi", "va fi", "vor fi", "fie", "devine", "devin"],
+			"participle": "/^\\p{L}{2,}(at|ată|ați|ate|it|ită|iți|ite|ut|ută|uți|ute|âtă|âți)$/u",
+			"irregular": ["făcut", "făcută", "spus", "spusă", "scris", "scrisă", "pus", "pusă", "trimis", "trimisă"],
+			"except": [],
+			"window": 3
+		},
+		"starts_ignore": []
+	},
+	"el": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["αλλά", "αρχικά", "δηλαδή", "έτσι", "επίσης", "επομένως", "επιπλέον", "ενώ", "ωστόσο", "όμως", "τέλος", "για παράδειγμα", "παραδείγματος χάριν", "γιατί", "επειδή", "συνεπώς", "λοιπόν", "μάλιστα", "πρώτον", "δεύτερον", "εν τούτοις", "παρόλα αυτά", "αντίθετα", "εν κατακλείδι", "συνοψίζοντας", "εξάλλου", "κατόπιν", "στη συνέχεια"],
+		"passive": { "sentence": "/(?<![\\p{L}])\\p{L}{2,}(θηκε|θηκαν|θηκα|θήκαμε|θήκατε|θείτε|θεί|θούν|θούμε|ούνται|ιούνται|εται|εσαι|ονται|όταν|ονταν|μένος|μένη|μένο|μένοι|μένες|μένα)(?![\\p{L}])/u" },
+		"starts_ignore": []
+	},
+	"ca": {
+		"unit": "word", "sentence_max": 25,
+		"transitions": ["així", "així doncs", "a més", "a més a més", "doncs", "en primer lloc", "en segon lloc", "en resum", "en conclusió", "finalment", "igualment", "és a dir", "llavors", "mentre", "no obstant això", "per això", "per tant", "per exemple", "perquè", "però", "també", "tanmateix", "tot i que", "ja que", "d'altra banda", "per contra", "després"],
+		"passive": {
+			"aux": ["és", "són", "era", "eren", "fou", "foren", "serà", "seran", "estat", "ser", "sigui", "siguin", "va ser", "van ser"],
+			"participle": "/^\\p{L}{2,}(at|ada|ats|ades|it|ida|its|ides|ut|uda|uts|udes)$/u",
+			"irregular": ["fet", "feta", "fets", "fetes", "dit", "dita", "escrit", "escrita", "vist", "vista", "obert", "oberta"],
+			"except": ["ciutat", "estat", "vida", "sortida", "mesura", "partida", "sentit"],
+			"window": 2
+		},
+		"starts_ignore": ["el", "la", "els", "les", "un", "una", "l'"]
+	},
+	"hr": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["ali", "budući da", "dakle", "također", "isto tako", "jer", "konačno", "međutim", "na primjer", "naime", "nadalje", "najprije", "osim toga", "prvo", "drugo", "stoga", "zato", "zatim", "ukratko", "u zaključku", "s druge strane", "ipak", "iako", "dok", "naposljetku"],
+		"passive": {
+			"aux": ["je", "su", "bio", "bila", "bilo", "bili", "bile", "biti", "bit će", "bude", "budu"],
+			"participle": "/^\\p{L}{2,}(an|ana|ano|ani|ane|en|ena|eno|eni|ene|jen|jena|jeno|t|ta|to|ti|te)$/u",
+			"irregular": [],
+			"except": ["dan", "jedan", "jedna", "jedno", "on", "ona", "ono", "oni", "one", "plan", "van", "sto", "što", "to", "ta", "te", "ti"],
+			"window": 3
+		},
+		"starts_ignore": []
+	},
+	"bg": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["въпреки това", "все пак", "докато", "защото", "затова", "значи", "и така", "или", "както и", "като", "като цяло", "например", "накрая", "най-напред", "освен това", "обаче", "поради това", "следователно", "също така", "тоест", "първо", "второ", "в заключение", "от друга страна", "с други думи", "но"],
+		"passive": { "sentence": "/(?<![\\p{L}])(е|са|беше|бяха|бил|била|било|били|ще бъде|ще бъдат|бъде)\\s+\\p{L}{2,}(ан|ана|ано|ани|ян|яна|яно|яни|ен|ена|ено|ени|т|та|то|ти)(?![\\p{L}])/u" },
+		"starts_ignore": []
+	},
+	"ja": {
+		"unit": "char", "sentence_max": 40,
+		"transitions": ["しかし", "ただし", "ところが", "そのため", "したがって", "だから", "それで", "そして", "また", "さらに", "なお", "つまり", "すなわち", "例えば", "たとえば", "まず", "次に", "最後に", "一方", "それに", "加えて", "要するに", "結果として", "ですから", "でも", "それでも", "けれども", "とはいえ", "その上", "まとめると"],
+		"passive": { "sentence": "/\\p{Han}(?:[あかさたなはまやらわがざだばぱ]れ|られ|され|せられ)(?:る|た|ます|ました|て)/u" },
+		"starts_ignore": []
+	},
+	"zh": {
+		"unit": "char", "sentence_max": 40,
+		"transitions": ["但是", "但", "然而", "因此", "所以", "因为", "由于", "而且", "并且", "此外", "另外", "首先", "其次", "最后", "例如", "比如", "总之", "总而言之", "也就是说", "换句话说", "同时", "接着", "然后", "不过", "虽然", "尽管", "于是", "因而", "另一方面", "综上所述"],
+		"passive": { "sentence": "/被|遭到|受到|为.{1,8}所/u" },
+		"starts_ignore": []
+	},
+	"ko": {
+		"unit": "word", "sentence_max": 15,
+		"transitions": ["그러나", "하지만", "그런데", "그래서", "따라서", "그러므로", "왜냐하면", "또한", "게다가", "더욱이", "예를 들어", "예컨대", "즉", "다시 말해", "먼저", "우선", "다음으로", "마지막으로", "결국", "요컨대", "한편", "반면에", "그리고", "그럼에도 불구하고", "결론적으로", "그 결과"],
+		"passive": { "sentence": "/\\p{Hangul}+(되었|되어|됩니다|되다|된다|됐다|된|되는|당했|당한|받았|받는|어지|아지|여지)/u" },
+		"starts_ignore": []
+	},
+	"hi": {
+		"unit": "word", "sentence_max": 20,
+		"transitions": ["लेकिन", "परंतु", "किंतु", "इसलिए", "अतः", "क्योंकि", "जबकि", "इसके अलावा", "इसके अतिरिक्त", "साथ ही", "उदाहरण के लिए", "जैसे", "अर्थात", "यानी", "पहले", "फिर", "इसके बाद", "अंत में", "आखिरकार", "दूसरी ओर", "फिर भी", "हालांकि", "संक्षेप में", "परिणामस्वरूप", "तो", "भी"],
+		"passive": { "sentence": "/\\S+\\s+(गया|गई|गए|गयी|गये|जाता|जाती|जाते|जाएगा|जाएगी|जाएंगे|जाना)(?![\\p{L}\\p{M}])/u" },
+		"starts_ignore": []
+	},
+	"vi": {
+		"unit": "word", "sentence_max": 25,
+		"transitions": ["tuy nhiên", "nhưng", "vì vậy", "do đó", "bởi vì", "vì", "ngoài ra", "hơn nữa", "thêm vào đó", "ví dụ", "chẳng hạn", "nghĩa là", "tức là", "đầu tiên", "trước hết", "sau đó", "tiếp theo", "cuối cùng", "tóm lại", "mặt khác", "trong khi", "mặc dù", "cho nên", "thế nhưng", "kết quả là"],
+		"passive": { "sentence": "/(?<![\\p{L}])(bị|được)\\s+\\p{L}+/u" },
+		"starts_ignore": []
+	},
+	"th": {
+		"unit": "char", "sentence_max": 60,
+		"transitions": ["แต่", "อย่างไรก็ตาม", "ดังนั้น", "เพราะ", "เนื่องจาก", "นอกจากนี้", "ยิ่งไปกว่านั้น", "ตัวอย่างเช่น", "เช่น", "กล่าวคือ", "ก่อนอื่น", "จากนั้น", "ต่อมา", "สุดท้าย", "โดยสรุป", "ในทางกลับกัน", "แม้ว่า", "ขณะที่", "ส่วน", "ทั้งนี้"],
+		"passive": { "sentence": "/ถูก|โดน/u" },
+		"starts_ignore": []
+	}
+}

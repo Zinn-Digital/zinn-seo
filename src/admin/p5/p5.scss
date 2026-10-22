@@ -1,0 +1,92 @@
+// Redirects and 404, Protection, Site search (stage P5).
+// ⛔ Logical properties only; colours from the kit's tokens so the dark
+// scheme stays readable.
+
+.zseo-p5 {
+
+	.zseo-card-title {
+		margin: 0;
+		font-size: 14px;
+	}
+
+	.zseo-small {
+		font-size: 12px;
+	}
+
+	.zseo-tag.is-bad {
+		background: #fbe0de;
+		color: #8a1f11;
+	}
+
+	.zseo-hops {
+		margin-block: 0;
+		margin-inline-start: 1.25em;
+
+		li + li {
+			margin-block-start: 4px;
+		}
+	}
+
+	.zseo-sources {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			gap: 8px 16px;
+			padding-block: 10px;
+			border-block-end: 1px solid var(--zak-border, #dcdcde);
+		}
+	}
+
+	.zseo-found-list {
+		margin-block: 0;
+		margin-inline-start: 1.25em;
+		list-style: disc;
+		overflow-wrap: anywhere;
+
+		li + li {
+			margin-block-start: 6px;
+		}
+	}
+
+	.zseo-details summary {
+		cursor: pointer;
+	}
+
+	.zseo-pre {
+		white-space: pre;
+		max-inline-size: 100%;
+	}
+
+	// Older WordPress (6.4) keeps a select's label on one line and cuts it at
+	// 360 px: long labels wrap instead.
+	.components-input-control__label,
+	.components-input-control__label *,
+	.components-base-control__label {
+		white-space: normal;
+		overflow: visible;
+		text-overflow: clip;
+	}
+
+	.zseo-table .components-checkbox-control__input-container {
+		margin-inline-end: 0;
+	}
+}
+
+.zak-shell.is-dark .zseo-p5 .zseo-tag.is-bad {
+	background: #4d1416;
+	color: #ffc9c9;
+}
+
+@media (max-width: 600px) {
+
+	.zseo-p5 .zseo-sources li .components-button {
+		inline-size: 100%;
+		justify-content: center;
+	}
+}

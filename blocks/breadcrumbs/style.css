@@ -1,0 +1,4 @@
+/* Breadcrumbs. */
+.__PREFIX__-crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.25em;font-size:.9em}
+.__PREFIX__-crumbs li{display:inline-flex;gap:.25em;min-inline-size:0;overflow-wrap:anywhere}
+.__PREFIX__-crumbs__sep{opacity:.6}

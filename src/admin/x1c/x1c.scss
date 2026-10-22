@@ -1,0 +1,189 @@
+// Writing, Rich results and Works with → More (stage X1C). ⛔ Logical properties only; colours
+// from the kit's tokens so the dark scheme stays readable; loaded only on this plugin's screens.
+
+.zseo-x1c,
+.zseo-x1c-screen {
+	min-inline-size: 0;
+}
+
+.zseo-x1c-box {
+	padding: 12px 16px;
+	margin-block: 8px;
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-radius: 4px;
+	background: var(--zak-surface, #fff);
+
+	h3,
+	h4 {
+		margin-block: 0 8px;
+	}
+
+	> * + * {
+		margin-block-start: 8px;
+	}
+}
+
+.zseo-x1c-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 8px 16px;
+
+	> .components-base-control {
+		flex: 1 1 200px;
+		min-inline-size: 0;
+	}
+}
+
+.zseo-x1c-actions {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 4px 12px;
+	margin-inline-start: 8px;
+}
+
+.zseo-x1c-ideas,
+.zseo-x1c-posts,
+.zseo-x1c-checks,
+.zseo-x1c-lists,
+.zseo-x1c-plan {
+	margin: 8px 0 0;
+	padding: 0;
+	list-style: none;
+
+	> li {
+		padding-block: 6px;
+		overflow-wrap: anywhere;
+		border-block-end: 1px solid var(--zak-border, #dcdcde);
+
+		&:last-child {
+			border-block-end: 0;
+		}
+	}
+}
+
+.zseo-x1c-checks > li.is-ok {
+	color: var(--zak-text-muted, #50575e);
+}
+
+.zseo-x1c-list {
+	padding-inline-start: 10px;
+	border-inline-start: 4px solid var(--zak-accent, #2271b1);
+
+	&.is-green {
+		border-inline-start-color: #00a32a;
+	}
+
+	&.is-amber {
+		border-inline-start-color: #dba617;
+	}
+
+	&.is-red {
+		border-inline-start-color: #d63638;
+	}
+
+	&.is-purple {
+		border-inline-start-color: #8c5fc5;
+	}
+
+	&.is-teal {
+		border-inline-start-color: #00838f;
+	}
+
+	&.is-grey {
+		border-inline-start-color: #8c8f94;
+	}
+}
+
+.zseo-x1c-list__head {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 12px;
+	align-items: baseline;
+}
+
+.zseo-x1c-list__phrases {
+	margin: 4px 0;
+	overflow-wrap: anywhere;
+}
+
+.zseo-x1c-score {
+	padding: 8px 12px;
+	border-inline-start: 4px solid #d63638;
+
+	&.is-fair {
+		border-inline-start-color: #dba617;
+	}
+
+	&.is-good {
+		border-inline-start-color: #00a32a;
+	}
+}
+
+.zseo-x1c-score__line {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin: 0;
+}
+
+.zseo-x1c-score__num {
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1;
+
+	&.is-small {
+		font-size: 14px;
+	}
+}
+
+.zseo-x1c-tag {
+	display: inline-block;
+	padding: 0 6px;
+	font-size: 12px;
+	border-radius: 3px;
+	background: var(--zak-surface-2, #f0f0f1);
+	color: var(--zak-text, #1e1e1e);
+}
+
+.zseo-x1c-err {
+	color: #b32d2e;
+}
+
+.zseo-x1c-text {
+	max-block-size: 480px;
+	overflow-y: auto;
+	padding-inline: 4px;
+
+	&:focus-visible {
+		outline: 2px solid var(--zak-accent, #2271b1);
+	}
+}
+
+.zseo-x1c-bars {
+	margin: 8px 0;
+
+	ol {
+		display: flex;
+		align-items: flex-end;
+		gap: 3px;
+		block-size: 60px;
+		margin: 4px 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li {
+		display: flex;
+		flex: 1 1 0;
+		align-items: flex-end;
+		block-size: 100%;
+	}
+
+	span {
+		display: block;
+		inline-size: 100%;
+		min-block-size: 2px;
+		background: var(--zak-accent, #2271b1);
+	}
+}

@@ -1,0 +1,97 @@
+// The SEO blocks' editor UI. ⛔ Logical properties only (the RTL build is generated from this file).
+
+.zseo-blk-form {
+	margin-block: 8px;
+
+	.components-card__header {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2px;
+	}
+
+	&__desc {
+		font-size: 12px;
+		color: var(--wp-components-color-gray-700, #757575);
+	}
+
+	.components-card__body {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
+}
+
+.zseo-blk-field {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.zseo-blk-label {
+	font-size: 11px;
+	font-weight: 500;
+	text-transform: uppercase;
+	line-height: 1.4;
+}
+
+.zseo-blk-advice {
+	margin: 0;
+	font-size: 12px;
+
+	&.is-ideal {
+		color: #007017;
+	}
+
+	&.is-short,
+	&.is-long {
+		color: #8a5a00;
+	}
+}
+
+.zseo-blk-image {
+	align-items: flex-start;
+
+	img {
+		max-inline-size: 120px;
+		block-size: auto;
+		border-radius: 4px;
+	}
+}
+
+.zseo-blk-repeater {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	min-inline-size: 0;
+}
+
+.zseo-blk-row {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 10px 12px;
+	border: 1px solid var(--wp-components-color-gray-300, #ddd);
+	border-radius: 4px;
+
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 8px;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.zseo-blk-advice.is-ideal {
+		color: #68de7c;
+	}
+
+	.zseo-blk-advice.is-short,
+	.zseo-blk-advice.is-long {
+		color: #f0b849;
+	}
+}

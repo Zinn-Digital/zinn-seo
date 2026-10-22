@@ -1,0 +1,124 @@
+// Links → Link plan (zs-763, stage AIL1). ⛔ Logical properties only; colours from the kit's
+// tokens so the dark scheme stays readable; loaded with the Links screen only.
+
+.zseo-plan {
+	min-inline-size: 0;
+}
+
+.zseo-plan__health {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 24px;
+	padding: 12px 16px;
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-radius: 8px;
+
+	> div {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+.zseo-plan__label {
+	font-weight: 600;
+}
+
+.zseo-plan__actions,
+.zseo-plan__filters,
+.zseo-plan__row-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 12px;
+	margin: 0;
+}
+
+.zseo-plan__filters .components-base-control {
+	min-inline-size: 12rem;
+}
+
+.zseo-plan__ai {
+	padding: 12px 16px;
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-inline-start: 4px solid var(--zak-accent, #3858e9);
+	background: var(--zak-surface, #fff);
+	border-radius: 4px;
+
+	p {
+		margin-block: 0 8px;
+	}
+}
+
+.zseo-plan__items {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.zseo-plan__item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 8px 12px;
+	padding-block: 12px;
+	border-block-end: 1px solid var(--zak-border, #dcdcde);
+}
+
+.zseo-plan__item-body {
+	flex: 1 1 18rem;
+	min-inline-size: 0;
+	overflow-wrap: anywhere;
+
+	p {
+		margin-block: 0 4px;
+	}
+}
+
+.zseo-plan__pages a {
+	font-weight: 600;
+}
+
+.zseo-plan__sentence {
+	margin: 4px 0;
+	padding-inline-start: 12px;
+	border-inline-start: 3px solid var(--zak-border, #dcdcde);
+	color: var(--zak-text, #1d2327);
+
+	mark {
+		padding-inline: 2px;
+		border-radius: 2px;
+		background: rgba(240, 184, 73, 0.35);
+		color: inherit;
+	}
+}
+
+.zseo-plan__meta {
+	font-size: 12px;
+}
+
+.zseo-plan__clusters,
+.zseo-plan__settings {
+	summary {
+		cursor: pointer;
+		font-weight: 600;
+	}
+}
+
+.zseo-plan__clusters .zseo-table-wrap {
+	overflow-x: auto;
+	margin-block-start: 8px;
+}
+
+.zseo-plan__counts {
+	grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+}
+
+.zseo-plan__pick {
+	margin-block-start: 4px;
+}

@@ -1,0 +1,48 @@
+// Safe updates (zs-655, zs-775): only what the shared admin styles do not already give — the
+// badge colours, a test's story and the action buttons in a row. Logical properties only (RTL).
+
+.zseo-guard {
+	.zseo-badge.is-error {
+		background: #b32d2e;
+	}
+
+	.zseo-badge.is-warning {
+		background: #8a6100;
+	}
+
+	.zseo-badge.is-success {
+		background: #007017;
+	}
+
+	.zseo-badge.is-info {
+		background: #3858e9;
+	}
+
+	.zseo-row-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		align-items: center;
+	}
+
+	.zseo-guard-story {
+		margin-block: 0;
+		margin-inline-start: 1.25em;
+		color: #3c434a;
+	}
+
+	.zseo-care-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.zseo-care-item {
+		padding-block: 12px;
+		border-block-end: 1px solid #dcdcde;
+	}
+
+	.zseo-break {
+		overflow-wrap: anywhere;
+	}
+}

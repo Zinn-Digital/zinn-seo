@@ -1,0 +1,27 @@
+#wpadminbar #wp-admin-bar-zinn-seo-inspector .ab-icon:before{content:"\f179";top:2px}
+#wpadminbar .zseo-ab--good .ab-label{color:#68de7c}#wpadminbar .zseo-ab--ok .ab-label{color:#f2d675}#wpadminbar .zseo-ab--bad .ab-label{color:#ff8085}
+.zseo-in{box-sizing:border-box;inline-size:min(42rem,calc(100vw - 2rem));max-block-size:min(85vh,52rem);margin:auto;padding:0;border:0;border-radius:12px;background:#fff;color:#1d2327;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;box-shadow:0 10px 40px rgba(0,0,0,.3);overflow:auto;z-index:100000}
+.zseo-in::backdrop{background:rgba(0,0,0,.45)}
+.zseo-in *{box-sizing:border-box}
+.zseo-in__bar{position:sticky;inset-block-start:0;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.75rem;padding-inline:1.25rem;background:#1d2327;color:#fff}
+.zseo-in__bar h2{margin:0;font-size:16px;color:#fff}
+.zseo-in__close{min-inline-size:2.75rem;min-block-size:2.75rem;border:0;border-radius:8px;background:transparent;color:#fff;font-size:24px;line-height:1;cursor:pointer}
+.zseo-in__close:focus-visible,.zseo-in__btn:focus-visible,.zseo-in__link:focus-visible{outline:2px solid #2271b1;outline-offset:2px}
+.zseo-in__body{padding-block:.5rem 1.25rem;padding-inline:1.25rem}
+.zseo-in__sec{padding-block:.75rem;border-block-end:1px solid #e0e0e0}
+.zseo-in__sec h3{margin-block:0 .5rem;font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:#50575e}
+.zseo-in__dl{display:grid;grid-template-columns:minmax(7rem,max-content) 1fr;gap:.35rem 1rem;margin:0}
+.zseo-in__dl dt{font-weight:600}.zseo-in__dl dd{margin:0;min-inline-size:0;overflow-wrap:anywhere}
+.zseo-in__dl small{color:#646970}
+.zseo-in__ltr{direction:ltr;unicode-bidi:isolate;text-align:start}
+.zseo-in__warn{margin-block:.5rem 0;padding-block:.4rem;padding-inline:.6rem;border-inline-start:4px solid #d63638;background:#fcf0f1;color:#8a2424}
+.zseo-in__tags{display:flex;flex-wrap:wrap;gap:.35rem;margin:0;padding:0;list-style:none}
+.zseo-in__tags li{padding-block:.1rem;padding-inline:.5rem;border-radius:999px;background:#f0f0f1}
+.zseo-in__outline,.zseo-in__list{margin:0;padding-inline-start:1.1rem}
+.zseo-in__h{overflow-wrap:anywhere}.zseo-in__h3{margin-inline-start:.75rem}.zseo-in__h4{margin-inline-start:1.5rem}.zseo-in__h5,.zseo-in__h6{margin-inline-start:2.25rem}
+.zseo-in__h.is-skip,.zseo-in__skip{color:#b32d2e}
+.zseo-in__score.is-good{color:#007017}.zseo-in__score.is-ok{color:#8a6100}.zseo-in__score.is-bad{color:#b32d2e}
+.zseo-in__link{display:inline-block;margin-block-start:.5rem;color:#2271b1}
+.zseo-in__btn{margin-block-start:1rem;min-block-size:2.5rem;padding-inline:1rem;border:1px solid #2271b1;border-radius:6px;background:#fff;color:#2271b1;cursor:pointer}
+@media (prefers-color-scheme:dark){.zseo-in{background:#1e1e1e;color:#f0f0f0}.zseo-in__sec{border-color:#3c434a}.zseo-in__sec h3,.zseo-in__dl small{color:#a7aaad}.zseo-in__tags li{background:#2c3338}.zseo-in__warn{background:#3a1d1f;color:#ffb4b4}.zseo-in__btn{background:#1e1e1e;color:#72aee6;border-color:#72aee6}.zseo-in__link{color:#72aee6}.zseo-in__score.is-good{color:#68de7c}.zseo-in__score.is-ok{color:#f2d675}.zseo-in__score.is-bad{color:#ff8085}}
+@media (max-width:600px){.zseo-in__dl{grid-template-columns:1fr}.zseo-in__dl dd{margin-block-end:.5rem}}

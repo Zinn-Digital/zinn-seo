@@ -1,0 +1,349 @@
+// The block editor panel. ⛔ Logical properties only (the RTL build is generated from this file).
+
+.zseo-ed {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.zseo-ed-snippet {
+	padding: 10px 12px;
+	border: 1px solid var(--wp-components-color-gray-300, #ddd);
+	border-radius: 4px;
+	background: var(--wp-components-color-background, #fff);
+	overflow-wrap: anywhere;
+
+	&__title {
+		color: #1a0dab;
+		font-size: 15px;
+		line-height: 1.3;
+	}
+
+	&__url {
+		color: #006621;
+		font-size: 12px;
+		text-align: start;
+	}
+
+	&__desc {
+		color: #4d5156;
+		font-size: 12px;
+		line-height: 1.5;
+	}
+}
+
+.zseo-ed-count {
+	margin: 4px 0 0;
+	font-size: 12px;
+	color: #757575;
+
+	&.is-over {
+		color: #b32d2e;
+	}
+}
+
+.zseo-ed-label,
+.zseo-ed-heading {
+	margin: 8px 0 4px;
+	font-size: 11px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.zseo-ed-more {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.zseo-ed-image__img {
+	display: block;
+	max-inline-size: 100%;
+	block-size: auto;
+	margin-block-end: 8px;
+	border-radius: 2px;
+}
+
+.zseo-ed-hint {
+	margin: 4px 0 0;
+	font-size: 12px;
+	color: #757575;
+}
+
+.zseo-ed-discover {
+	ul {
+		margin: 0 0 8px;
+	}
+
+	li {
+		position: relative;
+		padding-inline-start: 18px;
+		font-size: 12px;
+
+		&::before {
+			position: absolute;
+			inset-inline-start: 0;
+		}
+
+		&.is-ok::before {
+			content: "\2713";
+			color: #00a32a;
+		}
+
+		&.is-missing::before {
+			content: "\2022";
+			color: #b32d2e;
+		}
+	}
+}
+
+.zseo-ed-muted {
+	margin: 0;
+	font-size: 12px;
+	color: var(--wp-components-color-gray-700, #757575);
+}
+
+.zseo-ed-types {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	.components-card__header {
+		display: flex;
+		justify-content: space-between;
+		gap: 8px;
+	}
+}
+
+.zseo-ed .zseo-check {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	font-size: 12px;
+}
+
+.zseo-ed .zseo-check__summary {
+	margin: 0;
+	font-weight: 600;
+
+	&.is-good {
+		color: #007017;
+	}
+
+	&.is-bad {
+		color: #b32d2e;
+	}
+}
+
+.zseo-ed .zseo-check__nodes {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.zseo-ed .zseo-check__node {
+	padding: 6px 8px;
+	border: 1px solid var(--wp-components-color-gray-300, #ddd);
+	border-radius: 4px;
+	overflow-wrap: anywhere;
+
+	p {
+		margin: 4px 0 0;
+	}
+}
+
+.zseo-ed .zseo-check__head {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 8px;
+	align-items: center;
+}
+
+.zseo-ed .zseo-badge {
+	display: inline-block;
+	padding: 0 6px;
+	border-radius: 8px;
+	background: #50575e;
+	color: #fff;
+	font-size: 11px;
+
+	&.is-active {
+		background: #007017;
+	}
+}
+
+.zseo-ed .zseo-check__errors {
+	margin: 4px 0 0;
+	padding-inline-start: 16px;
+	color: #b32d2e;
+}
+
+.zseo-ed .zseo-check__warnings ul {
+	margin: 4px 0 0;
+	padding-inline-start: 16px;
+}
+
+.zseo-ed .zseo-muted {
+	color: var(--wp-components-color-gray-700, #757575);
+}
+
+// The AI writing help panel (stage P10).
+.zseo-ai-ed {
+	display: grid;
+	gap: 16px;
+
+	h3 {
+		margin: 0 0 4px;
+		font-size: 13px;
+	}
+
+	.components-notice {
+		margin: 8px 0 0;
+	}
+}
+
+.zseo-ai-ed__feature {
+	display: grid;
+	gap: 6px;
+	justify-items: start;
+	padding-block-end: 12px;
+	border-block-end: 1px solid var(--wp-components-color-gray-200, #e0e0e0);
+}
+
+.zseo-ai-ed__help {
+	margin: 0;
+	font-size: 12px;
+	color: var(--wp-components-color-gray-700, #50575e);
+}
+
+.zseo-ai-ed__answer {
+	display: grid;
+	gap: 6px;
+	inline-size: 100%;
+	padding: 8px;
+	border-radius: 4px;
+	background: var(--wp-components-color-gray-100, #f0f0f0);
+	overflow-wrap: anywhere;
+
+	p {
+		margin: 0;
+	}
+
+	ins {
+		text-decoration: none;
+		background: #edfaef;
+	}
+
+	del {
+		color: #8a2424;
+	}
+}
+
+.zseo-ai-ed__list {
+	margin: 0;
+	padding-inline-start: 1.2em;
+}
+
+.zseo-ai-ed__img {
+	max-inline-size: 100%;
+	block-size: auto;
+	border-radius: 4px;
+}
+
+// Stage X1A: the snippet limits and scheduled changes in the panel.
+.zseo-ed-limits {
+	display: grid;
+	gap: 8px;
+	margin-block: 8px;
+	padding: 0;
+	border: 0;
+}
+
+.zseo-ed-scheduled {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 4px 8px;
+	margin-block-end: 8px;
+	padding: 8px;
+	border: 1px solid #dcdcde;
+
+	p {
+		margin: 0;
+	}
+}
+
+// Stage X1C: the writing panel, news and dataset panels. Logical properties only.
+.zseo-ed-x1c {
+	margin-block: 12px;
+	padding-block-start: 12px;
+	border-block-start: 1px solid #e0e0e0;
+
+	&:first-child {
+		margin-block-start: 0;
+		padding-block-start: 0;
+		border-block-start: 0;
+	}
+}
+
+.zseo-ed-x1c-panel > .components-base-control,
+.zseo-ed-x1c-panel > .components-toggle-control {
+	margin-block-end: 12px;
+}
+
+.zseo-ed-list {
+	margin: 4px 0;
+	padding-inline-start: 16px;
+	overflow-wrap: anywhere;
+
+	li {
+		margin-block-end: 4px;
+	}
+}
+
+.zseo-ed-terms li {
+	&.is-missing,
+	&.is-few {
+		color: #b32d2e;
+	}
+
+	&.is-many {
+		color: #996800;
+	}
+
+	&.is-ok {
+		color: #00703c;
+	}
+}
+
+.zseo-ed-score {
+	padding-inline-start: 8px;
+	border-inline-start: 3px solid #d63638;
+
+	&.is-fair {
+		border-inline-start-color: #dba617;
+	}
+
+	&.is-good {
+		border-inline-start-color: #00a32a;
+	}
+}
+
+.zseo-ed-box {
+	margin-block: 8px;
+	padding: 8px;
+	border: 1px solid #e0e0e0;
+	border-radius: 2px;
+	overflow-wrap: anywhere;
+}
+
+.zseo-ed-img {
+	display: block;
+	max-inline-size: 100%;
+	block-size: auto;
+	margin-block-end: 8px;
+}

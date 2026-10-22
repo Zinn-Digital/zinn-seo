@@ -1,0 +1,1137 @@
+// Zinn® SEO's own screens, inside the admin kit's shell. Loaded on this plugin's screen only
+// (zs-155). ⛔ Logical properties only (CLAUDE.md §2.7: the RTL build is generated from this file);
+// greys are the kit's muted token so the dark scheme stays readable.
+
+.zseo-admin {
+	margin-block-start: 1rem;
+
+	.components-notice {
+		margin-inline: 0;
+		margin-block-end: 1rem;
+	}
+}
+
+.zseo-tabs .components-tab-panel__tab-content {
+	padding-block-start: 16px;
+}
+
+.zseo-stack {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.zseo-muted {
+	color: var(--zak-muted, #50575e);
+}
+
+.zseo-ok {
+	// #007017, not the kit's #00a32a: that green is 3:1 on white, below WCAG AA for text
+	// (axe, zinn_seo_p2_browser.mjs, 2026-10-09).
+	color: #007017;
+	font-weight: 600;
+}
+
+.zak-shell.is-dark .zseo-ok {
+	color: #68de7c;
+}
+
+.zseo-found {
+	margin: 0;
+	padding-inline-start: 12px;
+	border-inline-start: 3px solid var(--zak-accent, #3858e9);
+}
+
+.zseo-found-list,
+.zseo-changes {
+	margin-inline-start: 1.5em;
+	list-style: disc;
+}
+
+.zseo-logo {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px;
+}
+
+.zseo-logo__img {
+	inline-size: 64px;
+	block-size: 64px;
+	object-fit: contain;
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-radius: 8px;
+	background: #fff;
+}
+
+.zseo-roles-list {
+	dt {
+		font-weight: 600;
+		margin-block-start: 8px;
+	}
+
+	dd {
+		margin-inline-start: 0;
+	}
+}
+
+.zseo-roles {
+	th[scope="row"] {
+		text-align: start;
+	}
+
+	td {
+		text-align: center;
+	}
+}
+
+.zseo-preview {
+	margin-block-start: 16px;
+}
+
+.zseo-palette {
+	inline-size: min(640px, 92vw);
+
+	.zseo-palette__list {
+		margin: 8px 0 0;
+		max-block-size: 50vh;
+		overflow-y: auto;
+
+		li {
+			margin: 0;
+		}
+
+		.components-button {
+			inline-size: 100%;
+			justify-content: flex-start;
+			text-align: start;
+			block-size: auto;
+			min-block-size: 36px;
+			white-space: normal;
+		}
+
+		.components-button.is-active {
+			background: var(--wp-admin-theme-color, #3858e9);
+			color: #fff;
+		}
+	}
+
+	.zseo-palette__hint {
+		margin-block-end: 0;
+		font-size: 12px;
+	}
+}
+
+.zseo-fields-modal {
+	inline-size: min(640px, 92vw);
+}
+
+// ── Search appearance, Social, Bulk editor (stage P1) ───────────────────────────────────────
+
+.zseo-warn {
+	color: #b32d2e;
+}
+
+.zseo-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 16px;
+
+	> * {
+		flex: 1 1 200px;
+		min-inline-size: 0;
+	}
+}
+
+.zseo-actions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 8px;
+}
+
+.zseo-legend {
+	display: block;
+	margin-block-end: 8px;
+	font-weight: 600;
+}
+
+.zseo-group__title {
+	margin-block: 16px 8px;
+	font-size: 14px;
+}
+
+.zseo-badge {
+	display: inline-block;
+	margin-inline-start: 8px;
+	padding: 1px 8px;
+	border-radius: 10px;
+	background: var(--zak-accent, #3858e9);
+	color: #fff;
+	font-size: 11px;
+	line-height: 18px;
+	font-weight: 500;
+}
+
+.zseo-sep {
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+	legend {
+		font-weight: 600;
+	}
+
+	&__choices {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+
+		.components-button {
+			min-inline-size: 40px;
+			justify-content: center;
+			font-size: 16px;
+		}
+	}
+}
+
+.zseo-template {
+	position: relative;
+
+	&__vars {
+		margin-block-start: 4px;
+	}
+}
+
+.zseo-template__menu {
+	max-block-size: 320px;
+	overflow-y: auto;
+	min-inline-size: min(320px, 85vw);
+
+	.components-menu-item__info {
+		white-space: normal;
+	}
+}
+
+.zseo-snippet {
+	padding: 12px 16px;
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-radius: 8px;
+	background: var(--zak-surface, #fff);
+	overflow-wrap: anywhere;
+	max-inline-size: 640px;
+
+	&__url {
+		color: #188038;
+		font-size: 13px;
+		text-align: start;
+	}
+
+	&__title {
+		color: #1a0dab;
+		font-size: 19px;
+		line-height: 1.3;
+		margin-block: 2px;
+	}
+
+	&__desc {
+		color: #4d5156;
+		font-size: 14px;
+		line-height: 1.55;
+	}
+
+	&__counts {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 12px;
+		margin-block-start: 8px;
+		font-size: 12px;
+	}
+}
+
+// wp-admin colours every heading #1d2327. On the dark surface that is
+// 1.1:1: the card titles on Fix it and Redirects and the group titles on
+// Search appearance could not be read (the demo's dark pass, 2026-10-11).
+// `:where()` keeps this as weak as wp-admin's own rule, so a heading that
+// has a colour of its own keeps it.
+:where(.zak-shell.is-dark) :is(h1, h2, h3, h4, h5, h6) {
+	color: var(--zak-text);
+}
+
+.zak-shell.is-dark {
+	.zseo-snippet__url {
+		color: #81c995;
+	}
+
+	.zseo-snippet__title {
+		color: #8ab4f8;
+	}
+
+	.zseo-snippet__desc {
+		color: #bdc1c6;
+	}
+
+	.zseo-warn {
+		color: #ff8085;
+	}
+
+	.zseo-bulk,
+	.zseo-bulk td,
+	.zseo-bulk th,
+	.zseo-history td,
+	.zseo-history th {
+		background: var(--zak-surface);
+		color: var(--zak-text);
+		border-color: var(--zak-border);
+	}
+
+	.zseo-bulk tr.is-dirty td {
+		background: #2d2a1e;
+	}
+
+	.zseo-savebar {
+		background: var(--zak-bg);
+	}
+}
+
+.zseo-details {
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-radius: 4px;
+	padding: 8px 12px;
+
+	summary {
+		cursor: pointer;
+		font-weight: 600;
+	}
+
+	> .zseo-stack {
+		margin-block-start: 12px;
+	}
+}
+
+.zseo-limit {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.zseo-savebar {
+	position: sticky;
+	inset-block-end: 0;
+	z-index: 10;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 12px;
+	margin-block-start: 16px;
+	padding-block: 12px;
+	background: var(--zak-bg, #fff);
+	border-block-start: 1px solid var(--zak-border, #dcdcde);
+}
+
+.zseo-image-pick {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px;
+
+	&__img {
+		inline-size: 240px;
+		max-inline-size: 100%;
+		block-size: auto;
+		border: 1px solid var(--zak-border, #dcdcde);
+		border-radius: 6px;
+	}
+
+	&__actions {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 8px;
+	}
+}
+
+.zseo-pro {
+	max-inline-size: 640px;
+
+	&__tag {
+		display: inline-block;
+		margin: 0 0 8px;
+		padding: 2px 10px;
+		border-radius: 10px;
+		background: var(--zak-accent, #3858e9);
+		color: #fff;
+		font-weight: 600;
+		font-size: 12px;
+	}
+
+	&__title {
+		margin-block: 0 8px;
+	}
+
+	&__points {
+		margin-inline-start: 1.25em;
+		list-style: disc;
+	}
+}
+
+.zseo-cards-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 24px;
+
+	@media (max-width: 960px) {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+.zseo-cards-preview img {
+	display: block;
+	inline-size: 100%;
+	block-size: auto;
+	border-radius: 8px;
+	border: 1px solid var(--zak-border, #dcdcde);
+}
+
+.zseo-colour {
+	inline-size: 64px;
+	block-size: 40px;
+	padding: 2px;
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-radius: 4px;
+	background: none;
+	cursor: pointer;
+}
+
+.zseo-checks {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	gap: 8px 16px;
+}
+
+.zseo-columns {
+	display: inline;
+	white-space: normal;
+	overflow-wrap: anywhere;
+}
+
+.zseo-filters {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 12px;
+	align-items: end;
+}
+
+.zseo-bulk__tools {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.zseo-bulk__wrap {
+	overflow-x: auto;
+}
+
+.zseo-bulk {
+	table-layout: fixed;
+	inline-size: 100%;
+	// 720, not 900: beside the side navigation (UI1) a 1280 px window leaves ~790 px for the
+	// screen, and the columns are shares of the width. Narrower than this, the box scrolls.
+	min-inline-size: 720px;
+
+	.zseo-col--check {
+		inline-size: 36px;
+	}
+
+	.zseo-col--item {
+		inline-size: 18%;
+	}
+
+	.zseo-col--title {
+		inline-size: 22%;
+	}
+
+	.zseo-col--desc {
+		inline-size: 26%;
+	}
+
+	.zseo-col--robots {
+		inline-size: 14%;
+	}
+
+	th,
+	td {
+		vertical-align: top;
+		text-align: start;
+	}
+
+	.zseo-bulk__check {
+		inline-size: 32px;
+	}
+
+	tr.is-dirty td {
+		background: #fcf9e8;
+	}
+
+	.zseo-count {
+		display: block;
+		font-size: 11px;
+		text-align: end;
+	}
+
+	textarea {
+		resize: block;
+	}
+
+	@media (max-width: 960px) {
+		display: block;
+		min-inline-size: 0;
+
+		thead,
+		colgroup {
+			display: none;
+		}
+
+		tbody {
+			display: block;
+		}
+
+		tr,
+		td {
+			display: block;
+			inline-size: auto;
+		}
+
+		tr {
+			border-block-end: 1px solid var(--zak-border, #dcdcde);
+			padding-block: 8px;
+		}
+
+		td[data-label]::before {
+			content: attr(data-label);
+			display: block;
+			font-weight: 600;
+			margin-block-end: 4px;
+		}
+
+		td.zseo-bulk__check {
+			inline-size: auto;
+		}
+	}
+}
+
+.zseo-history {
+	inline-size: 100%;
+}
+
+.zseo-modal {
+	inline-size: min(560px, 92vw);
+}
+
+// ── Structured data in bulk (SCH1: zs-764, zs-765) ────────────────────────────────────────────
+
+.zseo-modal--wide {
+	inline-size: min(760px, 94vw);
+}
+
+.zseo-bulk {
+	.zseo-col--schema {
+		inline-size: 18%;
+	}
+
+	.zseo-bulk__schema {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+	}
+}
+
+.zseo-bulk__filled {
+	margin: 0;
+	font-size: 12px;
+	overflow-wrap: anywhere;
+}
+
+.zseo-fill__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.zseo-fill__item {
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-radius: 4px;
+	padding: 12px;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	min-inline-size: 0;
+}
+
+.zseo-fill__head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+}
+
+.zseo-fill__record {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.zseo-fill__line {
+	display: grid;
+	grid-template-columns: minmax(0, 14em) minmax(0, 1fr);
+	gap: 8px;
+
+	dt {
+		font-weight: 600;
+		overflow-wrap: anywhere;
+	}
+
+	dd {
+		margin: 0;
+		overflow-wrap: anywhere;
+	}
+
+	@media (max-width: 600px) {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+.zseo-fill__warnings {
+	margin: 0;
+	padding-inline-start: 1.2em;
+	color: var(--zak-muted, #50575e);
+}
+
+.zseo-fill__ok {
+	margin: 0;
+	font-weight: 600;
+	border-inline-start: 4px solid var(--zak-ok, #00a32a);
+	padding-inline-start: 8px;
+}
+
+.zseo-fill__pair {
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-radius: 4px;
+	padding: 8px 12px 12px;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	min-inline-size: 0;
+}
+
+.zseo-preview-import h3 {
+	margin-block: 8px;
+}
+
+// ── Sitemaps and AI (stage P2) ────────────────────────────────────────────────────────────────
+
+.zseo-stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: 12px;
+	margin: 0;
+
+	&__item {
+		padding-block: 10px;
+		padding-inline: 12px;
+		border: 1px solid var(--zak-border, #dcdcde);
+		border-radius: 8px;
+		min-inline-size: 0;
+	}
+
+	dt {
+		font-size: 12px;
+		color: var(--zak-muted, #50575e);
+	}
+
+	dd {
+		margin: 2px 0 0;
+		font-size: 18px;
+		font-weight: 600;
+		overflow-wrap: anywhere;
+	}
+}
+
+.zseo-row--top {
+	align-items: flex-start;
+}
+
+.zseo-actions--start {
+	justify-content: flex-start;
+}
+
+.zseo-address {
+	direction: ltr;
+	unicode-bidi: isolate;
+	overflow-wrap: anywhere;
+	word-break: break-word;
+}
+
+.zseo-units,
+.zseo-files,
+.zseo-log,
+.zseo-visits,
+.zseo-crawlers__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	> li {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 4px 12px;
+		padding-block: 8px;
+		border-block-end: 1px solid var(--zak-border, #dcdcde);
+		min-inline-size: 0;
+	}
+}
+
+.zseo-crawlers__list > li {
+	justify-content: space-between;
+
+	.components-toggle-control {
+		flex: 1 1 260px;
+	}
+}
+
+.zseo-includes {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 8px 16px;
+
+	> legend {
+		grid-column: 1 / -1;
+	}
+}
+
+.zseo-code {
+	display: inline-block;
+	padding-block: 4px;
+	padding-inline: 8px;
+	border-radius: 4px;
+	background: var(--zak-surface, #f6f7f7);
+	border: 1px solid var(--zak-border, #dcdcde);
+	direction: ltr;
+}
+
+.zseo-pre {
+	margin: 0;
+	padding: 12px;
+	max-block-size: 420px;
+	overflow: auto;
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-radius: 4px;
+	background: var(--zak-surface, #f6f7f7);
+	color: var(--zak-text, #1e1e1e);
+	font-family: Menlo, Consolas, monospace;
+	font-size: 12px;
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+	direction: ltr;
+	text-align: start;
+}
+
+.zseo-code-input textarea {
+	font-family: Menlo, Consolas, monospace;
+	font-size: 13px;
+	direction: ltr;
+}
+
+.zseo-checklist {
+	margin: 0;
+	padding-inline-start: 1.25em;
+
+	li.is-error {
+		color: #b32d2e;
+	}
+
+	li.is-warning {
+		color: #996800;
+	}
+}
+
+.zseo-bars {
+	display: inline-flex;
+	align-items: flex-end;
+	gap: 2px;
+	block-size: 24px;
+
+	> span {
+		inline-size: 4px;
+		background: var(--zak-accent, #3858e9);
+		border-radius: 1px;
+	}
+}
+
+.zak-shell.is-dark {
+	.zseo-checklist li.is-error {
+		color: #f86368;
+	}
+
+	.zseo-checklist li.is-warning {
+		color: #f0c33c;
+	}
+}
+
+// ── Structured data and SEO blocks (stage P3) ───────────────────────────────────────────────
+
+.zseo-grid-2,
+.zseo-grid-3 {
+	display: grid;
+	gap: 12px 16px;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+	align-items: end;
+}
+
+.zseo-grid-3 {
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr));
+}
+
+.zseo-card-row {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 0 0 14px;
+	padding: 12px 14px;
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-radius: 6px;
+	min-inline-size: 0;
+
+	> .zseo-legend {
+		padding-inline: 4px;
+	}
+
+	> .components-button.is-link {
+		align-self: flex-start;
+	}
+}
+
+.zseo-types {
+	display: grid;
+	gap: 12px;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+}
+
+.zseo-types__row {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 0;
+	padding: 12px 14px;
+	border: 1px solid var(--zak-border, #dcdcde);
+	border-radius: 6px;
+	min-inline-size: 0;
+}
+
+.zseo-picks {
+	margin: 8px 0 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 8px;
+		margin-block: 2px;
+		overflow-wrap: anywhere;
+	}
+}
+
+.zseo-check {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+
+	&__summary {
+		margin: 0;
+		padding: 10px 14px;
+		border-radius: 6px;
+		font-weight: 600;
+
+		&.is-good {
+			background: #edfaef;
+			color: #005c12;
+		}
+
+		&.is-bad {
+			background: #fcf0f1;
+			color: #8a2424;
+		}
+	}
+
+	&__nodes {
+		display: grid;
+		gap: 10px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__node {
+		padding: 10px 14px;
+		border: 1px solid var(--zak-border, #dcdcde);
+		border-radius: 6px;
+		overflow-wrap: anywhere;
+
+		p {
+			margin: 6px 0 0;
+		}
+	}
+
+	&__head {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 6px 10px;
+
+		.zseo-badge {
+			margin-inline-start: 0;
+		}
+	}
+
+	&__errors {
+		margin: 8px 0 0;
+		padding-inline-start: 18px;
+		color: #b32d2e;
+	}
+
+	&__warnings {
+		margin-block-start: 6px;
+
+		summary {
+			cursor: pointer;
+		}
+
+		ul {
+			margin: 6px 0 0;
+			padding-inline-start: 18px;
+		}
+	}
+}
+
+.zseo-badge.is-active {
+	background: #007017;
+}
+
+.zseo-badge.is-limited {
+	background: #8a5a00;
+}
+
+.zseo-badge.is-retired,
+.zseo-badge.is-none {
+	background: #50575e;
+}
+
+.zseo-badge.is-pro {
+	background: var(--zak-accent, #3858e9);
+}
+
+.zseo-template {
+	.components-card__header {
+		display: flex;
+		justify-content: space-between;
+		gap: 8px;
+	}
+}
+
+.zseo-props {
+	inline-size: 100%;
+	border-collapse: collapse;
+
+	th,
+	td {
+		padding: 6px 8px 6px 0;
+		text-align: start;
+		vertical-align: top;
+	}
+
+	th {
+		font-weight: 600;
+	}
+}
+
+@media (max-width: 600px) {
+	.zseo-props thead {
+		position: absolute;
+		inline-size: 1px;
+		block-size: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+	}
+
+	.zseo-props,
+	.zseo-props tbody,
+	.zseo-props tr,
+	.zseo-props td {
+		display: block;
+		inline-size: auto;
+	}
+
+	.zseo-props tr {
+		margin-block-end: 10px;
+		padding: 8px 10px;
+		border: 1px solid var(--zak-border, #dcdcde);
+		border-radius: 6px;
+	}
+
+	.zseo-props td[data-label]::before {
+		content: attr(data-label);
+		display: block;
+		font-size: 11px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+}
+
+.zseo-blocks {
+	display: grid;
+	gap: 12px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+
+	> li {
+		display: flex;
+		min-inline-size: 0;
+	}
+
+	&__card {
+		flex: 1;
+		min-inline-size: 0;
+	}
+
+	&__head {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		flex-wrap: wrap;
+
+		.zseo-badge {
+			margin-inline-start: 0;
+		}
+	}
+
+	&__foot {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 8px;
+	}
+}
+
+.zak-shell.is-dark {
+	.zseo-check__summary.is-good {
+		background: #0f2d16;
+		color: #68de7c;
+	}
+
+	.zseo-check__summary.is-bad {
+		background: #3a1416;
+		color: #ff8085;
+	}
+
+	.zseo-check__errors {
+		color: #ff8085;
+	}
+
+	.zseo-card-row,
+	.zseo-types__row,
+	.zseo-check__node,
+	.zseo-props tr {
+		border-color: #3c434a;
+	}
+}
+
+// The bulk editor's per-row links are tap targets of their own (WCAG 2.5.8: at least 24px).
+.zseo-bulk__item a {
+	display: inline-flex;
+	align-items: center;
+	min-block-size: 24px;
+	min-inline-size: 24px;
+}
+
+// A tab's panel takes focus (WordPress's TabPanel gives it tabindex 0); older WordPress draws
+// no ring on it, so the plugin's screens show one (WCAG 2.4.7).
+#zinn-seo-admin-root [role="tabpanel"]:focus-visible {
+	outline: 2px solid var(--wp-admin-theme-color, #3858e9);
+	outline-offset: 2px;
+}
+
+// What a settings file carries (zs-249): a short list under the export's lead.
+.zseo-transfer-scope {
+	margin-block: 0 12px;
+	margin-inline-start: 1.25em;
+	list-style: disc;
+
+	li {
+		margin-block-end: 4px;
+	}
+}
+
+// The setup's first step: start from another site's settings, folded until asked for.
+.zseo-setup-import {
+	margin-block-start: 16px;
+	padding-block-start: 12px;
+	border-block-start: 1px solid var(--zak-border, #dcdcde);
+
+	summary {
+		cursor: pointer;
+		font-weight: 600;
+		// A thumb-sized target (44 px) that keeps the browser's own open/closed marker.
+		padding-block: 12px;
+		line-height: 20px;
+	}
+
+	.zseo-transfer {
+		margin-block-start: 8px;
+	}
+}
+
+// Search appearance › Content types (Q277): the type's name, who added it and its flags in the
+// first column; one switch per column after it.
+.zseo-ctypes {
+	td:not(:first-child),
+	th:not(:first-child) {
+		inline-size: 1%;
+		white-space: nowrap;
+	}
+
+	.components-toggle-control {
+		margin-block-end: 0;
+	}
+}
+
+.zseo-ctypes__flag {
+	display: inline-block;
+	margin-block-start: 4px;
+	margin-inline-end: 6px;
+}
+
+.zseo-ctypes__hide {
+	display: block;
+	margin-block-start: 4px;
+}

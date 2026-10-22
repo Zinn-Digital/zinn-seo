@@ -1,0 +1,45 @@
+{
+	"$comment": [
+		"The plans a licence can be on and how a feature's tier maps onto them (docs/843 D8, D34). wp/bin/build-admin-kit.php joins this with docs/plugins-overhaul/features.json to generate each host's plan->feature matrix (includes/admin-kit/class-matrix.php + data/matrix.json). Never hand-type a feature's plan anywhere else.",
+		"`tiers`: features.json tier -> the lowest plan that includes it. free = every plan; pro = Personal and up; agency = Agency only.",
+		"`overrides`: a feature whose plan is not its tier's default. sh-r5 (priority support) is a Pro feature sold from Business up (D8).",
+		"`sites`: null means unlimited. Staging, local and development copies never count (sh-r1): the Freemius plans carry is_free_localhost=true.",
+		"Legacy plans (PBS 'premium' 673, Tranzly 'pro' 11459) are NOT listed: any paid plan whose name is not below is legacy and is mapped by its licence QUOTA (D34), never by Freemius plan ordering, because the legacy plans were created first and would compare lower. Licence::tier() carries that rule.",
+		"`comparison_hidden`: features that are true of the plugin but are not something a customer chooses a plan for (how we sell and credit it). They stay in the matrix, so can() still answers for them; the plan comparison does not list them.",
+		"`area_labels`: features.json groups some items by the round in which the owner approved them; a customer needs the subject instead. build-admin-kit.php refuses an area whose name still reads like an approval round (Round, idea, suggestion, approved) and has no label here."
+	],
+	"plans": [
+		{ "id": "free", "sites": null },
+		{ "id": "personal", "sites": 1 },
+		{ "id": "business", "sites": 5 },
+		{ "id": "agency", "sites": null }
+	],
+	"tiers": {
+		"free": "free",
+		"pro": "personal",
+		"agency": "agency"
+	},
+	"overrides": {
+		"sh-r5": "business",
+		"zs-248": "agency",
+		"zs-189": "agency",
+		"zs-541": "agency",
+		"zs-421": "agency",
+		"zs-422": "agency",
+		"zs-350": "agency"
+	},
+	"trial_days": 14,
+	"comparison_hidden": [ "adm-4", "adm-5", "adm-6", "adm-9", "adm-10", "sh-r7" ],
+	"area_labels": {
+		"Round 2 · Templates (your idea)": "Templates and cloud",
+		"Round 2 · Reviews block (your idea)": "More blocks",
+		"Round 2 · Even more blocks (your idea: catch everyone)": "More blocks",
+		"Round 2 · My suggestions": "More features",
+		"Round 2 · Your ideas": "More features",
+		"Round 2 · Licensing and support": "Licensing and support",
+		"Round 3 · Owner additions (approved in chat 2026-09-25)": "Licensing and support",
+		"Admin, promotion and licensing": "Admin and licensing",
+		"Accessibility (all free, on purpose)": "Accessibility",
+		"AI keys and models (both plugins)": "AI keys and models"
+	}
+}

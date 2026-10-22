@@ -1,0 +1,249 @@
+// The AI screen and its parts (stage P10). Loaded with this plugin's admin screen only.
+// ⛔ Logical properties only (the RTL build is generated from this file); colours from the
+// kit's tokens so the dark scheme stays readable.
+
+.zseo-ai {
+
+	.zseo-card-title {
+		margin: 0;
+		font-size: 14px;
+	}
+
+	.zseo-cardhead {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 4px 16px;
+	}
+
+	.zseo-lead {
+		margin: 0;
+		font-size: 14px;
+		max-inline-size: 46em;
+	}
+
+	.zseo-ai__setup {
+		margin-block-end: 16px;
+		border-inline-start: 3px solid var(--zak-accent, #3858e9);
+	}
+
+	.zseo-types {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px 16px;
+		margin: 0;
+		padding: 0;
+		border: 0;
+
+		legend {
+			margin-block-end: 6px;
+			font-weight: 600;
+		}
+	}
+
+	.zseo-count {
+		margin: 0;
+		font-weight: 600;
+	}
+
+	.zseo-suggs {
+		display: grid;
+		gap: 12px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.zseo-sugg {
+		display: grid;
+		gap: 10px;
+		padding: 12px;
+		border: 1px solid var(--zak-border, #dcdcde);
+		border-radius: 6px;
+		background: var(--zak-surface, #fff);
+		min-inline-size: 0;
+	}
+
+	.zseo-sugg__head {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		min-inline-size: 0;
+	}
+
+	.zseo-sugg__title {
+		font-weight: 600;
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-sugg__thumb {
+		flex: none;
+		inline-size: 48px;
+		block-size: 48px;
+		object-fit: cover;
+		border-radius: 4px;
+	}
+
+	.zseo-sugg__field .components-base-control__help {
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-sugg__langs {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			overflow-wrap: anywhere;
+		}
+
+		strong {
+			display: inline-block;
+			min-inline-size: 2.5em;
+			text-transform: uppercase;
+		}
+	}
+
+	.zseo-job {
+		display: grid;
+		gap: 8px;
+		padding: 12px;
+		border-radius: 6px;
+		background: var(--zak-bg, #f6f7f7);
+	}
+
+	.zseo-job__line {
+		margin: 0;
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-bar {
+		block-size: 8px;
+		border-radius: 4px;
+		background: var(--zak-border, #dcdcde);
+		overflow: hidden;
+
+		span {
+			display: block;
+			block-size: 100%;
+			background: var(--zak-accent, #3858e9);
+			transition: inline-size 0.3s ease;
+		}
+	}
+
+	.zseo-starters {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		.components-button {
+			block-size: auto;
+			min-block-size: 36px;
+			white-space: normal;
+			text-align: start;
+		}
+	}
+
+	.zseo-chat {
+		display: grid;
+		gap: 16px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.zseo-chat__q {
+		margin: 0;
+		margin-inline-start: auto;
+		max-inline-size: 85%;
+		padding: 8px 12px;
+		border-radius: 12px;
+		background: var(--zak-accent, #3858e9);
+		color: #fff;
+		inline-size: fit-content;
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-chat__a {
+		max-inline-size: 95%;
+		padding: 8px 12px;
+		border-radius: 12px;
+		border: 1px solid var(--zak-border, #dcdcde);
+		background: var(--zak-surface, #fff);
+		overflow-wrap: anywhere;
+
+		p {
+			margin-block: 0 8px;
+		}
+	}
+
+	.zseo-chat__next {
+		font-weight: 600;
+	}
+
+	.zseo-brief {
+		padding: 12px;
+		border: 1px solid var(--zak-border, #dcdcde);
+		border-radius: 6px;
+		overflow-wrap: anywhere;
+
+		h3 {
+			margin-block-start: 0;
+		}
+	}
+
+	.zseo-options {
+		display: grid;
+		gap: 10px;
+		margin: 0;
+		padding-inline-start: 1.5em;
+
+		li {
+			display: grid;
+			gap: 4px;
+			overflow-wrap: anywhere;
+		}
+	}
+
+	.zseo-impact {
+		display: inline-block;
+		margin-inline-start: 6px;
+		padding-inline: 6px;
+		border-radius: 10px;
+		font-size: 11px;
+		background: var(--zak-bg, #f0f0f1);
+
+		&.is-high {
+			background: #fcf0f1;
+			color: #8a2424;
+		}
+	}
+
+	.zseo-paybox {
+		padding: 12px;
+		border: 1px solid var(--zak-border, #dcdcde);
+		border-radius: 6px;
+		min-inline-size: 0;
+		overflow-wrap: anywhere;
+
+		h3 {
+			margin-block-start: 0;
+			font-size: 14px;
+		}
+	}
+}
+
+// Shared by the AI screen and the editor panel.
+.zseo-paidby {
+	font-size: 12px;
+	color: var(--zak-muted, #50575e);
+}
+
+.zseo-aifail__do a,
+.zseo-aifail__do .components-button.is-link {
+	font-weight: 600;
+}

@@ -1,0 +1,170 @@
+// Clean-up, Features, Version, Server rules, Link updates, Scheduled changes, Conditions (stage
+// X1A). ⛔ Logical properties only; colours from the kit's tokens so the dark scheme stays
+// readable; nothing here is ever loaded outside this plugin's own screens.
+
+.zseo-x1a,
+.zseo-x1a-features,
+.zseo-x1a-conditions {
+	min-inline-size: 0;
+}
+
+.zseo-x1a-save {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 16px;
+	margin-block: 8px 0;
+
+	.components-notice {
+		flex: 1 1 100%;
+		margin: 0;
+	}
+}
+
+.zseo-x1a-switch {
+	padding-block: 8px;
+	border-block-end: 1px solid var(--zak-border, #dcdcde);
+
+	&:last-of-type {
+		border-block-end: 0;
+	}
+}
+
+.zseo-x1a-found {
+	margin-block: 4px 0;
+	margin-inline-start: 44px;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	code {
+		display: block;
+		max-inline-size: 100%;
+		padding: 4px 6px;
+		font-size: 12px;
+		// Wrapped, never a scroll box: a keyboard could not reach a scrolling region (WCAG 2.1.1).
+		white-space: pre-wrap;
+		overflow-wrap: anywhere;
+		background: var(--zak-surface, #f6f7f7);
+		color: var(--zak-text, #1e1e1e);
+	}
+}
+
+.zseo-x1a-found__title {
+	margin: 0 0 4px;
+	font-weight: 600;
+}
+
+.zseo-x1a-count,
+.zseo-x1a-note {
+	margin-block: 0 8px;
+	margin-inline-start: 44px;
+}
+
+.zseo-x1a-big {
+	margin-block: 0 8px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.zseo-x1a-list {
+	margin-block: 0;
+	margin-inline-start: 1.25em;
+
+	li + li {
+		margin-block-start: 4px;
+	}
+
+	del {
+		color: var(--zak-muted, #50575e);
+	}
+
+	ins {
+		text-decoration: none;
+		font-weight: 600;
+	}
+}
+
+.zseo-x1a-fields {
+	display: grid;
+	gap: 12px;
+	margin-block: 8px;
+	padding: 0;
+	border: 0;
+
+	legend {
+		margin-block-end: 4px;
+		font-weight: 600;
+	}
+}
+
+.zseo-x1a-issue {
+	margin-block-end: 12px;
+}
+
+.zseo-x1a-issue__title {
+	margin: 0 0 8px;
+	font-size: 15px;
+}
+
+.zseo-x1a-modules {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+	gap: 12px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		padding: 12px 16px;
+		border: 1px solid var(--zak-border, #dcdcde);
+		border-radius: 4px;
+		background: var(--zak-surface, #fff);
+	}
+
+	// Off is said in words by the switch itself; the border only adds to it (never colour alone).
+	li.is-on {
+		border-inline-start: 4px solid var(--zak-ok, #007017);
+	}
+
+	li.is-off {
+		border-inline-start: 4px solid var(--zak-border, #dcdcde);
+	}
+}
+
+.zseo-x1a-tag {
+	display: inline-block;
+	margin-inline-start: 8px;
+	padding: 0 6px;
+	border: 1px solid currentColor;
+	border-radius: 3px;
+	font-size: 11px;
+	line-height: 18px;
+	vertical-align: middle;
+}
+
+.zseo-x1a-code textarea {
+	font-family: Consolas, Monaco, monospace;
+	font-size: 13px;
+	line-height: 1.5;
+	white-space: pre;
+	overflow-x: auto;
+	direction: ltr; // Rules are code: left to right in every language.
+	text-align: start;
+}
+
+.zseo-x1a-conditions {
+	display: grid;
+	gap: 8px;
+	margin: 0;
+	padding: 12px;
+	border: 1px dashed var(--zak-border, #dcdcde);
+
+	legend {
+		padding-inline: 4px;
+		font-weight: 600;
+	}
+}

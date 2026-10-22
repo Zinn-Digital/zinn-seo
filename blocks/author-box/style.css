@@ -1,0 +1,11 @@
+/* Author and expert box. */
+.__PREFIX__-author{display:grid;gap:1em;margin-block:1.5em}
+.__PREFIX__-author__person{display:flex;gap:1em;align-items:flex-start;padding:1em 1.2em;border-radius:10px;background:color-mix(in srgb,currentColor 5%,transparent)}
+.__PREFIX__-author__person>div{min-inline-size:0}
+.__PREFIX__-author__img{inline-size:64px;block-size:64px;border-radius:50%;flex:none}
+.__PREFIX__-author__role{margin:0;font-size:.8em;text-transform:uppercase;letter-spacing:.04em;opacity:.7}
+.__PREFIX__-author__name{margin:.1em 0 .2em;font-weight:700}
+.__PREFIX__-author__name span{font-weight:400;opacity:.8}
+.__PREFIX__-author__creds{margin:0 0 .3em;font-size:.9em}
+.__PREFIX__-author__bio>p{margin:.3em 0}
+.__PREFIX__-author__links{margin:.4em 0 0;display:flex;flex-wrap:wrap;gap:.3em .9em;font-size:.9em;overflow-wrap:anywhere}

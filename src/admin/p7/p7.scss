@@ -1,0 +1,190 @@
+// Works with your plugins (stage P7).
+// ⛔ Logical properties only; colours from the kit's tokens so the dark scheme stays readable.
+
+.zseo-guide {
+	white-space: nowrap;
+}
+
+.zseo-works {
+
+	h3,
+	h4,
+	summary,
+	dt {
+		color: var(--zak-text, #1d2327);
+	}
+
+	.components-card__header {
+		flex-wrap: wrap;
+		gap: 6px 16px;
+	}
+
+	.zseo-card-title {
+		margin: 0;
+		font-size: 14px;
+	}
+
+	.zseo-w-group h3 {
+		margin-block: 18px 8px;
+		font-size: 13px;
+		text-transform: none;
+	}
+
+	.zseo-w-list {
+		display: grid;
+		gap: 10px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.zseo-w-item {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 10px 20px;
+		margin: 0;
+		padding-block: 14px;
+		padding-inline: 16px;
+		border: 1px solid var(--zak-border, #dcdcde);
+		border-inline-start-width: 4px;
+		border-radius: 6px;
+		background: var(--zak-surface, #fff);
+		color: var(--zak-text, #1d2327);
+
+		&.is-on {
+			border-inline-start-color: #007017;
+		}
+
+		p {
+			margin-block: 4px 0;
+			max-inline-size: 70ch;
+		}
+	}
+
+	.zseo-w-item__text {
+		flex: 1 1 260px;
+		min-inline-size: 0;
+	}
+
+	.zseo-w-item__name {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 4px 10px;
+		margin: 0;
+		font-size: 14px;
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-w-item__state {
+		font-size: 12px;
+		font-weight: 400;
+		color: var(--zak-muted, #50575e);
+	}
+
+	.zseo-w-item.is-on .zseo-w-item__state {
+		color: #007017;
+		font-weight: 600;
+	}
+
+	.zseo-w-item__switch {
+		flex: none;
+
+		// The switch's label names the plugin for screen readers; the row already shows it.
+		.components-toggle-control__label {
+			position: absolute;
+			inline-size: 1px;
+			block-size: 1px;
+			overflow: hidden;
+			clip-path: inset(50%);
+			white-space: nowrap;
+		}
+	}
+
+	// A row's checkbox names its store for screen readers; the row already shows the name.
+	.zseo-w-pick .components-checkbox-control__label {
+		position: absolute;
+		inline-size: 1px;
+		block-size: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
+	}
+
+	.zseo-w-tag {
+		display: inline-block;
+		padding-block: 1px;
+		padding-inline: 7px;
+		border-radius: 10px;
+		background: var(--zak-accent, #3858e9);
+		color: #fff;
+		font-size: 11px;
+		font-weight: 600;
+	}
+
+	.zseo-w-rest summary {
+		padding-block: 10px;
+		cursor: pointer;
+		font-weight: 600;
+	}
+
+	.zseo-w-fields {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+		gap: 16px 20px;
+		align-items: start;
+	}
+
+	.zseo-w-hours textarea {
+		font-family: Menlo, Consolas, monospace;
+	}
+
+	.zseo-w-problems {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px 18px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.zseo-w-address,
+	.zseo-w-endpoints dd {
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-w-endpoints {
+		margin: 0;
+
+		dt {
+			margin-block-start: 12px;
+			font-weight: 600;
+		}
+
+		dd {
+			margin-block: 4px 0;
+			margin-inline: 0;
+		}
+
+		code {
+			display: inline-block;
+			max-inline-size: 100%;
+			white-space: pre-wrap;
+			overflow-wrap: anywhere;
+		}
+	}
+}
+
+// The dark scheme: the green of "working" must stay readable on a dark surface.
+.zak-shell.is-dark .zseo-works {
+
+	.zseo-w-item.is-on {
+		border-inline-start-color: #68de7c;
+	}
+
+	.zseo-w-item.is-on .zseo-w-item__state {
+		color: #68de7c;
+	}
+}

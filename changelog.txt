@@ -1,0 +1,430 @@
+=== Zinn® SEO changelog ===
+
+Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
+
+== Changelog ==
+
+= 0.17.62 =
+* Every e-mail Zinn® SEO sends is now written in plain words for someone who is not technical: first what happened and what it means for your site and your visitors, then whether you need to do anything and the one next step, with its link. Codes, status numbers, file names and PHP's own messages come last, under "Technical details (for you or your developer)". This covers the malware scan, a code fix switched off, Safe updates (an update undone, a round of updates tested), new broken links, missing pages, your content copied elsewhere, a wave of spammy links, spam a hack may have added and the Fix it on autopilot reports.
+* New: Site care now tells you when your site's background jobs are running late. Many plugins (WooCommerce and others) keep a list of jobs to do out of sight, such as sending order e-mails. When 200 or more of them are overdue for 15 minutes or longer, you get one e-mail that says what it means (customers may get their e-mails late), and an urgent one if the jobs have stopped altogether. One e-mail per backlog; you can turn it off on its own in Settings → Alert e-mails ("Background tasks running late").
+* "A sudden wave of spammy links to your site" is now its own kind of alert e-mail, so turning off "Your content copied on another site" no longer turns it off too.
+
+= 0.17.61 =
+* Site care's error e-mails now say, in plain words, what happened, whether visitors were affected, whether you need to do anything, and the one next step. The technical details (the code behind it, the file and line, PHP's own message) come after, for you or your developer.
+* A page that breaks: the e-mail now names the page (its address, without the part after "?", and how it was asked for), the theme or plugin behind it, and what to do: update it when a newer version exists, send its developer the details, or let the AI suggest a fix from the Errors screen.
+* An error in a background job on your server (a command-line task run by your host, a developer or a script, or a scheduled task) now comes in its own e-mail, which is not marked urgent. It says visitors were not affected and that usually nothing needs doing. Before, it said a page had broken and visitors might have seen an error page. You can turn these e-mails off on their own in Settings → Alert e-mails ("Errors in background jobs on your server").
+* Fix: an error in a command typed into WP-CLI (wp eval) was listed twice on the Errors screen, once as "Unknown code". It is now one problem, named as WP-CLI. Errors already listed twice are merged the next time the logs are read.
+* The Errors screen explains "Call to a member function … on null" in plain words.
+* Fix: on sites with a persistent object cache (Redis, Memcached), a background job you started (such as applying a link plan) could be reported as started and then never run, because another task's stale copy of WordPress's list of missing settings hid it. Background jobs now read their own record from the database when the cache says it is missing, so a started job always runs.
+
+= 0.17.60 =
+* Fix: when a page, post or product stops being published (back to draft, pending review, private, the bin, or deleted), IndexNow is now told the address it had while published, the one search engines know. Before, it was told the draft's own address (such as ?post_type=product&p=123), which no search engine knows, so they never learned the real page was gone.
+* Fix: when a published page's address changes (a new slug or parent), IndexNow is told the old address as well as the new one.
+* WordPress's own query addresses (?p=, ?page_id=, ?post_type=, ?preview=) are never sent to IndexNow on a site with pretty permalinks.
+* Fix: on PHP 7.4, working out which addresses move when a site leaves plain permalinks no longer logs a PHP warning ("strpos(): Empty needle").
+
+= 0.17.59 =
+* Big and busy sites: when the link plan, Fix it on autopilot or image text change many pages, each page is now saved without other plugins' save actions, so translation, search, AI and other plugins do not queue work for every page (on one large site a single apply of 2,403 pages made them queue about 13,900 tasks). WordPress's own save work and Zinn® SEO's still run, and addresses are never changed. A site whose other plugins must react to each change can turn on "Let other plugins react to every page a bulk change saves" in Settings → Background jobs; then the job slows down by itself when those plugins queue work.
+* Background jobs keep their memory flat on very large sites: every step lets go of what it read as it goes and ends early, never failing, if its memory still grows too far. It carries on in the next step.
+* The link plan, Fix it on autopilot, structured data and image text ask before changing 100 pages or more, and say how many.
+
+= 0.17.58 =
+* Fix: a background job that paused to keep your site fast now carries on when its pause ends, also on hosts that run WordPress's scheduled tasks from the server's own cron. A long scheduled task of another plugin could drop the one-off task that ends the pause, and the job then waited up to 15 minutes. Zinn® SEO now keeps its own scheduled tasks when that happens, and a visit to your site starts the job again if its task is missing anyway.
+* Fix: a job whose very first step is turned away (another background request held the site's turn at that moment) is tried again 30 seconds later instead of waiting up to 15 minutes.
+
+= 0.17.57 =
+* New: a Zinn® Ads card among the Zinn® services on this plugin's own screens — Google Ads management that asks before it spends, with a click-fraud shield free on Zinn® hosting. It links to the page in your language and is never shown on a footprint-free site or in no-trace mode.
+
+= 0.17.56 =
+* Background jobs now look after any site on their own. Before each step they check how your site is doing: how long its requests take to start, the server's load, how late its scheduled tasks are and how many Action Scheduler tasks (from any plugin) are waiting past their time. When the site is busy the steps get shorter and it rests between them; when it is struggling, or other plugins' scheduled tasks are already behind, the job pauses and the screen says "Paused to keep your site fast — resumes automatically." It carries on by itself once the site has recovered, and still finishes.
+* Background steps keep back the second or so the request that starts the next step takes, so each request stays under five seconds on hosts where that request is slow.
+* A job's background requests are limited to 30 a minute and counted on the job, so nothing can start steps in a loop.
+
+= 0.17.55 =
+* Alert e-mails say clearly that Zinn® SEO sent them: they come from "Zinn® SEO on <your site>", the subject starts with [Zinn® SEO], and the last lines name the plugin, link to the new Settings › Alert e-mails and stop that kind of e-mail in one click.
+* The same alert again (the same error, the same finding) is no longer e-mailed every time it happens: it is counted, and one e-mail at the end of the period (an hour, a day or a week; a day unless you choose) says how many times. Each kind of e-mail can be switched off in Settings › Alert e-mails.
+* Fix: on a site with a persistent object cache that disconnects when the request ends (Redis), a job queued from WP-CLI waited for the 15-minute watchdog: the request that starts it was refused. It now starts as soon as the command ends. A fatal error, a page that ends the request and a code fix's test record what happened in the same safe way.
+* Background steps run from your site's own requests now finish within about four seconds of the request's start, so each request stays under five seconds.
+* Pro: the autopilot's internal-link fix looks up the old and binned addresses of a whole batch of pages in one database query instead of one per link: on a site with many renamed pages each lookup could take over a second. What took a while is looked up once per run, also while a link waits for your site's answer.
+* Development: the plugin JavaScript lint check installs its tools once, never several times side by side.
+
+= 0.17.54 =
+* Services: our team can now move your site from Yoast SEO, Rank Math or another SEO plugin for you, as a one-off service priced by Zinn®. We use this plugin's own importer, check every page against the old plugin and send you the report showing nothing changed. Order it from the expert help card on the Services screen, or from "Let our team do it" on the Move from another SEO plugin screen. You share a login with us yourself; the plugin never signs anyone in.
+
+= 0.17.53 =
+* Fix: a background step that ends the request before it finishes (a page that redirects and exits, a fatal error, another plugin that stops PHP) no longer leaves its job idle until the 15-minute watchdog. The step is counted, the job carries on at once after the usual rest, and after three such steps in a row with no page to blame it stops with the reason.
+* Fix: a job queued from WP-CLI (for example the analysis of a page saved with `wp post update`) starts as soon as the command ends, by the site's own background request, instead of waiting for the watchdog. A command that runs a job to the end still runs it in the terminal. Pro: `wp zinn-seo autopilot apply` runs the jobs queued ahead of it instead of waiting.
+* Pro: the autopilot's internal-link fix no longer runs your site's search to check a link to a search, date or author page (a second each on a large site, so a batch with many such links took half a minute a step and read one page). Checking a batch's links keeps to the step's time, and what took a while to check is kept for the rest of the run. The link index, link check, CSV import and the other background tools look pages up the same quick way.
+* Pro: on a busy site, the change history recorded an autopilot run as "0 changes" when its link changes needed another background step, so the run could not be undone from the history. The count is kept now.
+* IndexNow: a page that was changed and then put back before it was sent (an autopilot apply and its undo) is no longer sent. Only pages that differ from what the search engines last received are sent; an address you send yourself always is.
+
+= 0.17.52 =
+* Pro: the autopilot's internal-link fix keeps to each background step's time when your own pages answer slowly. It asks your site about several links at once, only as many as fit in the step, keeps every answer for the rest of the run and reads several pages a step. A step used to work up to a minute on one page. A page that answers too slowly is never taken for a missing page, and a link whose page never answers is not taken for a working one: the run lists how many links could not be checked.
+* Pro: the broken link check keeps to each step's time too. A page with many slow links is finished over several steps instead of holding one step until every link has answered.
+* Fix: a notice that has been resolved no longer outranks the notice that resolved it. A low balance, short forecast or paused-checks notice older than "checks resumed" is no longer shown or counted, and an Update Guard incident that has been resolved is not either.
+
+= 0.17.51 =
+* Background jobs keep your site's pace: each step works about five seconds (it was twenty). When your pages answer slowly, the server is busy, or it is your quiet hours (Settings, Jobs), steps get shorter and the site rests between them. Every job still finishes, the same from the loopback, cron and WP-CLI.
+* Fix: the outbound links check asks again with a small GET before calling a site broken (some sites refuse HEAD), and a 304 answer counts as live. After a cancelled build the report no longer says it is waiting.
+* Planned link anchors no longer start with a preposition, end on a filler word ("copy that") or use one common word on its own.
+* Easy Property Listings support is removed (the plugin is closed on WordPress.org). Houzez, Estatik, Classified Listing, MotoPress Hotel Booking and VikBooking stay.
+
+= 0.17.50 =
+* Pro: when a Pro trial ends without a paid plan (or a licence lapses), every Pro feature stops and nothing on your site breaks. Pro jobs, schedules, the Update Guard's watch, autopilot, link plans, site care, A/B tests, scheduled changes and AI on Pro stop starting new work; a running A/B test or a scheduled sale title goes back to your own wording. Visitors keep the free plugin's SEO, redirects keep working, and an address Pro used to answer (a /go/ affiliate link, a page's .md address, the news sitemap) sends them on instead of showing a missing page. The Pro screens and the AI agent tools say "Upgrade to keep it, or switch to the free version". Your settings and everything you set up are kept, and paying brings it all back at once.
+* Fix: a redirect given conditions in Pro (members only, phones, a country) no longer sends every visitor away when those conditions are not being checked; a redirect for pages that no longer exist still answers. The redirects Pro kept in .htaccess are removed when fast redirects stops, so a rule you changed or deleted no longer answers.
+
+= 0.17.49 =
+* WordPress MCP adapter updated to 0.7.1 (MCP protocol 2026-07-28, session-storage security fix); no deprecation notice from the bundled copy.
+
+= 0.17.48 =
+* Fix: a page whose shortcode or filter sends visitors elsewhere and stops the page (a members-only wall) no longer stalls background jobs that read every page (the link index, outbound links, the link plan, link fixes, analysis). The redirect is refused while Zinn® SEO reads the page; if the page still ends the request, the job lets go of its lock, carries on, skips that page with a named reason until it changes, and finishes saying "N pages could not be read" with their IDs. Fix: help links to the 23 screen guides now open their section of the how-to guide directly, without a redirect.
+
+= 0.17.47 =
+* Language packs refresh after background updates.
+
+= 0.17.46 =
+* Fix: Zinn® SEO now runs one background job at a time on a site. A job started while another runs waits its turn, is never dropped, and its screen says which job it is waiting for; two jobs no longer slow the site by stepping at the same moment. Fix: the Tajik translation keeps the name Elementor as written.
+
+= 0.17.45 =
+* Moving from Rank Math: a theme's Rank Math breadcrumb trail keeps printing, in its wording (home label, separator, archive, search and 404 words, date steps, parent categories, taxonomy names, product tags), and products and custom types keep their trail. Sharing tags keep a post's tags, the publisher on lists and Rank Math's per-type "Written by" lines. "Page 2 of 3" keeps its separator. Attachment pages go to their post. The breadcrumb settings are on Links › Breadcrumbs.
+
+= 0.17.44 =
+* Fix: link fixes, the link plan, outbound link edits, broken and incoming link fixes and internal link updates now change what visitors see on pages built with Elementor, Beaver Builder, Bricks, Divi, Oxygen, WPBakery, Breakdance and Thrive, not only the content box; each change makes one revision, can be undone with its run, and is reported done only when the page as visitors get it shows it. Fix: the Fix it on autopilot estimate shows what each AI replacement of a gone page costs before the links fix starts. Fix: AI link anchors never use words that say nothing about the page ("your content"), and a gone page is replaced only by a page that clearly matches it, never by a media file. Fix: proposals of an older run show at once after an update, and pages held by another run are not counted. Fix: the optimiser's score follows a read that has finished, and a slow page no longer holds a links-fix step past its lock.
+
+= 0.17.43 =
+* Development dependencies updated.
+
+= 0.17.42 =
+* Moving from The SEO Framework: an author's own title, description, robots, canonical, sharing texts, fediverse handle and redirect come over; an author's page names the author's own X and fediverse accounts.
+
+= 0.17.41 =
+* Fix: background jobs (the link plan, sitemaps, AI runs) run at full speed on a host that runs WordPress cron from the server (system cron through WP-CLI) — not one step every 15 minutes. Fix: the AI structured data estimate uses what your own site's runs cost per page, once you have run one. Fix: in Pro Site care, an error repeated with a different file path each time is one problem with a count, not hundreds.
+
+= 0.17.40 =
+* Fix: in the Pro Link plan, a page nothing links to always gets a link in when a page of its topic could carry one — a full page gives up a link the site does not need. Fix: reading back an import again from WP-CLI no longer logs PHP warnings.
+
+= 0.17.39 =
+* Fixed: Site care no longer reports a translated WordPress (for example British English) as a changed core file: it checks the files of the language package that was installed.
+* Fixed: Site care no longer reports a code comment as a hidden log-in; comments never run. Real code is still found.
+* Fixed: The database clean-up counts and optimises only tables with real space to give back (at least 32 MB and 10% of the table), shows the true figure, and no longer rebuilds every table of a large database.
+* Fixed: Filling structured data with AI no longer counts or prices pages it can never fill (an empty cart or checkout page, a page set to no article type), and when AI is not set up yet it says so instead of naming one page's problem.
+* Fixed: The WP-CLI optimiser read no longer offers to spend an unknown amount on a site that is not connected; it says how to connect.
+* Fixed: Counts in 13 languages (Arabic, Polish, Russian, Czech, French and others) now use the right word form for the number shown, for example Arabic for one page.
+
+= 0.17.38 =
+* Pro: the AI Update Guard, complete. Every plugin, theme and WordPress update is checked against your site (your WordPress and PHP, the plugins it needs, your WooCommerce, the PHP functions it calls, and versions that already failed here), then tried on a copy of your site that visitors never see: your key pages, the signed-in screens, the shop, cart and checkout, your forms and the login are read with the version you have and with the new one, PHP errors are caught and every page is compared. Only an update that passes is installed, the exact version that was tested, with the version before kept; if your site breaks afterwards, the version before is put back by itself before the next page is built, also for updates made on the Updates screen. A schedule tests the waiting updates every day or week and installs the ones that pass, with a plain-words summary. The AI explains a failed test and can write a small code fix for you to approve in Site care.
+* Fixed: Site care's schedules and alerts could not be saved.
+* Fixed (Pro): the Link plan no longer stops on the first page that has a number of five digits or more in it (such as 10000). A plan whose build fails now says so and why, and a new one can be started; a plan left "being built" by the earlier fault is shown as failed.
+* Fixed (Pro): Fix every internal link no longer proposes the same link twice when a step is cut short or two background runs meet, counts every page it reads, and reads several addresses at once, so large sites finish much faster.
+* Fixed (Pro): Fix every internal link leaves members' links alone. A page that sends visitors who are not signed in to the sign-in page, or any temporary (302 or 307) redirect, is not a moved page; only a permanent redirect (301 or 308), your own redirects and WordPress's old addresses are fixed.
+* Changed (Pro): a link to a page you keep out of search on purpose is no longer proposed for removal: it still works for visitors. The run counts these links for your information.
+* Fixed (Pro): an old address that now leads to an uploaded file is listed as a redirect, not as an unpublished page, and is never approved by a rule.
+
+= 0.17.37 =
+* admin kit: language packs for served locales; matrix re-rendered
+
+= 0.17.36 =
+* Pro: Outbound links report. Links, Outbound links lists every site your pages link to, the one with the most links first, with how many links, on which pages, with which words and whether each link is followed, nofollow, sponsored or ugc. Find a site, or filter by status, link type and flag. Each site is checked once (live, sends visitors elsewhere and where, broken, refuses checks); a domain that is gone or parked for sale is flagged as expired, and spam words are flagged too. Change or remove one link where it is, with a preview first, or every link to a site at once, reviewed first; each page keeps a revision and a whole change undoes in one click. Built from the internal-link index's own read of every page, so it costs no second scan, and kept up to date as pages are saved.
+* Free: the Links screen's Outbound links tab shows what the report does in Pro.
+
+= 0.17.35 =
+* Fixed: Site care no longer reports two normal things as malware: a settings file other security plugins keep in the uploads folder that stops before any code runs (All In One Security's firewall rules), and a plugin updated from its own home (such as the Zinn® plugins) compared with the WordPress.org release.
+* The public demo now shows the Site care screen to visitors (read only).
+
+= 0.17.34 =
+* Pro: Fix it on autopilot. Fix the whole Fix it list in one go: meta descriptions for pages that have none, an own title for pages that share one, alt text for images, structured data, the internal links (with the site link plan) and the one-click fixes, across the whole site, some kinds of fix or one section. See what it will fix and what it costs before it starts (about $0.0003 a description, $0.0002 an alt text on Zinn® credits, measured), approve it all or one by one, and undo a whole run in one click; every change keeps the value it replaced and a later edit is never overwritten. It can run every week, as you, with an e-mail summary, and across every site of a multisite network.
+* Pro: Fix every internal link in one click. One sweep finds the links that hop through a redirect or a chain, land on a missing, trashed, unpublished or hidden page, or point at the wrong language, and points each at the live page in the right language; the AI proposes the closest page for one that is gone. Reviewed first, one revision per page, undone in one click.
+* Free: Fix it and the Link updates tab show the way to fix the whole site with Pro.
+* Fix: with "print the library's alt text" on, the content analysis now sees the alt text visitors get, so Fix it no longer lists those images.
+
+= 0.17.33 =
+* Pro: Site care with AI. Scan for malware and clean it up in one click (backed up first, moved to quarantine, never deleted, checked again, undoable); have your error logs read, grouped and explained with the fix; clean up the database with sizes first and a backup before anything goes; and let the AI write small code fixes you read, test and approve. SEO › Site care.
+
+= 0.17.32 =
+* New, free: the live content optimiser. As you write, in the block editor, the classic editor, Elementor and (Pro) other page builders, a score from 0 to 100 for how well your post covers the words, names, questions and headings of the 10 pages that rank for your focus phrase, with what to add, what you use too often, and each top page's length and headings. Reading the top 10 for a phrase costs $0.05 of Zinn® credit once and is kept for every post that targets it; the score is worked out in your editor as you type, with nothing sent. 58 languages, 61 countries.
+
+= 0.17.31 =
+* New: Search appearance › Content types. Every content type on your site, including those added by other plugins (named by plugin), gets its own search, sitemap and content-score settings. Types with no page of their own, such as FAQs and reviews shown inside other pages, are left out of scores by default, and "Hide this type from search" shows what will change first and can be undone.
+
+= 0.17.30 =
+* The bulk editor gets a structured data column, and AI can fill FAQ, how-to, article and product structured data for many pages at once.
+
+= 0.17.29 =
+* Fixed: the hacked-site scan no longer raises false alarms about your own site: links to your own pages kept hidden for a pop-up or a message, WordPress embeds of other sites and of known video and photo services, pages in a language your site publishes (Zinn® Translate, Tranzly, Polylang, WPML, TranslatePress), items that have no page of their own, and a one-character difference between what visitors and Googlebot see. Real hacks (hidden spam links, the Japanese keyword hack, cloaking, rogue scripts) are still caught.
+* New: "This is normal" beside each scan finding. It is never shown or e-mailed again, and "Show them again" brings them all back.
+* The weekly spam e-mail now says clearly that it comes from Zinn® SEO, explains each finding in plain words and lists only what is new.
+* Fixed: a breadcrumb step is never printed without a name, so Search Console never reports "Either 'name' or 'item.name' should be specified".
+* Fix it: "Visitors keep asking for addresses that do not exist" now counts lost pages only, not bots' noise (missing image sizes, login probes, crawler loops).
+
+= 0.17.28 =
+* AI agents (MCP): this plugin's tools now always appear to your AI app, even when another Zinn® plugin on the same site is an older version.
+* Every screen now shows "Guide to this screen" under its menu, opening that screen's step-by-step guide on zinnseo.com in your language.
+
+= 0.17.27 =
+* Pro: AI internal linking for the whole site, done like an SEO expert. The new Link plan (in the side menu, just under Links) plans every internal link at once: a hub page for each topic, every page nothing links to linked, the right number of links for each page's length, and natural, varied link words taken from your own sentences, never in headings or to hidden or redirected pages. Review it all, by topic or one by one, then add the links in the background with a revision per page, and undo a whole run in one click. New pages get their links as you publish, and a link health score shows how the site and each page are doing. Built and measured on a 100,000-post site.
+* Free: the orphan report, Fix it and the editor's link suggestions now show the way to do it for the whole site with Pro.
+
+= 0.17.26 =
+* A sleek side menu: every screen in nine clear sections (Start, Content and writing, Search appearance, Technical SEO, Insights and rankings, AI and credit, Agency and clients, Settings and tools, Account and help), with icons, the screen you are on highlighted and the number of issues waiting in Fix it. The plugin now uses the full width of the window, and on a phone or tablet a bar at the top opens the menu. Every bookmark and link still opens the same screen. New: Export / import settings has its own screen, says exactly what the file carries, and a new site can start from another site's settings in the first step of the guided setup.
+
+= 0.17.25 =
+* AI agents (MCP) can now do everything on Settings › AI providers: see which AI provider is connected, test it, refresh the model lists, add a model by name and choose the model for each kind of work. Your API key is still entered only by you. The full changelog now lives in changelog.txt.
+
+= 0.17.24 =
+* Pro: marketplace seller dashboards and order pages stay out of search and sitemaps. One database lookup fewer per page.
+
+= 0.17.23 =
+* Fix duplicate structured data in one click: a preview first, then your theme's or plugin's own setting does it, with an Undo; nothing on your pages changes.
+
+= 0.17.22 =
+* Per-author SEO controls with a 301, and an authors sitemap that leaves out hidden and moved authors; click a suggested title to edit it; breadcrumb rules per content type and shorter trails; TikTok in the knowledge graph; Bricks page descriptions (Pro); sitemaps readable without XSLT, never kept by page caches, at the site root on multilingual sites.
+
+= 0.17.21 =
+* Moving from another SEO plugin is now safe by construction. Before you start, Zinn® SEO checks your site: the plugin you move from and its version, page caches and CDNs, a multilingual plugin, and that every step can be checked on your real pages.
+* After the copy, everything it wrote is read back from your database before anything else changes. The comparison and the switch-off stay closed until it is all stored.
+* The switch reads your home page, posts, pages, products, categories, robots.txt, the sitemap index, llms.txt and every language's home page just before and right after. If anything is lost, your old plugin is switched straight back on and the move is undone by itself. Your sitemaps are built before the switch, so the sitemap index never stands empty.
+* Page caches are emptied after the switch (WP Rocket, LiteSpeed Cache, W3 Total Cache, WP Super Cache, SiteGround, Zinn® Cache, Cloudflare through Pro and more); a cache Zinn® SEO cannot reach is named so you can empty it.
+* WP-CLI: `wp zinn-seo import preflight`, `verify` and `move` (the whole move in one command).
+
+= 0.17.20 =
+* The conflict check no longer reports a theme breadcrumb trail as a duplicate when Zinn® SEO prints none.
+
+= 0.17.19 =
+* A move from another SEO plugin now keeps its finer choices too: SureRank's sharing picture on the search results page, The SEO Framework's card size on X for a single post, SEO Ultimate's dates ("March 1st, 2026") and the page number it adds to descriptions on page 2 and on, Premium SEO Pack's home page description on page 2, and the article pictures and descriptions Schema & Structured Data for WP gave search engines.
+* New: a card size on X for a single post or page, a page number after descriptions on page 2 and on, and two structured data choices for articles (the picture in Google's three shapes, the excerpt as the article's description).
+
+= 0.17.18 =
+* Zinn® SEO health checks count only real pages; structured data repeats are told from other things; images keep their alt text after a move from Rank Math; the internal-link index builds far faster; a site with many settings can still change them.
+
+= 0.17.17 =
+* A move from Rank Math keeps its Instant Indexing: IndexNow stays on, with the key search engines already know.
+
+= 0.17.16 =
+* Moving from Yoast SEO, All in One SEO, SEOPress, The SEO Framework, Slim SEO, Squirrly SEO, SmartCrawl, SureRank, WP Meta SEO, Premium SEO Pack, SEO Ultimate and the redirect and structured data plugins now keeps what every page showed: the robots.txt lines other plugins add (such as WooCommerce's), previous/next links, the breadcrumb wording and the theme's old breadcrumb call (Pro), sharing tags, the organisation's details, and every language of a multilingual site.
+* New settings: breadcrumb wording (Links › Breadcrumbs); previous/next links and page 2 rules (Search appearance); author and date archives sent to the home page (Clean-up); the X text and picture, the site name and extra tags of shared links (Social); the site's name in search results and the organisation's kind, telephone and address (Structured data).
+
+= 0.17.15 =
+* Google Docs™ add-on: the path to your key is built from the screen names your WordPress shows (SEO › Writing › Google Docs™), so the help matches the menu in every language; the Writing tab now reads Google Docs™.
+
+= 0.17.14 =
+* New settings on the Sitemaps, Search appearance, Social and Structured data screens: the sitemap index address, empty terms in the sitemap, how descriptions are shortened, page 2 and on, hidden products, the full set of sharing tags, a badge over shared images, company registration details, breadcrumbs and shop product lists.
+
+= 0.17.13 =
+* Big sites: scoring the SEO and readability of every page now uses the same small amount of memory on a site with a million posts as on a small one.
+
+= 0.17.12 =
+* Google Docs™ add-on: the connection help and the "key is not valid" message now name the right screen, SEO › Writing › Google Docs™, in every language.
+
+= 0.17.11 =
+* Moving from Rank Math keeps every title, description, robots rule, sitemap address, sharing image and tag the site had, and never lists empty archives; licence e-mails always use the site's https address.
+
+= 0.17.10 =
+* Moving from Rank Math keeps every title, description, robots rule, sitemap address, sharing image and tag the site had; licence e-mails always use the site's https address.
+
+= 0.17.9 =
+* Big sites: the check that warns when two pages share a focus phrase, and the internal link suggestions that use focus phrases, now take the same short time on a site with a million posts as on a small one. Sites scored before this version are brought up to date once, in the background.
+
+= 0.17.8 =
+* Safer AI rewrite: the text of a block sent for a rewrite, and the before line shown beside it, are now read as plain words with every tag removed and symbols such as & shown as they should be.
+
+= 0.17.7 =
+* Help on every screen: the question mark at the top of each Zinn® SEO screen now opens the step-by-step guide for that screen, in your language, and Settings → AI providers has its guide in the Help tab.
+* Faster, lighter scoring of the whole site: scoring every page's SEO and readability no longer keeps a temporary copy of each page, so it uses the same small amount of memory on a site with a million posts as on a small one.
+
+= 0.17.6 =
+* Page builders: re-opening the builder panel reloads it cleanly.
+
+= 0.17.5 =
+* More dependable AI app sign-in (MCP): Claude, ChatGPT and other AI apps connect to your site the same way whether a visitor, a scheduled task or a WP-CLI command started WordPress.
+
+= 0.17.4 =
+* Privacy: the recommended AI models list is downloaded only when you tick its daily check under Settings → AI providers; connecting to Zinn® credits no longer turns it on. In the Pro edition, a site connected to Zinn® keeps its list current, and the screen says so.
+
+= 0.17.3 =
+* When Semrush, SE Ranking or Moz turns down your API key, the message now links straight to that company's API keys page (or its billing page if the plan is the problem), so you can fix it in one click.
+
+= 0.17.2 =
+* Maintenance: security review notes added to the code. Nothing changes for you.
+
+= 0.17.1 =
+* The readme now explains what the Zinn® CDN sends and to whom.
+
+= 0.17.0 =
+* AI assistants such as Claude and ChatGPT can now check and improve your SEO for you (off until you switch it on): every action is a tool, every change can be tried first, approved by you, logged and undone. Pro: Optimise this site, a guided run. The Arabic screens mirror fully, and Zinn® SEO Pro joins the Page Builder Sandwich Pro + Tranzly Pro bundle.
+
+= 0.16.3 =
+* New: Services offers Zinn® Chat — live chat with an AI agent that answers your visitors from your own pages.
+* New: watch what Google's first page shows for your brand, and give your visitors a public status page with your own logo, colours and address — both from Services.
+
+= 0.16.2 =
+* AI model lists keep themselves current: retired models leave every picker and saved choices move to the newest model of the same family.
+
+= 0.16.1 =
+* Lighter start for WP-CLI commands: works within a 128 MB memory limit beside WooCommerce and other large plugins.
+
+= 0.16.0 =
+* New: Zinn® CDN in one click. On SEO, CDN your images, CSS, scripts and fonts load from servers close to every visitor, for a site hosted anywhere: your domain, hosting and pages stay exactly as they are, nothing is added to your visitors' pages, and switching it off puts everything back at once. Paid per GB from your Zinn® credit, with a small monthly minimum. If the credit runs out the CDN pauses by itself and your site keeps working. Sites on Zinn® hosting keep the Premium CDN.
+* New: Fix it shows when the biggest image or block on your pages appears late for real visitors, with the CDN offered beside it.
+
+= 0.15.13 =
+* Fix: AI writing help on a model that thinks before it answers (such as Gemini 3.5 Flash) no longer runs out of room mid-answer, and costs less.
+
+= 0.15.12 =
+* Fix: SEO, Credit lists the price of a Google Trends check beside the other research tools.
+
+= 0.15.11 =
+* Translations now arrive as small language packs for the languages your site uses, so the plugin download is much smaller.
+
+= 0.15.10 =
+* New: choose the AI model for the writer, spelling and tone, and AI pictures. Only the current models of your connected AI providers are listed; a newly released model appears by itself and the oldest one goes.
+
+= 0.15.9 =
+* New: SEO, Zinn® price list — every Zinn® service that helps your site with today's price read live, what you already have, and an order in two clicks.
+* New: research on credit — a report on any website (visits, searches, top pages and links) and Google Trends (when people search, and the searches rising fastest); Pro: your share of search visibility against rivals, measured on a schedule.
+* New: the indexing console — send pages to IndexNow, Bing and Google by hand, keep pages out of automatic sending with simple rules, see every answer, send the failed again and download it all.
+* New: more from Bing Webmaster Tools — crawl problems, how much Bing crawls, linked pages and keyword research; Pro sets Bing's crawl rate.
+* New: refresh shared links on Facebook when a page's share title, text or image changes, with your own Facebook app.
+* New: the full-site audit's problems now appear in Fix it.
+* New (Pro): visitors from ChatGPT, Perplexity, Gemini, Copilot and Claude per page; ad earnings per page beside Google clicks; safe updates (each update checked against your WordPress and PHP, and your pages compared after every update); the days you changed your SEO and the alerts marked on every score chart, with a copy for Google Sheets.
+
+= 0.15.8 =
+* Fix: WP-CLI commands that only read your plugins, themes or settings no longer start Zinn® SEO's features, so they use the same memory as if the plugin were off (up to 14 MB less on a shop site).
+* Fix: the Services screen on a site not yet connected to Zinn® shows how to connect, with no failed request in the background.
+
+= 0.15.7 =
+* Writing: an AI writer for post ideas, drafts and full articles from a brief, and passages rewritten or expanded; a headline analyser; keyword lists you give your posts; spelling, grammar and tone checks in any language. Pro: a content planner that writes drafts in the background, guidelines from Surfer, Clearscope, MarketMuse, Frase and Semrush in the editor, an originality check, an AI image generator, affiliate links with click counts, a Google Docs™ add-on, and links between your own sites (Agency).
+* Structured data: carousels for archive pages and image licence details. Pro: news publishing (news article types, live blogs, Google News exclusion, stock tickers, newsroom policies), datasets, math solvers, quizzes from LearnDash, Tutor LMS and LifterLMS, accordions as FAQ questions, and the shop's returns, delivery and loyalty programme for the whole shop.
+* Works with: Relevanssi, SearchWP, ElasticPress and WP Search with Algolia; WooCommerce local pickup from your locations; Avada, SeedProd, SiteOrigin, Themify, Visual Composer, Cornerstone and Greenshift; Houzez, Estatik, Easy Property Listings, Classified Listing, MotoPress Hotel Booking and VikBooking.
+
+= 0.15.6 =
+* New: when a check finds a problem, the Zinn® service or plugin that solves it appears right beside it in Fix it, with its price: an expert clean-up beside a hack, faster hosting or a cache beside a slow server, index watching beside pages Google left out, a restore of the old site beside addresses visitors still ask for, a writer beside a thin page, and more. New findings in Fix it for a slow server, pages Google has not indexed, old addresses still asked for, visitors in another language and a long list of urgent fixes.
+* New: SEO, Services lists everything Zinn® can do for the site — links, articles, local citations, domains, monitoring, hosting, security, expert help, referrals and bundles — priced up front. You order on your Zinn® account in a new tab and nothing is charged from WordPress. Offers can be hidden, never repeat endlessly and never show to a client login.
+
+= 0.15.5 =
+* No change for sites: release checks (the WordPress.org standards check now sees what the release sees).
+
+= 0.15.4 =
+* Fix: the bulk editor's list opens at once on a very large site, even when you have far more images or other content than posts.
+* Fix: copying from another SEO plugin and changing many pages at once now use the same small amount of memory on a site with a million posts as on a small one.
+* Fix: building the internal-link report on a very large site no longer leaves millions of temporary rows in your database, and uses the same small amount of memory from the first page to the last.
+
+= 0.15.2 =
+* Clean-up and control: switch off what WordPress adds that search engines waste time on, smart robots defaults, RSS credit lines, a comment trap with no captcha, image alt text from patterns, internal links that follow a moved page, snippet controls, the main category, conflicts found and fixed in one click, feature switches, safe version rollback, and moves from eleven more plugins. Pro: scheduled SEO changes, a safe .htaccess editor and redirects for some visitors only. No-trace mode now leaves nothing in the REST API.
+
+= 0.15.1 =
+* Fix: Moz's key pair is sent as an Access ID and access secret, so the plugin package carries no field named like a licence secret.
+
+= 0.15.0 =
+* New: the research toolbox, paid per use from Zinn® credit. See where your business shows on Google Maps street by street, read your Google, Trustpilot and Tripadvisor reviews with alerts for new ones and a falling rating, see a competitor's traffic and top pages, and turn the questions people ask Google into an FAQ.
+* New (Pro): your prices and position on Google Shopping and Amazon, YouTube rankings, dated snapshots of the results page saved in your media library, brand mood, technology lookup, content briefs from the top ten with a draft in one click, and AI drafts of review replies and FAQ answers.
+
+= 0.14.0 =
+* Site authority: watch your Ahrefs Domain Rating with your own free key, your Open PageRank, or Zinn® Authority on credit — history, competitors (Pro) and an e-mail when a score goes up or down. Pro adds your own Majestic, Moz, Semrush, SE Ranking and Ahrefs accounts. Keys are kept by Zinn®, never in WordPress.
+
+= 0.13.2 =
+* A help link on a screen without a guide of its own now opens the step-by-step user guide on zinnseo.com.
+
+= 0.13.1 =
+* Fix: a client report's summary is shown in the client's own language and direction on every screen, so screen readers read it correctly.
+
+= 0.13.0 =
+* New (Agency): your agency's name, logo and colours on the plugin, our branding hidden from your clients, and client logins that see only the screens you choose — never prices, credit, keys or connections.
+* New (Agency): branded client reports from inside the client's WordPress — your logo and theirs, opened by a short summary in plain words, e-mailed on a schedule, kept up to date in a Google Sheet or Drive folder, and on a client page that needs no login.
+* New (Pro): hand any problem to a colleague or a client as a task with a due date, comments and a done tick, right from the Fix it inbox.
+* New (Pro): the same alerts you get by e-mail in Slack, Microsoft Teams, Discord, Telegram or your own webhook.
+* New (Agency): build landing pages from a spreadsheet or Google Sheet, one per row, with thin and look-alike pages held back so you only publish pages worth ranking.
+
+= 0.12.0 =
+* AI writing help on your own AI key or on Zinn® credits: titles, descriptions, alt text, structured data, FAQs and redirect maps suggested for you to check, whole-site runs that pause and resume, and plain-words explanations of Fix-it issues.
+
+= 0.11.1 =
+* Fix: choosing your Search Console property now sends your sitemap to Google straight away, even if you never came back to WordPress from Google's sign-in page.
+
+= 0.11.0 =
+* New: Google Search Console inside WordPress. Sign in to Google once and see the clicks, impressions and position of every page and search, which pages Google has indexed and why the others are not, and your sitemap is sent to Google for you — free.
+* New: Bing Webmaster Tools with your own free Bing key: your Bing searches and clicks, and the sitemap sent to Bing.
+* New: real-visitor page speed (Core Web Vitals) for the site and each template, with what slows it down and how to fix it.
+* New: job and livestream pages tell Google the moment they are published, changed or taken down.
+* New in Pro: the searches each page is one push from page one for, with the exact change and an AI rewrite in one click; page-two and seen-but-not-clicked searches; pages losing clicks with a refresh list; a topical map with writing briefs; every SEO change on your clicks chart.
+* New in Pro: title and description tests on real Google clicks — the difference is checked for chance and the winner is kept for you.
+* New in Pro: revenue from search with Google Analytics (no script added), crawler visits and wasted crawl budget with one-click fixes, Cloudflare edge redirects and cache clearing, Google reviews and posts, Apple Maps and Bing listing files, and a lab speed test of any page.
+* Fixed: a shop's Shop page was listed twice in the sitemap (once as the page, once as the product archive). Each address is listed once.
+
+= 0.10.0 =
+* New: works as one with Tranzly, Page Builder Sandwich, Zinn® Cache and Zinn® Chat. Your SEO titles and descriptions are translated together with each page, your title patterns and llms.txt summary exist in every language, and a page you hide from search stays hidden in every language.
+* New: a change of a title, description, redirect or site-wide setting reaches visitors straight away on a site with Zinn® Cache: exactly the pages you changed leave the cache.
+* New: the Zinn® Chat assistant answers from the same facts search engines are given: who you are, how to reach you, your opening hours and your main pages.
+* New: translations made before the two plugins worked together catch up. Fix it lists the translated pages that lack the search title or description their original has, and one click translates just those, in the background.
+* New: on a site with several languages Fix it counts a page and its translations as one job. The translations are shown beside it, per language, and are no longer added to the number of pages or the time.
+* Fixed: on a site with several languages the main llms.txt listed the pages of every language. It now lists the main language only and links each language's own file.
+* Fixed: with Page Builder Sandwich Pro, a page with an FAQ block printed its FAQ data a second time, with each question twice.
+
+= 0.9.2 =
+* Fixed: after many pages changed at once (a translation run, a bulk edit, an import) the sitemap refresh could rebuild the same files again and again and never finish. It now rebuilds each changed file once, carries on where it stopped if the server interrupts it, and ends.
+* Fixed: `wp zinn-seo sitemaps build` reported "The build stopped: pending" whenever a background build was already running. It now says a build is running, shows how far it is, and `--wait` finishes it in the terminal.
+* Fixed: a full sitemap build interrupted by the server could list some addresses twice.
+* Fixed: changes saved by two visitors at the same moment could miss the sitemap; none is lost now.
+* Fixed: a whole-site index check waiting for an answer asked every three seconds for as long as it took. It now asks less and less often and pauses after a day.
+* Fixed: deleting the plugin could hang when another plugin refused to delete its location pages.
+* Improved: a background job can no longer run two steps at once, and a job cancelled while a step runs stays cancelled.
+
+= 0.9.1 =
+* Fixed: the content analysis no longer stops on a page written in a language that has a translation of the plugin and no built-in readability profile. "Score every page" now finishes on sites in every language.
+* Fixed: the Fix it list is shown in each reader's own language (it could appear in the language of whoever opened it first).
+* Fixed: card and group titles are readable in dark mode on Fix it, Search appearance and Redirects.
+
+= 0.9.0 =
+* New: Rankings and checks. Connect the site to a Zinn® account and track your Google rankings, check which pages Google has indexed (one page or the whole site), find out whether AI assistants recommend you, watch your backlinks, audit the site with a link to each page to fix, and research keywords. Pay only for what you run; every check shows its price first.
+* New: Credit screen with your balance, how long it lasts, what is paused and why, and "Add credit" in a new tab. Notices in WordPress and by e-mail from your own site when credit runs low, a check pauses or resumes.
+* Pro: keyword research in the editor and per country and language, a focus phrase for every market, content gap against a competitor with drafts, a local rank grid, brand mentions, harmful-backlink review with a disavow file, and alerts for spammy link waves and copied content.
+* Fixed: the step-by-step guide links now open the guides at zinnseo.com/kb.
+
+= 0.8.0 =
+* Works with the plugins you use: a new "Works with" screen lists more than 50 plugins, shows which are found on your site, and lets you switch each one's part off. A plugin you do not use costs nothing.
+* Local business details (address, hours, phone, map position) for search engines and AI assistants. WooCommerce products in search with price, stock, brand and ratings; filtered shop pages, basket and checkout kept out. Advanced Custom Fields text counts in the content checks. FAQ blocks of Kadence Blocks and Spectra join the page's structured data.
+* Pro: product variants, delivery and returns in search, sold-out and discontinued rules, a Google Merchant feed with a readiness check; several business locations with a store finder and KML file; marketplaces (Dokan, WCFM, WC Vendors, MultiVendorX) with a sellers list and bulk fixes; forums, courses, memberships, events, jobs, directories, recipes, podcasts and video; Polylang, WPML and TranslatePress; the SEO panel and blocks in seven more page builders; multisite network settings, locks and a network sitemap; every page's head as data for headless front ends (REST, WPGraphQL).
+* Move from another SEO plugin: SmartCrawl's own redirects, authors' page titles and social profiles, structured data of every kind (recipes, events, products and more), and year and day archive titles now come over too.
+* Each screen links to its step-by-step guide.
+* Fixed: two title tags on pages some plugins draw in block themes; content checks kept an old copy of a page for up to ten minutes after a page builder or a custom field changed it; a translation was loaded too early when a background task was scheduled.
+
+= 0.7.0 =
+* Move from another SEO plugin: Yoast SEO, Rank Math, All in One SEO, SEOPress, The SEO Framework, Slim SEO, Squirrly SEO, SmartCrawl, and the redirects of Redirection and Safe Redirect Manager. A count first, then the copy with the same numbers, in the background and safe to interrupt.
+* Side by side: while a move is under way, or when the other plugin was switched off by hand, pages keep saying what they said by reading its data directly.
+* Compare every page as the other plugin shows it with what Zinn® SEO would print; keep exactly what it showed where it wrote something itself; the other plugin is switched off only when the pages say the same, and switched back on if one does not. Undo takes everything back.
+* A name for each page in breadcrumbs; `%date(F Y)%`, `%archive_prefix%` and `%none%` in templates; a switch for using the featured image when a page is shared.
+* Fixed: search results a site chose to have indexed were still marked noindex; a site run by a person with no user chosen was described as an organisation.
+
+= 0.6.0 =
+* Redirect manager (301, 302, 307, 308, 410, 451, patterns, groups, tester, spreadsheet import and export) answered before the theme loads from a constant-time index; automatic redirects for changed and deleted pages; chain and loop fixer; imports from Redirection, Yoast SEO Premium, Rank Math, All in One SEO, SEOPress, Safe Redirect Manager and .htaccess.
+* A 404 monitor kept as counters with a 10,000-row ceiling, robots apart, suggested pages, one-click redirects and a weekly e-mail.
+* Safe permalink, category-base and domain changes: every moving address shown, redirects written first.
+* Hacked-site SEO spam scan and site search insights.
+* Pro: redirects before plugins load, .htaccess sync and Nginx/Apache/Caddy export; SEO lock with confirmation and log; weekly spam watch.
+
+= 0.5.0 =
+* Content analysis of the page as visitors see it, in the block editor, the classic editor, Page Builder Sandwich and Elementor: focus phrases with synonyms, cornerstone content, SEO, readability (every WordPress language), inclusive language and accessibility checks, a mobile and desktop search preview, scores in the post lists and a Content screen.
+* Internal links: suggestions while you write with one-click insert, a link index with orphans and dead ends, link rules (nofollow, sponsored, new tab) and breadcrumbs for themes.
+* A duplicate title, description and heading finder, a Fix it inbox with one-click fixes, and an SEO inspector in the admin bar for editors.
+* Pro: answer-readiness, search intent and topic coverage; SEO revisions with restore; all link suggestions, incoming links with "Add link", suggestions by meaning with your own AI key, automatic links and a broken link checker.
+
+= 0.4.0 =
+* One structured-data graph per page: your organisation or person, the site, the page, articles with their authors' expertise, breadcrumbs and languages; WooCommerce and Page Builder Sandwich data joined to it; a hand-over to another SEO plugin's graph.
+* An offline check of structured data against schema.org and Google's current rich-result rules, in the editor, the admin and WP-CLI; a site graph for AI agents.
+* SEO blocks in the block editor, Page Builder Sandwich, Elementor and as a shortcode: Quick Answer, article index, contents, takeaways, FAQ, how-to, pros and cons, review, author box, related content, local business, breadcrumbs.
+* Elementor: SEO page settings with a live preview, and SEO dynamic tags. The classic editor gets the same Structured data box.
+* Pro: comparison table, fact check, glossary, video with key moments, custom blocks; schema types per page, a visual schema builder with import, rules, about/mentions/speakable.
+
+= 0.3.0 =
+* XML sitemaps built in the background and served as files, rebuilt only where a page changed: images, honest dates, every language with Tranzly, shop products, exclusions, a readable view, sitemap health, and an HTML sitemap shortcode. Pro: video, Google News and multisite network sitemaps.
+* robots.txt editor with checks and an address tester; AI crawler choices with what each crawler is for; content signals and the TDM reservation file.
+* llms.txt and llms-full.txt, per language with Tranzly. Pro: a Markdown version of every page, and the AI crawler visit log.
+* IndexNow (off until switched on), "Inspect in Google" under every post, and staging copies kept out of search.
+
+= 0.2.0 =
+* Titles, descriptions, robots and canonical addresses for every kind of page, with templates, variables and a live preview.
+* Open Graph, X cards, Mastodon, Pinterest and LinkedIn tags; site verification; Google Discover readiness.
+* The "Search and social" panel in the block editor, a meta box in the classic editor, and fields on category and tag screens.
+* The bulk editor, with changes to every matching page and undo. Pro: spreadsheet import and export, generated social cards.
+
+= 0.1.0 =
+* First version: guided setup, settings, SEO roles, settings export and import, command palette, REST API, WP-CLI, no-trace mode and the performance budget.

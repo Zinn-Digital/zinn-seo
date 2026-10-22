@@ -1,0 +1,207 @@
+// The research toolbox (stage C1). Loaded with this plugin's admin screen only, never on a
+// visitor's page. ⛔ Logical properties only (the RTL build is generated from this file); colours
+// from the kit's tokens, with fallbacks, so the dark scheme stays readable.
+
+.zseo-toolbox {
+
+	.zseo-market {
+		max-inline-size: 22em;
+	}
+
+	.zseo-formrow {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 14em), 1fr));
+		gap: 12px 16px;
+		align-items: start;
+	}
+
+	.zseo-places {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		gap: 8px;
+
+		li {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 4px 8px;
+			overflow-wrap: anywhere;
+		}
+	}
+
+	// The map grid: square cells that shrink with the screen, never past its edge.
+	.zseo-grid {
+		display: grid;
+		gap: 4px;
+		inline-size: min(100%, calc(var(--zseo-grid-size, 5) * 56px));
+	}
+
+	.zseo-grid__row {
+		display: grid;
+		grid-template-columns: repeat(var(--zseo-grid-size, 5), minmax(0, 1fr));
+		gap: 4px;
+	}
+
+	.zseo-grid__cell {
+		display: inline-grid;
+		place-items: center;
+		aspect-ratio: 1;
+		min-inline-size: 1.75em;
+		border-radius: 50%;
+		font-weight: 600;
+		font-size: 13px;
+		color: #fff;
+		background: #8c8f94;
+
+		&.is-top {
+			background: #1e7d34;
+		}
+
+		&.is-good {
+			background: #2f8f9d;
+		}
+
+		&.is-low {
+			background: #b26200;
+		}
+
+		&.is-none {
+			background: #b32d2e;
+		}
+
+		&.is-unknown {
+			background: transparent;
+			color: var(--zak-muted, #50575e);
+			border: 1px dashed var(--zak-border, #dcdcde);
+		}
+	}
+
+	.zseo-legend {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px 16px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 12px;
+
+		li {
+			display: inline-flex;
+			align-items: center;
+			gap: 6px;
+		}
+
+		.zseo-grid__cell {
+			inline-size: 14px;
+			min-inline-size: 14px;
+		}
+	}
+
+	.zseo-watch {
+		padding-block: 8px;
+		padding-inline: 12px;
+		border-inline-start: 3px solid var(--zak-border, #dcdcde);
+
+		p {
+			margin-block: 0 4px;
+		}
+	}
+
+	.zseo-reviewlist {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		gap: 10px;
+
+		li {
+			padding-inline-start: 10px;
+			border-inline-start: 3px solid var(--zak-border, #dcdcde);
+			overflow-wrap: anywhere;
+
+			&.is-poor {
+				border-inline-start-color: #b32d2e;
+			}
+		}
+
+		p {
+			margin-block: 2px 0;
+		}
+	}
+
+	.zseo-snapshot__pic img {
+		display: block;
+		max-inline-size: 100%;
+		block-size: auto;
+		border: 1px solid var(--zak-border, #dcdcde);
+	}
+
+	.zseo-serp {
+		margin-block: 0;
+		padding-inline-start: 1.5em;
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-bullets {
+		margin-block: 0;
+		padding-inline-start: 1.25em;
+		list-style: disc;
+	}
+
+	.zseo-question {
+		display: grid;
+		gap: 4px;
+	}
+
+	.zseo-techlist {
+		display: grid;
+		gap: 6px;
+		margin: 0;
+
+		div {
+			display: grid;
+			grid-template-columns: minmax(8em, 12em) 1fr;
+			gap: 4px 12px;
+		}
+
+		dt {
+			font-weight: 600;
+			text-transform: capitalize;
+		}
+
+		dd {
+			margin: 0;
+			overflow-wrap: anywhere;
+		}
+	}
+
+	.zseo-mood {
+		display: flex;
+		block-size: 10px;
+		border-radius: 5px;
+		overflow: hidden;
+		max-inline-size: 30em;
+		background: var(--zak-border, #dcdcde);
+
+		.is-pos {
+			background: #1e7d34;
+		}
+
+		.is-neu {
+			background: #8c8f94;
+		}
+
+		.is-neg {
+			background: #b32d2e;
+		}
+	}
+
+	@media (max-width: 600px) {
+
+		.zseo-techlist div {
+			grid-template-columns: 1fr;
+		}
+	}
+}

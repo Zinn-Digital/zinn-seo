@@ -1,0 +1,276 @@
+// Site authority (stage C2). Loaded with this plugin's admin screen only (zs-155).
+// ⛔ Logical properties only (the RTL build is generated from this file); colours from the kit's
+// tokens so the dark scheme stays readable.
+
+.zseo-authority {
+
+	.zseo-authority__cards {
+		list-style: none;
+		padding: 0;
+	}
+
+	.zseo-stats__item {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+	}
+
+	.zseo-stats__label {
+		font-size: 12px;
+		color: var(--zak-muted, #50575e);
+	}
+
+	.zseo-stats__value {
+		font-size: 22px;
+		font-weight: 600;
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-delta {
+		font-size: 12px;
+
+		&.is-up {
+			color: #007017;
+		}
+
+		&.is-down {
+			color: #b32d2e;
+		}
+	}
+
+	.zseo-rating {
+		font-size: 12px;
+		color: var(--zak-muted, #50575e);
+	}
+
+	.zseo-authority__by {
+		font-size: 12px;
+		color: var(--zak-muted, #50575e);
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-authority__title {
+		margin: 0;
+		font-size: 16px;
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-authority__tag {
+		display: inline-block;
+		margin-inline-start: 6px;
+		padding-block: 1px;
+		padding-inline: 8px;
+		border: 1px solid var(--zak-border, #dcdcde);
+		border-radius: 999px;
+		font-size: 12px;
+		font-weight: 400;
+		vertical-align: middle;
+	}
+
+	.zseo-authority__status {
+		font-size: 13px;
+		overflow-wrap: anywhere;
+
+		&.is-success {
+			color: #007017;
+		}
+
+		&.is-warning {
+			color: #996800;
+		}
+
+		&.is-error {
+			color: #b32d2e;
+		}
+
+		&.is-none {
+			color: var(--zak-muted, #50575e);
+		}
+	}
+
+	.zseo-authority__key {
+		margin: 0;
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-authority__steps {
+		margin-block: 0;
+		padding-inline-start: 20px;
+
+		li {
+			margin-block-end: 4px;
+		}
+	}
+
+	.zseo-authority__legend {
+		font-weight: 600;
+		padding: 0;
+	}
+
+	fieldset {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		min-inline-size: 0;
+	}
+
+	// An alert rule / a competitor: one row on a wide screen, stacked on a phone.
+	.zseo-authority__rule {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		gap: 8px;
+		align-items: end;
+
+		@media (min-width: 782px) {
+			grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+		}
+	}
+
+	.zseo-authority__filters {
+		flex-wrap: wrap;
+		align-items: flex-end;
+
+		> * {
+			min-inline-size: 200px;
+			flex: 1 1 200px;
+		}
+	}
+
+	.zseo-authority__pick {
+		inline-size: 100%;
+
+		th[scope="row"] {
+			font-weight: 400;
+			overflow-wrap: anywhere;
+		}
+	}
+
+	.zseo-authority__attribution {
+		margin: 0;
+	}
+
+	.zseo-chart {
+		margin: 0;
+
+		&__svg {
+			display: block;
+			inline-size: 100%;
+			block-size: 160px;
+			direction: ltr;
+			border: 1px solid var(--zak-border, #dcdcde);
+			border-radius: 8px;
+			background: var(--zak-surface, #fff);
+		}
+
+		&__clicks {
+			fill: none;
+			stroke: var(--zak-accent, #3858e9);
+			stroke-width: 2.5;
+		}
+
+		&__legend {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 4px 16px;
+			margin-block-start: 6px;
+			font-size: 12px;
+			overflow-wrap: anywhere;
+		}
+
+		&__key::before {
+			content: "";
+			display: inline-block;
+			inline-size: 14px;
+			block-size: 3px;
+			margin-inline-end: 6px;
+			vertical-align: middle;
+			background: var(--zak-accent, #3858e9);
+		}
+	}
+
+	// Competitors: dashed, one of four neutral-to-warm tones each.
+	.zseo-authority-chart__rival {
+		fill: none;
+		stroke-width: 1.5;
+		stroke-dasharray: 5 3;
+
+		&.is-0 { stroke: #996800; }
+		&.is-1 { stroke: #7a5195; }
+		&.is-2 { stroke: #00838f; }
+		&.is-3 { stroke: #b32d2e; }
+	}
+
+	.zseo-authority-chart__key {
+
+		&.is-0::before { background: #996800; }
+		&.is-1::before { background: #7a5195; }
+		&.is-2::before { background: #00838f; }
+		&.is-3::before { background: #b32d2e; }
+	}
+}
+
+.zak-shell.is-dark .zseo-authority {
+
+	.zseo-delta.is-up,
+	.zseo-authority__status.is-success {
+		color: #68de7c;
+	}
+
+	.zseo-delta.is-down,
+	.zseo-authority__status.is-error {
+		color: #ff8085;
+	}
+
+	.zseo-authority__status.is-warning {
+		color: #f0c33c;
+	}
+
+	.zseo-authority-chart__rival {
+
+		&.is-0 { stroke: #f0c33c; }
+		&.is-1 { stroke: #c3a6e0; }
+		&.is-2 { stroke: #5fd3de; }
+		&.is-3 { stroke: #ff8085; }
+	}
+
+	.zseo-authority-chart__key {
+
+		&.is-0::before { background: #f0c33c; }
+		&.is-1::before { background: #c3a6e0; }
+		&.is-2::before { background: #5fd3de; }
+		&.is-3::before { background: #ff8085; }
+	}
+}
+
+// zs-651: the days of SEO changes and alerts on a score's history.
+.zseo-chart__mark {
+	stroke-width: 1;
+	stroke-dasharray: 3 3;
+
+	&.is-change {
+		stroke: #8c8f94;
+	}
+
+	&.is-alert {
+		stroke: #d63638;
+		stroke-dasharray: none;
+	}
+}
+
+.zseo-chart__key.is-change::before {
+	background: #8c8f94;
+}
+
+.zseo-chart__key.is-alert::before {
+	background: #d63638;
+}
+
+@media (prefers-color-scheme: dark) {
+	.zseo-chart__mark.is-alert {
+		stroke: #ff8085;
+	}
+
+	.zseo-chart__key.is-alert::before {
+		background: #ff8085;
+	}
+}

@@ -1,0 +1,94 @@
+// Site care (zs-772 … zs-776): only what the shared admin styles do not already give — a list of
+// items, the code diff and the AI's answer. Logical properties only (RTL).
+
+.zseo-care {
+	.zseo-badge.is-error {
+		background: #b32d2e;
+	}
+
+	.zseo-badge.is-warning {
+		background: #8a6100;
+	}
+
+	.zseo-badge.is-success {
+		background: #007017;
+	}
+
+	.zseo-badge.is-info {
+		background: #3858e9;
+	}
+
+	.zseo-badge {
+		margin-inline-start: 0;
+	}
+}
+
+.zseo-care-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.zseo-care-item {
+	padding-block: 12px;
+	border-block-end: 1px solid #dcdcde;
+
+	&:last-child {
+		border-block-end: 0;
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+.zseo-care-words {
+	gap: 4px;
+	min-inline-size: 12em;
+}
+
+.zseo-care-ai {
+	padding: 8px 12px;
+	border-inline-start: 4px solid #3858e9;
+	background: #f6f7f7;
+	gap: 4px;
+}
+
+.zseo-care-problems {
+	margin-block: 0;
+	margin-inline-start: 1.5em;
+	color: #b32d2e;
+}
+
+.zseo-care-code,
+.zseo-care-diff {
+	max-inline-size: 100%;
+	margin: 0;
+	padding: 8px;
+	overflow-x: auto;
+	background: #1e1e1e;
+	color: #f0f0f0;
+	font-size: 12px;
+	line-height: 1.5;
+	white-space: pre;
+	text-align: start;
+}
+
+.zseo-care-diff {
+	.is-add {
+		color: #8bd38b;
+	}
+
+	.is-del {
+		color: #f19494;
+	}
+
+	.is-same {
+		color: #c3c4c7;
+	}
+}
+
+.zseo-care-code-input textarea {
+	font-family: Menlo, Consolas, monospace;
+	font-size: 12px;
+}

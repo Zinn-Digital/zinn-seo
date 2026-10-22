@@ -1,0 +1,420 @@
+// The content analysis panel (block editor sidebar, classic editor box,
+// Elementor's panel).
+// ⛔ Logical properties only (the RTL build is generated from this file).
+
+.zseo-an {
+	--zseo-good: #007017;
+	--zseo-ok: #8a6100;
+	--zseo-bad: #b32d2e;
+	--zseo-na: #646970;
+	font-size: 13px;
+	line-height: 1.5;
+	min-inline-size: 0;
+
+	.components-panel__body {
+		border-block-start: 1px solid #e0e0e0;
+	}
+
+	.components-base-control {
+		margin-block-end: 12px;
+	}
+}
+
+.zseo-an-focus__row {
+	padding-block-end: 8px;
+	margin-block-end: 8px;
+	border-block-end: 1px dashed #dcdcde;
+}
+
+.zseo-an-summary {
+	padding-block: 12px;
+	padding-inline: 16px;
+}
+
+.zseo-an-scores {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr));
+	gap: 8px;
+}
+
+.zseo-an-score {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2px;
+	padding-block: 8px;
+	padding-inline: 4px;
+	border-radius: 8px;
+	background: #f6f7f7;
+	text-align: center;
+	min-inline-size: 0;
+
+	&__num {
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 1.1;
+	}
+
+	&__label {
+		font-size: 12px;
+		overflow-wrap: anywhere;
+	}
+
+	&.is-good {
+		background: #edfaef;
+		color: var(--zseo-good);
+	}
+
+	&.is-ok {
+		background: #fcf9e8;
+		color: var(--zseo-ok);
+	}
+
+	&.is-bad {
+		background: #fcf0f1;
+		color: var(--zseo-bad);
+	}
+}
+
+.zseo-an-status {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	min-block-size: 24px;
+	margin-block: 8px 0;
+	color: var(--zseo-na);
+
+	.components-spinner {
+		margin: 0;
+	}
+}
+
+.zseo-an-checks {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.zseo-an-check {
+	display: flex;
+	gap: 8px;
+	align-items: flex-start;
+	padding-block: 6px;
+	border-block-end: 1px solid #f0f0f1;
+
+	&__dot {
+		flex: none;
+		inline-size: 10px;
+		block-size: 10px;
+		margin-block-start: 5px;
+		border-radius: 50%;
+		background: var(--zseo-na);
+	}
+
+	&.is-good &__dot {
+		background: #00a32a;
+	}
+
+	&.is-ok &__dot {
+		background: #dba617;
+	}
+
+	&.is-bad &__dot {
+		background: #d63638;
+	}
+
+	&__text {
+		min-inline-size: 0;
+		overflow-wrap: anywhere;
+	}
+
+	&.is-na {
+		color: var(--zseo-na);
+	}
+
+	&__more.components-button.is-link {
+		font-size: 12px;
+	}
+}
+
+.zseo-an-marks {
+	margin-block: 6px 0;
+	margin-inline-start: 0;
+	padding-inline-start: 10px;
+	border-inline-start: 3px solid #dba617;
+	list-style: none;
+	color: #3c434a;
+
+	li {
+		margin-block-end: 4px;
+	}
+}
+
+.zseo-an-note {
+	color: var(--zseo-na);
+	font-size: 12px;
+}
+
+.zseo-an-sub {
+	margin-block: 12px 6px;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	color: #50575e;
+}
+
+.zseo-an-links {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		padding-block: 8px;
+		border-block-end: 1px solid #f0f0f1;
+		min-inline-size: 0;
+		overflow-wrap: anywhere;
+	}
+
+	&__anchor {
+		font-weight: 600;
+	}
+
+	&__sentence {
+		color: #50575e;
+		font-style: italic;
+	}
+
+	&__do {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+}
+
+.zseo-an-tag {
+	display: inline-block;
+	align-self: flex-start;
+	padding-block: 0;
+	padding-inline: 6px;
+	border-radius: 9px;
+	background: #fcf9e8;
+	color: var(--zseo-ok);
+	font-size: 11px;
+	font-weight: 600;
+}
+
+.zseo-an-terms {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-block: 10px 0;
+	margin-inline: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		padding-block: 2px;
+		padding-inline: 8px;
+		border-radius: 12px;
+		font-size: 12px;
+		overflow-wrap: anywhere;
+	}
+
+	.is-present {
+		background: #edfaef;
+		color: var(--zseo-good);
+	}
+
+	.is-missing {
+		background: #fcf0f1;
+		color: var(--zseo-bad);
+	}
+}
+
+.zseo-an-history {
+	margin: 0;
+	padding-inline-start: 18px;
+
+	li {
+		margin-block-end: 10px;
+		overflow-wrap: anywhere;
+	}
+
+	&__who {
+		display: block;
+		color: var(--zseo-na);
+		font-size: 12px;
+	}
+}
+
+.zseo-an-outline {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		padding-block: 2px;
+		overflow-wrap: anywhere;
+	}
+
+	.is-h3 {
+		padding-inline-start: 12px;
+	}
+
+	.is-h4,
+	.is-h5,
+	.is-h6 {
+		padding-inline-start: 24px;
+	}
+
+	&__level {
+		display: inline-block;
+		min-inline-size: 2em;
+		color: var(--zseo-na);
+		font-size: 11px;
+		font-weight: 600;
+	}
+}
+
+.zseo-an-foot {
+	padding-block: 8px;
+	padding-inline: 16px;
+}
+
+.zseo-an-icon__dot {
+	fill: currentcolor;
+}
+
+// Search result preview.
+.zseo-serp-switch {
+	display: flex;
+	margin-block-end: 10px;
+}
+
+.zseo-serp {
+	padding: 12px;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	background: #fff;
+	font-family: Arial, sans-serif;
+	min-inline-size: 0;
+	overflow-wrap: anywhere;
+
+	&.is-mobile {
+		max-inline-size: 400px;
+	}
+
+	&__site {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		margin-block-end: 6px;
+	}
+
+	&__icon {
+		flex: none;
+		inline-size: 26px;
+		block-size: 26px;
+		border-radius: 50%;
+		background: #f1f3f4;
+		object-fit: contain;
+	}
+
+	&__name {
+		display: flex;
+		flex-direction: column;
+		min-inline-size: 0;
+		line-height: 1.3;
+	}
+
+	&__sitename {
+		color: #202124;
+		font-size: 14px;
+	}
+
+	&__url {
+		color: #4d5156;
+		font-size: 12px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		text-align: start;
+	}
+
+	&__title {
+		color: #1a0dab;
+		font-size: 20px;
+		line-height: 1.3;
+	}
+
+	&.is-mobile &__title {
+		font-size: 18px;
+	}
+
+	&__desc {
+		margin-block-start: 4px;
+		color: #4d5156;
+		font-size: 14px;
+		line-height: 1.58;
+	}
+}
+
+// Elementor's panel is dark: keep the panel readable there.
+.elementor-panel .zseo-an {
+	color: inherit;
+
+	.zseo-an-score {
+		color: #1d2327;
+	}
+}
+
+// The keyword finder (Pro, stage P9).
+.zseo-finder {
+
+	.components-base-control {
+		margin-block-end: 8px;
+	}
+
+	.zseo-finder__go {
+		margin-block: 8px;
+	}
+
+	.zseo-finder__list,
+	.zseo-finder__markets ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.zseo-finder__list li {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		padding-block: 8px;
+		border-block-end: 1px solid #dcdcde;
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-finder__num {
+		font-size: 12px;
+		color: #50575e;
+	}
+
+	.zseo-finder__do {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2px 12px;
+	}
+
+	.zseo-finder__markets {
+		margin-block-start: 12px;
+
+		li {
+			padding-block: 4px;
+			overflow-wrap: anywhere;
+		}
+	}
+}

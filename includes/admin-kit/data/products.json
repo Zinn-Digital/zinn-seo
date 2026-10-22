@@ -1,0 +1,55 @@
+{
+	"$comment": [
+		"The products the admin kit knows about: the plugins that carry it, the Freemius bundle that sells them together, and the fixed addresses every copy uses. Rendered unchanged into every host (wp/bin/build-admin-kit.php), read by Products in PHP and handed to the React shell in its boot data.",
+		"A new plugin that carries the kit is a row here plus an `admin_kit` entry in wp/plugins.json. A product the kit only PROMOTES (Zinn SEO, later) is a row in promotions.json instead, and needs no code.",
+		"The bundle ids are Freemius's public identifiers (docs/843 D8, bundle 40216, read back by the L03 store configuration 2026-09-27). The public key is public by design; the secret key lives in Vault (secret/vendors/freemius/bundle) and never appears in a plugin. build-admin-kit.php writes these three values into each host's SDK init, so changing them here is the whole change.",
+		"`main_files` lists every basename the product is installed under (free and premium), so 'is the other plugin active?' is answered for both editions.",
+		"`bundle.saving_percent` is the largest saving of the bundle over buying its Pro plugins separately, in whole percent rounded DOWN, from wp/freemius-plans.json; wp/tests/unit/AdminKitBundleOfferTest.php fails when a price changes and this does not. `pricing_path` is the page on the host plugin's own site whose bundle section the card and the Plans screen link to.",
+		"`in_bundle: false`: the host is not sold in the bundle, so its SDK init carries no bundle keys and its screens offer no bundle card. Absent means true.",
+		"`shared_exclude`: shared features (product `shared` in docs/plugins-overhaul/features.json) this host does not ship, so its Plans screen never lists them. Zinn® SEO gains the AI core in its stage P10 and removes those ids then.",
+		"`on_wordpress_org: false` (Zinn® SEO until stage D2, the WordPress.org switch-over): a search of the WordPress.org directory would not find the plugin, so its card offers no Install button and sends people to its own site (`site`), which says how to get it. wp/tests/unit/AdminKitPromotionsTest.php holds this equal to `dotorg_listed` in wp/plugins.json, so the day the plugin is listed the test asks for the flip. Absent means true.",
+		"`docs_root` is where a help link goes when a screen has no guide of its own. It must be a page that answers 200 today (CLAUDE.md 2.41): scripts/wp-admin-kit-check.py --live asserts it."
+	],
+	"bundle": {
+		"id": "40216",
+		"public_key": "pk_1bcbfe8657c755d37d4b8a4c29f46",
+		"license_auto_activation": true,
+		"saving_percent": 38,
+		"pricing_path": "pricing/"
+	},
+	"products": {
+		"tranzly": {
+			"name": "Tranzly",
+			"features_product": "tz",
+			"freemius_id": "6843",
+			"main_files": [ "tranzly/tranzly.php", "tranzly-premium/tranzly.php" ],
+			"site": "https://tranzly.io/",
+			"docs_root": "https://tranzly.io/",
+			"install_search": "Tranzly"
+		},
+		"page-builder-sandwich": {
+			"name": "Page Builder Sandwich",
+			"features_product": "pbs",
+			"freemius_id": "203",
+			"main_files": [ "page-builder-sandwich/class-plugin.php", "page-builder-sandwich-premium/class-plugin.php" ],
+			"site": "https://pagebuildersandwich.com/",
+			"docs_root": "https://pagebuildersandwich.com/",
+			"install_search": "Page Builder Sandwich"
+		},
+		"zinn-seo": {
+			"name": "Zinn® SEO",
+			"features_product": "zseo",
+			"freemius_id": "41086",
+			"main_files": [ "zinn-seo/zinn-seo.php", "zinn-seo-premium/zinn-seo.php" ],
+			"site": "https://zinnseo.com/",
+			"docs_root": "https://zinnseo.com/kb",
+			"install_search": "Zinn SEO",
+			"on_wordpress_org": false,
+			"in_bundle": true,
+			"shared_exclude": [ "ai-1", "ai-2", "ai-3", "ai-4", "ai-5", "ai-6", "ai-7", "ai-8", "ai-9", "ai-10", "adm-4", "adm-8", "sh-r2", "sh-r4", "sh-r8" ]
+		}
+	},
+	"privacy_url": "https://zinndigital.com/legal/privacy",
+	"api_base": "https://api.zinndigital.com",
+	"company_url": "https://zinndigital.com/"
+}

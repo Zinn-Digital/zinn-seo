@@ -1,0 +1,25 @@
+{
+	"$comment": [
+		"Help links per screen (features adm-3, sh-r2). A screen's `guide` is the step-by-step guide for it; `null` means no guide page exists yet, and the link goes to the product's docs_root (products.json) instead. ⛔ Never write a URL here that does not answer 200 today (CLAUDE.md 2.41): scripts/wp-admin-kit-check.py --live fetches every one.",
+		"Measured 2026-09-27: neither product site has a docs section yet (tranzly.io/docs/ and pagebuildersandwich.com/docs/ answer 404) and the knowledge base has no tranzly-plugin or page-builder-sandwich-plugin article, so every guide is null and the docs root is each product's home page. When lane W4 publishes the guides and videos, the change is a URL per row here.",
+		"Keys are route ids. A route with no row gets the docs root, so a plugin route added later is never linked to a 404."
+	],
+	"tranzly": {
+		"overview": null,
+		"setup": null,
+		"settings": null,
+		"plans": null,
+		"addons": null,
+		"help": null,
+		"feedback": null
+	},
+	"page-builder-sandwich": {
+		"overview": null,
+		"setup": null,
+		"settings": null,
+		"plans": null,
+		"addons": null,
+		"help": null,
+		"feedback": null
+	}
+}

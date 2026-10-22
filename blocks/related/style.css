@@ -1,0 +1,10 @@
+/* Related content. */
+.__PREFIX__-related{margin-block:1.5em}
+.__PREFIX__-related__title{margin:0 0 .5em;font-weight:700}
+.__PREFIX__-related ul{margin:0;padding-inline-start:1.2em}
+.__PREFIX__-related li{margin-block:.35em}
+.__PREFIX__-related__excerpt{margin:.15em 0 0;font-size:.9em;opacity:.8}
+.__PREFIX__-related--images ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,12em),1fr));gap:1em}
+.__PREFIX__-related--images li{margin:0}
+.__PREFIX__-related--images a{display:block;text-decoration:none}
+.__PREFIX__-related--images img{display:block;inline-size:100%;block-size:auto;aspect-ratio:16/10;object-fit:cover;border-radius:6px;margin-block-end:.4em}

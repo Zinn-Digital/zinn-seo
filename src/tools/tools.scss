@@ -1,0 +1,464 @@
+// Credit and the pay-per-use checks (stage P9). Loaded with this plugin's admin screen only.
+// ⛔ Logical properties only (the RTL build is generated from this file); colours from the
+// kit's tokens so the dark scheme stays readable.
+
+.zseo-tools {
+
+	.zseo-card-title {
+		margin: 0;
+		font-size: 14px;
+	}
+
+	.zseo-small {
+		font-size: 12px;
+	}
+
+	.zseo-cardhead {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 4px 16px;
+	}
+
+	.zseo-hero {
+		margin: 0;
+		font-size: 20px;
+		line-height: 1.3;
+		max-inline-size: 34em;
+	}
+
+	.zseo-lead {
+		margin: 0;
+		font-size: 14px;
+		max-inline-size: 46em;
+	}
+
+	.zseo-benefits {
+		margin-block: 0;
+		margin-inline-start: 1.25em;
+		list-style: disc;
+
+		li + li {
+			margin-block-start: 4px;
+		}
+	}
+
+	.zseo-sends {
+		margin: 0;
+		font-size: 12px;
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-code-line {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 8px 12px;
+		margin: 0;
+	}
+
+	.zseo-usercode {
+		padding-block: 6px;
+		padding-inline: 12px;
+		border: 1px dashed var(--zak-border, #dcdcde);
+		border-radius: 6px;
+		background: transparent;
+		font-size: 20px;
+		letter-spacing: 0.08em;
+		font-weight: 600;
+	}
+
+	.zseo-waiting {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 4px 8px;
+		margin: 0;
+
+		.components-spinner {
+			margin: 0;
+		}
+	}
+
+	.zseo-balance__amount {
+		font-size: 26px;
+	}
+
+	.zseo-state {
+		margin: 0;
+	}
+
+	.zseo-held,
+	.zseo-packs,
+	.zseo-noticelist,
+	.zseo-answers,
+	.zseo-findings,
+	.zseo-examples,
+	.zseo-mentions,
+	.zseo-choices,
+	.zseo-chips {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.zseo-held li {
+		padding-inline-start: 12px;
+		border-inline-start: 3px solid #dba617;
+	}
+
+	.zseo-held li + li {
+		margin-block-start: 6px;
+	}
+
+	.zseo-packs {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		gap: 12px;
+
+		li {
+			display: flex;
+			flex-direction: column;
+			gap: 2px;
+			padding-block: 10px;
+			padding-inline: 12px;
+			border: 1px solid var(--zak-border, #dcdcde);
+			border-radius: 8px;
+			min-inline-size: 0;
+		}
+
+		strong {
+			font-size: 18px;
+		}
+
+		.zseo-tag {
+			align-self: flex-start;
+			margin-inline-start: 0;
+		}
+	}
+
+	.zseo-auto {
+		margin: 0;
+	}
+
+	.zseo-noticelist > li,
+	.zseo-findings > li,
+	.zseo-mentions > li {
+		padding-block: 12px;
+		border-block-end: 1px solid var(--zak-border, #dcdcde);
+		overflow-wrap: anywhere;
+
+		&:first-child {
+			padding-block-start: 0;
+		}
+
+		p {
+			margin-block: 4px;
+		}
+
+		&.is-read {
+			opacity: 0.72;
+		}
+	}
+
+	.zseo-noticelist__top,
+	.zseo-findings__top {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 4px 10px;
+		margin-block-end: 4px;
+	}
+
+	.zseo-tag {
+		margin-inline-start: 0;
+
+		&.is-success,
+		&.is-complete,
+		&.is-pass {
+			background: #d7f0dc;
+			color: #0a4b1c;
+		}
+
+		&.is-warning,
+		&.is-warn,
+		&.is-partial,
+		&.is-running,
+		&.is-queued {
+			background: #fcf0c7;
+			color: #5c4400;
+		}
+
+		&.is-critical,
+		&.is-failed {
+			background: #fbe0de;
+			color: #8a1f11;
+		}
+
+		&.is-info {
+			background: #e2e9fb;
+			color: #1d2f7a;
+		}
+	}
+
+	.zseo-refusal .zseo-refusal__do {
+		font-weight: 600;
+	}
+
+	.zseo-cost {
+		color: var(--zak-muted, #50575e);
+
+		&.is-short strong {
+			color: #b32d2e;
+		}
+	}
+
+	.zseo-ask {
+		font-weight: 600;
+	}
+
+	.zseo-runbar,
+	.zseo-schedule {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+
+		.components-notice {
+			margin-block-end: 0;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.zseo-runline,
+	.zseo-empty {
+		margin: 0;
+	}
+
+	.zseo-heldline,
+	.zseo-needsplan,
+	.zseo-indexrun {
+		margin: 0;
+	}
+
+	.zseo-creditline {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 4px 16px;
+		margin-block: 0 8px;
+	}
+
+	.zseo-t {
+
+		.is-num {
+			text-align: end;
+			font-variant-numeric: tabular-nums;
+		}
+
+		td {
+			vertical-align: top;
+			overflow-wrap: anywhere;
+		}
+
+		.components-base-control,
+		.components-checkbox-control {
+			margin: 0;
+		}
+
+		.components-button.is-link {
+			block-size: auto;
+			min-block-size: 0;
+			padding: 0;
+		}
+	}
+
+	.zseo-url {
+		overflow-wrap: anywhere;
+		unicode-bidi: plaintext;
+	}
+
+	.zseo-inline {
+		display: inline-flex;
+		flex-wrap: wrap;
+		gap: 4px 12px;
+	}
+
+	.zseo-rankmove {
+		white-space: nowrap;
+
+		&.is-up {
+			color: #007017;
+			font-weight: 600;
+		}
+
+		&.is-down {
+			color: #b32d2e;
+			font-weight: 600;
+		}
+
+		&.is-out,
+		&.is-wait,
+		&.is-same {
+			color: var(--zak-muted, #50575e);
+		}
+	}
+
+	.zseo-answers li + li {
+		margin-block-start: 8px;
+	}
+
+	.zseo-answers summary {
+		cursor: pointer;
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-answer {
+		margin-block: 8px;
+		padding-inline-start: 12px;
+		border-inline-start: 3px solid var(--zak-border, #dcdcde);
+		white-space: pre-line;
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-examples {
+		margin-block-start: 6px;
+
+		li {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2px 12px;
+			padding-block: 3px;
+		}
+	}
+
+	.zseo-fixlink {
+		font-weight: 600;
+		white-space: nowrap;
+	}
+
+	.zseo-progress {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+
+		progress {
+			inline-size: 100%;
+			block-size: 10px;
+		}
+	}
+
+	.zseo-choices li,
+	.zseo-chips li {
+		padding-block: 4px;
+		overflow-wrap: anywhere;
+	}
+
+	.zseo-chips {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px 16px;
+	}
+
+	// The kit turns a table into one card per row on a phone; numbers then read from the start.
+	@media (max-width: 600px) {
+
+		.zseo-t .is-num {
+			text-align: start;
+		}
+
+		.zseo-hero {
+			font-size: 18px;
+		}
+
+		.zseo-usercode {
+			font-size: 17px;
+		}
+	}
+}
+
+.zak-shell.is-dark .zseo-tools {
+
+	.zseo-tag {
+
+		&.is-success,
+		&.is-complete,
+		&.is-pass {
+			background: #153b1e;
+			color: #b8e6bf;
+		}
+
+		&.is-warning,
+		&.is-warn,
+		&.is-partial,
+		&.is-running,
+		&.is-queued {
+			background: #4a3a05;
+			color: #f5e6ab;
+		}
+
+		&.is-critical,
+		&.is-failed {
+			background: #4d1a14;
+			color: #ffc9c2;
+		}
+
+		&.is-info {
+			background: #1f2b57;
+			color: #cdd9ff;
+		}
+	}
+
+	.zseo-rankmove.is-up {
+		color: #68de7c;
+	}
+
+	.zseo-rankmove.is-down,
+	.zseo-cost.is-short strong {
+		color: #ff8085;
+	}
+}
+
+// Low credit and automatic top-up, and the Overview card (P10 / Q127).
+.zseo-settings-list {
+	display: grid;
+	gap: 8px;
+	margin: 0;
+
+	div {
+		display: grid;
+		grid-template-columns: minmax(8em, 12em) 1fr;
+		gap: 4px 12px;
+	}
+
+	dt {
+		font-weight: 600;
+	}
+
+	dd {
+		margin: 0;
+		overflow-wrap: anywhere;
+	}
+}
+
+@media (max-width: 600px) {
+
+	.zseo-settings-list div {
+		grid-template-columns: 1fr;
+	}
+}
+
+.zseo-ov-credit__amount {
+	margin: 0;
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 1.2;
+
+	&.is-empty,
+	&.is-held {
+		color: #b32d2e;
+	}
+}
