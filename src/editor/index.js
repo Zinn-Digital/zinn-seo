@@ -61,6 +61,13 @@ function robotsChoices() {
 			value: 'noimageindex',
 			label: __( 'Do not index its images (noimageindex)', 'zinn-seo' ),
 		},
+		{
+			value: 'nocache',
+			label: __(
+				'Bing Copilot uses only the title, link and snippet (nocache)',
+				'zinn-seo'
+			),
+		},
 	];
 }
 

@@ -4,6 +4,13 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.64 =
+* Rebuild only: the package no longer carries development files
+
+= 0.17.63 =
+* "Visitors keep asking for addresses that do not exist" no longer counts the numbered pages of a list past its end (page 35 of a category that now has 20 pages, or an old comment page). When a list gets shorter, search engines keep asking for its old page numbers for a while; there is nothing to redirect them to and the "not found" answer is right. Real lost addresses (a removed page, an old translated address) still count.
+* New: "Bing Copilot uses only the title, link and snippet (nocache)" for a page, or for a whole content type in its template. Bing's Copilot then shows only the page's title, address and snippet, and the page stays in Bing's search results. Other search engines ignore it.
+
 = 0.17.62 =
 * Every e-mail Zinn® SEO sends is now written in plain words for someone who is not technical: first what happened and what it means for your site and your visitors, then whether you need to do anything and the one next step, with its link. Codes, status numbers, file names and PHP's own messages come last, under "Technical details (for you or your developer)". This covers the malware scan, a code fix switched off, Safe updates (an update undone, a round of updates tested), new broken links, missing pages, your content copied elsewhere, a wave of spammy links, spam a hack may have added and the Fix it on autopilot reports.
 * New: Site care now tells you when your site's background jobs are running late. Many plugins (WooCommerce and others) keep a list of jobs to do out of sight, such as sending order e-mails. When 200 or more of them are overdue for 15 minutes or longer, you get one e-mail that says what it means (customers may get their e-mails late), and an urgent one if the jobs have stopped altogether. One e-mail per backlog; you can turn it off on its own in Settings → Alert e-mails ("Background tasks running late").

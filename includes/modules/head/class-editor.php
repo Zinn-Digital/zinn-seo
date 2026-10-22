@@ -484,6 +484,7 @@ final class Editor {
 					'noarchive'    => __( 'No cached copy (noarchive)', 'zinn-seo' ),
 					'nosnippet'    => __( 'No text snippet (nosnippet)', 'zinn-seo' ),
 					'noimageindex' => __( 'Do not index its images (noimageindex)', 'zinn-seo' ),
+					'nocache'      => __( 'Bing Copilot uses only the title, link and snippet (nocache)', 'zinn-seo' ),
 				);
 				$input   = '<fieldset id="' . esc_attr( $id ) . '"><legend class="screen-reader-text">' . $label . '</legend>';
 				foreach ( $choices as $flag => $text ) {

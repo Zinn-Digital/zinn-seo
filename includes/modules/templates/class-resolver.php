@@ -267,7 +267,7 @@ final class Resolver {
 				if ( 'nofollow' === $follow ) {
 					$out['nofollow'] = true;
 				}
-				foreach ( array( 'noarchive', 'nosnippet', 'noimageindex' ) as $flag ) {
+				foreach ( Templates::EXTRA_ROBOTS as $flag ) {
 					if ( in_array( $flag, $own, true ) || in_array( $flag, (array) $tpl['extra'], true ) ) {
 						$out[ $flag ] = true;
 					}

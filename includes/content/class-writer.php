@@ -652,6 +652,8 @@ final class Writer {
 		if ( ! is_string( $raw ) ) {
 			return null;
 		}
+		// Q215 semgrep: our own packed copy of a value, and allowed_classes is stdClass only, so no object of any other class can be made. Re-check if allowed_classes is widened or $raw can come from outside the site.
+		// nosemgrep: php.lang.security.unserialize-use.unserialize-use -- the reason is on the line above.
 		$out = @unserialize( $raw, array( 'allowed_classes' => array( 'stdClass' ) ) ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged, WordPress.PHP.DiscouragedPHPFunctions.serialize_unserialize -- our own packed copy; only stdClass objects are allowed back.
 
 		return is_array( $out ) ? $out : null;

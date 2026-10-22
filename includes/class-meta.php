@@ -66,7 +66,9 @@ final class Meta {
 				'objects'     => array( 'post', 'term', 'user' ),
 				// `index` and `follow` exist to overrule a content type's default (all of a type
 				// set to noindex, this one page indexed); they are never printed (zs-021).
-				'choices'     => array( 'noindex', 'nofollow', 'noarchive', 'nosnippet', 'noimageindex', 'index', 'follow' ),
+				// `nocache` (Q44, FIX14): Bing's own value — Copilot may show only the title, address and
+				// snippet; the page stays in Bing's results. Other engines ignore it.
+				'choices'     => array( 'noindex', 'nofollow', 'noarchive', 'nosnippet', 'noimageindex', 'nocache', 'index', 'follow' ),
 				'description' => __( 'Robots directives for this page only.', 'zinn-seo' ),
 			),
 			'canonical' => array(

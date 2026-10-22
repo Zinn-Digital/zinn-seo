@@ -234,6 +234,12 @@ final class Findings {
 		if ( 1 === preg_match( '#(^|/)(wp-content|wp-includes|wp-admin|\.well-known)/|(^|/)(wp-login|xmlrpc)\.php$|(^|/)\.[a-z]#i', $path ) ) {
 			return false;
 		}
+		// Q290 (FIX14): a list's numbered page past its end (`/category/…/page/35`, a post's
+		// `comment-page-4`) — the list shrank and crawlers walk the old numbers. Nobody bookmarked
+		// it and there is no closest page to send it to (zinnhub.com, 2026-10-22: 149 of 196).
+		if ( 1 === preg_match( '#(^|/)(page/[0-9]+|comment-page-[0-9]+)/?$#i', $path ) ) {
+			return false;
+		}
 
 		return 1 !== preg_match( '#\.(jpe?g|png|gif|webp|avif|svg|ico|bmp|css|js|map|json|txt|xml|woff2?|ttf|eot|mp4|webm|mp3|pdf|zip|gz|php|env|ini|log|bak|sql)$#i', $path );
 	}

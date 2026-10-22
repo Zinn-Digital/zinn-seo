@@ -25,6 +25,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 final class Templates {
 
 	/**
+	 * The robots values a content type's template may add (and a page may set): Google's three, and
+	 * Bing's `nocache` (Q44, FIX14: Copilot shows only the title, address and snippet).
+	 */
+	public const EXTRA_ROBOTS = array( 'noarchive', 'nosnippet', 'noimageindex', 'nocache' );
+
+	/**
 	 * The fields of one record (the `templates` setting's dict `fields`).
 	 *
 	 * @return array<string, array<string, mixed>>
@@ -49,7 +55,7 @@ final class Templates {
 			),
 			'extra'    => array(
 				'type'    => 'list',
-				'choices' => array( 'noarchive', 'nosnippet', 'noimageindex' ),
+				'choices' => self::EXTRA_ROBOTS,
 			),
 			'og_title' => array(
 				'type' => 'template',

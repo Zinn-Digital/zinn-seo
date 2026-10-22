@@ -136,6 +136,8 @@ export function contains( haystack, phrase, forms = true ) {
 	if ( unspaced( p ) ) {
 		return h.includes( p.replace( / /g, '' ) ) || h.includes( p );
 	}
+	// Q215 semgrep: the phrase goes through escapeRe() and sits between fixed lookarounds, with no quantifier of its own, so it cannot backtrack (no ReDoS). Re-check if escapeRe() is removed or the pattern gains a quantifier around the phrase.
+	// nosemgrep: javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp -- the reason is on the line above.
 	const re = new RegExp(
 		`(?<![\\p{L}\\p{N}])${ escapeRe( p ) }(?![\\p{L}\\p{N}])`,
 		'u'
@@ -169,6 +171,8 @@ export function count( haystack, phrase ) {
 		const needle = p.replace( / /g, '' );
 		return needle ? h.split( needle ).length - 1 : 0;
 	}
+	// Q215 semgrep: the phrase goes through escapeRe() and sits between fixed lookarounds, with no quantifier of its own, so it cannot backtrack (no ReDoS). Re-check if escapeRe() is removed or the pattern gains a quantifier around the phrase.
+	// nosemgrep: javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp -- the reason is on the line above.
 	const re = new RegExp(
 		`(?<![\\p{L}\\p{N}])${ escapeRe( p ) }(?![\\p{L}\\p{N}])`,
 		'gu'

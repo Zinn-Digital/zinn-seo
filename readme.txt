@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.62
+Stable tag: 0.17.64
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -834,6 +834,13 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.64 =
+* Rebuild only: the package no longer carries development files
+
+= 0.17.63 =
+* "Visitors keep asking for addresses that do not exist" no longer counts the numbered pages of a list past its end (page 35 of a category that now has 20 pages, or an old comment page). When a list gets shorter, search engines keep asking for its old page numbers for a while; there is nothing to redirect them to and the "not found" answer is right. Real lost addresses (a removed page, an old translated address) still count.
+* New: "Bing Copilot uses only the title, link and snippet (nocache)" for a page, or for a whole content type in its template. Bing's Copilot then shows only the page's title, address and snippet, and the page stays in Bing's search results. Other search engines ignore it.
+
 = 0.17.62 =
 * Every e-mail Zinn® SEO sends is now written in plain words for someone who is not technical: first what happened and what it means for your site and your visitors, then whether you need to do anything and the one next step, with its link. Codes, status numbers, file names and PHP's own messages come last, under "Technical details (for you or your developer)". This covers the malware scan, a code fix switched off, Safe updates (an update undone, a round of updates tested), new broken links, missing pages, your content copied elsewhere, a wave of spammy links, spam a hack may have added and the Fix it on autopilot reports.
 * New: Site care now tells you when your site's background jobs are running late. Many plugins (WooCommerce and others) keep a list of jobs to do out of sight, such as sending order e-mails. When 200 or more of them are overdue for 15 minutes or longer, you get one e-mail that says what it means (customers may get their e-mails late), and an urgent one if the jobs have stopped altogether. One e-mail per backlog; you can turn it off on its own in Settings → Alert e-mails ("Background tasks running late").
@@ -847,67 +854,4 @@ They are answered before your theme loads, from small index files, so a redirect
 * The Errors screen explains "Call to a member function … on null" in plain words.
 * Fix: on sites with a persistent object cache (Redis, Memcached), a background job you started (such as applying a link plan) could be reported as started and then never run, because another task's stale copy of WordPress's list of missing settings hid it. Background jobs now read their own record from the database when the cache says it is missing, so a started job always runs.
 
-= 0.17.60 =
-* Fix: when a page, post or product stops being published (back to draft, pending review, private, the bin, or deleted), IndexNow is now told the address it had while published, the one search engines know. Before, it was told the draft's own address (such as ?post_type=product&p=123), which no search engine knows, so they never learned the real page was gone.
-* Fix: when a published page's address changes (a new slug or parent), IndexNow is told the old address as well as the new one.
-* WordPress's own query addresses (?p=, ?page_id=, ?post_type=, ?preview=) are never sent to IndexNow on a site with pretty permalinks.
-* Fix: on PHP 7.4, working out which addresses move when a site leaves plain permalinks no longer logs a PHP warning ("strpos(): Empty needle").
-
-= 0.17.59 =
-* Big and busy sites: when the link plan, Fix it on autopilot or image text change many pages, each page is now saved without other plugins' save actions, so translation, search, AI and other plugins do not queue work for every page (on one large site a single apply of 2,403 pages made them queue about 13,900 tasks). WordPress's own save work and Zinn® SEO's still run, and addresses are never changed. A site whose other plugins must react to each change can turn on "Let other plugins react to every page a bulk change saves" in Settings → Background jobs; then the job slows down by itself when those plugins queue work.
-* Background jobs keep their memory flat on very large sites: every step lets go of what it read as it goes and ends early, never failing, if its memory still grows too far. It carries on in the next step.
-* The link plan, Fix it on autopilot, structured data and image text ask before changing 100 pages or more, and say how many.
-
-= 0.17.58 =
-* Fix: a background job that paused to keep your site fast now carries on when its pause ends, also on hosts that run WordPress's scheduled tasks from the server's own cron. A long scheduled task of another plugin could drop the one-off task that ends the pause, and the job then waited up to 15 minutes. Zinn® SEO now keeps its own scheduled tasks when that happens, and a visit to your site starts the job again if its task is missing anyway.
-* Fix: a job whose very first step is turned away (another background request held the site's turn at that moment) is tried again 30 seconds later instead of waiting up to 15 minutes.
-
-= 0.17.57 =
-* New: a Zinn® Ads card among the Zinn® services on this plugin's own screens — Google Ads management that asks before it spends, with a click-fraud shield free on Zinn® hosting. It links to the page in your language and is never shown on a footprint-free site or in no-trace mode.
-
-= 0.17.56 =
-* Background jobs now look after any site on their own. Before each step they check how your site is doing: how long its requests take to start, the server's load, how late its scheduled tasks are and how many Action Scheduler tasks (from any plugin) are waiting past their time. When the site is busy the steps get shorter and it rests between them; when it is struggling, or other plugins' scheduled tasks are already behind, the job pauses and the screen says "Paused to keep your site fast — resumes automatically." It carries on by itself once the site has recovered, and still finishes.
-* Background steps keep back the second or so the request that starts the next step takes, so each request stays under five seconds on hosts where that request is slow.
-* A job's background requests are limited to 30 a minute and counted on the job, so nothing can start steps in a loop.
-
-= 0.17.55 =
-* Alert e-mails say clearly that Zinn® SEO sent them: they come from "Zinn® SEO on <your site>", the subject starts with [Zinn® SEO], and the last lines name the plugin, link to the new Settings › Alert e-mails and stop that kind of e-mail in one click.
-* The same alert again (the same error, the same finding) is no longer e-mailed every time it happens: it is counted, and one e-mail at the end of the period (an hour, a day or a week; a day unless you choose) says how many times. Each kind of e-mail can be switched off in Settings › Alert e-mails.
-* Fix: on a site with a persistent object cache that disconnects when the request ends (Redis), a job queued from WP-CLI waited for the 15-minute watchdog: the request that starts it was refused. It now starts as soon as the command ends. A fatal error, a page that ends the request and a code fix's test record what happened in the same safe way.
-* Background steps run from your site's own requests now finish within about four seconds of the request's start, so each request stays under five seconds.
-* Pro: the autopilot's internal-link fix looks up the old and binned addresses of a whole batch of pages in one database query instead of one per link: on a site with many renamed pages each lookup could take over a second. What took a while is looked up once per run, also while a link waits for your site's answer.
-* Development: the plugin JavaScript lint check installs its tools once, never several times side by side.
-
-= 0.17.54 =
-* Services: our team can now move your site from Yoast SEO, Rank Math or another SEO plugin for you, as a one-off service priced by Zinn®. We use this plugin's own importer, check every page against the old plugin and send you the report showing nothing changed. Order it from the expert help card on the Services screen, or from "Let our team do it" on the Move from another SEO plugin screen. You share a login with us yourself; the plugin never signs anyone in.
-
-= 0.17.53 =
-* Fix: a background step that ends the request before it finishes (a page that redirects and exits, a fatal error, another plugin that stops PHP) no longer leaves its job idle until the 15-minute watchdog. The step is counted, the job carries on at once after the usual rest, and after three such steps in a row with no page to blame it stops with the reason.
-* Fix: a job queued from WP-CLI (for example the analysis of a page saved with `wp post update`) starts as soon as the command ends, by the site's own background request, instead of waiting for the watchdog. A command that runs a job to the end still runs it in the terminal. Pro: `wp zinn-seo autopilot apply` runs the jobs queued ahead of it instead of waiting.
-* Pro: the autopilot's internal-link fix no longer runs your site's search to check a link to a search, date or author page (a second each on a large site, so a batch with many such links took half a minute a step and read one page). Checking a batch's links keeps to the step's time, and what took a while to check is kept for the rest of the run. The link index, link check, CSV import and the other background tools look pages up the same quick way.
-* Pro: on a busy site, the change history recorded an autopilot run as "0 changes" when its link changes needed another background step, so the run could not be undone from the history. The count is kept now.
-* IndexNow: a page that was changed and then put back before it was sent (an autopilot apply and its undo) is no longer sent. Only pages that differ from what the search engines last received are sent; an address you send yourself always is.
-
-= 0.17.52 =
-* Pro: the autopilot's internal-link fix keeps to each background step's time when your own pages answer slowly. It asks your site about several links at once, only as many as fit in the step, keeps every answer for the rest of the run and reads several pages a step. A step used to work up to a minute on one page. A page that answers too slowly is never taken for a missing page, and a link whose page never answers is not taken for a working one: the run lists how many links could not be checked.
-* Pro: the broken link check keeps to each step's time too. A page with many slow links is finished over several steps instead of holding one step until every link has answered.
-* Fix: a notice that has been resolved no longer outranks the notice that resolved it. A low balance, short forecast or paused-checks notice older than "checks resumed" is no longer shown or counted, and an Update Guard incident that has been resolved is not either.
-
-= 0.17.51 =
-* Background jobs keep your site's pace: each step works about five seconds (it was twenty). When your pages answer slowly, the server is busy, or it is your quiet hours (Settings, Jobs), steps get shorter and the site rests between them. Every job still finishes, the same from the loopback, cron and WP-CLI.
-* Fix: the outbound links check asks again with a small GET before calling a site broken (some sites refuse HEAD), and a 304 answer counts as live. After a cancelled build the report no longer says it is waiting.
-* Planned link anchors no longer start with a preposition, end on a filler word ("copy that") or use one common word on its own.
-* Easy Property Listings support is removed (the plugin is closed on WordPress.org). Houzez, Estatik, Classified Listing, MotoPress Hotel Booking and VikBooking stay.
-
-= 0.17.50 =
-* Pro: when a Pro trial ends without a paid plan (or a licence lapses), every Pro feature stops and nothing on your site breaks. Pro jobs, schedules, the Update Guard's watch, autopilot, link plans, site care, A/B tests, scheduled changes and AI on Pro stop starting new work; a running A/B test or a scheduled sale title goes back to your own wording. Visitors keep the free plugin's SEO, redirects keep working, and an address Pro used to answer (a /go/ affiliate link, a page's .md address, the news sitemap) sends them on instead of showing a missing page. The Pro screens and the AI agent tools say "Upgrade to keep it, or switch to the free version". Your settings and everything you set up are kept, and paying brings it all back at once.
-* Fix: a redirect given conditions in Pro (members only, phones, a country) no longer sends every visitor away when those conditions are not being checked; a redirect for pages that no longer exist still answers. The redirects Pro kept in .htaccess are removed when fast redirects stops, so a rule you changed or deleted no longer answers.
-
-= 0.17.49 =
-* WordPress MCP adapter updated to 0.7.1 (MCP protocol 2026-07-28, session-storage security fix); no deprecation notice from the bundled copy.
-
-= 0.17.48 =
-* Fix: a page whose shortcode or filter sends visitors elsewhere and stops the page (a members-only wall) no longer stalls background jobs that read every page (the link index, outbound links, the link plan, link fixes, analysis). The redirect is refused while Zinn® SEO reads the page; if the page still ends the request, the job lets go of its lock, carries on, skips that page with a named reason until it changes, and finishes saying "N pages could not be read" with their IDs. Fix: help links to the 23 screen guides now open their section of the how-to guide directly, without a redirect.
-
-= 0.17.47 =
-* Language packs refresh after background updates.
+The full history of every release is in changelog.txt, in the plugin's folder.
