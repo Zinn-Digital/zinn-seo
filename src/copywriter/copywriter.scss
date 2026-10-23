@@ -1,0 +1,74 @@
+// The AI copywriter (zs-782). Logical properties only (RTL mirrors itself).
+.zseo-cw {
+	display: grid;
+	gap: 12px;
+	max-inline-size: 760px;
+}
+
+.zseo-cw__pick,
+.zseo-cw__opts {
+	display: grid;
+	gap: 12px;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.zseo-cw__prompt-list {
+	margin-block: 8px;
+	max-block-size: 260px;
+	overflow-y: auto;
+	padding-inline-start: 0;
+	list-style: none;
+
+	.components-button {
+		block-size: auto;
+		text-align: start;
+		white-space: normal;
+	}
+}
+
+.zseo-cw__variant {
+	border: 1px solid var(--zak-border, #dcdcde);
+	background: var(--zak-surface, #fff);
+	border-radius: 4px;
+	padding: 12px;
+	margin-block-end: 12px;
+}
+
+.zseo-cw__variant-label {
+	font-weight: 600;
+	margin-block: 0 8px;
+}
+
+.zseo-cw__text {
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+}
+
+.zseo-cw__check {
+	margin-block: 8px;
+	padding-inline-start: 0;
+	list-style: none;
+	font-size: 12px;
+
+	li::before {
+		content: "• ";
+	}
+
+	.is-good {
+		color: var(--zak-ok, #00753a);
+	}
+
+	.is-warning {
+		color: var(--zak-warn, #996800);
+	}
+
+	.is-bad {
+		color: var(--zak-bad, #b32d2e);
+	}
+}
+
+.zseo-cw__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}

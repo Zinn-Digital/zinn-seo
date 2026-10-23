@@ -383,6 +383,19 @@ final class Migrate {
 	 * @return array<string, mixed>
 	 */
 	public static function step( array $state, float $deadline ): array {
+		// A run with no plan (`wp zinn-seo jobs run address-change` after the change finished
+		// starts the job again with an empty state): nothing to move, so nothing is written or
+		// switched, and no warning is logged (p5 on 0.17.63 logged seven).
+		if ( ! is_array( $state['from'] ?? null ) || ! is_array( $state['to'] ?? null ) || '' === (string) ( $state['to']['structure'] ?? '' ) ) {
+			return array(
+				'state'    => $state,
+				'done'     => true,
+				'progress' => array(
+					'done'  => 0,
+					'total' => 0,
+				),
+			);
+		}
 		$after   = (string) ( $state['after'] ?? 'post:0' );
 		$written = (int) ( $state['written'] ?? 0 );
 		$done    = false;

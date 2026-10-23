@@ -199,5 +199,10 @@
 	"src/admin/nav/sections.js": [ "build/settings.js" ],
 	"src/admin/nav/teasers.js": [ "build/settings.js" ],
 	"src/admin/types/ContentTypesTab.js": [ "build/settings.js" ],
-	"src/mcp-kit/McpPanel.js": [ "build/settings.js" ]
+	"src/mcp-kit/McpPanel.js": [ "build/settings.js" ],
+	"src/copywriter/CopywriterTab.js": [ "build/settings.js" ],
+	"src/copywriter/CopywriterTool.js": [ "build/editor.js", "build/elementor.js", "build/settings.js" ],
+	"src/copywriter/EditorPanel.js": [ "build/editor.js" ],
+	"src/copywriter/shared.js": [ "build/editor.js", "build/elementor.js", "build/settings.js" ],
+	"src/elementor/CopywriterBox.js": [ "build/elementor.js" ]
 }

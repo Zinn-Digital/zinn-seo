@@ -276,6 +276,7 @@ return array(
 	'ZinnDigital\\ZinnSEO\\Redirects\\Redirects_Rest' => 'includes/modules/redirects/class-redirects-rest.php',
 	'ZinnDigital\\ZinnSEO\\Redirects\\Serve' => 'includes/modules/redirects/class-serve.php',
 	'ZinnDigital\\ZinnSEO\\Redirects\\Store' => 'includes/modules/redirects/class-store.php',
+	'ZinnDigital\\ZinnSEO\\Redirects\\Translated' => 'includes/modules/redirects/class-translated.php',
 	'ZinnDigital\\ZinnSEO\\Rest' => 'includes/class-rest.php',
 	'ZinnDigital\\ZinnSEO\\Robots\\Robots' => 'includes/modules/robots/class-robots.php',
 	'ZinnDigital\\ZinnSEO\\Robots\\Robots_Rest' => 'includes/modules/robots/class-robots-rest.php',
@@ -337,6 +338,7 @@ return array(
 	'ZinnDigital\\ZinnSEO\\Tools\\Tools_Rest' => 'includes/modules/tools/class-tools-rest.php',
 	'ZinnDigital\\ZinnSEO\\Transfer' => 'includes/class-transfer.php',
 	'ZinnDigital\\ZinnSEO\\Uninstall' => 'includes/class-uninstall.php',
+	'ZinnDigital\\ZinnSEO\\Update_Trust' => 'includes/class-update-trust.php',
 	'ZinnDigital\\ZinnSEO\\Url_Post' => 'includes/class-url-post.php',
 	'ZinnDigital\\ZinnSEO\\Writer\\Writer' => 'includes/modules/writer/class-writer.php',
 );

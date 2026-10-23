@@ -2799,6 +2799,41 @@
       "mcp_tool": "zinn-seo-delete-content-idea"
     },
     {
+      "name": "zinn-seo/delete-copywriter-piece",
+      "label": "Delete a piece of writing (Pro)",
+      "description": "Deletes one library or history entry.",
+      "edition": "pro",
+      "capability": "edit_posts (the REST route's own check)",
+      "annotations": {
+        "readonly": false,
+        "destructive": true,
+        "idempotent": true
+      },
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^\\d+$"
+          },
+          "dry_run": {
+            "type": "boolean",
+            "description": "True: change nothing, and answer what this call would send and what the site holds now."
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "output_schema": {},
+      "rest": {
+        "method": "POST",
+        "path": "/wp-json/wp-abilities/v1/abilities/zinn-seo/delete-copywriter-piece/run"
+      },
+      "mcp_tool": "zinn-seo-delete-copywriter-piece"
+    },
+    {
       "name": "zinn-seo/delete-keyword-list",
       "label": "Delete a keyword list",
       "description": "Deletes one keyword list; the posts it was given to are not changed.",
@@ -5341,6 +5376,29 @@
         "path": "/wp-json/wp-abilities/v1/abilities/zinn-seo/get-content-plan-drafting/run"
       },
       "mcp_tool": "zinn-seo-get-content-plan-drafting"
+    },
+    {
+      "name": "zinn-seo/get-copywriter-bulk",
+      "label": "Read the AI copywriter's run over many pages (Pro)",
+      "description": "Returns the background run's status and progress.",
+      "edition": "pro",
+      "capability": "edit_posts (the REST route's own check)",
+      "annotations": {
+        "readonly": true,
+        "destructive": false,
+        "idempotent": true
+      },
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true,
+        "default": {}
+      },
+      "output_schema": {},
+      "rest": {
+        "method": "GET",
+        "path": "/wp-json/wp-abilities/v1/abilities/zinn-seo/get-copywriter-bulk/run"
+      },
+      "mcp_tool": "zinn-seo-get-copywriter-bulk"
     },
     {
       "name": "zinn-seo/get-crawl-log",
@@ -8106,6 +8164,45 @@
       "mcp_tool": "zinn-seo-install-tested-update"
     },
     {
+      "name": "zinn-seo/keep-copywriter-piece",
+      "label": "Keep a piece of writing in the library (Pro)",
+      "description": "Keeps a run from the history (or one of its versions) in the library.",
+      "edition": "pro",
+      "capability": "edit_posts (the REST route's own check)",
+      "annotations": {
+        "readonly": false,
+        "destructive": false,
+        "idempotent": false
+      },
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "entry": {
+            "type": "integer",
+            "description": "The history entry."
+          },
+          "variant": {
+            "type": "integer",
+            "description": "Only this version (0-based)."
+          },
+          "dry_run": {
+            "type": "boolean",
+            "description": "True: change nothing, and answer what this call would send and what the site holds now."
+          }
+        },
+        "required": [
+          "entry"
+        ]
+      },
+      "output_schema": {},
+      "rest": {
+        "method": "POST",
+        "path": "/wp-json/wp-abilities/v1/abilities/zinn-seo/keep-copywriter-piece/run"
+      },
+      "mcp_tool": "zinn-seo-keep-copywriter-piece"
+    },
+    {
       "name": "zinn-seo/list-affiliate-link-posts",
       "label": "List the posts using an affiliate link (Pro)",
       "description": "Lists the posts and pages that use one affiliate link (after: keyset).",
@@ -8805,6 +8902,52 @@
         "path": "/wp-json/wp-abilities/v1/abilities/zinn-seo/list-content-types/run"
       },
       "mcp_tool": "zinn-seo-list-content-types"
+    },
+    {
+      "name": "zinn-seo/list-copywriter-library",
+      "label": "List the AI copywriter's library or history (Pro)",
+      "description": "Lists saved pieces (kind=saved) or past runs (kind=history), newest first, 30 at a time.",
+      "edition": "pro",
+      "capability": "edit_posts (the REST route's own check)",
+      "annotations": {
+        "readonly": true,
+        "destructive": false,
+        "idempotent": true
+      },
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true,
+        "default": {}
+      },
+      "output_schema": {},
+      "rest": {
+        "method": "GET",
+        "path": "/wp-json/wp-abilities/v1/abilities/zinn-seo/list-copywriter-library/run"
+      },
+      "mcp_tool": "zinn-seo-list-copywriter-library"
+    },
+    {
+      "name": "zinn-seo/list-copywriter-tools",
+      "label": "List the AI copywriter's tools (Pro)",
+      "description": "Returns every writing tool (its inputs, length limit, whether it can be A/B tested), the ready-made prompts, the output languages and how many tools and prompts there are against Rank Math Content AI.",
+      "edition": "pro",
+      "capability": "edit_posts (the REST route's own check)",
+      "annotations": {
+        "readonly": true,
+        "destructive": false,
+        "idempotent": true
+      },
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true,
+        "default": {}
+      },
+      "output_schema": {},
+      "rest": {
+        "method": "GET",
+        "path": "/wp-json/wp-abilities/v1/abilities/zinn-seo/list-copywriter-tools/run"
+      },
+      "mcp_tool": "zinn-seo-list-copywriter-tools"
     },
     {
       "name": "zinn-seo/list-ctr-opportunities",
@@ -12474,6 +12617,61 @@
       "mcp_tool": "zinn-seo-run-check"
     },
     {
+      "name": "zinn-seo/run-copywriter",
+      "label": "Write with the AI copywriter (Pro)",
+      "description": "Writes with one tool, optionally for a page (its focus phrase and research are used), in a chosen language, as 1-5 versions, each with a check (length, focus phrase, ease, claims). Spends Zinn® credits or uses the owner's AI key; changes no page.",
+      "edition": "pro",
+      "capability": "edit_posts (the REST route's own check)",
+      "annotations": {
+        "readonly": false,
+        "destructive": false,
+        "idempotent": false
+      },
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "tool": {
+            "type": "string",
+            "description": "The tool's id (see list-copywriter-tools)."
+          },
+          "inputs": {
+            "type": "object",
+            "description": "What to write: {topic, text, audience, details, reply_to}."
+          },
+          "post": {
+            "type": "integer",
+            "description": "The page it writes for (its focus phrase and research are used)."
+          },
+          "language": {
+            "type": "string",
+            "description": "The output language (a locale such as de_DE); default the page's or the site's."
+          },
+          "variants": {
+            "type": "integer",
+            "description": "How many versions, 1 to 5."
+          },
+          "tone": {
+            "type": "string",
+            "description": "A tone of voice for this run; default the site's."
+          },
+          "dry_run": {
+            "type": "boolean",
+            "description": "True: change nothing, and answer what this call would send and what the site holds now."
+          }
+        },
+        "required": [
+          "tool"
+        ]
+      },
+      "output_schema": {},
+      "rest": {
+        "method": "POST",
+        "path": "/wp-json/wp-abilities/v1/abilities/zinn-seo/run-copywriter/run"
+      },
+      "mcp_tool": "zinn-seo-run-copywriter"
+    },
+    {
       "name": "zinn-seo/run-edge-action",
       "label": "Run a Cloudflare action (Pro)",
       "description": "Runs one edge action (what): purge, deploy the redirects or the crawler rules.",
@@ -13662,6 +13860,58 @@
       "mcp_tool": "zinn-seo-set-content-tool-key"
     },
     {
+      "name": "zinn-seo/set-copywriter-template",
+      "label": "Change how a writing tool writes (Pro)",
+      "description": "Changes one tool's instructions (an empty brief puts the original back), or adds a tool of your own (label + brief).",
+      "edition": "pro",
+      "capability": "the REST route's own per-item permission check",
+      "annotations": {
+        "readonly": false,
+        "destructive": false,
+        "idempotent": true
+      },
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]{1,40}$"
+          },
+          "brief": {
+            "type": "string",
+            "description": "The instructions the AI gets ('' puts the original back)."
+          },
+          "label": {
+            "type": "string",
+            "description": "The name of a tool of your own."
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Characters allowed per version (0 none)."
+          },
+          "words": {
+            "type": "integer",
+            "description": "The length to aim for, in words."
+          },
+          "dry_run": {
+            "type": "boolean",
+            "description": "True: change nothing, and answer what this call would send and what the site holds now."
+          }
+        },
+        "required": [
+          "id",
+          "brief"
+        ]
+      },
+      "output_schema": {},
+      "rest": {
+        "method": "POST",
+        "path": "/wp-json/wp-abilities/v1/abilities/zinn-seo/set-copywriter-template/run"
+      },
+      "mcp_tool": "zinn-seo-set-copywriter-template"
+    },
+    {
       "name": "zinn-seo/set-crawl-log",
       "label": "Record crawler visits (Pro)",
       "description": "Turns crawler logging on or off (on), with a sample rate (sample).",
@@ -14291,7 +14541,7 @@
     {
       "name": "zinn-seo/set-redirect-conditions",
       "label": "Set a redirect's conditions (Pro)",
-      "description": "Sets when one redirect runs (match: all or any; rules: condition, operator, value).",
+      "description": "Sets when one redirect runs (match: all or any; rules: condition, operator, value). A country rule takes two-letter codes and never redirects verified search engine crawlers.",
       "edition": "pro",
       "capability": "the REST route's own per-item permission check",
       "annotations": {
@@ -14705,6 +14955,62 @@
         "path": "/wp-json/wp-abilities/v1/abilities/zinn-seo/start-autopilot-network/run"
       },
       "mcp_tool": "zinn-seo-start-autopilot-network"
+    },
+    {
+      "name": "zinn-seo/start-copywriter-bulk",
+      "label": "Write for many pages with the AI copywriter (Pro)",
+      "description": "Runs one tool for every published page of a type (or a category) in the background; each page's versions go to the library and no page is changed. dry=true only counts the pages.",
+      "edition": "pro",
+      "capability": "the REST route's own per-item permission check",
+      "annotations": {
+        "readonly": false,
+        "destructive": false,
+        "idempotent": false
+      },
+      "input_schema": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "tool": {
+            "type": "string",
+            "description": "The tool's id."
+          },
+          "type": {
+            "type": "string",
+            "description": "The kind of page (post type)."
+          },
+          "term": {
+            "type": "integer",
+            "description": "Only pages in this category or term."
+          },
+          "language": {
+            "type": "string",
+            "description": "The output language; default each page's own."
+          },
+          "variants": {
+            "type": "integer",
+            "description": "Versions per page, 1 to 5."
+          },
+          "dry": {
+            "type": "boolean",
+            "description": "Only count the pages."
+          },
+          "dry_run": {
+            "type": "boolean",
+            "description": "True: change nothing, and answer what this call would send and what the site holds now."
+          }
+        },
+        "required": [
+          "tool",
+          "type"
+        ]
+      },
+      "output_schema": {},
+      "rest": {
+        "method": "POST",
+        "path": "/wp-json/wp-abilities/v1/abilities/zinn-seo/start-copywriter-bulk/run"
+      },
+      "mcp_tool": "zinn-seo-start-copywriter-bulk"
     },
     {
       "name": "zinn-seo/start-malware-scan",

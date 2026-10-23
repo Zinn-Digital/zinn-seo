@@ -117,6 +117,71 @@ final class Cdn {
 	}
 
 	/**
+	 * Pages waiting to be purged at the end of this request: address => true.
+	 *
+	 * @var array<string, bool>
+	 */
+	private static array $pages = array();
+
+	/**
+	 * Purge these PAGES from every cache in front of the site, at the end of this request, once
+	 * (0.17.65: a redirect or a "gone" saved for an address, ZHORD6). A cache that keeps the old
+	 * page would go on answering it for hours, so the new redirect would not be seen.
+	 *
+	 * The one page-purge driver of the plugin: Zinn® Cache (`zinn_cache_purge_plan`), LiteSpeed and
+	 * WP Rocket by address, the Cloudflare edge connected in Zinn® SEO Pro, and the
+	 * `zinn_seo_purge_urls` action for any other cache (a host's own CDN bridge listens there).
+	 *
+	 * @param array<int, string> $urls Absolute addresses.
+	 * @return void
+	 */
+	public static function purge_urls( array $urls ): void {
+		if ( array() === self::$pages ) {
+			add_action( 'shutdown', array( self::class, 'flush_pages' ), 4 );
+		}
+		foreach ( $urls as $u ) {
+			$u = (string) $u;
+			if ( '' !== $u ) {
+				self::$pages[ $u ] = true;
+			}
+		}
+	}
+
+	/**
+	 * Send the queued pages to every cache (end of the request).
+	 *
+	 * @return array<int, string> The addresses sent.
+	 */
+	public static function flush_pages(): array {
+		$urls        = array_keys( self::$pages );
+		self::$pages = array();
+		if ( array() === $urls ) {
+			return array();
+		}
+		do_action( 'zinn_cache_purge_plan', array( 'urls' => $urls ) );
+		foreach ( $urls as $u ) {
+			do_action( 'litespeed_purge_url', $u ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- LiteSpeed Cache's own documented purge action.
+		}
+		if ( function_exists( 'rocket_clean_files' ) ) {
+			rocket_clean_files( $urls );
+		}
+		$edge = '\ZinnDigital\ZinnSEO\Pro\Edge\Edge';
+		if ( class_exists( $edge ) ) {
+			$edge::queue( $urls );
+		}
+
+		/**
+		 * Fires with the pages Zinn® SEO asked every cache to forget (a redirect or a "gone" was
+		 * saved or removed for them), for a cache or CDN this plugin does not know.
+		 *
+		 * @param array<int, string> $urls Absolute addresses.
+		 */
+		do_action( 'zinn_seo_purge_urls', $urls );
+
+		return $urls;
+	}
+
+	/**
 	 * Is the front end rewriting right now?
 	 *
 	 * @return bool

@@ -424,6 +424,18 @@ final class Elementor {
 				'content_classes' => 'zseo-el-preview-wrap',
 			)
 		);
+		if ( \ZinnDigital\ZinnSEO\Modules::enabled( 'copywriter' ) && current_user_can( 'edit_posts' ) ) {
+			// zs-782: the AI copywriter, drawn by the Elementor bundle; "Insert" adds a Text Editor
+			// widget with the chosen version at the end of the page.
+			$document->add_control(
+				'zseo_copywriter',
+				array(
+					'type'            => constant( $cm . '::RAW_HTML' ),
+					'raw'             => '<div class="zseo-el-copywriter" data-post="' . esc_attr( (string) $post_id ) . '"></div>',
+					'content_classes' => 'zseo-el-copywriter-wrap',
+				)
+			);
+		}
 		if ( \ZinnDigital\ZinnSEO\Modules::enabled( 'analysis' ) ) {
 			// The content analysis (stage P4): drawn by the Elementor bundle, measured on what
 			// Elementor renders, re-checked after each save.

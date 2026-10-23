@@ -2072,6 +2072,13 @@
             "compare": true
         },
         {
+            "id": "zs-782",
+            "area": "AI writing help",
+            "title": "AI copywriter",
+            "min": "personal",
+            "compare": true
+        },
+        {
             "id": "zs-721",
             "area": "AI writing help",
             "title": "Spelling, grammar and tone",

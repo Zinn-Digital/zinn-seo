@@ -2160,6 +2160,185 @@ final class Rest_Map {
 			),
 			array(
 				'method'      => 'GET',
+				'route'       => '/zinn-seo/v1/copywriter',
+				'name'        => 'zinn-seo/list-copywriter-tools',
+				'label'       => __( 'List the AI copywriter\'s tools (Pro)', 'zinn-seo' ),
+				'description' => __( 'Returns every writing tool (its inputs, length limit, whether it can be A/B tested), the ready-made prompts, the output languages and how many tools and prompts there are against Rank Math Content AI.', 'zinn-seo' ),
+				'edition'     => 'pro',
+				'capability'  => 'edit_posts (the REST route\'s own check)',
+			),
+			array(
+				'method'      => 'GET',
+				'route'       => '/zinn-seo/v1/copywriter/bulk',
+				'name'        => 'zinn-seo/get-copywriter-bulk',
+				'label'       => __( 'Read the AI copywriter\'s run over many pages (Pro)', 'zinn-seo' ),
+				'description' => __( 'Returns the background run\'s status and progress.', 'zinn-seo' ),
+				'edition'     => 'pro',
+				'capability'  => 'edit_posts (the REST route\'s own check)',
+			),
+			array(
+				'method'      => 'POST',
+				'route'       => '/zinn-seo/v1/copywriter/bulk',
+				'name'        => 'zinn-seo/start-copywriter-bulk',
+				'label'       => __( 'Write for many pages with the AI copywriter (Pro)', 'zinn-seo' ),
+				'description' => __( 'Runs one tool for every published page of a type (or a category) in the background; each page\'s versions go to the library and no page is changed. dry=true only counts the pages.', 'zinn-seo' ),
+				'edition'     => 'pro',
+				'capability'  => 'the REST route\'s own per-item permission check',
+				'args'        => array(
+					'tool'     => array(
+						'type'        => 'string',
+						'required'    => true,
+						'description' => __( 'The tool\'s id.', 'zinn-seo' ),
+					),
+					'type'     => array(
+						'type'        => 'string',
+						'required'    => true,
+						'description' => __( 'The kind of page (post type).', 'zinn-seo' ),
+					),
+					'term'     => array(
+						'type'        => 'integer',
+						'description' => __( 'Only pages in this category or term.', 'zinn-seo' ),
+					),
+					'language' => array(
+						'type'        => 'string',
+						'description' => __( 'The output language; default each page\'s own.', 'zinn-seo' ),
+					),
+					'variants' => array(
+						'type'        => 'integer',
+						'description' => __( 'Versions per page, 1 to 5.', 'zinn-seo' ),
+					),
+					'dry'      => array(
+						'type'        => 'boolean',
+						'description' => __( 'Only count the pages.', 'zinn-seo' ),
+					),
+					'dry_run'  => array(
+						'type'        => 'boolean',
+						'description' => __( 'True: change nothing, and answer what this call would send and what the site holds now.', 'zinn-seo' ),
+					),
+				),
+			),
+			array(
+				'method'      => 'GET',
+				'route'       => '/zinn-seo/v1/copywriter/library',
+				'name'        => 'zinn-seo/list-copywriter-library',
+				'label'       => __( 'List the AI copywriter\'s library or history (Pro)', 'zinn-seo' ),
+				'description' => __( 'Lists saved pieces (kind=saved) or past runs (kind=history), newest first, 30 at a time.', 'zinn-seo' ),
+				'edition'     => 'pro',
+				'capability'  => 'edit_posts (the REST route\'s own check)',
+			),
+			array(
+				'method'      => 'POST',
+				'route'       => '/zinn-seo/v1/copywriter/library',
+				'name'        => 'zinn-seo/keep-copywriter-piece',
+				'label'       => __( 'Keep a piece of writing in the library (Pro)', 'zinn-seo' ),
+				'description' => __( 'Keeps a run from the history (or one of its versions) in the library.', 'zinn-seo' ),
+				'edition'     => 'pro',
+				'capability'  => 'edit_posts (the REST route\'s own check)',
+				'args'        => array(
+					'entry'   => array(
+						'type'        => 'integer',
+						'required'    => true,
+						'description' => __( 'The history entry.', 'zinn-seo' ),
+					),
+					'variant' => array(
+						'type'        => 'integer',
+						'description' => __( 'Only this version (0-based).', 'zinn-seo' ),
+					),
+					'dry_run' => array(
+						'type'        => 'boolean',
+						'description' => __( 'True: change nothing, and answer what this call would send and what the site holds now.', 'zinn-seo' ),
+					),
+				),
+			),
+			array(
+				'method'      => 'DELETE',
+				'route'       => '/zinn-seo/v1/copywriter/library/{id}',
+				'name'        => 'zinn-seo/delete-copywriter-piece',
+				'label'       => __( 'Delete a piece of writing (Pro)', 'zinn-seo' ),
+				'description' => __( 'Deletes one library or history entry.', 'zinn-seo' ),
+				'edition'     => 'pro',
+				'capability'  => 'edit_posts (the REST route\'s own check)',
+				'args'        => array(
+					'dry_run' => array(
+						'type'        => 'boolean',
+						'description' => __( 'True: change nothing, and answer what this call would send and what the site holds now.', 'zinn-seo' ),
+					),
+				),
+			),
+			array(
+				'method'      => 'POST',
+				'route'       => '/zinn-seo/v1/copywriter/run',
+				'name'        => 'zinn-seo/run-copywriter',
+				'label'       => __( 'Write with the AI copywriter (Pro)', 'zinn-seo' ),
+				'description' => __( 'Writes with one tool, optionally for a page (its focus phrase and research are used), in a chosen language, as 1-5 versions, each with a check (length, focus phrase, ease, claims). Spends Zinn® credits or uses the owner\'s AI key; changes no page.', 'zinn-seo' ),
+				'edition'     => 'pro',
+				'capability'  => 'edit_posts (the REST route\'s own check)',
+				'args'        => array(
+					'tool'     => array(
+						'type'        => 'string',
+						'required'    => true,
+						'description' => __( 'The tool\'s id (see list-copywriter-tools).', 'zinn-seo' ),
+					),
+					'inputs'   => array(
+						'type'        => 'object',
+						'description' => __( 'What to write: {topic, text, audience, details, reply_to}.', 'zinn-seo' ),
+					),
+					'post'     => array(
+						'type'        => 'integer',
+						'description' => __( 'The page it writes for (its focus phrase and research are used).', 'zinn-seo' ),
+					),
+					'language' => array(
+						'type'        => 'string',
+						'description' => __( 'The output language (a locale such as de_DE); default the page\'s or the site\'s.', 'zinn-seo' ),
+					),
+					'variants' => array(
+						'type'        => 'integer',
+						'description' => __( 'How many versions, 1 to 5.', 'zinn-seo' ),
+					),
+					'tone'     => array(
+						'type'        => 'string',
+						'description' => __( 'A tone of voice for this run; default the site\'s.', 'zinn-seo' ),
+					),
+					'dry_run'  => array(
+						'type'        => 'boolean',
+						'description' => __( 'True: change nothing, and answer what this call would send and what the site holds now.', 'zinn-seo' ),
+					),
+				),
+			),
+			array(
+				'method'      => 'PUT',
+				'route'       => '/zinn-seo/v1/copywriter/templates/{id}',
+				'name'        => 'zinn-seo/set-copywriter-template',
+				'label'       => __( 'Change how a writing tool writes (Pro)', 'zinn-seo' ),
+				'description' => __( 'Changes one tool\'s instructions (an empty brief puts the original back), or adds a tool of your own (label + brief).', 'zinn-seo' ),
+				'edition'     => 'pro',
+				'capability'  => 'the REST route\'s own per-item permission check',
+				'args'        => array(
+					'brief'   => array(
+						'type'        => 'string',
+						'required'    => true,
+						'description' => __( 'The instructions the AI gets (\'\' puts the original back).', 'zinn-seo' ),
+					),
+					'label'   => array(
+						'type'        => 'string',
+						'description' => __( 'The name of a tool of your own.', 'zinn-seo' ),
+					),
+					'limit'   => array(
+						'type'        => 'integer',
+						'description' => __( 'Characters allowed per version (0 none).', 'zinn-seo' ),
+					),
+					'words'   => array(
+						'type'        => 'integer',
+						'description' => __( 'The length to aim for, in words.', 'zinn-seo' ),
+					),
+					'dry_run' => array(
+						'type'        => 'boolean',
+						'description' => __( 'True: change nothing, and answer what this call would send and what the site holds now.', 'zinn-seo' ),
+					),
+				),
+			),
+			array(
+				'method'      => 'GET',
 				'route'       => '/zinn-seo/v1/crawlers',
 				'name'        => 'zinn-seo/get-crawlers',
 				'label'       => __( 'Read AI crawler rules', 'zinn-seo' ),
@@ -4418,7 +4597,7 @@ final class Rest_Map {
 				'route'       => '/zinn-seo/v1/redirects/{id}/conditions',
 				'name'        => 'zinn-seo/set-redirect-conditions',
 				'label'       => __( 'Set a redirect\'s conditions (Pro)', 'zinn-seo' ),
-				'description' => __( 'Sets when one redirect runs (match: all or any; rules: condition, operator, value).', 'zinn-seo' ),
+				'description' => __( 'Sets when one redirect runs (match: all or any; rules: condition, operator, value). A country rule takes two-letter codes and never redirects verified search engine crawlers.', 'zinn-seo' ),
 				'edition'     => 'pro',
 				'capability'  => 'the REST route\'s own per-item permission check',
 				'args'        => array(

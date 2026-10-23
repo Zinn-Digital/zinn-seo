@@ -41,6 +41,10 @@ export function conditionTypes() {
 			hint: '203.0.113.0/24',
 		},
 		language: { label: __( 'Language', 'zinn-seo' ), hint: 'fr, de' },
+		country: {
+			label: __( 'Country the visitor is in', 'zinn-seo' ),
+			hint: 'DE, AT, CH',
+		},
 		filter: {
 			label: __( 'Your own check (a filter)', 'zinn-seo' ),
 			hint: 'members_only',
@@ -76,6 +80,42 @@ export function saveConditions( id, conds ) {
 		method: 'PUT',
 		data: conds,
 	} );
+}
+
+/**
+ * What a country condition does, and Google's advice against it (zs-781, owner: "Build it, safely").
+ *
+ * @param {Object}  props
+ * @param {boolean} props.known The host tells WordPress the visitor's country.
+ * @return {Element} Notice.
+ */
+export function CountryNotice( { known } ) {
+	return (
+		<div className="notice notice-warning inline zseo-country-notice">
+			<p>
+				{ __(
+					"Google advises against sending visitors to another page because of where they are: search engines crawl mostly from the United States and would not see your other countries' pages. Show a banner that suggests the other page, or use one page per language with hreflang, when you can.",
+					'zinn-seo'
+				) }
+			</p>
+			<p>
+				{ __(
+					"If you use it: search engines (checked by their address) are never redirected by country; a visitor's own choice is kept (link to any page with ?zseo_country=de, or ?zseo_country=auto to forget it); and pages under this rule are never kept by page caches, so each visitor gets the right answer.",
+					'zinn-seo'
+				) }
+			</p>
+			{ ! known && (
+				<p>
+					<strong>
+						{ __(
+							"Your host does not tell WordPress the visitor's country yet (for example Cloudflare's IP geolocation, or a GeoIP header). Until it does, this condition is never met and every visitor sees the page as usual.",
+							'zinn-seo'
+						) }
+					</strong>
+				</p>
+			) }
+		</div>
+	);
 }
 
 /**
@@ -252,6 +292,9 @@ export default function ConditionsEditor( { value, onChange, guide } ) {
 			>
 				{ __( 'Add a condition', 'zinn-seo' ) }
 			</Button>
+			{ v.rules.some( ( r ) => r.type === 'country' ) && (
+				<CountryNotice known={ !! boot.countryKnown } />
+			) }
 			<p className="zseo-muted">
 				{ __(
 					'With conditions, the redirect is answered by WordPress itself (never by your server or Cloudflare), and visitors who do not match see the page as usual.',

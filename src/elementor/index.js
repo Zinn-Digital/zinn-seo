@@ -10,6 +10,7 @@ import apiFetch from '@wordpress/api-fetch';
 
 import { checks } from './checks';
 import { mountElementorAnalysis } from './analysis';
+import { mountCopywriter } from './copywriter';
 import './elementor.scss';
 
 const state = { resolved: null, schema: null, postId: 0 };
@@ -167,6 +168,11 @@ function start() {
 			document.querySelector( '.zseo-el-analysis:not([data-mounted])' )
 		) {
 			mountElementorAnalysis();
+		}
+		if (
+			document.querySelector( '.zseo-el-copywriter:not([data-mounted])' )
+		) {
+			mountCopywriter();
 		}
 	} ).observe( document.body, { childList: true, subtree: true } );
 	load();

@@ -8,6 +8,7 @@ import { __ } from '@wordpress/i18n';
 import { TabPanel } from '@wordpress/components';
 
 import { seoFetch } from '../api';
+import { viewHref } from '../../admin-kit/router';
 import WriterTab from './WriterTab';
 import PlannerTab from './PlannerTab';
 import HeadlineTab from './HeadlineTab';
@@ -17,6 +18,10 @@ import ContentToolsTab from './ContentToolsTab';
 import AffiliatesTab from './AffiliatesTab';
 import CrosslinksTab from './CrosslinksTab';
 import GdocsTab from './GdocsTab';
+// zs-782. Not a lazy chunk: WordPress loads a script's translations only for the registered file,
+// so strings in a chunk loaded later would stay English (CLAUDE.md §2.19 outranks splitting here;
+// settings.js is loaded only on this plugin's own screens).
+import CopywriterTab from '../../copywriter/CopywriterTab';
 import './x1c.scss';
 
 /**
@@ -46,6 +51,9 @@ export function writingTabs( data = {} ) {
 			: [] ),
 		...( show( 'writer-pro' )
 			? [ { name: 'planner', title: __( 'Planner', 'zinn-seo' ) } ]
+			: [] ),
+		...( show( 'copywriter' )
+			? [ { name: 'copywriter', title: __( 'Copywriter', 'zinn-seo' ) } ]
 			: [] ),
 		...( mods.headline
 			? [ { name: 'headlines', title: __( 'Headlines', 'zinn-seo' ) } ]
@@ -92,6 +100,25 @@ export function writingTabs( data = {} ) {
 }
 
 /**
+ * What the Pro copywriter does, on a free site (one upgrade path, zs-234).
+ *
+ * @return {Element} Notice.
+ */
+function CopywriterUpsell() {
+	return (
+		<p className="zseo-muted">
+			{ __(
+				"Pro: more than seventy AI writing tools and a library of ready-made prompts, written from each page's own SEO research, in any language, with versions to compare and a check of each.",
+				'zinn-seo'
+			) }{ ' ' }
+			<a href={ viewHref( 'plans' ) }>
+				{ __( 'See the Pro plans', 'zinn-seo' ) }
+			</a>
+		</p>
+	);
+}
+
+/**
  * The screen.
  *
  * @param {Object} props
@@ -126,6 +153,12 @@ export default function WritingScreen( { data } ) {
 							return <WriterTab data={ data } onPlan={ plan } />;
 						case 'planner':
 							return <PlannerTab data={ data } />;
+						case 'copywriter':
+							return data.modules && data.modules.copywriter ? (
+								<CopywriterTab />
+							) : (
+								<CopywriterUpsell />
+							);
 						case 'headlines':
 							return <HeadlineTab data={ data } />;
 						case 'lists':

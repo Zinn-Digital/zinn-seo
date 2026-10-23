@@ -20,9 +20,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  *   one. A page with children, or a category while the post addresses contain `%category%`, also
  *   gets ONE pattern rule moving everything below the old address (`^/old/(.*)$` → `/new/$1`), so a
  *   parent with ten thousand children costs one rule, not ten thousand.
- * - **Moved to the bin / deleted** (posts, pages, WooCommerce products — any public type): by the
- *   setting `redirects_on_trash`: `parent` (the parent page, else the main category, else the type's
+ * - **Moved to the bin / deleted / unpublished** (posts, pages, WooCommerce products — any public
+ *   type; unpublished = back to draft, pending, scheduled or private): by the setting
+ *   `redirects_on_trash`: `parent` (the parent page, else the main category, else the type's
  *   archive, else the home page), `410` (gone) or `none`. Publishing it again removes that rule.
+ * - **A category or tag deleted** (any public taxonomy): `parent` → its parent term, or 410 when it
+ *   has none; `410`; `none` (0.17.65).
+ * - **Every language** (0.17.65): a translation plugin that gives the same page an address per
+ *   language ({@see Translated}) gets the same rule for each of those addresses.
  * - **The address is live again** (a new page published where an old one redirected): a redirect
  *   this module wrote for that address is removed, so a rule never hides a live page; one written by
  *   a person is kept and flagged (`problem` = `shadows`) on the Redirects screen and in Fix it.
@@ -32,9 +37,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 final class Auto {
 
 	/**
-	 * Addresses of posts about to be moved to the bin: post id => address.
+	 * Addresses of posts about to be moved to the bin: post id => language => path.
 	 *
-	 * @var array<int, string>
+	 * @var array<int, array<string, string>>
 	 */
 	private static array $trashing = array();
 
@@ -46,11 +51,29 @@ final class Auto {
 	private static array $terms = array();
 
 	/**
+	 * A published post's addresses in every language, read before an update: id => lang => path.
+	 *
+	 * @var array<int, array<string, string>>
+	 */
+	private static array $before = array();
+
+	/**
+	 * Terms about to be deleted: id => [paths by language, parent term id, taxonomy].
+	 *
+	 * @var array<int, array{paths: array<string, string>, parent: int, taxonomy: string}>
+	 */
+	private static array $deleting = array();
+
+	/** Statuses that take a published post off the site without the bin. */
+	public const UNPUBLISHED = array( 'draft', 'pending', 'private', 'future' );
+
+	/**
 	 * Hooks (admin, REST, CLI, cron — wherever content changes).
 	 *
 	 * @return void
 	 */
 	public static function boot(): void {
+		add_action( 'pre_post_update', array( self::class, 'before_update' ), 10, 1 );
 		add_action( 'post_updated', array( self::class, 'post_updated' ), 20, 3 );
 		add_action( 'transition_post_status', array( self::class, 'transition' ), 20, 3 );
 		add_action( 'wp_trash_post', array( self::class, 'before_trash' ), 10, 1 );
@@ -58,6 +81,21 @@ final class Auto {
 		add_action( 'before_delete_post', array( self::class, 'before_delete' ), 10, 2 );
 		add_action( 'edit_terms', array( self::class, 'before_term_edit' ), 10, 2 );
 		add_action( 'edited_term', array( self::class, 'term_edited' ), 10, 3 );
+		add_action( 'pre_delete_term', array( self::class, 'before_term_delete' ), 10, 2 );
+		add_action( 'delete_term', array( self::class, 'term_deleted' ), 10, 3 );
+	}
+
+	/**
+	 * Remember a published post's addresses (every language) before it is changed.
+	 *
+	 * @param int $post_id Post.
+	 * @return void
+	 */
+	public static function before_update( $post_id ): void {
+		$post = get_post( (int) $post_id );
+		if ( $post instanceof \WP_Post && self::public_post( $post ) ) {
+			self::$before[ (int) $post_id ] = Translated::paths( (string) get_permalink( $post ) );
+		}
 	}
 
 	/**
@@ -95,20 +133,27 @@ final class Auto {
 	 * @return void
 	 */
 	public static function post_updated( $post_id, $after, $before ): void {
+		$snapshot = self::$before[ (int) $post_id ] ?? null;
+		unset( self::$before[ (int) $post_id ] );
 		if ( ! $after instanceof \WP_Post || ! $before instanceof \WP_Post || ! Settings::get( 'redirects_auto', true ) ) {
 			return;
 		}
 		if ( ! self::public_post( $before ) || ! self::public_post( $after ) ) {
 			return;
 		}
-		$old = self::path( (string) get_permalink( $before ) );
-		$new = self::path( (string) get_permalink( $after ) );
-		if ( '' === $old || '' === $new || Path::key( $old, Store::base() ) === Path::key( $new, Store::base() ) ) {
-			return;
-		}
-		self::write( $old, $new, 301, 'post:' . (int) $post_id );
-		if ( is_post_type_hierarchical( $after->post_type ) && self::has_children( (int) $post_id, $after->post_type ) ) {
-			self::write_prefix( $old, $new, 'post:' . (int) $post_id );
+		$olds = $snapshot ?? array( '' => self::path( (string) get_permalink( $before ) ) );
+		$news = Translated::paths( (string) get_permalink( $after ) );
+		$kids = null;
+		foreach ( $olds as $lang => $old ) {
+			$new = (string) ( $news[ $lang ] ?? '' );
+			if ( '' === $old || '' === $new || Path::key( $old, Store::base() ) === Path::key( $new, Store::base() ) ) {
+				continue;
+			}
+			self::write( $old, $new, 301, 'post:' . (int) $post_id );
+			$kids = $kids ?? ( is_post_type_hierarchical( $after->post_type ) && self::has_children( (int) $post_id, $after->post_type ) );
+			if ( $kids ) {
+				self::write_prefix( $old, $new, 'post:' . (int) $post_id );
+			}
 		}
 	}
 
@@ -144,10 +189,23 @@ final class Auto {
 	 * @return void
 	 */
 	public static function transition( $new_status, $old_status, $post ): void {
-		if ( 'publish' !== $new_status || ! $post instanceof \WP_Post || ! self::public_post( $post ) || ! Store::ready() ) {
+		if ( ! $post instanceof \WP_Post ) {
 			return;
 		}
-		self::live_again( self::path( (string) get_permalink( $post ) ) );
+		if ( 'publish' === $old_status && in_array( (string) $new_status, self::UNPUBLISHED, true ) ) {
+			// 0.17.65 (ZHORD6): taken off the site without the bin — the same rule as the bin.
+			$paths = self::$before[ (int) $post->ID ] ?? array();
+			if ( array() !== $paths && is_post_type_viewable( $post->post_type ) && 'attachment' !== $post->post_type ) {
+				self::removed( $post, $paths, 'unpublish' );
+			}
+			return;
+		}
+		if ( 'publish' !== $new_status || ! self::public_post( $post ) || ! Store::ready() ) {
+			return;
+		}
+		foreach ( Translated::paths( (string) get_permalink( $post ) ) as $path ) {
+			self::live_again( $path );
+		}
 	}
 
 	/**
@@ -182,7 +240,7 @@ final class Auto {
 	public static function before_trash( $post_id ): void {
 		$post = get_post( (int) $post_id );
 		if ( $post instanceof \WP_Post && self::public_post( $post ) ) {
-			self::$trashing[ (int) $post_id ] = self::path( (string) get_permalink( $post ) );
+			self::$trashing[ (int) $post_id ] = Translated::paths( (string) get_permalink( $post ) );
 		}
 	}
 
@@ -193,11 +251,11 @@ final class Auto {
 	 * @return void
 	 */
 	public static function trashed( $post_id ): void {
-		$old = self::$trashing[ (int) $post_id ] ?? '';
+		$old = self::$trashing[ (int) $post_id ] ?? array();
 		unset( self::$trashing[ (int) $post_id ] );
 		$post = get_post( (int) $post_id );
-		if ( '' !== $old && $post instanceof \WP_Post ) {
-			self::removed( $post, $old );
+		if ( array() !== $old && $post instanceof \WP_Post ) {
+			self::removed( $post, $old, 'trash' );
 		}
 	}
 
@@ -212,28 +270,66 @@ final class Auto {
 	public static function before_delete( $post_id, $post = null ): void {
 		$post = $post instanceof \WP_Post ? $post : get_post( (int) $post_id );
 		if ( $post instanceof \WP_Post && self::public_post( $post ) ) {
-			self::removed( $post, self::path( (string) get_permalink( $post ) ) );
+			self::removed( $post, Translated::paths( (string) get_permalink( $post ) ), 'delete' );
 		}
 	}
 
 	/**
-	 * Write the rule for a removed post.
+	 * Write the rule for a removed post, in every language it had an address in.
 	 *
-	 * @param \WP_Post $post Post.
-	 * @param string   $old  Its address.
+	 * @param \WP_Post              $post  Post.
+	 * @param array<string, string> $old   Its paths: language => path ('' = the site's language).
+	 * @param string                $event trash|delete|unpublish.
 	 * @return void
 	 */
-	private static function removed( \WP_Post $post, string $old ): void {
-		$mode = (string) Settings::get( 'redirects_on_trash', 'parent' );
-		if ( 'none' === $mode || '' === $old ) {
+	private static function removed( \WP_Post $post, array $old, string $event ): void {
+		$mode = self::gone_action( 'post:' . $post->post_type, $post, $event );
+		if ( 'none' === $mode || array() === array_filter( $old ) ) {
 			return;
 		}
-		if ( '410' === $mode ) {
-			self::write( $old, '', 410, 'post:' . $post->ID, 'trash' );
-			return;
+		$to = '410' === $mode ? array() : Translated::paths( self::parent_of( $post ) );
+		foreach ( $old as $lang => $path ) {
+			if ( '' === $path ) {
+				continue;
+			}
+			if ( '410' === $mode ) {
+				self::write( $path, '', 410, 'post:' . $post->ID, 'trash' );
+				continue;
+			}
+			$target = (string) ( $to[ $lang ] ?? ( $to[''] ?? '' ) );
+			self::write( $path, '' === $target ? '/' : $target, 301, 'post:' . $post->ID, 'trash' );
 		}
-		$to = self::path( self::parent_of( $post ) );
-		self::write( $old, '' === $to ? '/' : $to, 301, 'post:' . $post->ID, 'trash' );
+	}
+
+	/**
+	 * What happens to the address of a page, product or term that is gone (0.17.65): the choice for
+	 * its content type (`redirects_on_trash_by`), else the site's (`redirects_on_trash`), then the
+	 * `zinn_seo_gone_action` filter.
+	 *
+	 * @param string            $key    `post:<type>` or `term:all`.
+	 * @param \WP_Post|\WP_Term $item The post or term.
+	 * @param string            $event  trash|delete|unpublish|term_delete.
+	 * @return string parent|410|none
+	 */
+	public static function gone_action( string $key, $item, string $event ): string {
+		$by     = (array) Settings::get( 'redirects_on_trash_by', array() );
+		$action = (string) ( $by[ $key ]['action'] ?? '' );
+		if ( '' === $action ) {
+			$action = (string) Settings::get( 'redirects_on_trash', 'parent' );
+		}
+
+		/**
+		 * What to do with the address of a post, page, product or term that is gone: `parent`
+		 * (a permanent redirect to its parent page, category or archive), `410` (gone) or `none`.
+		 *
+		 * @param string            $action parent|410|none, from the settings.
+		 * @param \WP_Post|\WP_Term $item The post or term.
+		 * @param string            $event  `trash`, `delete`, `unpublish` (back to draft, pending,
+		 *                                  scheduled or private) or `term_delete`.
+		 */
+		$filtered = (string) apply_filters( 'zinn_seo_gone_action', $action, $item, $event );
+
+		return in_array( $filtered, array( 'parent', '410', 'none' ), true ) ? $filtered : $action;
 	}
 
 	/**
@@ -295,7 +391,71 @@ final class Auto {
 		}
 		$link = get_term_link( (int) $term_id, (string) $taxonomy );
 		if ( is_string( $link ) ) {
-			self::$terms[ (int) $term_id ] = self::path( $link );
+			self::$terms[ (int) $term_id ] = Translated::paths( $link );
+		}
+	}
+
+	/**
+	 * Remember a public term's addresses (every language) and its parent before it is deleted.
+	 *
+	 * @param int    $term_id  Term.
+	 * @param string $taxonomy Taxonomy.
+	 * @return void
+	 */
+	public static function before_term_delete( $term_id, $taxonomy ): void {
+		$tax  = get_taxonomy( (string) $taxonomy );
+		$term = get_term( (int) $term_id, (string) $taxonomy );
+		if ( ! $tax || ! $tax->public || ! $term instanceof \WP_Term ) {
+			return;
+		}
+		$link = get_term_link( $term );
+		if ( is_string( $link ) ) {
+			self::$deleting[ (int) $term_id ] = array(
+				'paths'    => Translated::paths( $link ),
+				'parent'   => (int) $term->parent,
+				'taxonomy' => (string) $taxonomy,
+			);
+		}
+	}
+
+	/**
+	 * A category or tag was deleted (0.17.65, ZHORD6): `parent` sends its visitors to the parent
+	 * term (or answers 410 when it had none), `410` answers gone, `none` leaves it.
+	 *
+	 * @param int    $term_id  Term.
+	 * @param int    $tt_id    Term taxonomy.
+	 * @param string $taxonomy Taxonomy.
+	 * @return void
+	 */
+	public static function term_deleted( $term_id, $tt_id, $taxonomy ): void { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundBeforeLastUsed -- the action's signature.
+		$was = self::$deleting[ (int) $term_id ] ?? null;
+		unset( self::$deleting[ (int) $term_id ] );
+		if ( null === $was ) {
+			return;
+		}
+		$term = new \WP_Term(
+			(object) array(
+				'term_id'  => (int) $term_id,
+				'taxonomy' => (string) $taxonomy,
+				'parent'   => (int) $was['parent'],
+			)
+		);
+		$mode = self::gone_action( 'term:all', $term, 'term_delete' );
+		if ( 'none' === $mode ) {
+			return;
+		}
+		$to = array();
+		if ( 'parent' === $mode && $was['parent'] > 0 ) {
+			$link = get_term_link( (int) $was['parent'], (string) $taxonomy );
+			$to   = is_string( $link ) ? Translated::paths( $link ) : array();
+		}
+		foreach ( $was['paths'] as $lang => $path ) {
+			$target = (string) ( $to[ $lang ] ?? ( $to[''] ?? '' ) );
+			if ( '' === $target ) {
+				self::write( $path, '', 410, 'term:' . (int) $term_id, 'trash' );
+			} else {
+				self::write( $path, $target, 301, 'term:' . (int) $term_id, 'trash' );
+			}
 		}
 	}
 
@@ -308,14 +468,23 @@ final class Auto {
 	 * @return void
 	 */
 	public static function term_edited( $term_id, $tt_id, $taxonomy ): void { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundInExtendedClassBeforeLastUsed,Generic.CodeAnalysis.UnusedFunctionParameter.FoundBeforeLastUsed -- the action's signature.
-		$old = self::$terms[ (int) $term_id ] ?? '';
+		$olds = self::$terms[ (int) $term_id ] ?? array();
 		unset( self::$terms[ (int) $term_id ] );
+		$old = (string) ( $olds[''] ?? '' );
 		if ( '' === $old || ! Settings::get( 'redirects_auto', true ) ) {
 			return;
 		}
 		clean_term_cache( (int) $term_id, (string) $taxonomy );
 		$link = get_term_link( (int) $term_id, (string) $taxonomy );
-		$new  = is_string( $link ) ? self::path( $link ) : '';
+		$news = is_string( $link ) ? Translated::paths( $link ) : array();
+		$new  = (string) ( $news[''] ?? '' );
+		// Every other language's address of the term (0.17.65).
+		foreach ( $olds as $lang => $was ) {
+			$now = (string) ( $news[ $lang ] ?? '' );
+			if ( '' !== $lang && '' !== $was && '' !== $now && Path::key( $was, Store::base() ) !== Path::key( $now, Store::base() ) ) {
+				self::write( $was, $now, 301, 'term:' . (int) $term_id );
+			}
+		}
 		if ( '' === $new || Path::key( $old, Store::base() ) === Path::key( $new, Store::base() ) ) {
 			return;
 		}

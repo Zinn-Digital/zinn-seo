@@ -24,6 +24,8 @@ import {
 
 import GuideAnchor, { editorGuide } from '../admin/x1a/GuideAnchor';
 import ModelPicker from '../admin/x1c/ModelPicker';
+// zs-782 (statically: a lazy chunk's strings would not be translated, see WritingScreen.js).
+import CopywriterPanel from '../copywriter/EditorPanel';
 
 const boot = window.zinnSeoEditor || {};
 const base = boot.restPath || '/zinn-seo/v1';
@@ -1101,6 +1103,7 @@ export function WritingPanel() {
 			{ boot.writer && boot.aiState && boot.aiState.ready && (
 				<Passage postId={ postId } />
 			) }
+			{ boot.copywriter && <CopywriterPanel postId={ postId } /> }
 			{ boot.proofread && <Proofread postId={ postId } /> }
 			{ boot.contentTools && <Guidelines postId={ postId } /> }
 			{ boot.imageGen && <Images postId={ postId } /> }
@@ -1478,6 +1481,7 @@ export default function registerX1cPanels( Panel ) {
 		boot.headline ||
 		boot.kwlists ||
 		boot.writer ||
+		boot.copywriter ||
 		boot.proofread ||
 		boot.contentTools ||
 		boot.imageGen ||

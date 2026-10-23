@@ -110,6 +110,11 @@ export function reason( r ) {
 				r.need,
 				r.have
 			);
+		case 'custom_build':
+			return __(
+				'This copy is a custom build, not the public release: this update is for a different copy and would replace its custom changes. Ask whoever maintains it.',
+				'zinn-seo'
+			);
 		case 'php_removed':
 			return sprintf(
 				/* translators: 1: PHP function names, 2: this site's PHP version. */

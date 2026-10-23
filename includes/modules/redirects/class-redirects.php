@@ -72,6 +72,20 @@ final class Redirects {
 				'choices' => array( 'parent', '410', 'none' ),
 				'group'   => 'redirects',
 			),
+			// 0.17.65: per content type (`post:<type>`) and for categories and tags (`term:all`);
+			// an action left empty follows `redirects_on_trash`.
+			'redirects_on_trash_by'    => array(
+				'type'    => 'dict',
+				'default' => array(),
+				'fields'  => array(
+					'action' => array(
+						'type'    => 'enum',
+						'default' => '',
+						'choices' => array( '', 'parent', '410', 'none' ),
+					),
+				),
+				'group'   => 'redirects',
+			),
 			'redirects_collapse'       => array(
 				'type'    => 'bool',
 				'default' => true,
@@ -205,6 +219,16 @@ final class Redirects {
 			'exportUrl' => wp_nonce_url( admin_url( 'admin-post.php?action=' . self::EXPORT ), self::EXPORT ),
 			'early'     => Index::REGEX_EARLY,
 			'codes'     => Store::CODES,
+			// The public content types, for the per-type "deleted or unpublished" choice.
+			'types'     => array_values(
+				array_map(
+					static fn( \WP_Post_Type $t ): array => array(
+						'name'  => $t->name,
+						'label' => (string) $t->labels->name,
+					),
+					array_filter( get_post_types( array( 'public' => true ), 'objects' ), static fn( $t ): bool => 'attachment' !== $t->name )
+				)
+			),
 		);
 
 		return $data;

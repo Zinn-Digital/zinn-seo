@@ -53,6 +53,68 @@ export function redirectsTabs( data = {} ) {
  *
  * @return {Element} Tab.
  */
+/**
+ * The same choice for each content type, and for categories and tags (0.17.65): a shop may want
+ * a deleted product to answer "gone" while a deleted post goes to its category.
+ *
+ * @param {Object}   props          Props.
+ * @param {Object}   props.value    `post:<type>` / `term:all` => { action }.
+ * @param {Function} props.onChange Called with the new value.
+ * @return {Element} The choices.
+ */
+function GoneByType( { value, onChange } ) {
+	const types = ( ( window.zinnSeoAdmin || {} ).redirects || {} ).types || [];
+	const rows = [
+		...types.map( ( t ) => ( {
+			key: `post:${ t.name }`,
+			label: t.label,
+		} ) ),
+		{ key: 'term:all', label: __( 'Categories and tags', 'zinn-seo' ) },
+	];
+	const options = [
+		{ value: '', label: __( 'The same as above', 'zinn-seo' ) },
+		{
+			value: 'parent',
+			label: __(
+				'Send visitors to its parent page or category',
+				'zinn-seo'
+			),
+		},
+		{ value: '410', label: __( 'Answer “gone” (410)', 'zinn-seo' ) },
+		{ value: 'none', label: __( 'Do nothing', 'zinn-seo' ) },
+	];
+	const set = ( key, action ) => {
+		const next = { ...value };
+		if ( action ) {
+			next[ key ] = { action };
+		} else {
+			delete next[ key ];
+		}
+		onChange( next );
+	};
+	return (
+		<fieldset className="zseo-stack">
+			<legend>
+				{ __(
+					'A different choice for one kind of content (for example, products that should answer “gone”)',
+					'zinn-seo'
+				) }
+			</legend>
+			{ rows.map( ( row ) => (
+				<SelectControl
+					key={ row.key }
+					__nextHasNoMarginBottom
+					__next40pxDefaultSize
+					label={ row.label }
+					value={ ( value[ row.key ] || {} ).action || '' }
+					options={ options }
+					onChange={ ( v ) => set( row.key, v ) }
+				/>
+			) ) }
+		</fieldset>
+	);
+}
+
 function SettingsTab() {
 	const { settings, save, error } = useSettings();
 	const [ fail, setFail ] = useState( '' );
@@ -83,7 +145,7 @@ function SettingsTab() {
 						'zinn-seo'
 					) }
 					help={ __(
-						'A changed slug, parent or category writes a permanent redirect from the old address; a page with children gets one rule for everything below it.',
+						'A changed slug, parent or category writes a permanent redirect from the old address, in every language your translation plugin gives the page; a page with children gets one rule for everything below it.',
 						'zinn-seo'
 					) }
 					checked={ !! settings.redirects_auto }
@@ -92,7 +154,7 @@ function SettingsTab() {
 				<SelectControl
 					__nextHasNoMarginBottom
 					__next40pxDefaultSize
-					label={ __( 'When a page is deleted', 'zinn-seo' ) }
+					label={ __( 'When a page is removed', 'zinn-seo' ) }
 					value={ settings.redirects_on_trash }
 					options={ [
 						{
@@ -112,10 +174,14 @@ function SettingsTab() {
 						},
 					] }
 					help={ __(
-						'A published page, post or product. Publishing it again removes the redirect.',
+						'A published page, post or product moved to the bin, deleted, or taken back to draft, pending, scheduled or private; and a deleted category or tag, which goes to its parent (or answers “gone” when it has none). Publishing it again removes the redirect. Every saved redirect is also emptied from your caches and CDN, so visitors get it at once.',
 						'zinn-seo'
 					) }
 					onChange={ ( v ) => put( { redirects_on_trash: v } ) }
+				/>
+				<GoneByType
+					value={ settings.redirects_on_trash_by || {} }
+					onChange={ ( v ) => put( { redirects_on_trash_by: v } ) }
 				/>
 				<ToggleControl
 					__nextHasNoMarginBottom

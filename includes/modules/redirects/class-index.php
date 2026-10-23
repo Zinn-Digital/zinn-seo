@@ -141,6 +141,7 @@ final class Index {
 	public static function changed( ?array $before, ?array $after ): void {
 		$shards = array();
 		$regex  = false;
+		$pages  = array();
 		foreach ( array( $before, $after ) as $row ) {
 			if ( null === $row ) {
 				continue;
@@ -149,8 +150,11 @@ final class Index {
 				$regex = true;
 			} else {
 				$shards[ Path::shard( (string) $row['path_hash'] ) ] = true;
+				$pages[] = Store::address( (string) $row['source'] );
 			}
 		}
+		// 0.17.65: a cache in front of the site forgets the page, or it keeps answering the old one.
+		\ZinnDigital\ZinnSEO\Cdn\Cdn::purge_urls( array_values( array_unique( array_filter( $pages ) ) ) );
 		self::notify();
 		if ( null !== self::$deferred ) {
 			self::$deferred += $shards + ( $regex ? array( 'regex' => true ) : array() );

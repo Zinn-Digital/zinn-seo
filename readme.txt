@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.64
+Stable tag: 0.17.65
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -833,6 +833,14 @@ They are answered before your theme loads, from small index files, so a redirect
 12. Every screen right to left in Arabic, and translated into 57 languages.
 
 == Changelog ==
+
+= 0.17.65 =
+* New (Pro): the AI copywriter, under Writing → Copywriter, in the block editor's Writing help panel and in Elementor's SEO settings. More than seventy writing tools (every tool Rank Math Content AI has, and over thirty more: list posts, how-to steps, "People also ask" answers, featured-snippet answers, LinkedIn and Pinterest posts, video scripts, newsletters, press releases, landing page heroes, search ad headlines and more) and over 150 ready-made prompts. Opened from a page, it writes from that page's own focus phrase and research, in your brand's name and tone, in any of the plugin's languages. Ask for up to five versions at once: each is checked for length, your focus phrase, how easy it is to read, and claims to look at before publishing ("guaranteed", "best"). Insert a version as blocks or as an Elementor text widget, use it as the SEO title or description, A/B test it in Google, or keep it in your library. Every run is in your history; an SEO manager can change how any tool writes or add tools of their own; and one tool can write for every page of a kind in the background (nothing is changed on the pages: every version waits in your library).
+* New (Pro): redirect by the visitor's country, as a condition of a redirect. Search engines are never redirected (Google, Bing and the others are checked by their address); a visitor's own choice is kept (link with ?zseo_country=de, or ?zseo_country=auto to forget it); and pages under such a rule are never kept by page caches. The screen says plainly that Google advises against redirecting by location, and when your host does not tell WordPress the visitor's country.
+* Fixed (Pro): a plugin or theme that is a custom build is no longer told to update. WordPress matches updates by folder name only, so a copy changed for your site (for example version 0.32.9-yoursite) was offered the public release, and the fatal-error e-mail said to install it, which would have replaced every custom change. Now an update is advised only when the installed copy is the public release from the same place and author; otherwise the e-mail and the Errors screen say it is a custom build and to ask whoever maintains it, and Safe updates holds it and never updates it automatically.
+* Automatic redirects: a published post, page or product taken back to draft, pending, scheduled or private now follows the same choice as the bin (its parent or category, "gone", or nothing), and so does a deleted category or tag (its parent, or "gone" when it has none). The choice can differ per content type and for categories and tags (for example, products answer "gone" while posts go to their category).
+* Automatic redirects now cover every language: with Zinn® Translate, Tranzly or TranslatePress, a changed or removed page is redirected at each of its translated addresses too (with WPML and Polylang each language was already its own page).
+* Saving, changing or deleting a redirect now empties that page from your caches and CDN (Zinn® Cache, LiteSpeed, WP Rocket, Cloudflare in Zinn® SEO Pro, and any cache that listens), so visitors get the redirect at once.
 
 = 0.17.64 =
 * Rebuild only: the package no longer carries development files

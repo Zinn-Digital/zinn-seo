@@ -38,6 +38,7 @@ return array(
 			return;
 		}
 		require_once __DIR__ . '/class-auto.php';
+		require_once __DIR__ . '/class-translated.php';
 		require_once __DIR__ . '/class-checker.php';
 		require_once __DIR__ . '/class-importer.php';
 		require_once __DIR__ . '/class-export.php';

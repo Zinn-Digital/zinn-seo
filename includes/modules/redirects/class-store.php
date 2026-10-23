@@ -230,6 +230,24 @@ KEY problem (problem)
 	}
 
 	/**
+	 * The absolute address of a plain rule's source on this site ('' for one elsewhere).
+	 *
+	 * @param string $source Stored source (a path, with the site's folder).
+	 * @return string
+	 */
+	public static function address( string $source ): string {
+		if ( '' === $source ) {
+			return '';
+		}
+		if ( 1 === preg_match( '#^https?://#i', $source ) ) {
+			return self::is_local( $source ) ? $source : '';
+		}
+		$origin = (string) preg_replace( '#^(https?://[^/]+).*$#i', '$1', home_url( '/' ) );
+
+		return $origin . '/' . ltrim( $source, '/' );
+	}
+
+	/**
 	 * Create a rule, or replace the rule already holding that source.
 	 *
 	 * @param array<string, mixed> $in      Fields.
