@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.65
+Stable tag: 0.17.66
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -834,6 +834,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.66 =
+* Help links: the Copywriter tab and a redirect's country condition now open their own step-by-step guides on zinnseo.com (Write anything with the AI copywriter; Redirect visitors by their country).
+
 = 0.17.65 =
 * New (Pro): the AI copywriter, under Writing → Copywriter, in the block editor's Writing help panel and in Elementor's SEO settings. More than seventy writing tools (every tool Rank Math Content AI has, and over thirty more: list posts, how-to steps, "People also ask" answers, featured-snippet answers, LinkedIn and Pinterest posts, video scripts, newsletters, press releases, landing page heroes, search ad headlines and more) and over 150 ready-made prompts. Opened from a page, it writes from that page's own focus phrase and research, in your brand's name and tone, in any of the plugin's languages. Ask for up to five versions at once: each is checked for length, your focus phrase, how easy it is to read, and claims to look at before publishing ("guaranteed", "best"). Insert a version as blocks or as an Elementor text widget, use it as the SEO title or description, A/B test it in Google, or keep it in your library. Every run is in your history; an SEO manager can change how any tool writes or add tools of their own; and one tool can write for every page of a kind in the background (nothing is changed on the pages: every version waits in your library).
 * New (Pro): redirect by the visitor's country, as a condition of a redirect. Search engines are never redirected (Google, Bing and the others are checked by their address); a visitor's own choice is kept (link with ?zseo_country=de, or ?zseo_country=auto to forget it); and pages under such a rule are never kept by page caches. The screen says plainly that Google advises against redirecting by location, and when your host does not tell WordPress the visitor's country.
@@ -848,18 +851,5 @@ They are answered before your theme loads, from small index files, so a redirect
 = 0.17.63 =
 * "Visitors keep asking for addresses that do not exist" no longer counts the numbered pages of a list past its end (page 35 of a category that now has 20 pages, or an old comment page). When a list gets shorter, search engines keep asking for its old page numbers for a while; there is nothing to redirect them to and the "not found" answer is right. Real lost addresses (a removed page, an old translated address) still count.
 * New: "Bing Copilot uses only the title, link and snippet (nocache)" for a page, or for a whole content type in its template. Bing's Copilot then shows only the page's title, address and snippet, and the page stays in Bing's search results. Other search engines ignore it.
-
-= 0.17.62 =
-* Every e-mail Zinn® SEO sends is now written in plain words for someone who is not technical: first what happened and what it means for your site and your visitors, then whether you need to do anything and the one next step, with its link. Codes, status numbers, file names and PHP's own messages come last, under "Technical details (for you or your developer)". This covers the malware scan, a code fix switched off, Safe updates (an update undone, a round of updates tested), new broken links, missing pages, your content copied elsewhere, a wave of spammy links, spam a hack may have added and the Fix it on autopilot reports.
-* New: Site care now tells you when your site's background jobs are running late. Many plugins (WooCommerce and others) keep a list of jobs to do out of sight, such as sending order e-mails. When 200 or more of them are overdue for 15 minutes or longer, you get one e-mail that says what it means (customers may get their e-mails late), and an urgent one if the jobs have stopped altogether. One e-mail per backlog; you can turn it off on its own in Settings → Alert e-mails ("Background tasks running late").
-* "A sudden wave of spammy links to your site" is now its own kind of alert e-mail, so turning off "Your content copied on another site" no longer turns it off too.
-
-= 0.17.61 =
-* Site care's error e-mails now say, in plain words, what happened, whether visitors were affected, whether you need to do anything, and the one next step. The technical details (the code behind it, the file and line, PHP's own message) come after, for you or your developer.
-* A page that breaks: the e-mail now names the page (its address, without the part after "?", and how it was asked for), the theme or plugin behind it, and what to do: update it when a newer version exists, send its developer the details, or let the AI suggest a fix from the Errors screen.
-* An error in a background job on your server (a command-line task run by your host, a developer or a script, or a scheduled task) now comes in its own e-mail, which is not marked urgent. It says visitors were not affected and that usually nothing needs doing. Before, it said a page had broken and visitors might have seen an error page. You can turn these e-mails off on their own in Settings → Alert e-mails ("Errors in background jobs on your server").
-* Fix: an error in a command typed into WP-CLI (wp eval) was listed twice on the Errors screen, once as "Unknown code". It is now one problem, named as WP-CLI. Errors already listed twice are merged the next time the logs are read.
-* The Errors screen explains "Call to a member function … on null" in plain words.
-* Fix: on sites with a persistent object cache (Redis, Memcached), a background job you started (such as applying a link plan) could be reported as started and then never run, because another task's stale copy of WordPress's list of missing settings hid it. Background jobs now read their own record from the database when the cache says it is missing, so a started job always runs.
 
 The full history of every release is in changelog.txt, in the plugin's folder.

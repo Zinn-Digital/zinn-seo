@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zinn® SEO 0.17.65\n"
+"Project-Id-Version: Zinn® SEO 0.17.66\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zinn-seo\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-22T22:30:26+00:00\n"
+"POT-Creation-Date: 2026-10-23T12:58:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zinn-seo\n"
@@ -769,7 +769,7 @@ msgstr ""
 
 #: includes/admin-kit/class-matrix.php:921
 #: includes/modules/keywords/module.php:17
-#: src/admin/x1c/WritingScreen.js:62
+#: src/admin/x1c/WritingScreen.js:63
 #: src/editor/X1cPanels.js:260
 msgid "Keyword lists"
 msgstr ""
@@ -823,7 +823,7 @@ msgstr ""
 #: includes/pro__premium_only/modules/affiliates/module.php:17
 #: src/admin/x1c/AffiliatesTab.js:89
 #: src/admin/x1c/AffiliatesTab.js:232
-#: src/admin/x1c/WritingScreen.js:79
+#: src/admin/x1c/WritingScreen.js:80
 msgid "Affiliate links"
 msgstr ""
 
@@ -2139,7 +2139,7 @@ msgid "Enter an e-mail address support can reply to."
 msgstr ""
 
 #: includes/admin/class-admin.php:69
-#: includes/class-guide.php:380
+#: includes/class-guide.php:385
 #: src/admin/p7/GuideLink.js:27
 #: src/admin/x1a/GuideAnchor.js:25
 #: src/authority/AuthorityScreen.js:1341
@@ -2306,7 +2306,7 @@ msgstr ""
 #: includes/pro__premium_only/modules/schema-pro/class-types.php:420
 #: src/admin/p5/ProtectionScreen.js:275
 #: src/admin/p5/RedirectsScreen.js:252
-#: src/admin/p5/RedirectsTab.js:281
+#: src/admin/p5/RedirectsTab.js:283
 #: src/admin/p7/IntegrationsScreen.js:575
 #: src/admin/p7/IntegrationsScreen.js:1400
 #: src/admin/x1a/LinkUpdatesTab.js:138
@@ -2366,8 +2366,8 @@ msgstr ""
 
 #: includes/ai-core/class-admin.php:271
 #: src/admin/discovery/RobotsTab.js:397
-#: src/admin/p5/RedirectsTab.js:293
-#: src/admin/x1a/Conditions.js:201
+#: src/admin/p5/RedirectsTab.js:295
+#: src/admin/x1a/Conditions.js:213
 msgid "Test"
 msgstr ""
 
@@ -2384,7 +2384,7 @@ msgstr ""
 #: src/admin/schema/GraphTab.js:353
 #: src/admin/schema/SchemaDetails.js:78
 #: src/admin/SiteFields.js:100
-#: src/admin/x1a/Conditions.js:276
+#: src/admin/x1a/Conditions.js:288
 #: src/admin/x1c/CrosslinksTab.js:161
 #: src/admin/x1c/PlannerTab.js:221
 #: src/agency/AgencyScreen.js:585
@@ -3146,7 +3146,7 @@ msgstr ""
 msgid "SEO Editor"
 msgstr ""
 
-#: includes/class-guide.php:380
+#: includes/class-guide.php:385
 #: includes/pro__premium_only/integrations/builders/class-panel.php:331
 #: src/admin/nav/SideNav.js:385
 #: src/admin/p7/GuideLink.js:30
@@ -3446,7 +3446,7 @@ msgstr ""
 #: src/admin/BulkScreen.js:1315
 #: src/admin/p5/NotfoundTab.js:305
 #: src/admin/p5/ProtectionScreen.js:337
-#: src/admin/p5/RedirectsTab.js:708
+#: src/admin/p5/RedirectsTab.js:710
 #: src/admin/p5/SiteSearchTab.js:133
 #: src/admin/ToolsScreen.js:422
 #: src/admin/x1c/AffiliatesTab.js:281
@@ -4022,7 +4022,7 @@ msgstr ""
 #: src/admin/p5/AddressTab.js:255
 #: src/admin/p5/ImportTab.js:116
 #: src/admin/p5/NotfoundTab.js:93
-#: src/admin/p5/RedirectsTab.js:238
+#: src/admin/p5/RedirectsTab.js:240
 #: src/admin/p6/ImportScreen.js:1350
 #: src/admin/Panels.js:279
 #: src/admin/schema/SchemaDetails.js:381
@@ -6880,9 +6880,9 @@ msgstr ""
 #: src/admin/p4/LinksScreen.js:308
 #: src/admin/p5/ImportTab.js:74
 #: src/admin/p5/NotfoundTab.js:75
-#: src/admin/p5/RedirectsTab.js:162
-#: src/admin/p5/RedirectsTab.js:671
-#: src/admin/p5/RedirectsTab.js:848
+#: src/admin/p5/RedirectsTab.js:163
+#: src/admin/p5/RedirectsTab.js:673
+#: src/admin/p5/RedirectsTab.js:851
 msgid "Type"
 msgstr ""
 
@@ -6997,7 +6997,7 @@ msgstr ""
 #: includes/freemius-strings.php:5656
 #: src/admin/schema/CustomTab.js:180
 #: src/admin/schema/CustomTab.js:229
-#: src/admin/x1a/Conditions.js:258
+#: src/admin/x1a/Conditions.js:270
 msgid "Value"
 msgstr ""
 
@@ -9873,8 +9873,8 @@ msgstr ""
 
 #: includes/modules/blocks/blocks/class-toc.php:80
 #: src/admin/p5/ImportTab.js:56
-#: src/admin/p5/RedirectsTab.js:139
-#: src/admin/p5/RedirectsTab.js:635
+#: src/admin/p5/RedirectsTab.js:140
+#: src/admin/p5/RedirectsTab.js:637
 #: src/admin/SettingsScreen.js:93
 #: src/referrals/ReferralsScreen.js:159
 msgid "From"
@@ -9885,8 +9885,8 @@ msgstr ""
 #: src/admin/BulkScreen.js:683
 #: src/admin/BulkScreen.js:715
 #: src/admin/p5/ImportTab.js:65
-#: src/admin/p5/RedirectsTab.js:171
-#: src/admin/p5/RedirectsTab.js:659
+#: src/admin/p5/RedirectsTab.js:172
+#: src/admin/p5/RedirectsTab.js:661
 #: src/tools/CreditsScreen.js:657
 msgid "To"
 msgstr ""
@@ -15050,7 +15050,7 @@ msgstr ""
 
 #: includes/modules/mcp/class-rest-map.php:4551
 #: src/admin/discovery/RobotsTab.js:371
-#: src/admin/p5/RedirectsTab.js:265
+#: src/admin/p5/RedirectsTab.js:267
 msgid "Test an address"
 msgstr ""
 
@@ -18073,8 +18073,8 @@ msgstr ""
 #: includes/modules/redirects/module.php:20
 #: includes/pro__premium_only/integrations/multisite/class-network.php:555
 #: src/admin/p5/RedirectsScreen.js:34
-#: src/admin/p5/RedirectsTab.js:765
-#: src/admin/p5/RedirectsTab.js:941
+#: src/admin/p5/RedirectsTab.js:767
+#: src/admin/p5/RedirectsTab.js:944
 #: src/admin/p6/pure.js:128
 #: src/admin/RolesScreen.js:22
 #: src/ai/AiScreen.js:26
@@ -21030,7 +21030,7 @@ msgstr ""
 #: src/admin/BulkScreen.js:343
 #: src/admin/p4/ContentScreen.js:146
 #: src/admin/p4/LinksScreen.js:738
-#: src/admin/p5/RedirectsTab.js:882
+#: src/admin/p5/RedirectsTab.js:885
 #: src/admin/p5/SiteSearchTab.js:78
 #: src/admin/x1c/AffiliatesTab.js:208
 #: src/agency/Tasks.js:442
@@ -25485,9 +25485,9 @@ msgid "Show hidden suggestions on the Overview again"
 msgstr ""
 
 #: src/admin-kit/DataList.js:142
-#: src/admin/p5/RedirectsTab.js:851
-#: src/admin/p5/RedirectsTab.js:867
-#: src/admin/p5/RedirectsTab.js:885
+#: src/admin/p5/RedirectsTab.js:854
+#: src/admin/p5/RedirectsTab.js:870
+#: src/admin/p5/RedirectsTab.js:888
 #: src/agency/Tasks.js:448
 #: src/indexing/IndexingScreen.js:296
 #: src/indexing/IndexingScreen.js:325
@@ -25498,7 +25498,7 @@ msgstr ""
 #. translators: %d: number of selected rows.
 #. translators: %d: number selected.
 #: src/admin-kit/DataList.js:159
-#: src/admin/p5/RedirectsTab.js:910
+#: src/admin/p5/RedirectsTab.js:913
 #, js-format
 msgid "%d selected"
 msgid_plural "%d selected"
@@ -25515,7 +25515,7 @@ msgid "Select all on this page"
 msgstr ""
 
 #: src/admin-kit/DataList.js:234
-#: src/admin/p5/RedirectsTab.js:605
+#: src/admin/p5/RedirectsTab.js:607
 msgid "Select"
 msgstr ""
 
@@ -26368,7 +26368,7 @@ msgstr ""
 #: src/admin/p5/AddressTab.js:211
 #: src/admin/p5/NotfoundTab.js:456
 #: src/admin/p5/ProtectionScreen.js:392
-#: src/admin/p5/RedirectsTab.js:955
+#: src/admin/p5/RedirectsTab.js:958
 #: src/admin/p5/SiteSearchTab.js:202
 #: src/agency/Tasks.js:499
 #: src/ai/WriteTab.js:276
@@ -27118,7 +27118,7 @@ msgstr ""
 
 #: src/admin/auto1/AutopilotScreen.js:1345
 #: src/admin/BulkScreen.js:285
-#: src/admin/p5/RedirectsTab.js:726
+#: src/admin/p5/RedirectsTab.js:728
 #: src/admin/x1c/KeywordListsTab.js:217
 #: src/search/InsightsTabs.js:603
 #: src/tools/tabs/IndexTab.js:573
@@ -27200,8 +27200,8 @@ msgid "New block"
 msgstr ""
 
 #: src/admin/blocks/CustomBlocksTab.js:73
-#: src/admin/p5/RedirectsTab.js:741
-#: src/admin/p5/RedirectsTab.js:931
+#: src/admin/p5/RedirectsTab.js:743
+#: src/admin/p5/RedirectsTab.js:934
 #: src/admin/schema/CustomTab.js:145
 #: src/admin/x1c/AffiliatesTab.js:288
 #: src/admin/x1c/KeywordListsTab.js:237
@@ -27542,7 +27542,7 @@ msgstr ""
 #. translators: %s: a post or term title.
 #. translators: %s: an address.
 #: src/admin/BulkScreen.js:256
-#: src/admin/p5/RedirectsTab.js:613
+#: src/admin/p5/RedirectsTab.js:615
 #, js-format
 msgid "Select %s"
 msgstr ""
@@ -27910,7 +27910,7 @@ msgstr ""
 
 #: src/admin/discovery/CrawlersTab.js:265
 #: src/admin/p5/NotfoundTab.js:431
-#: src/admin/p5/RedirectsTab.js:838
+#: src/admin/p5/RedirectsTab.js:841
 #: src/copywriter/CopywriterTab.js:75
 #: src/offers/OrderFlow.js:235
 #: src/search/BingMore.js:52
@@ -29825,9 +29825,9 @@ msgstr ""
 
 #: src/admin/p4/LinksScreen.js:372
 #: src/admin/ProTeaser.js:78
-#: src/admin/x1a/Conditions.js:140
+#: src/admin/x1a/Conditions.js:152
 #: src/admin/x1a/LinkUpdatesTab.js:74
-#: src/admin/x1c/WritingScreen.js:115
+#: src/admin/x1c/WritingScreen.js:116
 #: src/editor/analysis/AnalysisPanel.js:285
 #: src/editor/analysis/AnalysisPanel.js:454
 #: src/editor/analysis/AnalysisPanel.js:465
@@ -30473,7 +30473,7 @@ msgid "Send visitors to"
 msgstr ""
 
 #: src/admin/p5/NotfoundTab.js:103
-#: src/admin/p5/RedirectsTab.js:228
+#: src/admin/p5/RedirectsTab.js:230
 msgid "Add the redirect"
 msgstr ""
 
@@ -30900,192 +30900,192 @@ msgstr ""
 msgid "Only people who may change site-wide SEO settings can change these."
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:109
+#: src/admin/p5/RedirectsTab.js:110
 msgid "Edit the redirect"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:110
+#: src/admin/p5/RedirectsTab.js:111
 msgid "Add a redirect"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:135
+#: src/admin/p5/RedirectsTab.js:136
 msgid "From (a regular expression)"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:148
+#: src/admin/p5/RedirectsTab.js:149
 msgid "Matched against the address path, e.g. ^/shop/(.*)$. Use $1, $2… in the target."
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:152
+#: src/admin/p5/RedirectsTab.js:153
 msgid "A path on this site, or a full address of it. Letters case and a trailing slash do not matter."
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:175
+#: src/admin/p5/RedirectsTab.js:176
 msgid "A path on this site or any full address."
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:187
+#: src/admin/p5/RedirectsTab.js:188
 msgid "Group (optional)"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:200
+#: src/admin/p5/RedirectsTab.js:201
 msgid "Note (optional)"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:207
+#: src/admin/p5/RedirectsTab.js:208
 msgid "The address is a regular expression"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:227
+#: src/admin/p5/RedirectsTab.js:229
 msgid "Save the redirect"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:304
+#: src/admin/p5/RedirectsTab.js:306
 msgid "No redirect answers this address: WordPress shows it as usual."
 msgstr ""
 
 #. translators: 1: status code, 2: address.
-#: src/admin/p5/RedirectsTab.js:316
+#: src/admin/p5/RedirectsTab.js:318
 #, js-format
 msgid "Answered with %1$d and sent to %2$s"
 msgstr ""
 
 #. translators: %d: status code.
-#: src/admin/p5/RedirectsTab.js:325
+#: src/admin/p5/RedirectsTab.js:327
 #, js-format
 msgid "Answered with %d and the not-found page."
 msgstr ""
 
 #. translators: 1: number of hops, 2: final address.
-#: src/admin/p5/RedirectsTab.js:339
+#: src/admin/p5/RedirectsTab.js:341
 #, js-format
 msgid "That address redirects again (%1$d more hop) before it ends at %2$s."
 msgid_plural "That address redirects again (%1$d more hops) before it ends at %2$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/admin/p5/RedirectsTab.js:352
+#: src/admin/p5/RedirectsTab.js:354
 msgid "These redirects go round in a circle: no browser can open the address."
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:411
+#: src/admin/p5/RedirectsTab.js:413
 msgid "Chains and loops"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:416
+#: src/admin/p5/RedirectsTab.js:418
 msgid "A redirect to an address that redirects again costs every visitor another round trip, and search engines give up after a few. New redirects never make one: the old ones are pointed at the new address for you. This check finds any already there."
 msgstr ""
 
 #. translators: 1: chains, 2: loops, 3: missing targets, 4: date.
-#: src/admin/p5/RedirectsTab.js:430
+#: src/admin/p5/RedirectsTab.js:432
 #, js-format
 msgid "Last check: %1$d chains, %2$d loops, %3$d missing targets (%4$s)."
 msgstr ""
 
 #. translators: 1: chains fixed, 2: loops switched off.
-#: src/admin/p5/RedirectsTab.js:450
+#: src/admin/p5/RedirectsTab.js:452
 #, js-format
 msgid "%1$d chains now go straight to their final address; %2$d loops were switched off for you to look at."
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:463
+#: src/admin/p5/RedirectsTab.js:465
 msgid "Also ask every target on this site whether it answers (slower)"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:481
+#: src/admin/p5/RedirectsTab.js:483
 msgid "Check every redirect"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:496
+#: src/admin/p5/RedirectsTab.js:498
 msgid "Fix them"
 msgstr ""
 
 #. translators: %d: number of redirects.
-#: src/admin/p5/RedirectsTab.js:587
+#: src/admin/p5/RedirectsTab.js:589
 #, js-format
 msgid "%d redirect changed."
 msgid_plural "%d redirects changed."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/admin/p5/RedirectsTab.js:641
+#: src/admin/p5/RedirectsTab.js:643
 msgid "pattern"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:646
+#: src/admin/p5/RedirectsTab.js:648
 #: src/admin/ToolsScreen.js:27
 msgid "off"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:665
+#: src/admin/p5/RedirectsTab.js:667
 msgid "(the not-found page)"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:676
+#: src/admin/p5/RedirectsTab.js:678
 #: src/search/InsightsTabs.js:120
 msgid "Used"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:691
+#: src/admin/p5/RedirectsTab.js:693
 msgid "Made by"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:769
+#: src/admin/p5/RedirectsTab.js:771
 #: src/care/pure.js:213
 msgid "Switched on"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:773
+#: src/admin/p5/RedirectsTab.js:775
 msgid "Patterns"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:777
+#: src/admin/p5/RedirectsTab.js:779
 msgid "Times used"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:781
+#: src/admin/p5/RedirectsTab.js:783
 msgid "Need a look"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:788
+#: src/admin/p5/RedirectsTab.js:790
 msgid "The uploads folder cannot be written, so each visitor’s request looks redirects up in the database instead of the fast index. Make wp-content/uploads writable, then rebuild the index."
 msgstr ""
 
 #. translators: 1: number of pattern redirects, 2: how many are tried on every request.
-#: src/admin/p5/RedirectsTab.js:798
+#: src/admin/p5/RedirectsTab.js:800
 #, js-format
 msgid "%1$d pattern redirects: the first %2$d are tried on every request and the rest only when a page is missing. Turn pattern redirects that match one address into plain ones to keep every page fast."
 msgstr ""
 
 #. translators: %s: an address.
-#: src/admin/p5/RedirectsTab.js:817
+#: src/admin/p5/RedirectsTab.js:820
 #, js-format
 msgid "Saved: %s"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:830
+#: src/admin/p5/RedirectsTab.js:833
 msgid "All redirects"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:862
+#: src/admin/p5/RedirectsTab.js:865
 msgid "Group"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:888
+#: src/admin/p5/RedirectsTab.js:891
 msgid "Needing a look"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:918
+#: src/admin/p5/RedirectsTab.js:921
 #: src/toolbox/shared.js:355
 msgid "Switch on"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:924
+#: src/admin/p5/RedirectsTab.js:927
 #: src/toolbox/shared.js:354
 msgid "Switch off"
 msgstr ""
 
-#: src/admin/p5/RedirectsTab.js:942
+#: src/admin/p5/RedirectsTab.js:945
 msgid "No redirect yet. Add one above, import them from another plugin or a spreadsheet, or let the plugin write them when a page’s address changes."
 msgstr ""
 
@@ -34739,75 +34739,75 @@ msgstr ""
 msgid "Only when the page does not exist"
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:96
+#: src/admin/x1a/Conditions.js:97
 msgid "Google advises against sending visitors to another page because of where they are: search engines crawl mostly from the United States and would not see your other countries' pages. Show a banner that suggests the other page, or use one page per language with hreflang, when you can."
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:102
+#: src/admin/x1a/Conditions.js:103
 msgid "If you use it: search engines (checked by their address) are never redirected by country; a visitor's own choice is kept (link to any page with ?zseo_country=de, or ?zseo_country=auto to forget it); and pages under this rule are never kept by page caches, so each visitor gets the right answer."
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:110
+#: src/admin/x1a/Conditions.js:111
 msgid "Your host does not tell WordPress the visitor's country yet (for example Cloudflare's IP geolocation, or a GeoIP header). Until it does, this condition is never met and every visitor sees the page as usual."
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:135
+#: src/admin/x1a/Conditions.js:147
 msgid "Pro: send only some visitors elsewhere (members, phones, a campaign, a language) or only when a page no longer exists."
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:157
+#: src/admin/x1a/Conditions.js:169
 msgid "Only for some visitors (optional)"
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:167
+#: src/admin/x1a/Conditions.js:179
 msgid "Redirect when"
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:172
+#: src/admin/x1a/Conditions.js:184
 msgid "every condition holds"
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:176
+#: src/admin/x1a/Conditions.js:188
 msgid "any condition holds"
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:188
+#: src/admin/x1a/Conditions.js:200
 msgid "Condition"
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:206
+#: src/admin/x1a/Conditions.js:218
 msgid "is"
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:210
+#: src/admin/x1a/Conditions.js:222
 msgid "is not"
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:216
+#: src/admin/x1a/Conditions.js:228
 msgid "contains"
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:223
+#: src/admin/x1a/Conditions.js:235
 msgid "matches the pattern"
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:237
+#: src/admin/x1a/Conditions.js:249
 msgid "Visitor"
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:242
+#: src/admin/x1a/Conditions.js:254
 msgid "logged in"
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:246
+#: src/admin/x1a/Conditions.js:258
 msgid "not logged in"
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:293
+#: src/admin/x1a/Conditions.js:305
 msgid "Add a condition"
 msgstr ""
 
-#: src/admin/x1a/Conditions.js:299
+#: src/admin/x1a/Conditions.js:314
 msgid "With conditions, the redirect is answered by WordPress itself (never by your server or Cloudflare), and visitors who do not match see the page as usual."
 msgstr ""
 
@@ -36432,35 +36432,35 @@ msgstr ""
 msgid "Save as a draft post"
 msgstr ""
 
-#: src/admin/x1c/WritingScreen.js:50
+#: src/admin/x1c/WritingScreen.js:51
 msgid "Writer"
 msgstr ""
 
-#: src/admin/x1c/WritingScreen.js:53
+#: src/admin/x1c/WritingScreen.js:54
 msgid "Planner"
 msgstr ""
 
-#: src/admin/x1c/WritingScreen.js:56
+#: src/admin/x1c/WritingScreen.js:57
 msgid "Copywriter"
 msgstr ""
 
-#: src/admin/x1c/WritingScreen.js:59
+#: src/admin/x1c/WritingScreen.js:60
 msgid "Headlines"
 msgstr ""
 
-#: src/admin/x1c/WritingScreen.js:68
+#: src/admin/x1c/WritingScreen.js:69
 msgid "Spelling and tone"
 msgstr ""
 
-#: src/admin/x1c/WritingScreen.js:73
+#: src/admin/x1c/WritingScreen.js:74
 msgid "Writing tools"
 msgstr ""
 
-#: src/admin/x1c/WritingScreen.js:87
+#: src/admin/x1c/WritingScreen.js:88
 msgid "Between your sites"
 msgstr ""
 
-#: src/admin/x1c/WritingScreen.js:110
+#: src/admin/x1c/WritingScreen.js:111
 msgid "Pro: more than seventy AI writing tools and a library of ready-made prompts, written from each page's own SEO research, in any language, with versions to compare and a check of each."
 msgstr ""
 

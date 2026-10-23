@@ -50,9 +50,10 @@ const EMPTY = {
  * @param {Function} props.onSaved  Called with the stored rule.
  * @param {Function} props.onCancel Leave edit mode.
  * @param {string}   props.guide    The conditions guide's address ('' for none).
+ * @param {string}   props.country  The country redirects guide's address ('' for none).
  * @return {Element} Form.
  */
-function RuleForm( { rule, groups, onSaved, onCancel, guide } ) {
+function RuleForm( { rule, groups, onSaved, onCancel, guide, country } ) {
 	const [ draft, setDraft ] = useState( rule );
 	const [ error, setError ] = useState( '' );
 	const [ busy, setBusy ] = useState( false );
@@ -215,6 +216,7 @@ function RuleForm( { rule, groups, onSaved, onCancel, guide } ) {
 						value={ conds }
 						onChange={ setConds }
 						guide={ guide }
+						countryGuide={ country }
 					/>
 					<div className="zseo-actions zseo-actions--start">
 						<Button
@@ -809,6 +811,7 @@ export default function RedirectsTab( { data } ) {
 					rule={ editing }
 					groups={ groups }
 					guide={ guideUrl( data, 'redirect-conditions' ) }
+					country={ guideUrl( data, 'redirect-country' ) }
 					onCancel={ () => setEditing( EMPTY ) }
 					onSaved={ ( saved ) => {
 						setNotice(

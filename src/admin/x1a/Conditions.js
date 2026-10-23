@@ -87,9 +87,10 @@ export function saveConditions( id, conds ) {
  *
  * @param {Object}  props
  * @param {boolean} props.known The host tells WordPress the visitor's country.
+ * @param {string}  props.guide The country redirects guide's address ('' for none; GUIDE65).
  * @return {Element} Notice.
  */
-export function CountryNotice( { known } ) {
+export function CountryNotice( { known, guide = '' } ) {
 	return (
 		<div className="notice notice-warning inline zseo-country-notice">
 			<p>
@@ -114,6 +115,11 @@ export function CountryNotice( { known } ) {
 					</strong>
 				</p>
 			) }
+			{ guide && (
+				<p>
+					<GuideAnchor href={ guide } />
+				</p>
+			) }
 		</div>
 	);
 }
@@ -122,12 +128,18 @@ export function CountryNotice( { known } ) {
  * The editor.
  *
  * @param {Object}   props
- * @param {Object}   props.value    {match, rules}.
- * @param {Function} props.onChange Called with the new value.
- * @param {string}   props.guide    The guide's address ('' for none).
+ * @param {Object}   props.value        {match, rules}.
+ * @param {Function} props.onChange     Called with the new value.
+ * @param {string}   props.guide        The guide's address ('' for none).
+ * @param {string}   props.countryGuide The country redirects guide's address ('' for none).
  * @return {Element} Fieldset.
  */
-export default function ConditionsEditor( { value, onChange, guide } ) {
+export default function ConditionsEditor( {
+	value,
+	onChange,
+	guide,
+	countryGuide = '',
+} ) {
 	const boot = window.zinnSeoAdmin || {};
 	if ( ! boot.redirectConditions ) {
 		return (
@@ -293,7 +305,10 @@ export default function ConditionsEditor( { value, onChange, guide } ) {
 				{ __( 'Add a condition', 'zinn-seo' ) }
 			</Button>
 			{ v.rules.some( ( r ) => r.type === 'country' ) && (
-				<CountryNotice known={ !! boot.countryKnown } />
+				<CountryNotice
+					known={ !! boot.countryKnown }
+					guide={ countryGuide }
+				/>
 			) }
 			<p className="zseo-muted">
 				{ __(

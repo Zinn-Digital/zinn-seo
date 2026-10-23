@@ -145,10 +145,15 @@ final class Guide {
 			'link-updates'            => 'keep-internal-links-working-when-addresses-change',
 			'schedule'                => 'schedule-seo-changes',
 			'redirect-conditions'     => 'redirect-only-some-visitors',
+			// GUIDE65 (0.17.66): the country condition's own guide (zs-781).
+			'redirect-country'        => 'redirect-visitors-by-country',
 			'snippets'                => 'control-what-search-results-quote',
 			'primary-term'            => 'choose-a-posts-main-category',
 			// Writing, structured data and integrations (stage X1C).
 			'writer'                  => 'write-posts-with-the-ai-writer',
+			// GUIDE65 (0.17.66): the Copywriter tab's guide (zs-782).
+			'copywriter'              => 'write-anything-with-the-ai-copywriter',
+			'writing-copywriter'      => 'write-anything-with-the-ai-copywriter',
 			'planner'                 => 'plan-content-and-write-drafts-in-bulk',
 			'headline'                => 'score-your-headlines-for-clicks',
 			'keyword-lists'           => 'organise-keywords-in-lists',

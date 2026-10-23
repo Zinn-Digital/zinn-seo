@@ -22,6 +22,7 @@ import GdocsTab from './GdocsTab';
 // so strings in a chunk loaded later would stay English (CLAUDE.md §2.19 outranks splitting here;
 // settings.js is loaded only on this plugin's own screens).
 import CopywriterTab from '../../copywriter/CopywriterTab';
+import GuideLink from '../p7/GuideLink';
 import './x1c.scss';
 
 /**
@@ -154,10 +155,16 @@ export default function WritingScreen( { data } ) {
 						case 'planner':
 							return <PlannerTab data={ data } />;
 						case 'copywriter':
-							return data.modules && data.modules.copywriter ? (
-								<CopywriterTab />
-							) : (
-								<CopywriterUpsell />
+							return (
+								<>
+									<GuideLink data={ data } id="copywriter" />
+									{ data.modules &&
+									data.modules.copywriter ? (
+										<CopywriterTab />
+									) : (
+										<CopywriterUpsell />
+									) }
+								</>
 							);
 						case 'headlines':
 							return <HeadlineTab data={ data } />;
