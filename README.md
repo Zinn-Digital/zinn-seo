@@ -23,7 +23,7 @@ Everything in Zinn® SEO keeps working without it.
 
 | | |
 |---|---|
-| Version | `0.17.66` |
+| Version | `0.17.67` |
 | Requires WordPress | 6.4 or later |
 | Tested up to | WordPress **7.1** |
 | Requires PHP | 7.4 or later |

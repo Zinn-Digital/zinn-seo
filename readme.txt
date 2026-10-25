@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.66
+Stable tag: 0.17.67
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -833,6 +833,9 @@ They are answered before your theme loads, from small index files, so a redirect
 12. Every screen right to left in Arabic, and translated into 57 languages.
 
 == Changelog ==
+
+= 0.17.67 =
+* Security: syncing WooCommerce pickup locations needs manage_options; listing server-rules backups no longer creates a folder; Bing disconnect only removes the plugin's own cached data; the AI-app "Disconnect" action checks a capability as well as the nonce.
 
 = 0.17.66 =
 * Help links: the Copywriter tab and a redirect's country condition now open their own step-by-step guides on zinnseo.com (Write anything with the AI copywriter; Redirect visitors by their country).

@@ -330,7 +330,10 @@ final class Bing {
 	 */
 	public static function forget(): void {
 		foreach ( array_keys( (array) get_option( self::CACHE . 'index', array() ) ) as $opt ) {
-			delete_option( (string) $opt );
+			// Only our own cache rows: an index that was tampered with cannot delete another option.
+			if ( 0 === strpos( (string) $opt, self::CACHE ) ) {
+				delete_option( (string) $opt );
+			}
 		}
 		delete_option( self::CACHE . 'index' );
 	}
