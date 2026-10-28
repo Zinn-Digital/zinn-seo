@@ -4,6 +4,12 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.68 =
+* Fix (Pro, Site care): on a site whose folder has a long name with dashes and digits, error paths shown to the AI were hidden as "encoded text"; the site's folder is now removed first, so the AI still sees which plugin file failed.
+
+= 0.17.67 =
+* Security: syncing WooCommerce pickup locations needs manage_options; listing server-rules backups no longer creates a folder; Bing disconnect only removes the plugin's own cached data; the AI-app "Disconnect" action checks a capability as well as the nonce.
+
 = 0.17.66 =
 * Help links: the Copywriter tab and a redirect's country condition now open their own step-by-step guides on zinnseo.com (Write anything with the AI copywriter; Redirect visitors by their country).
 

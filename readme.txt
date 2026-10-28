@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.67
+Stable tag: 0.17.68
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -834,6 +834,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.68 =
+* Fix (Pro, Site care): on a site whose folder has a long name with dashes and digits, error paths shown to the AI were hidden as "encoded text"; the site's folder is now removed first, so the AI still sees which plugin file failed.
+
 = 0.17.67 =
 * Security: syncing WooCommerce pickup locations needs manage_options; listing server-rules backups no longer creates a folder; Bing disconnect only removes the plugin's own cached data; the AI-app "Disconnect" action checks a capability as well as the nonce.
 
@@ -850,9 +853,5 @@ They are answered before your theme loads, from small index files, so a redirect
 
 = 0.17.64 =
 * Rebuild only: the package no longer carries development files
-
-= 0.17.63 =
-* "Visitors keep asking for addresses that do not exist" no longer counts the numbered pages of a list past its end (page 35 of a category that now has 20 pages, or an old comment page). When a list gets shorter, search engines keep asking for its old page numbers for a while; there is nothing to redirect them to and the "not found" answer is right. Real lost addresses (a removed page, an old translated address) still count.
-* New: "Bing Copilot uses only the title, link and snippet (nocache)" for a page, or for a whole content type in its template. Bing's Copilot then shows only the page's title, address and snippet, and the page stays in Bing's search results. Other search engines ignore it.
 
 The full history of every release is in changelog.txt, in the plugin's folder.
