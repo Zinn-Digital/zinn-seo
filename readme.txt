@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.68
+Stable tag: 0.17.69
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -833,6 +833,9 @@ They are answered before your theme loads, from small index files, so a redirect
 12. Every screen right to left in Arabic, and translated into 57 languages.
 
 == Changelog ==
+
+= 0.17.69 =
+* Dependency security update (Renovate).
 
 = 0.17.68 =
 * Fix (Pro, Site care): on a site whose folder has a long name with dashes and digits, error paths shown to the AI were hidden as "encoded text"; the site's folder is now removed first, so the AI still sees which plugin file failed.

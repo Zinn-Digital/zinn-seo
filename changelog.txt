@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.69 =
+* Dependency security update (Renovate).
+
 = 0.17.68 =
 * Fix (Pro, Site care): on a site whose folder has a long name with dashes and digits, error paths shown to the AI were hidden as "encoded text"; the site's folder is now removed first, so the AI still sees which plugin file failed.
 
