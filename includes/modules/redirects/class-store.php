@@ -391,8 +391,18 @@ KEY problem (problem)
 			if ( null === $row ) {
 				continue;
 			}
-			$n += (int) $wpdb->delete( self::table(), array( 'id' => $id ) );
+			$gone = (int) $wpdb->delete( self::table(), array( 'id' => $id ) );
+			$n   += $gone;
 			Index::changed( $row, null );
+			if ( $gone > 0 ) {
+				/**
+				 * Fires after a redirect is deleted, so what hangs off it (its conditions) goes too.
+				 * Nothing fired this before 0.17.71 and a deleted rule's conditions stayed behind.
+				 *
+				 * @param int $id The redirect.
+				 */
+				do_action( 'zinn_seo_redirect_deleted', $id );
+			}
 		}
 
 		return $n;
