@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.70 =
+* Cookie consent banner (off by default): separate analytics and advertising choices, Google Consent Mode v2 denied by default and updated on the visitor's choice, remembered, with a re-open link.
+
 = 0.17.69 =
 * Dependency security update (Renovate).
 

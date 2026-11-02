@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.69
+Stable tag: 0.17.70
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -833,6 +833,9 @@ They are answered before your theme loads, from small index files, so a redirect
 12. Every screen right to left in Arabic, and translated into 57 languages.
 
 == Changelog ==
+
+= 0.17.70 =
+* Cookie consent banner (off by default): separate analytics and advertising choices, Google Consent Mode v2 denied by default and updated on the visitor's choice, remembered, with a re-open link.
 
 = 0.17.69 =
 * Dependency security update (Renovate).

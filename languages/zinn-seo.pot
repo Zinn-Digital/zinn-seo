@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zinn® SEO 0.17.69\n"
+"Project-Id-Version: Zinn® SEO 0.17.70\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zinn-seo\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-25T14:33:28+00:00\n"
+"POT-Creation-Date: 2026-11-01T16:04:50+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zinn-seo\n"
@@ -225,394 +225,394 @@ msgstr ""
 msgid "The trial could not be started here. Continue on the trial page instead."
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:800
+#: includes/admin-kit/class-matrix.php:802
 msgid "Modern admin screens"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:801
+#: includes/admin-kit/class-matrix.php:803
 msgid "Setup wizard"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:802
+#: includes/admin-kit/class-matrix.php:804
 msgid "Built-in help"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:803
+#: includes/admin-kit/class-matrix.php:805
 msgid "Zinn Digital® hosting promotion"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:804
+#: includes/admin-kit/class-matrix.php:806
 msgid "Pro licensing through Freemius (latest SDK)"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:805
+#: includes/admin-kit/class-matrix.php:807
 msgid "Free trial of Pro"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:806
+#: includes/admin-kit/class-matrix.php:808
 msgid "Credited to Zinn Digital® Ltd"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:807
+#: includes/admin-kit/class-matrix.php:809
 msgid "Synced to GitHub like our other plugins"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:808
+#: includes/admin-kit/class-matrix.php:810
 msgid "Staging and local sites don't use up a licence"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:809
+#: includes/admin-kit/class-matrix.php:811
 msgid "Feedback and feature-request button"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:810
+#: includes/admin-kit/class-matrix.php:812
 #: includes/modules/offers/class-copy.php:203
 msgid "Priority support"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:811
+#: includes/admin-kit/class-matrix.php:813
 msgid "Bug reporter and support tickets"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:812
+#: includes/admin-kit/class-matrix.php:814
 msgid "Use Freemius fully"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:813
+#: includes/admin-kit/class-matrix.php:815
 msgid "Nothing added to your visitors' pages"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:814
+#: includes/admin-kit/class-matrix.php:816
 msgid "No HTML comments or generator tags"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:815
+#: includes/admin-kit/class-matrix.php:817
 msgid "A small, measured head"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:816
+#: includes/admin-kit/class-matrix.php:818
 msgid "No second copy of your posts"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:817
+#: includes/admin-kit/class-matrix.php:819
 msgid "One small setting loaded per page"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:818
+#: includes/admin-kit/class-matrix.php:820
 msgid "Scripts only on its own screens"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:819
+#: includes/admin-kit/class-matrix.php:821
 msgid "Background work that resumes"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:820
+#: includes/admin-kit/class-matrix.php:822
 msgid "Modern and older servers"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:821
+#: includes/admin-kit/class-matrix.php:823
 msgid "Speed checked on every release"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:822
+#: includes/admin-kit/class-matrix.php:824
 msgid "Titles and descriptions for every kind of page"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:823
+#: includes/admin-kit/class-matrix.php:825
 msgid "Robots and canonical control"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:824
+#: includes/admin-kit/class-matrix.php:826
 msgid "Content types: search, sitemap and scores for each"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:825
+#: includes/admin-kit/class-matrix.php:827
 msgid "Site verification for every search engine"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:826
+#: includes/admin-kit/class-matrix.php:828
 msgid "Google Discover readiness"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:827
+#: includes/admin-kit/class-matrix.php:829
 #: includes/modules/snippets/module.php:17
 msgid "Snippet controls"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:828
+#: includes/admin-kit/class-matrix.php:830
 #: includes/modules/primary-term/class-primary-term.php:179
 #: includes/modules/primary-term/module.php:17
 msgid "Main category"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:829
+#: includes/admin-kit/class-matrix.php:831
 #: includes/pro__premium_only/modules/schedule/module.php:17
 #: src/admin/x1a/ScheduledTab.js:47
 msgid "Scheduled SEO changes"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:830
+#: includes/admin-kit/class-matrix.php:832
 msgid "Per-author SEO controls"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:831
+#: includes/admin-kit/class-matrix.php:833
 msgid "Click a suggestion to edit it"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:832
+#: includes/admin-kit/class-matrix.php:834
 msgid "Open Graph and X cards"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:833
+#: includes/admin-kit/class-matrix.php:835
 msgid "Mastodon, Pinterest and LinkedIn tags"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:834
+#: includes/admin-kit/class-matrix.php:836
 msgid "Branded social cards"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:835
+#: includes/admin-kit/class-matrix.php:837
 msgid "A card for posts without an image"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:836
+#: includes/admin-kit/class-matrix.php:838
 #: src/admin/SocialScreen.js:32
 msgid "Refresh shared links"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:837
+#: includes/admin-kit/class-matrix.php:839
 #: includes/modules/bulk/module.php:16
 #: src/admin/index.js:167
 #: src/admin/index.js:446
 msgid "Bulk editor"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:838
+#: includes/admin-kit/class-matrix.php:840
 msgid "Change every matching page, and undo"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:839
+#: includes/admin-kit/class-matrix.php:841
 #: includes/pro__premium_only/modules/csv/module.php:16
 #: src/admin/BulkScreen.js:1416
 msgid "Spreadsheet import and export"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:840
+#: includes/admin-kit/class-matrix.php:842
 msgid "Structured data in the bulk editor"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:841
+#: includes/admin-kit/class-matrix.php:843
 msgid "XML sitemaps that stream"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:842
+#: includes/admin-kit/class-matrix.php:844
 msgid "Fast on any size of site"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:843
+#: includes/admin-kit/class-matrix.php:845
 msgid "Images in the sitemap"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:844
+#: includes/admin-kit/class-matrix.php:846
 msgid "Pre-built, rebuilt only where it changed"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:845
+#: includes/admin-kit/class-matrix.php:847
 msgid "Every language in the sitemap"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:846
+#: includes/admin-kit/class-matrix.php:848
 msgid "Honest last-changed dates"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:847
+#: includes/admin-kit/class-matrix.php:849
 msgid "Leave out what should not be found"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:848
+#: includes/admin-kit/class-matrix.php:850
 msgid "A readable sitemap in the browser"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:849
+#: includes/admin-kit/class-matrix.php:851
 msgid "Shop products done right"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:850
+#: includes/admin-kit/class-matrix.php:852
 msgid "Sitemap health"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:851
+#: includes/admin-kit/class-matrix.php:853
 msgid "Video, Google News and HTML sitemaps"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:852
+#: includes/admin-kit/class-matrix.php:854
 msgid "One sitemap for a whole network"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:853
+#: includes/admin-kit/class-matrix.php:855
 msgid "Sitemaps that stay readable and fresh"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:854
+#: includes/admin-kit/class-matrix.php:856
 msgid "llms.txt and llms-full.txt"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:855
+#: includes/admin-kit/class-matrix.php:857
 msgid "llms.txt in every language"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:856
+#: includes/admin-kit/class-matrix.php:858
 msgid "A language index for AI assistants"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:857
+#: includes/admin-kit/class-matrix.php:859
 #: src/admin/DiscoveryScreen.js:122
 msgid "Choose which AI crawlers may read the site"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:858
+#: includes/admin-kit/class-matrix.php:860
 msgid "Say how your content may be used"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:859
+#: includes/admin-kit/class-matrix.php:861
 msgid "A Markdown version of every page"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:860
+#: includes/admin-kit/class-matrix.php:862
 msgid "Clean text for agents, announced"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:861
+#: includes/admin-kit/class-matrix.php:863
 #: includes/pro__premium_only/modules/crawler-log/module.php:16
 #: src/admin/discovery/CrawlersTab.js:418
 msgid "AI crawler visits"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:862
+#: includes/admin-kit/class-matrix.php:864
 msgid "robots.txt editor with checks"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:863
+#: includes/admin-kit/class-matrix.php:865
 #: includes/modules/indexnow/module.php:16
 #: src/admin/discovery/IndexingTab.js:167
 msgid "IndexNow"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:864
+#: includes/admin-kit/class-matrix.php:866
 msgid "Request indexing in one click"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:865
+#: includes/admin-kit/class-matrix.php:867
 msgid "Staging copies stay out of search"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:866
+#: includes/admin-kit/class-matrix.php:868
 msgid "Your knowledge graph"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:867
+#: includes/admin-kit/class-matrix.php:869
 msgid "One graph per page"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:868
+#: includes/admin-kit/class-matrix.php:870
 msgid "Pages, articles and authors"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:869
+#: includes/admin-kit/class-matrix.php:871
 msgid "Offline structured-data check"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:870
+#: includes/admin-kit/class-matrix.php:872
 msgid "Site graph for AI agents"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:871
+#: includes/admin-kit/class-matrix.php:873
 msgid "Other plugins join your graph"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:872
+#: includes/admin-kit/class-matrix.php:874
 msgid "Rich-result rules built in"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:873
+#: includes/admin-kit/class-matrix.php:875
 msgid "Schema types per page"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:874
+#: includes/admin-kit/class-matrix.php:876
 msgid "Visual schema builder"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:875
+#: includes/admin-kit/class-matrix.php:877
 msgid "Schema by rule"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:876
+#: includes/admin-kit/class-matrix.php:878
 msgid "About, mentions and speakable"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:877
+#: includes/admin-kit/class-matrix.php:879
 msgid "Category carousels"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:878
+#: includes/admin-kit/class-matrix.php:880
 #: src/admin/x1c/RichResultsScreen.js:61
 msgid "Image licences"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:879
+#: includes/admin-kit/class-matrix.php:881
 msgid "Datasets"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:880
+#: includes/admin-kit/class-matrix.php:882
 msgid "Quizzes and math solvers"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:881
+#: includes/admin-kit/class-matrix.php:883
 msgid "Shop returns, delivery and loyalty"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:882
+#: includes/admin-kit/class-matrix.php:884
 #: includes/pro__premium_only/modules/news/module.php:18
 #: src/admin/x1c/RichResultsScreen.js:194
 msgid "News publishing"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:883
+#: includes/admin-kit/class-matrix.php:885
 msgid "TikTok in your knowledge graph"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:884
+#: includes/admin-kit/class-matrix.php:886
 msgid "FAQs and structured data filled by AI"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:885
+#: includes/admin-kit/class-matrix.php:887
 msgid "One block library, every builder"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:886
+#: includes/admin-kit/class-matrix.php:888
 msgid "Quick Answer block"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:887
+#: includes/admin-kit/class-matrix.php:889
 msgid "Quick Answer with length advice"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:888
+#: includes/admin-kit/class-matrix.php:890
 msgid "FAQ and How-to blocks"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:889
+#: includes/admin-kit/class-matrix.php:891
 #: includes/modules/blocks/blocks/class-toc.php:34
 msgid "Table of contents"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:890
+#: includes/admin-kit/class-matrix.php:892
 #: includes/modules/blocks/blocks/class-article-index.php:40
 #: src/admin/BlocksScreen.js:21
 msgid "Article index"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:891
+#: includes/admin-kit/class-matrix.php:893
 #: includes/modules/blocks/blocks/class-article-index.php:161
 #: includes/modules/blocks/blocks/class-takeaways.php:34
 #: includes/modules/blocks/blocks/class-takeaways.php:58
@@ -620,28 +620,28 @@ msgstr ""
 msgid "Key takeaways"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:892
+#: includes/admin-kit/class-matrix.php:894
 #: includes/modules/blocks/blocks/class-pros-cons.php:35
 #: includes/pro__premium_only/modules/copywriter/data/tools.php:287
 msgid "Pros and cons"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:893
+#: includes/admin-kit/class-matrix.php:895
 #: includes/modules/blocks/blocks/class-review.php:67
 msgid "Review box"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:894
+#: includes/admin-kit/class-matrix.php:896
 #: includes/modules/blocks/blocks/class-author-box.php:36
 msgid "Author and expert box"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:895
+#: includes/admin-kit/class-matrix.php:897
 #: includes/modules/blocks/blocks/class-related.php:44
 msgid "Related content"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:896
+#: includes/admin-kit/class-matrix.php:898
 #: includes/modules/blocks/blocks/class-local-business.php:44
 #: includes/modules/blocks/blocks/class-local-business.php:79
 #: includes/modules/blocks/blocks/class-review.php:46
@@ -653,173 +653,173 @@ msgstr ""
 msgid "Local business"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:897
+#: includes/admin-kit/class-matrix.php:899
 msgid "Elementor integration"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:898
+#: includes/admin-kit/class-matrix.php:900
 #: includes/pro__premium_only/modules/blocks-pro/blocks/class-comparison.php:33
 msgid "Comparison table"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:899
+#: includes/admin-kit/class-matrix.php:901
 #: includes/modules/schema/class-rich-rules.php:170
 #: includes/pro__premium_only/modules/blocks-pro/blocks/class-fact-check.php:49
 msgid "Fact check"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:900
+#: includes/admin-kit/class-matrix.php:902
 #: includes/pro__premium_only/modules/blocks-pro/blocks/class-glossary.php:33
 #: includes/pro__premium_only/modules/blocks-pro/class-blocks-pro-rest.php:132
 #: src/admin/BlocksScreen.js:22
 msgid "Glossary"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:901
+#: includes/admin-kit/class-matrix.php:903
 #: includes/pro__premium_only/modules/blocks-pro/blocks/class-video.php:37
 msgid "Video with key moments"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:902
+#: includes/admin-kit/class-matrix.php:904
 msgid "Custom block builder"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:903
+#: includes/admin-kit/class-matrix.php:905
 msgid "Live SEO checks in every editor"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:904
+#: includes/admin-kit/class-matrix.php:906
 msgid "Analysis of the page as visitors see it"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:905
+#: includes/admin-kit/class-matrix.php:907
 msgid "Rendered-page analysis for every builder"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:906
+#: includes/admin-kit/class-matrix.php:908
 msgid "Focus phrases with synonyms"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:907
+#: includes/admin-kit/class-matrix.php:909
 msgid "Readability in every WordPress language"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:908
+#: includes/admin-kit/class-matrix.php:910
 #: src/admin/p4/ContentScreen.js:524
 msgid "Inclusive language"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:909
+#: includes/admin-kit/class-matrix.php:911
 #: src/admin/TemplateInput.js:166
 #: src/editor/analysis/AnalysisPanel.js:1050
 #: src/editor/index.js:342
 msgid "Search result preview"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:910
+#: includes/admin-kit/class-matrix.php:912
 #: includes/modules/analysis/class-analysis.php:987
 #: src/admin/p4/ContentScreen.js:170
 #: src/editor/analysis/AnalysisPanel.js:969
 msgid "Cornerstone content"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:911
+#: includes/admin-kit/class-matrix.php:913
 msgid "Accessibility checks"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:912
+#: includes/admin-kit/class-matrix.php:914
 msgid "Scores in the post lists"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:913
+#: includes/admin-kit/class-matrix.php:915
 #: includes/modules/duplicates/module.php:17
 msgid "Duplicate finder"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:914
+#: includes/admin-kit/class-matrix.php:916
 msgid "Pages competing for one phrase"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:915
+#: includes/admin-kit/class-matrix.php:917
 msgid "Answer-readiness score"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:916
+#: includes/admin-kit/class-matrix.php:918
 msgid "Search intent and topic coverage"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:917
+#: includes/admin-kit/class-matrix.php:919
 msgid "Live content optimiser"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:918
+#: includes/admin-kit/class-matrix.php:920
 #: includes/pro__premium_only/modules/revisions/module.php:17
 msgid "SEO revisions"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:919
+#: includes/admin-kit/class-matrix.php:921
 #: includes/modules/images/module.php:17
 msgid "Image SEO"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:920
+#: includes/admin-kit/class-matrix.php:922
 #: includes/pro__premium_only/modules/gdocs/class-gdocs.php:319
 msgid "Headline score"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:921
+#: includes/admin-kit/class-matrix.php:923
 #: includes/modules/keywords/module.php:17
 #: src/admin/x1c/WritingScreen.js:63
 #: src/editor/X1cPanels.js:260
 msgid "Keyword lists"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:922
+#: includes/admin-kit/class-matrix.php:924
 msgid "Link suggestions as you write"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:923
+#: includes/admin-kit/class-matrix.php:925
 msgid "Orphans and dead ends"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:924
+#: includes/admin-kit/class-matrix.php:926
 msgid "Breadcrumbs for themes"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:925
+#: includes/admin-kit/class-matrix.php:927
 #: src/admin/p4/LinksScreen.js:38
 msgid "Link rules"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:926
+#: includes/admin-kit/class-matrix.php:928
 msgid "Suggestions by meaning"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:927
+#: includes/admin-kit/class-matrix.php:929
 #: src/admin/p4/LinksScreen.js:39
 msgid "Automatic links"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:928
+#: includes/admin-kit/class-matrix.php:930
 msgid "Broken link checker"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:929
+#: includes/admin-kit/class-matrix.php:931
 #: includes/pro__premium_only/modules/outbound/module.php:16
 #: src/admin/p4/LinksScreen.js:1522
 msgid "Outbound links report"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:930
+#: includes/admin-kit/class-matrix.php:932
 msgid "AI internal linking for the whole site"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:931
+#: includes/admin-kit/class-matrix.php:933
 #: includes/modules/link-updates/module.php:17
 msgid "Internal link updates"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:932
+#: includes/admin-kit/class-matrix.php:934
 #: includes/pro__premium_only/modules/affiliates/module.php:17
 #: src/admin/x1c/AffiliatesTab.js:89
 #: src/admin/x1c/AffiliatesTab.js:232
@@ -827,28 +827,28 @@ msgstr ""
 msgid "Affiliate links"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:933
+#: includes/admin-kit/class-matrix.php:935
 msgid "Links between your own sites"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:934
+#: includes/admin-kit/class-matrix.php:936
 msgid "Breadcrumb rules per content type"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:935
+#: includes/admin-kit/class-matrix.php:937
 msgid "Shorter breadcrumb trails"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:936
+#: includes/admin-kit/class-matrix.php:938
 #: includes/modules/fixit/module.php:17
 msgid "Fix it inbox"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:937
+#: includes/admin-kit/class-matrix.php:939
 msgid "One inbox for every kind of issue"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:938
+#: includes/admin-kit/class-matrix.php:940
 #: includes/pro__premium_only/modules/autopilot/module.php:21
 #: src/admin/index.js:94
 #: src/admin/index.js:336
@@ -856,60 +856,60 @@ msgstr ""
 msgid "Fix it on autopilot"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:939
+#: includes/admin-kit/class-matrix.php:941
 msgid "Fix every internal link in one click"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:940
+#: includes/admin-kit/class-matrix.php:942
 #: includes/modules/inspector/class-inspector.php:135
 #: includes/modules/inspector/module.php:16
 msgid "SEO inspector"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:941
+#: includes/admin-kit/class-matrix.php:943
 msgid "Redirect manager"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:942
+#: includes/admin-kit/class-matrix.php:944
 msgid "Automatic redirects"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:943
+#: includes/admin-kit/class-matrix.php:945
 msgid "Chain and loop fixer"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:944
+#: includes/admin-kit/class-matrix.php:946
 msgid "Import redirects from other plugins"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:945
+#: includes/admin-kit/class-matrix.php:947
 #: includes/pro__premium_only/modules/redirects-pro/module.php:17
 #: src/admin/p5/ImportTab.js:467
 msgid "Fast redirects"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:946
+#: includes/admin-kit/class-matrix.php:948
 msgid "Server-level redirect export"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:947
+#: includes/admin-kit/class-matrix.php:949
 msgid "404 monitor that cannot fill your database"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:948
+#: includes/admin-kit/class-matrix.php:950
 msgid "Safe permalink and domain changes"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:949
+#: includes/admin-kit/class-matrix.php:951
 #: includes/modules/site-search/module.php:17
 msgid "Site search insights"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:950
+#: includes/admin-kit/class-matrix.php:952
 msgid "Hacked-site SEO spam scan"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:951
+#: includes/admin-kit/class-matrix.php:953
 #: includes/pro__premium_only/modules/lock/class-lock.php:586
 #: includes/pro__premium_only/modules/lock/module.php:17
 #: src/admin/p5/ProtectionScreen.js:29
@@ -918,365 +918,365 @@ msgstr ""
 msgid "SEO lock"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:952
+#: includes/admin-kit/class-matrix.php:954
 #: includes/pro__premium_only/modules/redirect-conditions/module.php:18
 msgid "Conditional redirects"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:953
+#: includes/admin-kit/class-matrix.php:955
 msgid "Malware scan and one-click clean-up"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:954
+#: includes/admin-kit/class-matrix.php:956
 msgid "Import from eight SEO plugins"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:955
+#: includes/admin-kit/class-matrix.php:957
 msgid "Side by side, then a proven switch-off"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:956
+#: includes/admin-kit/class-matrix.php:958
 msgid "More plugins to move from"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:957
+#: includes/admin-kit/class-matrix.php:959
 msgid "Local business details"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:958
+#: includes/admin-kit/class-matrix.php:960
 msgid "Several locations and a store finder"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:959
+#: includes/admin-kit/class-matrix.php:961
 msgid "Locations sitemap and KML file"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:960
+#: includes/admin-kit/class-matrix.php:962
 msgid "Products in search with price and stock"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:961
+#: includes/admin-kit/class-matrix.php:963
 msgid "Clean shop pages"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:962
+#: includes/admin-kit/class-matrix.php:964
 #: src/admin/p7/IntegrationsScreen.js:1019
 msgid "Sold-out and discontinued products"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:963
+#: includes/admin-kit/class-matrix.php:965
 msgid "Google Merchant feed and readiness check"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:964
+#: includes/admin-kit/class-matrix.php:966
 msgid "Easy Digital Downloads, SureCart, brands and bundles"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:965
+#: includes/admin-kit/class-matrix.php:967
 msgid "Works in your page builder"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:966
+#: includes/admin-kit/class-matrix.php:968
 msgid "Custom fields count"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:967
+#: includes/admin-kit/class-matrix.php:969
 #: src/admin/p7/IntegrationsScreen.js:53
 #: src/admin/p7/IntegrationsScreen.js:1698
 msgid "Forums and communities"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:968
+#: includes/admin-kit/class-matrix.php:970
 msgid "Marketplace seller stores"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:969
+#: includes/admin-kit/class-matrix.php:971
 #: src/admin/p7/IntegrationsScreen.js:54
 #: src/admin/p7/IntegrationsScreen.js:1737
 #: src/admin/x1c/RichResultsScreen.js:93
 msgid "Courses"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:970
+#: includes/admin-kit/class-matrix.php:972
 #: src/admin/p7/IntegrationsScreen.js:1764
 msgid "Memberships and paid content"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:971
+#: includes/admin-kit/class-matrix.php:973
 msgid "Events, jobs, directories and recipes"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:972
+#: includes/admin-kit/class-matrix.php:974
 msgid "Multisite networks"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:973
+#: includes/admin-kit/class-matrix.php:975
 #: src/admin/p7/IntegrationsScreen.js:61
 msgid "Podcasts and video"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:974
+#: includes/admin-kit/class-matrix.php:976
 msgid "Translation plugins"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:975
+#: includes/admin-kit/class-matrix.php:977
 msgid "SEO panel in seven more builders"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:976
+#: includes/admin-kit/class-matrix.php:978
 msgid "Headless front ends"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:977
+#: includes/admin-kit/class-matrix.php:979
 msgid "WC Vendors stores and ratings"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:978
+#: includes/admin-kit/class-matrix.php:980
 msgid "Services sold with WooCommerce"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:979
+#: includes/admin-kit/class-matrix.php:981
 msgid "Sellers' SEO at a glance"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:980
+#: includes/admin-kit/class-matrix.php:982
 msgid "Tested with each plugin's current release"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:981
+#: includes/admin-kit/class-matrix.php:983
 msgid "Paid content that still ranks"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:982
+#: includes/admin-kit/class-matrix.php:984
 msgid "SEO for what your users write"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:983
+#: includes/admin-kit/class-matrix.php:985
 msgid "Translated with each page"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:984
+#: includes/admin-kit/class-matrix.php:986
 msgid "One sitemap and llms.txt for every language"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:985
+#: includes/admin-kit/class-matrix.php:987
 msgid "Hidden means hidden in every language"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:986
+#: includes/admin-kit/class-matrix.php:988
 msgid "Title patterns in every language"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:987
+#: includes/admin-kit/class-matrix.php:989
 msgid "Multilingual SEO check"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:988
+#: includes/admin-kit/class-matrix.php:990
 msgid "Page Builder Sandwich blocks in search"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:989
+#: includes/admin-kit/class-matrix.php:991
 msgid "Page Builder Sandwich's AI fills your SEO fields"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:990
+#: includes/admin-kit/class-matrix.php:992
 msgid "Changes go live at once"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:991
+#: includes/admin-kit/class-matrix.php:993
 msgid "A chat assistant that knows your business"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:992
+#: includes/admin-kit/class-matrix.php:994
 msgid "Site search plugins"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:993
+#: includes/admin-kit/class-matrix.php:995
 msgid "Local pickup from your locations"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:994
+#: includes/admin-kit/class-matrix.php:996
 msgid "Accordions as FAQ"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:995
+#: includes/admin-kit/class-matrix.php:997
 msgid "More page builders"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:996
+#: includes/admin-kit/class-matrix.php:998
 #: src/admin/x1c/IntegrationsMoreTab.js:128
 msgid "Property, classifieds and rentals"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:997
+#: includes/admin-kit/class-matrix.php:999
 msgid "Descriptions from Bricks pages"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:998
+#: includes/admin-kit/class-matrix.php:1000
 msgid "Connect once, pay only for what you run"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:999
+#: includes/admin-kit/class-matrix.php:1001
 msgid "Rank, index, AI and backlink checks in the free plugin"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1000
+#: includes/admin-kit/class-matrix.php:1002
 msgid "Rank tracker"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1001
+#: includes/admin-kit/class-matrix.php:1003
 msgid "Google index checker"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1002
+#: includes/admin-kit/class-matrix.php:1004
 msgid "AI answers tracker"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1003
+#: includes/admin-kit/class-matrix.php:1005
 #: src/tools/labels.js:18
 #: src/tools/labels.js:19
 msgid "Backlink watch"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1004
+#: includes/admin-kit/class-matrix.php:1006
 msgid "Site audit with fix links"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1005
+#: includes/admin-kit/class-matrix.php:1007
 msgid "Keyword research in the editor"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1006
+#: includes/admin-kit/class-matrix.php:1008
 msgid "A focus phrase for every market"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1007
+#: includes/admin-kit/class-matrix.php:1009
 msgid "Content gap against a competitor"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1008
+#: includes/admin-kit/class-matrix.php:1010
 msgid "Local rank grid"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1009
+#: includes/admin-kit/class-matrix.php:1011
 #: src/agency/ReportsScreen.js:77
 #: src/catalogue/CatalogueScreen.js:40
 #: src/tools/labels.js:28
 msgid "Brand mentions"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1010
+#: includes/admin-kit/class-matrix.php:1012
 msgid "Harmful backlink review and disavow file"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1011
+#: includes/admin-kit/class-matrix.php:1013
 msgid "Negative SEO alerts"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1012
+#: includes/admin-kit/class-matrix.php:1014
 #: src/toolbox/ToolboxScreen.js:45
 msgid "Map rank grid"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1013
-#: includes/admin-kit/class-matrix.php:1141
+#: includes/admin-kit/class-matrix.php:1015
+#: includes/admin-kit/class-matrix.php:1144
 msgid "Review monitoring"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1014
+#: includes/admin-kit/class-matrix.php:1016
 #: src/toolbox/ToolboxScreen.js:61
 msgid "Competitor traffic"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1015
+#: includes/admin-kit/class-matrix.php:1017
 msgid "Questions people ask, as an FAQ"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1016
+#: includes/admin-kit/class-matrix.php:1018
 msgid "Google Shopping prices and position"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1017
+#: includes/admin-kit/class-matrix.php:1019
 msgid "Amazon rankings"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1018
+#: includes/admin-kit/class-matrix.php:1020
 msgid "YouTube rankings"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1019
+#: includes/admin-kit/class-matrix.php:1021
 msgid "Search results snapshots"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1020
+#: includes/admin-kit/class-matrix.php:1022
 #: src/toolbox/ToolboxScreen.js:141
 msgid "Brand mood"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1021
+#: includes/admin-kit/class-matrix.php:1023
 #: src/toolbox/ToolboxScreen.js:149
 msgid "Technology lookup"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1022
+#: includes/admin-kit/class-matrix.php:1024
 msgid "Content briefs from the top ten"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1023
+#: includes/admin-kit/class-matrix.php:1025
 #: includes/modules/onpage/module.php:17
 msgid "Full-site audit in Fix it"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1024
+#: includes/admin-kit/class-matrix.php:1026
 msgid "Report on any website"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1025
+#: includes/admin-kit/class-matrix.php:1027
 #: src/toolbox/tabs/X1bTabs.js:321
 msgid "Share of search visibility"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1026
+#: includes/admin-kit/class-matrix.php:1028
 #: src/toolbox/ToolboxScreen.js:85
 msgid "Google Trends"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1027
+#: includes/admin-kit/class-matrix.php:1029
 msgid "Top up before anything pauses"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1028
+#: includes/admin-kit/class-matrix.php:1030
 msgid "Guided setup"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1029
+#: includes/admin-kit/class-matrix.php:1031
 msgid "Setup that waits for you"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1030
+#: includes/admin-kit/class-matrix.php:1032
 msgid "Command palette"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1031
+#: includes/admin-kit/class-matrix.php:1033
 msgid "SEO roles and permissions"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1032
+#: includes/admin-kit/class-matrix.php:1034
 msgid "One upgrade screen, no nagging"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1033
+#: includes/admin-kit/class-matrix.php:1035
 msgid "Pro through Freemius"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1034
+#: includes/admin-kit/class-matrix.php:1036
 #: includes/modules/catalogue/module.php:18
 #: src/admin/index.js:555
 #: src/catalogue/CatalogueScreen.js:242
 msgid "Zinn® price list"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1035
+#: includes/admin-kit/class-matrix.php:1037
 #: includes/pro__premium_only/modules/guard/module.php:21
 #: src/admin/index.js:564
 #: src/admin/nav/teasers.js:15
@@ -1285,255 +1285,255 @@ msgstr ""
 msgid "Safe updates"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1036
+#: includes/admin-kit/class-matrix.php:1038
 msgid "AI Webmaster and AI chat"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1037
+#: includes/admin-kit/class-matrix.php:1039
 msgid "Resell SEO data under your brand"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1038
+#: includes/admin-kit/class-matrix.php:1040
 msgid "Clean uninstall"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1039
+#: includes/admin-kit/class-matrix.php:1041
 #: src/admin/ToolsScreen.js:336
 msgid "Copy settings to another site"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1040
+#: includes/admin-kit/class-matrix.php:1042
 msgid "REST API and WP-CLI"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1041
+#: includes/admin-kit/class-matrix.php:1043
 msgid "Hooks and a typed PHP API"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1042
+#: includes/admin-kit/class-matrix.php:1044
 msgid "One feature list"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1043
+#: includes/admin-kit/class-matrix.php:1045
 msgid "Google Search Console inside WordPress"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1044
+#: includes/admin-kit/class-matrix.php:1046
 msgid "Sitemaps sent for you"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1045
+#: includes/admin-kit/class-matrix.php:1047
 msgid "Which pages Google has indexed, and why not"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1046
+#: includes/admin-kit/class-matrix.php:1048
 msgid "Job and livestream pages in Google at once"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1047
+#: includes/admin-kit/class-matrix.php:1049
 msgid "Real-visitor page speed"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1048
+#: includes/admin-kit/class-matrix.php:1050
 msgid "Lab speed test of any page"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1049
+#: includes/admin-kit/class-matrix.php:1051
 #: src/search/InsightsTabs.js:194
 msgid "Almost on page one"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1050
+#: includes/admin-kit/class-matrix.php:1052
 msgid "Keyword opportunities"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1051
+#: includes/admin-kit/class-matrix.php:1053
 #: src/search/InsightsTabs.js:518
 msgid "Pages losing clicks"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1052
+#: includes/admin-kit/class-matrix.php:1054
 msgid "Topical map"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1053
+#: includes/admin-kit/class-matrix.php:1055
 #: src/search/SearchScreen.js:49
 msgid "Changes and rankings"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1054
+#: includes/admin-kit/class-matrix.php:1056
 #: includes/pro__premium_only/modules/abtest/module.php:18
 msgid "Title and description tests"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1055
+#: includes/admin-kit/class-matrix.php:1057
 #: src/search/AnalyticsTab.js:92
 #: src/search/SearchScreen.js:52
 msgid "Revenue from search"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1056
+#: includes/admin-kit/class-matrix.php:1058
 msgid "Crawler visits"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1057
+#: includes/admin-kit/class-matrix.php:1059
 #: src/search/CrawlTab.js:141
 msgid "Crawl budget"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1058
+#: includes/admin-kit/class-matrix.php:1060
 #: includes/pro__premium_only/modules/edge/module.php:18
 msgid "Cloudflare edge"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1059
+#: includes/admin-kit/class-matrix.php:1061
 msgid "Reviews and posts on Google"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1060
+#: includes/admin-kit/class-matrix.php:1062
 #: src/search/BusinessTab.js:269
 msgid "Apple Maps and Bing listings"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1061
+#: includes/admin-kit/class-matrix.php:1063
 msgid "Visitors from AI assistants"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1062
+#: includes/admin-kit/class-matrix.php:1064
 msgid "Ad earnings per page"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1063
+#: includes/admin-kit/class-matrix.php:1065
 #: includes/modules/indexing/module.php:17
 msgid "Indexing console"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1064
+#: includes/admin-kit/class-matrix.php:1066
 msgid "More from Bing Webmaster Tools"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1065
+#: includes/admin-kit/class-matrix.php:1067
 msgid "AI titles and descriptions"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1066
+#: includes/admin-kit/class-matrix.php:1068
 msgid "Your own AI key or Zinn® credits"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1067
+#: includes/admin-kit/class-matrix.php:1069
 msgid "Nothing changes until you say so"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1068
+#: includes/admin-kit/class-matrix.php:1070
 msgid "Clear answers when AI fails"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1069
+#: includes/admin-kit/class-matrix.php:1071
 msgid "Alt text for every image"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1070
+#: includes/admin-kit/class-matrix.php:1072
 msgid "Alt text that describes the picture"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1071
+#: includes/admin-kit/class-matrix.php:1073
 #: includes/modules/ai/class-free-tasks.php:279
 msgid "Structured data that fits the page"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1072
+#: includes/admin-kit/class-matrix.php:1074
 msgid "Every issue in plain words"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1073
+#: includes/admin-kit/class-matrix.php:1075
 msgid "Your own AI model"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1074
+#: includes/admin-kit/class-matrix.php:1076
 #: includes/pro__premium_only/modules/ai-pro/class-pro-tasks.php:74
 #: src/editor/AiPanel.js:398
 msgid "Quick answer and key takeaways"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1075
+#: includes/admin-kit/class-matrix.php:1077
 msgid "FAQ and how-to steps from the page"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1076
+#: includes/admin-kit/class-matrix.php:1078
 #: src/editor/AiPanel.js:653
 msgid "Rewrite to pass a check"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1077
+#: includes/admin-kit/class-matrix.php:1079
 msgid "Internal links with natural wording"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1078
+#: includes/admin-kit/class-matrix.php:1080
 msgid "Product names and descriptions"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1079
+#: includes/admin-kit/class-matrix.php:1081
 #: includes/pro__premium_only/modules/ai-pro/class-pro-tasks.php:410
 msgid "AI summaries for llms.txt in every language"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1080
+#: includes/admin-kit/class-matrix.php:1082
 msgid "People, places and things linked to Wikidata"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1081
+#: includes/admin-kit/class-matrix.php:1083
 msgid "Entity suggestions from Wikidata"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1082
+#: includes/admin-kit/class-matrix.php:1084
 #: src/editor/AiPanel.js:777
 msgid "AI answer preview"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1083
+#: includes/admin-kit/class-matrix.php:1085
 #: includes/pro__premium_only/modules/ai-pro/class-pro-tasks.php:544
 msgid "Social sharing image and headline"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1084
+#: includes/admin-kit/class-matrix.php:1086
 msgid "Missing pages sent to the right place"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1085
+#: includes/admin-kit/class-matrix.php:1087
 msgid "Redirects by meaning, not just matching words"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1086
+#: includes/admin-kit/class-matrix.php:1088
 msgid "The redirect map for a site move"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1087
+#: includes/admin-kit/class-matrix.php:1089
 msgid "Content briefs for new pages"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1088
+#: includes/admin-kit/class-matrix.php:1090
 msgid "Why a competitor outranks you"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1089
+#: includes/admin-kit/class-matrix.php:1091
 msgid "More clicks from searches you already appear in"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1090
+#: includes/admin-kit/class-matrix.php:1092
 #: includes/pro__premium_only/modules/ai-pro/class-insight.php:60
 #: src/ai/AskTab.js:56
 msgid "Ask your SEO data"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1091
+#: includes/admin-kit/class-matrix.php:1093
 msgid "AI costs and limits"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1092
+#: includes/admin-kit/class-matrix.php:1094
 msgid "AI writer and content planner"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1093
+#: includes/admin-kit/class-matrix.php:1095
 #: includes/pro__premium_only/modules/copywriter/class-copywriter.php:287
 #: includes/pro__premium_only/modules/copywriter/module.php:18
 #: src/copywriter/EditorPanel.js:101
@@ -1541,302 +1541,306 @@ msgstr ""
 msgid "AI copywriter"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1094
+#: includes/admin-kit/class-matrix.php:1096
 #: includes/modules/analysis-extra/module.php:18
 #: src/editor/X1cPanels.js:468
 msgid "Spelling, grammar and tone"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1095
+#: includes/admin-kit/class-matrix.php:1097
 msgid "Copied-text check"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1096
+#: includes/admin-kit/class-matrix.php:1098
 msgid "Surfer, Clearscope and Frase guidelines"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1097
+#: includes/admin-kit/class-matrix.php:1099
 #: src/editor/X1cPanels.js:875
 #: src/editor/X1cPanels.js:902
 msgid "AI images"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1098
+#: includes/admin-kit/class-matrix.php:1100
 msgid "Write in Google Docs™"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1099
+#: includes/admin-kit/class-matrix.php:1101
 #: includes/pro__premium_only/modules/whitelabel/module.php:17
 msgid "White label and client logins"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1100
+#: includes/admin-kit/class-matrix.php:1102
 msgid "Branded client reports"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1101
+#: includes/admin-kit/class-matrix.php:1103
 msgid "Reports that open in plain words"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1102
+#: includes/admin-kit/class-matrix.php:1104
 msgid "A client page with no login"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1103
+#: includes/admin-kit/class-matrix.php:1105
 msgid "Every client site in one place"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1104
+#: includes/admin-kit/class-matrix.php:1106
 msgid "Tasks from any finding"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1105
+#: includes/admin-kit/class-matrix.php:1107
 msgid "Alerts in Slack, Teams, Discord and Telegram"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1106
+#: includes/admin-kit/class-matrix.php:1108
 msgid "Landing pages from a spreadsheet"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1107
+#: includes/admin-kit/class-matrix.php:1109
 msgid "Your Ahrefs Domain Rating, free"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1108
+#: includes/admin-kit/class-matrix.php:1110
 msgid "Zinn® Authority, pay as you go"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1109
+#: includes/admin-kit/class-matrix.php:1111
 msgid "Pick the scores that matter to you"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1110
+#: includes/admin-kit/class-matrix.php:1112
 msgid "Every score's history"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1111
+#: includes/admin-kit/class-matrix.php:1113
 msgid "Told when a score goes up or down"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1112
+#: includes/admin-kit/class-matrix.php:1114
 msgid "Checks on your schedule, cost shown first"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1113
+#: includes/admin-kit/class-matrix.php:1115
 #: src/authority/AuthorityScreen.js:975
 msgid "Bring the SEO tools you already pay for"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1114
+#: includes/admin-kit/class-matrix.php:1116
 #: src/authority/AuthorityScreen.js:1180
 msgid "See how you compare"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1115
+#: includes/admin-kit/class-matrix.php:1117
 msgid "Every client site in one table"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1116
+#: includes/admin-kit/class-matrix.php:1118
 msgid "Scores in your client reports"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1117
+#: includes/admin-kit/class-matrix.php:1119
 msgid "Score history with its causes"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1118
+#: includes/admin-kit/class-matrix.php:1120
 msgid "Crawl clean-up"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1119
+#: includes/admin-kit/class-matrix.php:1121
 msgid "Tidy addresses"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1120
+#: includes/admin-kit/class-matrix.php:1122
 msgid "Better link previews"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1121
+#: includes/admin-kit/class-matrix.php:1123
 #: includes/modules/smart-robots/module.php:17
 msgid "Smart robots defaults"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1122
+#: includes/admin-kit/class-matrix.php:1124
 msgid "RSS feed protection"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1123
+#: includes/admin-kit/class-matrix.php:1125
 #: includes/modules/honeypot/module.php:16
 msgid "Comment spam trap"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1124
+#: includes/admin-kit/class-matrix.php:1126
 #: includes/modules/conflicts/module.php:18
 msgid "Conflict detector"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1125
+#: includes/admin-kit/class-matrix.php:1127
 #: includes/modules/dublin-core/module.php:16
 msgid "Dublin Core"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1126
+#: includes/admin-kit/class-matrix.php:1128
 msgid "Switch features off"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1127
+#: includes/admin-kit/class-matrix.php:1129
 msgid "One-click rollback"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1128
+#: includes/admin-kit/class-matrix.php:1130
 #: src/admin/Panels.js:206
 #: src/admin/SettingsScreen.js:450
 msgid "No-trace mode"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1129
+#: includes/admin-kit/class-matrix.php:1131
 msgid "Accessible admin"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1130
+#: includes/admin-kit/class-matrix.php:1132
 msgid "Safe .htaccess editor"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1131
+#: includes/admin-kit/class-matrix.php:1133
 msgid "Error logs read and fixed with AI"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1132
+#: includes/admin-kit/class-matrix.php:1134
 msgid "Safe database clean-up"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1133
+#: includes/admin-kit/class-matrix.php:1135
 msgid "Small code fixes, made safe"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1134
+#: includes/admin-kit/class-matrix.php:1136
 #: includes/modules/offers/class-copy.php:205
 msgid "AI Update Guard"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1135
+#: includes/admin-kit/class-matrix.php:1137
+msgid "Cookie consent banner"
+msgstr ""
+
+#: includes/admin-kit/class-matrix.php:1138
 msgid "Offers beside what they fix"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1136
+#: includes/admin-kit/class-matrix.php:1139
 msgid "Links to a page"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1137
+#: includes/admin-kit/class-matrix.php:1140
 #: includes/modules/offers/class-copy.php:170
 msgid "Articles by a writer"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1138
+#: includes/admin-kit/class-matrix.php:1141
 msgid "Domains"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1139
+#: includes/admin-kit/class-matrix.php:1142
 msgid "Bring back an old site"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1140
+#: includes/admin-kit/class-matrix.php:1143
 msgid "Domain checks before you buy"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1142
+#: includes/admin-kit/class-matrix.php:1145
 msgid "Local citations"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1143
+#: includes/admin-kit/class-matrix.php:1146
 msgid "Uptime and speed monitoring"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1144
+#: includes/admin-kit/class-matrix.php:1147
 msgid "Faster hosting when the server is slow"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1145
+#: includes/admin-kit/class-matrix.php:1148
 msgid "Footprint check"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1146
+#: includes/admin-kit/class-matrix.php:1149
 msgid "Hack clean-up and backups"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1147
+#: includes/admin-kit/class-matrix.php:1150
 msgid "Index watch"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1148
+#: includes/admin-kit/class-matrix.php:1151
 msgid "Our plugins when you need them"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1149
+#: includes/admin-kit/class-matrix.php:1152
 msgid "Expert help"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1150
+#: includes/admin-kit/class-matrix.php:1153
 msgid "Referrals and reselling"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1151
+#: includes/admin-kit/class-matrix.php:1154
 msgid "Bundles"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1152
+#: includes/admin-kit/class-matrix.php:1155
 msgid "Done-for-you fixes"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1153
+#: includes/admin-kit/class-matrix.php:1156
 msgid "Zinn® CDN in one click"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1154
+#: includes/admin-kit/class-matrix.php:1157
 msgid "Backups before big changes"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1155
+#: includes/admin-kit/class-matrix.php:1158
 msgid "Priority and emergency help"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1156
+#: includes/admin-kit/class-matrix.php:1159
 msgid "AI assistants work on your site (MCP)"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1157
+#: includes/admin-kit/class-matrix.php:1160
 msgid "Every action is an AI tool"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1158
+#: includes/admin-kit/class-matrix.php:1161
 msgid "Checks an assistant can run"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1159
+#: includes/admin-kit/class-matrix.php:1162
 msgid "Try first, approve, undo"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1160
+#: includes/admin-kit/class-matrix.php:1163
 msgid "Signed in, never anonymous"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1161
+#: includes/admin-kit/class-matrix.php:1164
 msgid "Optimise this site, in one run"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1172
+#: includes/admin-kit/class-matrix.php:1175
 msgid "Admin and licensing"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1173
+#: includes/admin-kit/class-matrix.php:1176
 msgid "Licensing and support"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1174
+#: includes/admin-kit/class-matrix.php:1177
 msgid "Speed and footprint"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1175
+#: includes/admin-kit/class-matrix.php:1178
 #: includes/pro__premium_only/integrations/multisite/class-network.php:549
 #: src/admin/index.js:138
 #: src/admin/index.js:401
@@ -1844,33 +1848,33 @@ msgstr ""
 msgid "Search appearance"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1176
+#: includes/admin-kit/class-matrix.php:1179
 #: includes/modules/social/module.php:17
 #: includes/pro__premium_only/integrations/multisite/class-network.php:550
 #: src/editor/AiPanel.js:859
 msgid "Social sharing"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1177
+#: includes/admin-kit/class-matrix.php:1180
 msgid "Bulk editing"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1178
+#: includes/admin-kit/class-matrix.php:1181
 #: includes/modules/llms/class-llms.php:371
 #: includes/pro__premium_only/integrations/multisite/class-network.php:552
 #: src/admin/DiscoveryScreen.js:20
 msgid "Sitemaps"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1179
+#: includes/admin-kit/class-matrix.php:1182
 msgid "AI visibility"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1180
+#: includes/admin-kit/class-matrix.php:1183
 msgid "Crawling and indexing"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1181
+#: includes/admin-kit/class-matrix.php:1184
 #: includes/modules/blocks/blocks/class-quick-answer.php:87
 #: includes/modules/inspector/class-inspector.php:144
 #: includes/modules/schema/class-classic.php:60
@@ -1890,7 +1894,7 @@ msgstr ""
 msgid "Structured data"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1182
+#: includes/admin-kit/class-matrix.php:1185
 #: includes/modules/blocks/module.php:30
 #: includes/pro__premium_only/integrations/multisite/class-network.php:558
 #: src/admin/BlocksScreen.js:165
@@ -1899,12 +1903,12 @@ msgstr ""
 msgid "SEO blocks"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1183
+#: includes/admin-kit/class-matrix.php:1186
 #: includes/modules/analysis/module.php:18
 msgid "Content analysis"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1184
+#: includes/admin-kit/class-matrix.php:1187
 #: includes/modules/links/module.php:17
 #: includes/pro__premium_only/integrations/multisite/class-network.php:560
 #: src/admin/p4/LinksScreen.js:88
@@ -1913,69 +1917,69 @@ msgstr ""
 msgid "Internal links"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1185
+#: includes/admin-kit/class-matrix.php:1188
 msgid "Fix it and inspector"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1186
+#: includes/admin-kit/class-matrix.php:1189
 msgid "Redirects and protection"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1187
+#: includes/admin-kit/class-matrix.php:1190
 msgid "Moving from another plugin"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1188
+#: includes/admin-kit/class-matrix.php:1191
 msgid "Works with your plugins"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1189
+#: includes/admin-kit/class-matrix.php:1192
 msgid "Rankings, index and AI checks"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1190
+#: includes/admin-kit/class-matrix.php:1193
 msgid "Setup and screens"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1191
+#: includes/admin-kit/class-matrix.php:1194
 msgid "Your data"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1192
+#: includes/admin-kit/class-matrix.php:1195
 msgid "Developers"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1193
+#: includes/admin-kit/class-matrix.php:1196
 msgid "Search Console and measurement"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1194
+#: includes/admin-kit/class-matrix.php:1197
 #: includes/modules/ai/module.php:17
 #: src/editor/AiPanel.js:951
 msgid "AI writing help"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1195
+#: includes/admin-kit/class-matrix.php:1198
 msgid "Agency and teams"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1196
+#: includes/admin-kit/class-matrix.php:1199
 #: includes/modules/ahrefs-dr/module.php:18
 #: src/admin/index.js:187
 #: src/admin/index.js:496
 msgid "Site authority"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1197
+#: includes/admin-kit/class-matrix.php:1200
 msgid "Clean-up and control"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1198
+#: includes/admin-kit/class-matrix.php:1201
 #: includes/modules/offers/module.php:19
 msgid "Services from Zinn®"
 msgstr ""
 
-#: includes/admin-kit/class-matrix.php:1199
+#: includes/admin-kit/class-matrix.php:1202
 #: includes/mcp-kit/class-server.php:322
 #: includes/modules/mcp/module.php:22
 #: src/mcp-kit/McpPanel.js:96
@@ -2495,7 +2499,7 @@ msgstr ""
 
 #: includes/ai-core/class-admin.php:409
 #: includes/modules/sitemaps/class-xsl.php:37
-#: src/admin/x1a/CleanupScreen.js:82
+#: src/admin/x1a/CleanupScreen.js:83
 #: src/toolbox/tabs/SearchTabs.js:316
 msgid "Images"
 msgstr ""
@@ -3239,12 +3243,12 @@ msgid "There is no SEO field called %s here."
 msgstr ""
 
 #. translators: %s: a module id.
-#: includes/class-modules.php:449
+#: includes/class-modules.php:517
 #, php-format
 msgid "There is no module called %s."
 msgstr ""
 
-#: includes/class-modules.php:452
+#: includes/class-modules.php:520
 msgid "This module is part of the core and cannot be switched off."
 msgstr ""
 
@@ -3307,7 +3311,7 @@ msgstr ""
 #: includes/class-setup.php:147
 #: src/admin/SettingsScreen.js:27
 #: src/admin/setupSteps.js:141
-#: src/admin/x1a/CleanupScreen.js:557
+#: src/admin/x1a/CleanupScreen.js:566
 msgid "Your site"
 msgstr ""
 
@@ -10365,6 +10369,66 @@ msgstr ""
 msgid "Connect this site to a Zinn® account to check rankings, Google's index, AI answers and backlinks from here, paying only for what you run. Nothing is sent until you agree."
 msgstr ""
 
+#: includes/modules/consent/class-consent.php:152
+msgid "We would like to use cookies to understand how this site is used and, if you agree, to show you relevant advertising. Choose what you allow; you can change your choice at any time."
+msgstr ""
+
+#: includes/modules/consent/class-consent.php:153
+msgid "We would like to use cookies to understand how this site is used. Choose what you allow; you can change your choice at any time."
+msgstr ""
+
+#: includes/modules/consent/class-consent.php:155
+#: src/admin-kit/Support.js:129
+#: src/tools/CreditsScreen.js:157
+msgid "Privacy policy"
+msgstr ""
+
+#: includes/modules/consent/class-consent.php:157
+msgid "Necessary (always on)"
+msgstr ""
+
+#: includes/modules/consent/class-consent.php:158
+msgid "Analytics"
+msgstr ""
+
+#: includes/modules/consent/class-consent.php:159
+msgid "Advertising"
+msgstr ""
+
+#: includes/modules/consent/class-consent.php:162
+msgid "Your privacy choices"
+msgstr ""
+
+#: includes/modules/consent/class-consent.php:164
+msgid "Cookies you allow"
+msgstr ""
+
+#: includes/modules/consent/class-consent.php:166
+msgid "Reject all"
+msgstr ""
+
+#: includes/modules/consent/class-consent.php:167
+msgid "Save choices"
+msgstr ""
+
+#: includes/modules/consent/class-consent.php:168
+msgid "Accept all"
+msgstr ""
+
+#: includes/modules/consent/class-consent.php:170
+#: includes/modules/consent/class-consent.php:220
+msgid "Privacy choices"
+msgstr ""
+
+#: includes/modules/consent/module.php:16
+#: src/admin/x1a/CleanupScreen.js:89
+msgid "Cookie consent"
+msgstr ""
+
+#: includes/modules/consent/module.php:17
+msgid "Ask visitors before analytics and advertising cookies are used, with a separate choice for each, and pass the answer to Google tags through Consent Mode. Off by default: while it is off, nothing is added to your pages."
+msgstr ""
+
 #: includes/modules/crawlers/module.php:17
 #: src/admin/discovery/StepDiscovery.js:53
 #: src/admin/DiscoveryScreen.js:22
@@ -10480,7 +10544,7 @@ msgid "Finds pages that share a title, a meta description or a main heading, and
 msgstr ""
 
 #: includes/modules/feeds/module.php:17
-#: src/admin/x1a/CleanupScreen.js:71
+#: src/admin/x1a/CleanupScreen.js:72
 msgid "RSS feeds"
 msgstr ""
 
@@ -25824,11 +25888,6 @@ msgstr ""
 msgid "only if you tick it: site details (WordPress and PHP versions, theme, plugins, an excerpt of the error log with passwords and e-mail addresses removed), which you can read before sending;"
 msgstr ""
 
-#: src/admin-kit/Support.js:129
-#: src/tools/CreditsScreen.js:157
-msgid "Privacy policy"
-msgstr ""
-
 #: src/admin-kit/Support.js:133
 msgid "I agree, continue"
 msgstr ""
@@ -28484,7 +28543,7 @@ msgid "Not built yet."
 msgstr ""
 
 #: src/admin/discovery/SitemapsTab.js:212
-#: src/admin/x1a/CleanupScreen.js:60
+#: src/admin/x1a/CleanupScreen.js:61
 msgid "Addresses"
 msgstr ""
 
@@ -34316,324 +34375,324 @@ msgid_plural "%1$s: %2$s items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/admin/x1a/CleanupScreen.js:35
+#: src/admin/x1a/CleanupScreen.js:36
 msgid "Send author archives to the home page"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:38
+#: src/admin/x1a/CleanupScreen.js:39
 msgid "…only on a one-author site, or for an author with no posts"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:43
+#: src/admin/x1a/CleanupScreen.js:44
 msgid "Send date archives to the home page"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:59
+#: src/admin/x1a/CleanupScreen.js:60
 msgid "Head and feeds"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:63
-#: src/admin/x1a/CleanupScreen.js:523
+#: src/admin/x1a/CleanupScreen.js:64
+#: src/admin/x1a/CleanupScreen.js:532
 msgid "Link previews"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:68
+#: src/admin/x1a/CleanupScreen.js:69
 msgid "Robots rules"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:77
+#: src/admin/x1a/CleanupScreen.js:78
 msgid "Comment spam"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:85
+#: src/admin/x1a/CleanupScreen.js:94
 msgid "Conflicts"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:120
+#: src/admin/x1a/CleanupScreen.js:129
 msgid "WordPress adds links, tags and feeds to every page that visitors never see and search engines waste time on. Switch off what you do not use: your pages get lighter and search engines spend their visits on the pages that matter."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:128
+#: src/admin/x1a/CleanupScreen.js:137
 msgid "Your home page could not be read just now, so the lines each switch removes are not shown. The switches work all the same."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:136
+#: src/admin/x1a/CleanupScreen.js:145
 msgid "Switch on the recommended set"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:139
+#: src/admin/x1a/CleanupScreen.js:148
 msgid "Links in every page head"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:142
+#: src/admin/x1a/CleanupScreen.js:151
 msgid "Remove the short link"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:143
+#: src/admin/x1a/CleanupScreen.js:152
 msgid "The \"?p=123\" address of each post. Nobody needs it once your addresses have names."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:150
+#: src/admin/x1a/CleanupScreen.js:159
 msgid "Remove the RSD link"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:151
+#: src/admin/x1a/CleanupScreen.js:160
 msgid "Only old desktop blogging apps read it."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:155
+#: src/admin/x1a/CleanupScreen.js:164
 msgid "Remove the Windows Live Writer link"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:156
+#: src/admin/x1a/CleanupScreen.js:165
 msgid "An app that no longer exists. Removed only where something still adds it."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:163
+#: src/admin/x1a/CleanupScreen.js:172
 msgid "Remove the REST API links"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:164
+#: src/admin/x1a/CleanupScreen.js:173
 msgid "The API itself keeps working; only the pointers to it in each page and its headers go. Keep this off if an app or service finds your site through them."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:171
+#: src/admin/x1a/CleanupScreen.js:180
 msgid "Remove the embed discovery links"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:172
+#: src/admin/x1a/CleanupScreen.js:181
 msgid "Other WordPress sites use them to embed your posts as cards. Off: your links still work everywhere, as plain links."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:179
+#: src/admin/x1a/CleanupScreen.js:188
 msgid "Remove the software version tags"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:180
+#: src/admin/x1a/CleanupScreen.js:189
 msgid "\"WordPress 7.1\", \"WooCommerce 10.2\"… tell attackers what to try and search engines nothing."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:186
+#: src/admin/x1a/CleanupScreen.js:195
 #: src/admin/x1a/RobotsDefaultsTab.js:40
 #: src/search/CrawlTab.js:36
 msgid "Feeds"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:188
+#: src/admin/x1a/CleanupScreen.js:197
 msgid "A feed switched off answers with a redirect to its page, so nothing that knew it ends on an error. Your main feed always stays."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:195
+#: src/admin/x1a/CleanupScreen.js:204
 msgid "Comment feeds"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:196
+#: src/admin/x1a/CleanupScreen.js:205
 msgid "The site-wide comments feed and one per post."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:203
+#: src/admin/x1a/CleanupScreen.js:212
 msgid "Author feeds"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:208
+#: src/admin/x1a/CleanupScreen.js:217
 msgid "Search result feeds"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:209
+#: src/admin/x1a/CleanupScreen.js:218
 msgid "Spammers use them to make your site publish their words."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:216
+#: src/admin/x1a/CleanupScreen.js:225
 msgid "Category, tag and other archive feeds"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:221
+#: src/admin/x1a/CleanupScreen.js:230
 msgid "Content type archive feeds"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:225
+#: src/admin/x1a/CleanupScreen.js:234
 msgid "Unwanted addresses"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:228
+#: src/admin/x1a/CleanupScreen.js:237
 msgid "Remove unknown parameters from addresses"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:232
+#: src/admin/x1a/CleanupScreen.js:241
 msgid "An address with \"?sessionid=…\" or another parameter your site does not use is sent to the clean address, so search engines see one copy of each page. Campaign and click ids (utm_, gclid, fbclid…) and the parameters shops and filters use are always kept."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:240
+#: src/admin/x1a/CleanupScreen.js:249
 msgid "Parameters to keep as well"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:241
+#: src/admin/x1a/CleanupScreen.js:250
 msgid "One per line. End a name with * to keep every parameter that starts with it."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:254
+#: src/admin/x1a/CleanupScreen.js:263
 msgid "Refuse spam searches"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:255
+#: src/admin/x1a/CleanupScreen.js:264
 msgid "Searches carrying a link, emoji or a wall of text are answered with \"not found\", so they never become pages of your site in search results."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:262
+#: src/admin/x1a/CleanupScreen.js:271
 msgid "Keep crawlers out of search results pages"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:266
+#: src/admin/x1a/CleanupScreen.js:275
 msgid "Adds lines to robots.txt so search engines do not crawl your site search at all."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:303
+#: src/admin/x1a/CleanupScreen.js:312
 msgid "These pages have the same address a category would take. The category will win: rename one of them first."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:322
+#: src/admin/x1a/CleanupScreen.js:331
 msgid "Short, clean and consistent addresses are easier to share, to remember and to rank. Every change here redirects the old addresses, so no link and no ranking is lost."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:330
+#: src/admin/x1a/CleanupScreen.js:339
 msgid "Your site uses plain \"?p=123\" addresses. Choose a name-based structure under Settings, Permalinks first."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:336
+#: src/admin/x1a/CleanupScreen.js:345
 msgid "Categories"
 msgstr ""
 
 #. translators: %s: the category base, usually "category".
-#: src/admin/x1a/CleanupScreen.js:342
+#: src/admin/x1a/CleanupScreen.js:351
 #, js-format
 msgid "Remove \"/%s/\" from category addresses"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:349
+#: src/admin/x1a/CleanupScreen.js:358
 msgid "example.com/category/news/ becomes example.com/news/."
 msgstr ""
 
 #. translators: %s: the shop category base.
-#: src/admin/x1a/CleanupScreen.js:362
+#: src/admin/x1a/CleanupScreen.js:371
 #, js-format
 msgid "Remove \"/%s/\" from shop category addresses"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:368
+#: src/admin/x1a/CleanupScreen.js:377
 msgid "example.com/product-category/shoes/ becomes example.com/shoes/."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:378
+#: src/admin/x1a/CleanupScreen.js:387
 msgid "Pages WordPress makes for you"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:382
+#: src/admin/x1a/CleanupScreen.js:391
 msgid "Attachment pages"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:383
+#: src/admin/x1a/CleanupScreen.js:392
 msgid "WordPress gives every uploaded image a page of its own: thin pages search engines index for nothing."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:391
+#: src/admin/x1a/CleanupScreen.js:400
 msgid "Leave as they are"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:395
+#: src/admin/x1a/CleanupScreen.js:404
 msgid "Send to the page they belong to (else the file)"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:402
+#: src/admin/x1a/CleanupScreen.js:411
 msgid "Send to the file itself"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:433
+#: src/admin/x1a/CleanupScreen.js:442
 msgid "Remove comment-reply copies"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:434
+#: src/admin/x1a/CleanupScreen.js:443
 msgid "Every \"Reply\" link otherwise makes a copy of the page with its own address. The reply form still opens in place."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:440
+#: src/admin/x1a/CleanupScreen.js:449
 msgid "One address per page"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:444
+#: src/admin/x1a/CleanupScreen.js:453
 msgid "Always use your main address (www or not)"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:448
+#: src/admin/x1a/CleanupScreen.js:457
 msgid "WordPress usually does this already; switch it on when another plugin or your theme stops it."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:456
+#: src/admin/x1a/CleanupScreen.js:465
 msgid "Always use one trailing slash style"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:460
+#: src/admin/x1a/CleanupScreen.js:469
 msgid "The style of your permalink settings. Files keep their names."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:466
+#: src/admin/x1a/CleanupScreen.js:475
 msgid "Title capitals"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:468
+#: src/admin/x1a/CleanupScreen.js:477
 msgid "Capitalise the titles search engines show, in the way that suits each language. Words written with capitals inside them (iPhone, SEO) and numbers are left exactly as you wrote them."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:482
+#: src/admin/x1a/CleanupScreen.js:491
 msgid "As written"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:486
+#: src/admin/x1a/CleanupScreen.js:495
 msgid "Title Case (Small Words Kept Small)"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:493
+#: src/admin/x1a/CleanupScreen.js:502
 #: src/admin/x1a/ImagesTab.js:151
 #: src/admin/x1a/ImagesTab.js:358
 msgid "First letter only"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:517
+#: src/admin/x1a/CleanupScreen.js:526
 msgid "When someone pastes a link to your page into Slack, Discord, LinkedIn or Mastodon, the preview they see comes partly from your site's embed information. Make it show your best title and image."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:527
+#: src/admin/x1a/CleanupScreen.js:536
 msgid "Use the SEO title"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:528
+#: src/admin/x1a/CleanupScreen.js:537
 msgid "The title you wrote for search results, not the plain post title."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:536
+#: src/admin/x1a/CleanupScreen.js:545
 msgid "Use the sharing image"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:537
+#: src/admin/x1a/CleanupScreen.js:546
 msgid "The image you chose for sharing, else the featured image."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:544
+#: src/admin/x1a/CleanupScreen.js:553
 msgid "Author shown"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:545
+#: src/admin/x1a/CleanupScreen.js:554
 msgid "By default the preview names the author and links to their archive, which shows their login name. Showing your site instead keeps that private."
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:553
+#: src/admin/x1a/CleanupScreen.js:562
 msgid "The post's author"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:559
+#: src/admin/x1a/CleanupScreen.js:568
 msgid "Nobody"
 msgstr ""
 
-#: src/admin/x1a/CleanupScreen.js:585
+#: src/admin/x1a/CleanupScreen.js:594
 msgid "Every clean-up feature is switched off. Switch them on under Settings, Features."
 msgstr ""
 
@@ -34892,6 +34951,42 @@ msgstr ""
 
 #: src/admin/x1a/ConflictsTab.js:211
 msgid "Fixes switched on"
+msgstr ""
+
+#: src/admin/x1a/ConsentTab.js:20
+msgid "Visitors are asked before analytics and advertising cookies are used, each as its own choice, and Google tags (Analytics, Ads, Tag Manager) are told the answer through Consent Mode: everything is denied until the visitor chooses, and the choice is remembered for 180 days."
+msgstr ""
+
+#: src/admin/x1a/ConsentTab.js:25
+msgid "The banner"
+msgstr ""
+
+#: src/admin/x1a/ConsentTab.js:29
+msgid "Ask about advertising too"
+msgstr ""
+
+#: src/admin/x1a/ConsentTab.js:30
+msgid "Switch off if the site shows no advertising: the banner then asks about analytics only, and advertising stays denied."
+msgstr ""
+
+#: src/admin/x1a/ConsentTab.js:38
+msgid "Show a small \"Privacy choices\" button after a choice"
+msgstr ""
+
+#: src/admin/x1a/ConsentTab.js:42
+msgid "Visitors can change their mind at any time. Without the button, add a link yourself."
+msgstr ""
+
+#: src/admin/x1a/ConsentTab.js:48
+msgid "Your own link"
+msgstr ""
+
+#: src/admin/x1a/ConsentTab.js:50
+msgid "Any link to the address below, for example a menu item, re-opens the banner. In a page or widget you can also use the shortcode."
+msgstr ""
+
+#: src/admin/x1a/ConsentTab.js:60
+msgid "The banner links to the privacy policy page chosen under Settings, Privacy in WordPress."
 msgstr ""
 
 #. translators: %s: a feature's name.

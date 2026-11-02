@@ -2366,6 +2366,13 @@
             "compare": true
         },
         {
+            "id": "zs-783",
+            "area": "Clean-up and control",
+            "title": "Cookie consent banner",
+            "min": "free",
+            "compare": true
+        },
+        {
             "id": "zs-600",
             "area": "Services from Zinn®",
             "title": "Offers beside what they fix",

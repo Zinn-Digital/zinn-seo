@@ -152,6 +152,7 @@
 	"src/admin/x1a/CommentsTab.js": [ "build/settings.js" ],
 	"src/admin/x1a/Conditions.js": [ "build/settings.js" ],
 	"src/admin/x1a/ConflictsTab.js": [ "build/settings.js" ],
+	"src/admin/x1a/ConsentTab.js": [ "build/settings.js" ],
 	"src/admin/x1a/FeaturesTab.js": [ "build/settings.js" ],
 	"src/admin/x1a/FeedsTab.js": [ "build/settings.js" ],
 	"src/admin/x1a/ImagesTab.js": [ "build/settings.js" ],

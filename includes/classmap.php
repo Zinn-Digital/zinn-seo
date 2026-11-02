@@ -136,6 +136,7 @@ return array(
 	'ZinnDigital\\ZinnSEO\\Connect\\Client' => 'includes/modules/connect/class-client.php',
 	'ZinnDigital\\ZinnSEO\\Connect\\Connect_Rest' => 'includes/modules/connect/class-connect-rest.php',
 	'ZinnDigital\\ZinnSEO\\Connect\\Connection' => 'includes/modules/connect/class-connection.php',
+	'ZinnDigital\\ZinnSEO\\Consent\\Consent' => 'includes/modules/consent/class-consent.php',
 	'ZinnDigital\\ZinnSEO\\Content\\Quiet_Save' => 'includes/content/class-quiet-save.php',
 	'ZinnDigital\\ZinnSEO\\Content\\Writer' => 'includes/content/class-writer.php',
 	'ZinnDigital\\ZinnSEO\\Counters' => 'includes/class-counters.php',

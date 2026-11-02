@@ -23,6 +23,7 @@ import FeedsTab from './FeedsTab';
 import CommentsTab from './CommentsTab';
 import ImagesTab from './ImagesTab';
 import ConflictsTab from './ConflictsTab';
+import ConsentTab from './ConsentTab';
 import './x1a.scss';
 
 /**
@@ -80,6 +81,14 @@ export function cleanupTabs( data = {} ) {
 			: [] ),
 		...( on( 'images' )
 			? [ { name: 'images', title: __( 'Images', 'zinn-seo' ) } ]
+			: [] ),
+		...( on( 'consent' )
+			? [
+					{
+						name: 'consent',
+						title: __( 'Cookie consent', 'zinn-seo' ),
+					},
+				]
 			: [] ),
 		...( on( 'conflicts' )
 			? [ { name: 'conflicts', title: __( 'Conflicts', 'zinn-seo' ) } ]
@@ -653,6 +662,8 @@ export default function CleanupScreen( { data } ) {
 								return (
 									<ImagesTab form={ form } data={ data } />
 								);
+							case 'consent':
+								return <ConsentTab form={ form } />;
 							default:
 								return <ConflictsTab data={ data } />;
 						}

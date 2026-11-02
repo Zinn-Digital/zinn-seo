@@ -21,7 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  * `requires` (other module ids); `features` (the catalogue ids it implements, which the feature
  * registry reads); `contexts` (front, admin, rest, cli, cron: where it boots); `locked` (cannot be
  * switched off); `files` (the module's own class files, relative to its directory, loaded only
- * when it boots — zs-715); and `boot`, a callable that receives the context and registers the hooks.
+ * when it boots — zs-715); `page_cache` (true when it prints on every page, so switching it or
+ * changing its settings empties the page caches); and `boot`, a callable that receives the
+ * context and registers the hooks.
  *
  * ⭐ zs-715: a switched-off module costs its definition and nothing else. Its `files` are never
  * read, its `boot` never runs, so it adds no hook, no query and no code to any request. Its
@@ -297,6 +299,7 @@ final class Modules {
 	 */
 	public static function boot(): void {
 		self::boot_for( self::context() );
+		add_action( 'zinn_seo_settings_saved', array( self::class, 'purge_changed_pages' ), 10, 2 );
 		add_action(
 			'rest_api_init',
 			static function (): void {
@@ -304,6 +307,71 @@ final class Modules {
 			},
 			1
 		);
+	}
+
+	/**
+	 * Empty the page caches when a module that prints on every page (`page_cache` in its
+	 * definition) is switched on or off, or one of its settings changes. Hooked here, not in the
+	 * module, because a switched-off module boots nothing (zs-715), so the request that switches it
+	 * ON has no hook of its own. Measured 2026-11-01 (zs-783): consent switched on, LiteSpeed Cache
+	 * went on serving the home page it had cached without the banner (max-age 7 days).
+	 *
+	 * @param mixed $after  Every setting after the change.
+	 * @param mixed $before Every setting before it.
+	 * @return void
+	 */
+	public static function purge_changed_pages( $after, $before ): void {
+		if ( array() === self::page_changes( self::discover(), (array) $after, (array) $before ) ) {
+			return;
+		}
+		\ZinnDigital\ZinnSEO\Cdn\Cdn::purge_page_caches();
+	}
+
+	/**
+	 * The `page_cache` modules whose page output a settings change altered: switched on, switched
+	 * off, or (while on) one of their own settings changed. Pure, so it is unit-tested.
+	 *
+	 * @param array<string, array<string, mixed>> $defs   Module definitions by id.
+	 * @param array<string, mixed>                $after  Settings after.
+	 * @param array<string, mixed>                $before Settings before.
+	 * @return list<string> Module ids.
+	 */
+	public static function page_changes( array $defs, array $after, array $before ): array {
+		$changed = array();
+		foreach ( $defs as $id => $def ) {
+			if ( empty( $def['page_cache'] ) ) {
+				continue;
+			}
+			$was = self::chosen( (string) $id, $def, $before );
+			$now = self::chosen( (string) $id, $def, $after );
+			if ( $was !== $now ) {
+				$changed[] = (string) $id;
+				continue;
+			}
+			if ( ! $now ) {
+				continue;
+			}
+			foreach ( array_keys( (array) ( $def['settings'] ?? array() ) ) as $key ) {
+				if ( ( $after[ $key ] ?? null ) !== ( $before[ $key ] ?? null ) ) {
+					$changed[] = (string) $id;
+					break;
+				}
+			}
+		}
+		return $changed;
+	}
+
+	/**
+	 * Whether the site chose this module on, in one settings snapshot (its default when unchosen).
+	 *
+	 * @param string               $id       Module id.
+	 * @param array<string, mixed> $def      Its definition.
+	 * @param array<string, mixed> $settings Settings snapshot.
+	 * @return bool
+	 */
+	private static function chosen( string $id, array $def, array $settings ): bool {
+		$choices = (array) ( $settings['modules'] ?? array() );
+		return array_key_exists( $id, $choices ) ? (bool) $choices[ $id ] : (bool) ( $def['default'] ?? false );
 	}
 
 	/**
