@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.72 =
+* Dependency security update (Renovate).
+
 = 0.17.71 =
 * Fix (Pro): Bing's nocache is kept on sites where a theme or plugin uses Rank Math's robots filter; deleting a redirect also removes its visitor conditions; the visitor's country choice is sent as one cookie.
 
