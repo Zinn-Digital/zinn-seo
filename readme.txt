@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.72
+Stable tag: 0.17.73
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -834,6 +834,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.73 =
+* Dependency security update (Renovate).
+
 = 0.17.72 =
 * Dependency security update (Renovate).
 
@@ -862,8 +865,5 @@ They are answered before your theme loads, from small index files, so a redirect
 * Automatic redirects: a published post, page or product taken back to draft, pending, scheduled or private now follows the same choice as the bin (its parent or category, "gone", or nothing), and so does a deleted category or tag (its parent, or "gone" when it has none). The choice can differ per content type and for categories and tags (for example, products answer "gone" while posts go to their category).
 * Automatic redirects now cover every language: with Zinn® Translate, Tranzly or TranslatePress, a changed or removed page is redirected at each of its translated addresses too (with WPML and Polylang each language was already its own page).
 * Saving, changing or deleting a redirect now empties that page from your caches and CDN (Zinn® Cache, LiteSpeed, WP Rocket, Cloudflare in Zinn® SEO Pro, and any cache that listens), so visitors get the redirect at once.
-
-= 0.17.64 =
-* Rebuild only: the package no longer carries development files
 
 The full history of every release is in changelog.txt, in the plugin's folder.
