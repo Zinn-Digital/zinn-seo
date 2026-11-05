@@ -27,6 +27,7 @@ import registerAiPanel from './AiPanel';
 import { PrimaryTermField, SnippetFields, snippetPreview } from './X1aFields';
 import registerNosnippet from './Nosnippet';
 import SchedulePanel from './SchedulePanel';
+import RedirectedWarning from './RedirectedWarning';
 import registerX1cPanels from './X1cPanels';
 import { fillOnFocus, revertOnBlur } from '../fields/fill';
 import './editor.scss';
@@ -605,6 +606,12 @@ function register() {
 	registerX1cPanels( Panel );
 	if ( boot.nosnippet ) {
 		registerNosnippet();
+	}
+	if ( boot.redirectCheck ) {
+		wp.plugins.registerPlugin( 'zinn-seo-redirected', {
+			render: () => <RedirectedWarning base={ base } />,
+			icon: null,
+		} );
 	}
 	if ( boot.schedule ) {
 		wp.plugins.registerPlugin( 'zinn-seo-schedule', {

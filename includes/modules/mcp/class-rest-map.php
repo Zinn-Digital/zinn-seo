@@ -4434,6 +4434,11 @@ final class Rest_Map {
 				),
 			),
 			array(
+				'method'     => 'GET',
+				'route'      => '/zinn-seo/v1/redirects/editor-check',
+				'covered_by' => 'zinn-seo/test-redirect',
+			),
+			array(
 				'method'      => 'POST',
 				'route'       => '/zinn-seo/v1/redirects/fix',
 				'name'        => 'zinn-seo/fix-redirect-chains',

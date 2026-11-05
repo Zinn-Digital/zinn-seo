@@ -30,4 +30,10 @@ return array(
 		'default' => false,
 		'group'   => 'notfound',
 	),
+	// SEOPress 10.3 parity: a 404 sends a GA4 event, never a second page view. Off by default.
+	'notfound_ga4'    => array(
+		'type'    => 'bool',
+		'default' => false,
+		'group'   => 'notfound',
+	),
 );
