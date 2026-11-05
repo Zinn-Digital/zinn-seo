@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.75
+Stable tag: 0.17.77
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -834,6 +834,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.77 =
+* Fix: no longer crashes on hosts that disable PHP functions such as set_time_limit or sys_getloadavg; each call is checked first and falls back safely.
+
 = 0.17.75 =
 * New: the 404 monitor can send Google Analytics 4 a "page not found" event (404 monitor > Settings, off by default). It uses the GA4 tag already on your site and is an event, never a second page view.
 * New: the block editor warns when the address you are about to publish is already redirected, with the redirect's code and target, so the page is not hidden behind an old rule.
@@ -861,8 +864,5 @@ They are answered before your theme loads, from small index files, so a redirect
 
 = 0.17.67 =
 * Security: syncing WooCommerce pickup locations needs manage_options; listing server-rules backups no longer creates a folder; Bing disconnect only removes the plugin's own cached data; the AI-app "Disconnect" action checks a capability as well as the nonce.
-
-= 0.17.66 =
-* Help links: the Copywriter tab and a redirect's country condition now open their own step-by-step guides on zinnseo.com (Write anything with the AI copywriter; Redirect visitors by their country).
 
 The full history of every release is in changelog.txt, in the plugin's folder.

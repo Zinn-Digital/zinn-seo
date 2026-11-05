@@ -581,7 +581,7 @@ final class Jobs_Pace {
 		if ( null !== $given ) {
 			return false === $given ? null : max( 0.0, (float) $given );
 		}
-		if ( ! function_exists( 'sys_getloadavg' ) ) {
+		if ( ! zinn_seo_can_call( 'sys_getloadavg' ) ) {
 			return null;
 		}
 		$avg = sys_getloadavg();

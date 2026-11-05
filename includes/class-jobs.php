@@ -1436,7 +1436,7 @@ final class Jobs {
 		if ( function_exists( 'wp_raise_memory_limit' ) ) {
 			wp_raise_memory_limit( 'zinn_seo_jobs' ); // WordPress's own: up to WP_MAX_MEMORY_LIMIT, never down.
 		}
-		if ( function_exists( 'set_time_limit' ) ) {
+		if ( zinn_seo_can_call( 'set_time_limit' ) ) {
 			set_time_limit( 30 ); // phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged -- the guard of a step that ran out of time must still finish its few writes.
 		}
 	}

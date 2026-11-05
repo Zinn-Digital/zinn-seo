@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.77 =
+* Fix: no longer crashes on hosts that disable PHP functions such as set_time_limit or sys_getloadavg; each call is checked first and falls back safely.
+
 = 0.17.75 =
 * New: the 404 monitor can send Google Analytics 4 a "page not found" event (404 monitor > Settings, off by default). It uses the GA4 tag already on your site and is an event, never a second page view.
 * New: the block editor warns when the address you are about to publish is already redirected, with the redirect's code and target, so the page is not hidden behind an old rule.

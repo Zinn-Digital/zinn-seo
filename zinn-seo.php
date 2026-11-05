@@ -4,7 +4,7 @@
  * Plugin Name:       Zinn® SEO
  * Plugin URI:        https://zinndigital.com/wordpress-plugins/
  * Description:       Complete search engine and AI visibility optimisation for WordPress, built for speed: nothing added to your visitors' pages except the tags search engines read, settings in one place, and a guided setup.
- * Version:           0.17.75
+ * Version:           0.17.77
  * Requires at least: 6.4
  * Requires PHP:      7.4
  * Author:            Neil Lock — CEO, Zinn Digital® Ltd
@@ -29,7 +29,7 @@ if ( function_exists( 'zinn_seo_fs' ) ) {
     zinn_seo_fs()->set_basename( false, __FILE__ );
     return;
 }
-define( 'ZINN_SEO_VERSION', '0.17.75' );
+define( 'ZINN_SEO_VERSION', '0.17.77' );
 define( 'ZINN_SEO_FILE', __FILE__ );
 define( 'ZINN_SEO_DIR', plugin_dir_path( __FILE__ ) );
 define( 'ZINN_SEO_URL', plugin_dir_url( __FILE__ ) );
@@ -86,4 +86,5 @@ if ( !function_exists( 'zinn_seo_fs' ) ) {
      */
     do_action( 'zinn_seo_fs_loaded' );
 }
+require_once __DIR__ . '/includes/php-functions-guard.php'; // Before anything that may call a host-disableable function.
 require_once __DIR__ . '/includes/bootstrap.php';
