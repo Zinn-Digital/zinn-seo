@@ -210,28 +210,6 @@ final class Redirects_Rest {
 				),
 			)
 		);
-		// SEOPress 10.3 parity: the editor warns when the address about to be published is
-		// already the SOURCE of a redirect (visitors would never reach the page there).
-		register_rest_route(
-			Plugin::REST_NS,
-			'/redirects/editor-check',
-			array(
-				'methods'             => \WP_REST_Server::READABLE,
-				'callback'            => array( self::class, 'editor_check' ),
-				'permission_callback' => array( self::class, 'can_check_post' ),
-				'args'                => array(
-					'post' => array(
-						'type'     => 'integer',
-						'required' => true,
-						'minimum'  => 1,
-					),
-					'url'  => array(
-						'type'     => 'string',
-						'required' => true,
-					),
-				),
-			)
-		);
 		register_rest_route(
 			Plugin::REST_NS,
 			'/redirects/health',
@@ -549,54 +527,6 @@ final class Redirects_Rest {
 				'final'  => null === $f ? '' : (string) $f['final'],
 				'hops'   => $hops,
 			)
-		);
-	}
-
-	/**
-	 * Who may ask whether a post's address is redirected: whoever may edit that post. An editor
-	 * learns only the redirect's code and target for an address they are about to publish.
-	 *
-	 * @param \WP_REST_Request $r Request.
-	 * @return bool
-	 */
-	public static function can_check_post( \WP_REST_Request $r ): bool {
-		$post = (int) $r->get_param( 'post' );
-		return $post > 0 && current_user_can( 'edit_post', $post );
-	}
-
-	/**
-	 * GET /redirects/editor-check: is the address this post is about to use already redirected?
-	 *
-	 * @param \WP_REST_Request $r Request.
-	 * @return \WP_REST_Response|\WP_Error
-	 */
-	public static function editor_check( \WP_REST_Request $r ) {
-		$url   = (string) $r->get_param( 'url' );
-		$path  = (string) wp_parse_url( $url, PHP_URL_PATH );
-		$query = (string) wp_parse_url( $url, PHP_URL_QUERY );
-		$uri   = ( '' === $path ? '/' : $path ) . ( '' === $query ? '' : '?' . $query );
-		$match = Store::is_local( $url ) ? Serve::match( $uri, true ) : null;
-		return rest_ensure_response( self::editor_answer( $match ) );
-	}
-
-	/**
-	 * The editor's answer for a redirect match (or none). Exported for the tests.
-	 *
-	 * @param array<string, mixed>|null $hit Serve::match() result.
-	 * @return array{redirected: bool, code: int, location: string}
-	 */
-	public static function editor_answer( ?array $hit ): array {
-		if ( null === $hit ) {
-			return array(
-				'redirected' => false,
-				'code'       => 0,
-				'location'   => '',
-			);
-		}
-		return array(
-			'redirected' => true,
-			'code'       => (int) ( $hit['code'] ?? 0 ),
-			'location'   => (string) ( $hit['location'] ?? '' ),
 		);
 	}
 

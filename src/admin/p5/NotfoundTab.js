@@ -193,19 +193,6 @@ function NotfoundSettings() {
 					checked={ !! settings.notfound_email }
 					onChange={ ( v ) => put( { notfound_email: v } ) }
 				/>
-				<ToggleControl
-					__nextHasNoMarginBottom
-					label={ __(
-						'Send a "page not found" event to Google Analytics 4',
-						'zinn-seo'
-					) }
-					help={ __(
-						'Uses the GA4 tag already on your site and adds an event, never a second page view. Nothing happens on pages without a GA4 tag.',
-						'zinn-seo'
-					) }
-					checked={ !! settings.notfound_ga4 }
-					onChange={ ( v ) => put( { notfound_ga4: v } ) }
-				/>
 				<p>
 					<Button
 						variant="secondary"

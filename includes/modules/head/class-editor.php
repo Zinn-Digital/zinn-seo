@@ -297,8 +297,6 @@ final class Editor {
 				'canManage'       => Capabilities::can_manage(),
 				// Click a suggested title or description to edit it (zs-757).
 				'placeholderEdit' => self::placeholder_edit(),
-				// Warn when the address about to be published is already redirected (SEOPress 10.3).
-				'redirectCheck'   => \ZinnDigital\ZinnSEO\Modules::enabled( 'redirects' ),
 			)
 		);
 	}
