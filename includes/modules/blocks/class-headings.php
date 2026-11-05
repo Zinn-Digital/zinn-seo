@@ -138,10 +138,52 @@ final class Headings {
 			$html
 		);
 
+		/**
+		 * Filters the headings the contents lists are built from (rival gap: Rank Math 1.0.281).
+		 *
+		 * The list is read from the RENDERED page, so a third-party heading block that prints an
+		 * h2-h6 is already in it with no filter. This is for the rest: leave a heading out, or add
+		 * one a block draws without a heading tag. Each entry is `level` (2-6), `text` and `id`;
+		 * an added entry's `id` must be on the element it points at. Anything else is dropped.
+		 *
+		 * @since 0.17.74
+		 *
+		 * @param array<int, array{level: int, text: string, id: string}> $headings The headings, in page order.
+		 * @param string                                                   $html     The page HTML, anchors added.
+		 */
+		$filtered = apply_filters( 'zinn_seo_contents_headings', $headings, $out );
+
 		return array(
 			'html'     => $out,
-			'headings' => $headings,
+			'headings' => is_array( $filtered ) ? self::valid( $filtered ) : $headings,
 		);
+	}
+
+	/**
+	 * The entries of a filtered headings list that a contents list can link to.
+	 *
+	 * @param array<mixed> $headings Filtered headings.
+	 * @return array<int, array{level: int, text: string, id: string}>
+	 */
+	public static function valid( array $headings ): array {
+		$out = array();
+		foreach ( $headings as $heading ) {
+			if ( ! is_array( $heading ) ) {
+				continue;
+			}
+			$level = (int) ( $heading['level'] ?? 0 );
+			$text  = trim( (string) ( $heading['text'] ?? '' ) );
+			$id    = trim( (string) ( $heading['id'] ?? '' ) );
+			if ( $level < 2 || $level > 6 || '' === $text || '' === $id ) {
+				continue;
+			}
+			$out[] = array(
+				'level' => $level,
+				'text'  => $text,
+				'id'    => $id,
+			);
+		}
+		return $out;
 	}
 
 	/**

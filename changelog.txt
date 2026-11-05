@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.74 =
+* New: the `zinn_seo_contents_headings` filter changes the headings the table of contents lists; headings printed by any block, third-party ones too, were already included.
+
 = 0.17.73 =
 * Dependency security update (Renovate).
 
