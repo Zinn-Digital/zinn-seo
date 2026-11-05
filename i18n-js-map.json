@@ -90,6 +90,7 @@
 	"src/editor/AiPanel.js": [ "build/editor.js" ],
 	"src/editor/AnalysisSidebar.js": [ "build/editor.js" ],
 	"src/editor/LockPanel.js": [ "build/editor.js" ],
+	"src/editor/RedirectedWarning.js": [ "build/editor.js" ],
 	"src/editor/SchemaPanel.js": [ "build/editor.js", "build/classic.js" ],
 	"src/editor/analysis/AnalysisPanel.js": [ "build/classic.js", "build/editor.js", "build/elementor.js" ],
 	"src/editor/analysis/SerpPreview.js": [ "build/classic.js", "build/editor.js", "build/elementor.js" ],

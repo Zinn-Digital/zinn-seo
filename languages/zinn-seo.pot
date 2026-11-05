@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zinn® SEO 0.17.74\n"
+"Project-Id-Version: Zinn® SEO 0.17.75\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zinn-seo\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-01T16:04:50+00:00\n"
+"POT-Creation-Date: 2026-11-05T12:50:09+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zinn-seo\n"
@@ -98,7 +98,7 @@ msgstr ""
 
 #: includes/adapters/elementor/class-elementor.php:454
 #: includes/adapters/elementor/class-tag-title.php:42
-#: includes/modules/head/class-editor.php:379
+#: includes/modules/head/class-editor.php:381
 #: includes/pro__premium_only/modules/copywriter/data/tools.php:195
 #: includes/pro__premium_only/modules/gdocs/class-gdocs.php:304
 #: includes/pro__premium_only/modules/search-insights/class-search-insights.php:337
@@ -112,7 +112,7 @@ msgstr ""
 #: src/admin/x1c/WriterTab.js:310
 #: src/agency/PagesScreen.js:183
 #: src/ai/WriteTab.js:48
-#: src/editor/index.js:377
+#: src/editor/index.js:378
 #: src/search/InsightsTabs.js:104
 msgid "SEO title"
 msgstr ""
@@ -124,7 +124,7 @@ msgstr ""
 
 #: includes/adapters/elementor/class-elementor.php:465
 #: includes/adapters/elementor/class-tag-description.php:42
-#: includes/modules/head/class-editor.php:383
+#: includes/modules/head/class-editor.php:385
 #: includes/modules/inspector/class-inspector.php:139
 #: includes/pro__premium_only/modules/gdocs/class-gdocs.php:305
 #: includes/pro__premium_only/modules/search-insights/class-search-insights.php:338
@@ -140,7 +140,7 @@ msgstr ""
 #: src/admin/x1c/WriterTab.js:318
 #: src/agency/PagesScreen.js:190
 #: src/ai/WriteTab.js:49
-#: src/editor/index.js:384
+#: src/editor/index.js:385
 #: src/search/InsightsTabs.js:107
 msgid "Meta description"
 msgstr ""
@@ -150,7 +150,7 @@ msgid "Hide from search engines (noindex)"
 msgstr ""
 
 #: includes/adapters/elementor/class-elementor.php:486
-#: includes/modules/head/class-editor.php:387
+#: includes/modules/head/class-editor.php:389
 #: includes/modules/inspector/class-inspector.php:140
 #: includes/pro__premium_only/modules/search-insights/class-search-insights.php:340
 #: src/admin/BulkScreen.js:371
@@ -159,7 +159,7 @@ msgstr ""
 #: src/admin/BulkScreen.js:1066
 #: src/admin/CommandPalette.js:180
 #: src/admin/p6/pure.js:61
-#: src/editor/index.js:429
+#: src/editor/index.js:430
 msgid "Canonical address"
 msgstr ""
 
@@ -712,7 +712,7 @@ msgstr ""
 #: includes/admin-kit/class-matrix.php:911
 #: src/admin/TemplateInput.js:166
 #: src/editor/analysis/AnalysisPanel.js:1050
-#: src/editor/index.js:342
+#: src/editor/index.js:343
 msgid "Search result preview"
 msgstr ""
 
@@ -914,7 +914,7 @@ msgstr ""
 #: includes/pro__premium_only/modules/lock/module.php:17
 #: src/admin/p5/ProtectionScreen.js:29
 #: src/admin/p5/ProtectionScreen.js:490
-#: src/editor/index.js:631
+#: src/editor/index.js:638
 msgid "SEO lock"
 msgstr ""
 
@@ -1889,7 +1889,7 @@ msgstr ""
 #: src/admin/index.js:429
 #: src/admin/SchemaScreen.js:179
 #: src/editor/AiPanel.js:335
-#: src/editor/index.js:650
+#: src/editor/index.js:657
 #: src/elementor/index.js:87
 msgid "Structured data"
 msgstr ""
@@ -2379,7 +2379,7 @@ msgstr ""
 #: includes/ai-core/class-admin.php:514
 #: includes/freemius-strings.php:2127
 #: includes/freemius-strings.php:4991
-#: includes/modules/head/class-editor.php:474
+#: includes/modules/head/class-editor.php:476
 #: src/admin/blocks/CustomBlocksTab.js:288
 #: src/admin/blocks/GlossaryTab.js:223
 #: src/admin/ImagePicker.js:82
@@ -2396,7 +2396,7 @@ msgstr ""
 #: src/authority/AuthorityScreen.js:1244
 #: src/blocks/Field.js:131
 #: src/blocks/Field.js:365
-#: src/editor/index.js:141
+#: src/editor/index.js:142
 #: src/editor/SchemaPanel.js:97
 #: src/search/TestsTab.js:177
 #: src/toolbox/shared.js:362
@@ -3273,7 +3273,7 @@ msgstr ""
 #: includes/modules/head/class-head-rest.php:71
 #: includes/modules/links/class-links-rest.php:201
 #: includes/modules/redirects/class-redirects-rest.php:167
-#: includes/modules/redirects/class-redirects-rest.php:423
+#: includes/modules/redirects/class-redirects-rest.php:445
 #: includes/modules/redirects/class-store.php:300
 #: includes/pro__premium_only/modules/link-plan/class-health.php:35
 #: includes/pro__premium_only/modules/links-pro/class-incoming.php:159
@@ -3328,7 +3328,7 @@ msgid "Other SEO plugins"
 msgstr ""
 
 #: includes/class-setup.php:159
-#: includes/modules/head/class-editor.php:391
+#: includes/modules/head/class-editor.php:393
 #: src/admin/BulkScreen.js:333
 #: src/admin/BulkScreen.js:337
 #: src/admin/BulkScreen.js:607
@@ -3337,7 +3337,7 @@ msgstr ""
 #: src/admin/SettingsScreen.js:402
 #: src/admin/setupSteps.js:179
 #: src/admin/x1a/ScheduledTab.js:24
-#: src/editor/index.js:448
+#: src/editor/index.js:449
 msgid "Search engines"
 msgstr ""
 
@@ -3448,7 +3448,7 @@ msgstr ""
 #: includes/freemius-strings.php:3081
 #: src/admin/ail1/LinkPlanTab.js:629
 #: src/admin/BulkScreen.js:1315
-#: src/admin/p5/NotfoundTab.js:305
+#: src/admin/p5/NotfoundTab.js:318
 #: src/admin/p5/ProtectionScreen.js:337
 #: src/admin/p5/RedirectsTab.js:710
 #: src/admin/p5/SiteSearchTab.js:133
@@ -9920,12 +9920,12 @@ msgid "When the content was last reviewed by an expert (YYYY-MM-DD)."
 msgstr ""
 
 #: includes/modules/blocks/class-blocks.php:87
-#: src/editor/index.js:440
+#: src/editor/index.js:441
 msgid "Name in breadcrumbs"
 msgstr ""
 
 #: includes/modules/blocks/class-blocks.php:89
-#: src/editor/index.js:441
+#: src/editor/index.js:442
 msgid "Empty: the title."
 msgstr ""
 
@@ -10974,55 +10974,55 @@ msgstr ""
 msgid "For an author who left: visitors and search engines go to this address instead, and the page leaves the sitemap. Empty: no redirect."
 msgstr ""
 
-#: includes/modules/head/class-editor.php:367
-#: includes/modules/head/class-editor.php:606
-#: src/editor/index.js:595
+#: includes/modules/head/class-editor.php:369
+#: includes/modules/head/class-editor.php:608
+#: src/editor/index.js:596
 msgid "Search and social"
 msgstr ""
 
-#: includes/modules/head/class-editor.php:473
+#: includes/modules/head/class-editor.php:475
 #: src/admin/ImagePicker.js:74
-#: src/editor/index.js:130
+#: src/editor/index.js:131
 msgid "Choose image"
 msgstr ""
 
-#: includes/modules/head/class-editor.php:481
-#: src/editor/index.js:46
-#: src/editor/index.js:402
+#: includes/modules/head/class-editor.php:483
+#: src/editor/index.js:47
+#: src/editor/index.js:403
 msgid "Hide from search results (noindex)"
 msgstr ""
 
-#: includes/modules/head/class-editor.php:482
+#: includes/modules/head/class-editor.php:484
 msgid "Show in search results even if its type is hidden (index)"
 msgstr ""
 
-#: includes/modules/head/class-editor.php:483
+#: includes/modules/head/class-editor.php:485
 #: src/admin/CommandPalette.js:60
-#: src/editor/index.js:50
+#: src/editor/index.js:51
 msgid "Do not follow its links (nofollow)"
 msgstr ""
 
-#: includes/modules/head/class-editor.php:484
+#: includes/modules/head/class-editor.php:486
 #: src/admin/CommandPalette.js:64
-#: src/editor/index.js:54
+#: src/editor/index.js:55
 msgid "No cached copy (noarchive)"
 msgstr ""
 
-#: includes/modules/head/class-editor.php:485
+#: includes/modules/head/class-editor.php:487
 #: src/admin/CommandPalette.js:68
-#: src/editor/index.js:58
+#: src/editor/index.js:59
 msgid "No text snippet (nosnippet)"
 msgstr ""
 
-#: includes/modules/head/class-editor.php:486
+#: includes/modules/head/class-editor.php:488
 #: src/admin/CommandPalette.js:72
-#: src/editor/index.js:62
+#: src/editor/index.js:63
 msgid "Do not index its images (noimageindex)"
 msgstr ""
 
-#: includes/modules/head/class-editor.php:487
+#: includes/modules/head/class-editor.php:489
 #: src/admin/CommandPalette.js:76
-#: src/editor/index.js:66
+#: src/editor/index.js:67
 msgid "Bing Copilot uses only the title, link and snippet (nocache)"
 msgstr ""
 
@@ -11727,7 +11727,7 @@ msgstr ""
 #: includes/modules/inspector/class-inspector.php:147
 #: src/admin/BulkScreen.js:395
 #: src/admin/BulkScreen.js:1075
-#: src/editor/index.js:475
+#: src/editor/index.js:476
 msgid "When shared"
 msgstr ""
 
@@ -12159,102 +12159,102 @@ msgstr ""
 #: includes/modules/mcp/class-rest-map.php:4402
 #: includes/modules/mcp/class-rest-map.php:4417
 #: includes/modules/mcp/class-rest-map.php:4432
-#: includes/modules/mcp/class-rest-map.php:4447
-#: includes/modules/mcp/class-rest-map.php:4480
-#: includes/modules/mcp/class-rest-map.php:4495
-#: includes/modules/mcp/class-rest-map.php:4510
-#: includes/modules/mcp/class-rest-map.php:4525
-#: includes/modules/mcp/class-rest-map.php:4567
-#: includes/modules/mcp/class-rest-map.php:4582
-#: includes/modules/mcp/class-rest-map.php:4616
-#: includes/modules/mcp/class-rest-map.php:4658
-#: includes/modules/mcp/class-rest-map.php:4691
-#: includes/modules/mcp/class-rest-map.php:4715
-#: includes/modules/mcp/class-rest-map.php:4730
-#: includes/modules/mcp/class-rest-map.php:4745
-#: includes/modules/mcp/class-rest-map.php:4769
-#: includes/modules/mcp/class-rest-map.php:4840
-#: includes/modules/mcp/class-rest-map.php:4855
-#: includes/modules/mcp/class-rest-map.php:4879
-#: includes/modules/mcp/class-rest-map.php:4894
-#: includes/modules/mcp/class-rest-map.php:4909
-#: includes/modules/mcp/class-rest-map.php:4924
-#: includes/modules/mcp/class-rest-map.php:4948
-#: includes/modules/mcp/class-rest-map.php:4972
-#: includes/modules/mcp/class-rest-map.php:5001
-#: includes/modules/mcp/class-rest-map.php:5030
-#: includes/modules/mcp/class-rest-map.php:5054
-#: includes/modules/mcp/class-rest-map.php:5110
-#: includes/modules/mcp/class-rest-map.php:5125
-#: includes/modules/mcp/class-rest-map.php:5149
-#: includes/modules/mcp/class-rest-map.php:5178
-#: includes/modules/mcp/class-rest-map.php:5220
-#: includes/modules/mcp/class-rest-map.php:5235
-#: includes/modules/mcp/class-rest-map.php:5250
-#: includes/modules/mcp/class-rest-map.php:5283
-#: includes/modules/mcp/class-rest-map.php:5298
-#: includes/modules/mcp/class-rest-map.php:5322
-#: includes/modules/mcp/class-rest-map.php:5346
-#: includes/modules/mcp/class-rest-map.php:5361
-#: includes/modules/mcp/class-rest-map.php:5376
-#: includes/modules/mcp/class-rest-map.php:5412
-#: includes/modules/mcp/class-rest-map.php:5441
-#: includes/modules/mcp/class-rest-map.php:5456
-#: includes/modules/mcp/class-rest-map.php:5480
-#: includes/modules/mcp/class-rest-map.php:5540
-#: includes/modules/mcp/class-rest-map.php:5564
-#: includes/modules/mcp/class-rest-map.php:5588
-#: includes/modules/mcp/class-rest-map.php:5661
-#: includes/modules/mcp/class-rest-map.php:5685
-#: includes/modules/mcp/class-rest-map.php:5700
-#: includes/modules/mcp/class-rest-map.php:5715
-#: includes/modules/mcp/class-rest-map.php:5739
-#: includes/modules/mcp/class-rest-map.php:5776
-#: includes/modules/mcp/class-rest-map.php:5805
-#: includes/modules/mcp/class-rest-map.php:5825
-#: includes/modules/mcp/class-rest-map.php:5849
-#: includes/modules/mcp/class-rest-map.php:5896
-#: includes/modules/mcp/class-rest-map.php:5920
-#: includes/modules/mcp/class-rest-map.php:5953
-#: includes/modules/mcp/class-rest-map.php:5977
-#: includes/modules/mcp/class-rest-map.php:5992
-#: includes/modules/mcp/class-rest-map.php:6027
-#: includes/modules/mcp/class-rest-map.php:6051
-#: includes/modules/mcp/class-rest-map.php:6066
-#: includes/modules/mcp/class-rest-map.php:6090
-#: includes/modules/mcp/class-rest-map.php:6123
-#: includes/modules/mcp/class-rest-map.php:6147
-#: includes/modules/mcp/class-rest-map.php:6167
-#: includes/modules/mcp/class-rest-map.php:6182
-#: includes/modules/mcp/class-rest-map.php:6218
-#: includes/modules/mcp/class-rest-map.php:6270
-#: includes/modules/mcp/class-rest-map.php:6285
-#: includes/modules/mcp/class-rest-map.php:6313
-#: includes/modules/mcp/class-rest-map.php:6328
-#: includes/modules/mcp/class-rest-map.php:6343
-#: includes/modules/mcp/class-rest-map.php:6381
-#: includes/modules/mcp/class-rest-map.php:6418
-#: includes/modules/mcp/class-rest-map.php:6450
-#: includes/modules/mcp/class-rest-map.php:6495
-#: includes/modules/mcp/class-rest-map.php:6519
-#: includes/modules/mcp/class-rest-map.php:6543
-#: includes/modules/mcp/class-rest-map.php:6558
-#: includes/modules/mcp/class-rest-map.php:6597
-#: includes/modules/mcp/class-rest-map.php:6621
-#: includes/modules/mcp/class-rest-map.php:6659
-#: includes/modules/mcp/class-rest-map.php:6679
-#: includes/modules/mcp/class-rest-map.php:6727
-#: includes/modules/mcp/class-rest-map.php:6747
-#: includes/modules/mcp/class-rest-map.php:6787
-#: includes/modules/mcp/class-rest-map.php:6802
-#: includes/modules/mcp/class-rest-map.php:6826
-#: includes/modules/mcp/class-rest-map.php:6841
-#: includes/modules/mcp/class-rest-map.php:6856
-#: includes/modules/mcp/class-rest-map.php:6871
-#: includes/modules/mcp/class-rest-map.php:6895
-#: includes/modules/mcp/class-rest-map.php:6919
-#: includes/modules/mcp/class-rest-map.php:6934
-#: includes/modules/mcp/class-rest-map.php:6983
+#: includes/modules/mcp/class-rest-map.php:4452
+#: includes/modules/mcp/class-rest-map.php:4485
+#: includes/modules/mcp/class-rest-map.php:4500
+#: includes/modules/mcp/class-rest-map.php:4515
+#: includes/modules/mcp/class-rest-map.php:4530
+#: includes/modules/mcp/class-rest-map.php:4572
+#: includes/modules/mcp/class-rest-map.php:4587
+#: includes/modules/mcp/class-rest-map.php:4621
+#: includes/modules/mcp/class-rest-map.php:4663
+#: includes/modules/mcp/class-rest-map.php:4696
+#: includes/modules/mcp/class-rest-map.php:4720
+#: includes/modules/mcp/class-rest-map.php:4735
+#: includes/modules/mcp/class-rest-map.php:4750
+#: includes/modules/mcp/class-rest-map.php:4774
+#: includes/modules/mcp/class-rest-map.php:4845
+#: includes/modules/mcp/class-rest-map.php:4860
+#: includes/modules/mcp/class-rest-map.php:4884
+#: includes/modules/mcp/class-rest-map.php:4899
+#: includes/modules/mcp/class-rest-map.php:4914
+#: includes/modules/mcp/class-rest-map.php:4929
+#: includes/modules/mcp/class-rest-map.php:4953
+#: includes/modules/mcp/class-rest-map.php:4977
+#: includes/modules/mcp/class-rest-map.php:5006
+#: includes/modules/mcp/class-rest-map.php:5035
+#: includes/modules/mcp/class-rest-map.php:5059
+#: includes/modules/mcp/class-rest-map.php:5115
+#: includes/modules/mcp/class-rest-map.php:5130
+#: includes/modules/mcp/class-rest-map.php:5154
+#: includes/modules/mcp/class-rest-map.php:5183
+#: includes/modules/mcp/class-rest-map.php:5225
+#: includes/modules/mcp/class-rest-map.php:5240
+#: includes/modules/mcp/class-rest-map.php:5255
+#: includes/modules/mcp/class-rest-map.php:5288
+#: includes/modules/mcp/class-rest-map.php:5303
+#: includes/modules/mcp/class-rest-map.php:5327
+#: includes/modules/mcp/class-rest-map.php:5351
+#: includes/modules/mcp/class-rest-map.php:5366
+#: includes/modules/mcp/class-rest-map.php:5381
+#: includes/modules/mcp/class-rest-map.php:5417
+#: includes/modules/mcp/class-rest-map.php:5446
+#: includes/modules/mcp/class-rest-map.php:5461
+#: includes/modules/mcp/class-rest-map.php:5485
+#: includes/modules/mcp/class-rest-map.php:5545
+#: includes/modules/mcp/class-rest-map.php:5569
+#: includes/modules/mcp/class-rest-map.php:5593
+#: includes/modules/mcp/class-rest-map.php:5666
+#: includes/modules/mcp/class-rest-map.php:5690
+#: includes/modules/mcp/class-rest-map.php:5705
+#: includes/modules/mcp/class-rest-map.php:5720
+#: includes/modules/mcp/class-rest-map.php:5744
+#: includes/modules/mcp/class-rest-map.php:5781
+#: includes/modules/mcp/class-rest-map.php:5810
+#: includes/modules/mcp/class-rest-map.php:5830
+#: includes/modules/mcp/class-rest-map.php:5854
+#: includes/modules/mcp/class-rest-map.php:5901
+#: includes/modules/mcp/class-rest-map.php:5925
+#: includes/modules/mcp/class-rest-map.php:5958
+#: includes/modules/mcp/class-rest-map.php:5982
+#: includes/modules/mcp/class-rest-map.php:5997
+#: includes/modules/mcp/class-rest-map.php:6032
+#: includes/modules/mcp/class-rest-map.php:6056
+#: includes/modules/mcp/class-rest-map.php:6071
+#: includes/modules/mcp/class-rest-map.php:6095
+#: includes/modules/mcp/class-rest-map.php:6128
+#: includes/modules/mcp/class-rest-map.php:6152
+#: includes/modules/mcp/class-rest-map.php:6172
+#: includes/modules/mcp/class-rest-map.php:6187
+#: includes/modules/mcp/class-rest-map.php:6223
+#: includes/modules/mcp/class-rest-map.php:6275
+#: includes/modules/mcp/class-rest-map.php:6290
+#: includes/modules/mcp/class-rest-map.php:6318
+#: includes/modules/mcp/class-rest-map.php:6333
+#: includes/modules/mcp/class-rest-map.php:6348
+#: includes/modules/mcp/class-rest-map.php:6386
+#: includes/modules/mcp/class-rest-map.php:6423
+#: includes/modules/mcp/class-rest-map.php:6455
+#: includes/modules/mcp/class-rest-map.php:6500
+#: includes/modules/mcp/class-rest-map.php:6524
+#: includes/modules/mcp/class-rest-map.php:6548
+#: includes/modules/mcp/class-rest-map.php:6563
+#: includes/modules/mcp/class-rest-map.php:6602
+#: includes/modules/mcp/class-rest-map.php:6626
+#: includes/modules/mcp/class-rest-map.php:6664
+#: includes/modules/mcp/class-rest-map.php:6684
+#: includes/modules/mcp/class-rest-map.php:6732
+#: includes/modules/mcp/class-rest-map.php:6752
+#: includes/modules/mcp/class-rest-map.php:6792
+#: includes/modules/mcp/class-rest-map.php:6807
+#: includes/modules/mcp/class-rest-map.php:6831
+#: includes/modules/mcp/class-rest-map.php:6846
+#: includes/modules/mcp/class-rest-map.php:6861
+#: includes/modules/mcp/class-rest-map.php:6876
+#: includes/modules/mcp/class-rest-map.php:6900
+#: includes/modules/mcp/class-rest-map.php:6924
+#: includes/modules/mcp/class-rest-map.php:6939
+#: includes/modules/mcp/class-rest-map.php:6988
 msgid "True: change nothing, and answer what this call would send and what the site holds now."
 msgstr ""
 
@@ -12563,7 +12563,7 @@ msgstr ""
 
 #: includes/modules/mcp/class-rest-map.php:507
 #: includes/modules/mcp/class-rest-map.php:566
-#: includes/modules/mcp/class-rest-map.php:6965
+#: includes/modules/mcp/class-rest-map.php:6970
 msgid "Due date, YYYY-MM-DD."
 msgstr ""
 
@@ -13008,7 +13008,7 @@ msgid "Alert rules: {metric, when: drops|rises, by}."
 msgstr ""
 
 #: includes/modules/mcp/class-rest-map.php:1194
-#: includes/modules/mcp/class-rest-map.php:6305
+#: includes/modules/mcp/class-rest-map.php:6310
 msgid "How often, in days."
 msgstr ""
 
@@ -15040,1736 +15040,1736 @@ msgstr ""
 msgid "Checks every redirect for chains and loops, and (targets) whether targets answer."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4440
+#: includes/modules/mcp/class-rest-map.php:4445
 msgid "Fix redirect chains"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4441
+#: includes/modules/mcp/class-rest-map.php:4446
 msgid "Points every chained redirect straight at its final target."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4455
+#: includes/modules/mcp/class-rest-map.php:4460
 msgid "Read redirect health"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4456
+#: includes/modules/mcp/class-rest-map.php:4461
 msgid "Counts chains, loops and redirects to missing pages."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4464
+#: includes/modules/mcp/class-rest-map.php:4469
 msgid "Read redirect import sources"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4465
+#: includes/modules/mcp/class-rest-map.php:4470
 msgid "Lists the plugins and files redirects can be imported from."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4473
+#: includes/modules/mcp/class-rest-map.php:4478
 msgid "Import redirects"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4474
+#: includes/modules/mcp/class-rest-map.php:4479
 msgid "Imports redirects from a source plugin or a pasted list (source, text)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4488
+#: includes/modules/mcp/class-rest-map.php:4493
 msgid "Preview a redirect import"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4489
+#: includes/modules/mcp/class-rest-map.php:4494
 msgid "Shows what importing from a source (source; text for a pasted list) would add. Nothing changes."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4503
+#: includes/modules/mcp/class-rest-map.php:4508
 msgid "Send a redirect list"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4504
+#: includes/modules/mcp/class-rest-map.php:4509
 msgid "Keeps a CSV or .htaccess list of redirects (content) for the import."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4518
+#: includes/modules/mcp/class-rest-map.php:4523
 msgid "Rebuild the redirect index"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4519
+#: includes/modules/mcp/class-rest-map.php:4524
 msgid "Rebuilds the fast lookup index of redirects."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4533
+#: includes/modules/mcp/class-rest-map.php:4538
 msgid "Read redirects as server rules (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4534
+#: includes/modules/mcp/class-rest-map.php:4539
 msgid "Returns the redirects as Apache and Nginx rules, for the fastest redirects."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4542
+#: includes/modules/mcp/class-rest-map.php:4547
 msgid "Export redirects as server rules (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4543
+#: includes/modules/mcp/class-rest-map.php:4548
 msgid "Returns the redirects as rules for one server (kind: apache or nginx)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4551
+#: includes/modules/mcp/class-rest-map.php:4556
 #: src/admin/discovery/RobotsTab.js:371
 #: src/admin/p5/RedirectsTab.js:267
 msgid "Test an address"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4552
+#: includes/modules/mcp/class-rest-map.php:4557
 msgid "Says which redirect an address (url) meets and where it ends."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4560
+#: includes/modules/mcp/class-rest-map.php:4565
 msgid "Delete a redirect"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4561
+#: includes/modules/mcp/class-rest-map.php:4566
 msgid "Deletes one redirect."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4575
+#: includes/modules/mcp/class-rest-map.php:4580
 msgid "Change a redirect"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4576
+#: includes/modules/mcp/class-rest-map.php:4581
 msgid "Changes one redirect's source, target, code, group, note or whether it is on."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4590
+#: includes/modules/mcp/class-rest-map.php:4595
 msgid "Read a redirect's conditions (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4591
+#: includes/modules/mcp/class-rest-map.php:4596
 msgid "Returns the conditions one redirect needs before it runs."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4599
+#: includes/modules/mcp/class-rest-map.php:4604
 msgid "Set a redirect's conditions (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4600
+#: includes/modules/mcp/class-rest-map.php:4605
 msgid "Sets when one redirect runs (match: all or any; rules: condition, operator, value). A country rule takes two-letter codes and never redirects verified search engine crawlers."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4607
+#: includes/modules/mcp/class-rest-map.php:4612
 msgid "Whether all or any rule must hold."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4612
+#: includes/modules/mcp/class-rest-map.php:4617
 msgid "The rules: {condition, operator, value}."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4624
+#: includes/modules/mcp/class-rest-map.php:4629
 msgid "Read visits from AI assistants"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4625
+#: includes/modules/mcp/class-rest-map.php:4630
 msgid "Returns visits sent by AI assistants per assistant, landing page and day, from Google Analytics and the site's own count."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4633
+#: includes/modules/mcp/class-rest-map.php:4638
 msgid "Read ad earnings per page"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4634
+#: includes/modules/mcp/class-rest-map.php:4639
 msgid "Returns each page's ad earnings in minor units beside its Google clicks and average position."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4642
+#: includes/modules/mcp/class-rest-map.php:4647
 msgid "Read a page's final SEO values"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4643
+#: includes/modules/mcp/class-rest-map.php:4648
 msgid "Returns the title, description, robots and canonical a page really gets after templates and defaults (object: post or term)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4651
+#: includes/modules/mcp/class-rest-map.php:4656
 msgid "Undo an SEO change (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4652
+#: includes/modules/mcp/class-rest-map.php:4657
 msgid "Puts back the value one history row replaced."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4666
+#: includes/modules/mcp/class-rest-map.php:4671
 msgid "Read a page's SEO change history (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4667
+#: includes/modules/mcp/class-rest-map.php:4672
 msgid "Lists every change to a page's SEO fields: when, who (a person or an AI agent), before and after."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4675
+#: includes/modules/mcp/class-rest-map.php:4680
 msgid "Read robots.txt"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4676
+#: includes/modules/mcp/class-rest-map.php:4681
 msgid "Returns the site's robots.txt, the owner's own rules and the checks on them."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4684
+#: includes/modules/mcp/class-rest-map.php:4689
 msgid "Change robots.txt"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4685
+#: includes/modules/mcp/class-rest-map.php:4690
 msgid "Stores the owner's own robots.txt rules (custom)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4699
+#: includes/modules/mcp/class-rest-map.php:4704
 msgid "Read thin-page rules"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4700
+#: includes/modules/mcp/class-rest-map.php:4705
 msgid "Returns the rules that keep thin pages (empty archives, search, attachments …) out of search, with counts."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4708
+#: includes/modules/mcp/class-rest-map.php:4713
 msgid "Bring in a real robots.txt file"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4709
+#: includes/modules/mcp/class-rest-map.php:4714
 msgid "Imports the rules of a robots.txt file on the server into the editor (import), or moves the file aside (move)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4723
+#: includes/modules/mcp/class-rest-map.php:4728
 msgid "Preview robots.txt"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4724
+#: includes/modules/mcp/class-rest-map.php:4729
 msgid "Shows the whole robots.txt and its checks with draft rules (custom). Nothing changes."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4738
+#: includes/modules/mcp/class-rest-map.php:4743
 msgid "Test robots.txt"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4739
+#: includes/modules/mcp/class-rest-map.php:4744
 msgid "Says whether a crawler (agent) may fetch an address (url), with the saved or draft rules."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4753
+#: includes/modules/mcp/class-rest-map.php:4758
 msgid "Read the SEO permissions of each role (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4754
+#: includes/modules/mcp/class-rest-map.php:4759
 msgid "Lists every role except administrator with the SEO capabilities it holds, and what each capability allows."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4762
+#: includes/modules/mcp/class-rest-map.php:4767
 msgid "Change a role's SEO permissions (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4763
+#: includes/modules/mcp/class-rest-map.php:4768
 msgid "Gives or takes SEO capabilities (caps: capability to true or false) of one role (role). Administrators only; the administrator role is never changed."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4777
+#: includes/modules/mcp/class-rest-map.php:4782
 msgid "List earlier versions"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4778
+#: includes/modules/mcp/class-rest-map.php:4783
 msgid "Lists the earlier Zinn® SEO versions this site can go back to."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4784
+#: includes/modules/mcp/class-rest-map.php:4789
 msgid "True fetches the release list again."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4797
+#: includes/modules/mcp/class-rest-map.php:4802
 msgid "List scheduled SEO changes (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4798
+#: includes/modules/mcp/class-rest-map.php:4803
 msgid "Lists SEO changes waiting for their date."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4806
+#: includes/modules/mcp/class-rest-map.php:4811
 msgid "Read a page's scheduled changes (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4807
+#: includes/modules/mcp/class-rest-map.php:4812
 msgid "Lists one page's scheduled SEO changes."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4815
+#: includes/modules/mcp/class-rest-map.php:4820
 msgid "Schedule an SEO change (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4816
+#: includes/modules/mcp/class-rest-map.php:4821
 msgid "Changes a page's SEO fields (fields) at a date (at), optionally changing them back later (revert_at), with a note."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4823
+#: includes/modules/mcp/class-rest-map.php:4828
 msgid "The SEO fields and their new values."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4828
+#: includes/modules/mcp/class-rest-map.php:4833
 msgid "When, ISO 8601 date and time."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4832
+#: includes/modules/mcp/class-rest-map.php:4837
 msgid "When to change them back, ISO 8601."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4836
+#: includes/modules/mcp/class-rest-map.php:4841
 msgid "Why."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4848
+#: includes/modules/mcp/class-rest-map.php:4853
 msgid "Cancel a scheduled change (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4849
+#: includes/modules/mcp/class-rest-map.php:4854
 msgid "Cancels one scheduled change of a page."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4863
+#: includes/modules/mcp/class-rest-map.php:4868
 msgid "Read the AI structured data fill"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4864
+#: includes/modules/mcp/class-rest-map.php:4869
 msgid "Returns the AI structured data runs (FAQ, how-to steps, product details, article details), how many suggestions wait for review per kind, the content types each kind covers, and how AI is paid (Zinn® credits or the site's own key)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4872
+#: includes/modules/mcp/class-rest-map.php:4877
 msgid "Fill structured data with AI"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4873
+#: includes/modules/mcp/class-rest-map.php:4878
 msgid "For one kind (faq, howto, product, article): mode count gives how many pages a run would cover and the cost on Zinn® credits before anything is spent; mode sample writes suggestions for the first few pages now; mode start runs the whole site in the background. Suggestions are never applied until approved."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4887
+#: includes/modules/mcp/class-rest-map.php:4892
 msgid "Use reviewed AI structured data"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4888
+#: includes/modules/mcp/class-rest-map.php:4893
 msgid "Uses the reviewed suggestions of one kind on the pages given (ids) or every one that passes the check (all), as one batch of the bulk history that bulk-undo reverses in one call."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4902
+#: includes/modules/mcp/class-rest-map.php:4907
 msgid "Check structured data details before saving"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4903
+#: includes/modules/mcp/class-rest-map.php:4908
 msgid "Checks one page's FAQ, how-to steps, product details or article details (record) against schema.org and Google's rich result rules as the page would print them; errors stop a save."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4917
+#: includes/modules/mcp/class-rest-map.php:4922
 msgid "Pause, resume or stop the AI structured data fill"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4918
+#: includes/modules/mcp/class-rest-map.php:4923
 msgid "Pauses, resumes or stops the AI structured data run (job schema-fill) or the job that uses reviewed suggestions (schema-fill-apply)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4932
+#: includes/modules/mcp/class-rest-map.php:4937
 msgid "Review AI structured data suggestions"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4933
+#: includes/modules/mcp/class-rest-map.php:4938
 msgid "Lists the suggestions waiting for one kind, each with its check against schema.org and Google's rich result rules (errors, warnings, Google's current status) and the values it would add."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4941
+#: includes/modules/mcp/class-rest-map.php:4946
 msgid "Throw away AI structured data suggestions"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4942
+#: includes/modules/mcp/class-rest-map.php:4947
 msgid "Throws away the suggestions of one kind for the pages given (ids) or all of them (all); nothing on the pages changes."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4956
+#: includes/modules/mcp/class-rest-map.php:4961
 msgid "Read a page's structured data"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4957
+#: includes/modules/mcp/class-rest-map.php:4962
 msgid "Returns the JSON-LD graph a page (post) prints."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4965
+#: includes/modules/mcp/class-rest-map.php:4970
 msgid "Read another page's structured data (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4966
+#: includes/modules/mcp/class-rest-map.php:4971
 msgid "Reads the JSON-LD of any public address (url), to copy into a template."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4980
+#: includes/modules/mcp/class-rest-map.php:4985
 msgid "Read a page's added structured data (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4981
+#: includes/modules/mcp/class-rest-map.php:4986
 msgid "Returns the structured data added to one page by hand."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4989
+#: includes/modules/mcp/class-rest-map.php:4994
 msgid "Set a page's structured data (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4990
+#: includes/modules/mcp/class-rest-map.php:4995
 msgid "Replaces the structured data added to one page (types: type and field values)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:4997
+#: includes/modules/mcp/class-rest-map.php:5002
 msgid "The structured data items: {type, fields} (the structured data builders' types)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5009
+#: includes/modules/mcp/class-rest-map.php:5014
 msgid "Read custom schema types (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5010
+#: includes/modules/mcp/class-rest-map.php:5015
 msgid "Returns the site's own structured data templates."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5018
+#: includes/modules/mcp/class-rest-map.php:5023
 msgid "Change custom schema types (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5019
+#: includes/modules/mcp/class-rest-map.php:5024
 msgid "Replaces the site's own structured data templates (templates)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5026
+#: includes/modules/mcp/class-rest-map.php:5031
 msgid "Every template: name, schema type and its properties."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5038
+#: includes/modules/mcp/class-rest-map.php:5043
 msgid "List structured data builders (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5039
+#: includes/modules/mcp/class-rest-map.php:5044
 msgid "Lists the structured data types that can be added to a page, with their fields."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5047
+#: includes/modules/mcp/class-rest-map.php:5052
 msgid "Validate structured data"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5048
+#: includes/modules/mcp/class-rest-map.php:5053
 msgid "Validates a page's graph (post) or pasted JSON-LD (json) against schema.org and Google's rich result rules."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5062
+#: includes/modules/mcp/class-rest-map.php:5067
 msgid "List a type's properties"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5063
+#: includes/modules/mcp/class-rest-map.php:5068
 msgid "Lists a schema.org type's properties (type)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5070
+#: includes/modules/mcp/class-rest-map.php:5075
 msgid "A schema.org type, e.g. Product."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5078
+#: includes/modules/mcp/class-rest-map.php:5083
 msgid "Search schema.org types"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5079
+#: includes/modules/mcp/class-rest-map.php:5084
 msgid "Finds schema.org types by name (q)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5086
+#: includes/modules/mcp/class-rest-map.php:5091
 msgid "Part of a type name."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5094
+#: includes/modules/mcp/class-rest-map.php:5099
 msgid "Read revenue from search (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5095
+#: includes/modules/mcp/class-rest-map.php:5100
 msgid "Returns Analytics sessions, conversions and revenue from organic search (days)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5103
+#: includes/modules/mcp/class-rest-map.php:5108
 msgid "Apply a title or description (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5104
+#: includes/modules/mcp/class-rest-map.php:5109
 msgid "Sets a page's (post_id) SEO title or description (field) to a value."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5118
+#: includes/modules/mcp/class-rest-map.php:5123
 #: src/search/BingTab.js:330
 msgid "Disconnect Bing"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5119
+#: includes/modules/mcp/class-rest-map.php:5124
 msgid "Disconnects Bing Webmaster Tools."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5133
+#: includes/modules/mcp/class-rest-map.php:5138
 msgid "Read Bing Webmaster Tools"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5134
+#: includes/modules/mcp/class-rest-map.php:5139
 msgid "Returns Bing clicks, impressions and crawl state (days)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5142
+#: includes/modules/mcp/class-rest-map.php:5147
 msgid "Connect Bing Webmaster Tools"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5143
+#: includes/modules/mcp/class-rest-map.php:5148
 msgid "Connects Bing with the site owner's Bing API key (key). The key is never returned."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5157
+#: includes/modules/mcp/class-rest-map.php:5162
 msgid "Set Bing's crawl rate"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5158
+#: includes/modules/mcp/class-rest-map.php:5163
 msgid "Saves how fast Bing crawls this site, hour by hour from 1 (slowest) to 10 (fastest)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5170
+#: includes/modules/mcp/class-rest-map.php:5175
 msgid "24 values, one per hour (UTC), each 1 to 10."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5174
+#: includes/modules/mcp/class-rest-map.php:5179
 msgid "Crawl boost, where Bing offers it."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5186
+#: includes/modules/mcp/class-rest-map.php:5191
 msgid "Read Bing crawl and link data"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5187
+#: includes/modules/mcp/class-rest-map.php:5192
 msgid "Returns the crawl problems Bing reported, Bing's daily crawl figures, the pages with links and, in Pro, the hourly crawl rate."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5195
+#: includes/modules/mcp/class-rest-map.php:5200
 msgid "Research a search on Bing"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5196
+#: includes/modules/mcp/class-rest-map.php:5201
 msgid "Returns weekly Bing impressions for one search in a country and language."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5204
+#: includes/modules/mcp/class-rest-map.php:5209
 msgid "Read the links to a page in Bing"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5205
+#: includes/modules/mcp/class-rest-map.php:5210
 msgid "Returns the pages Bing knows link to one of this site's pages, with their anchor text."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5213
+#: includes/modules/mcp/class-rest-map.php:5218
 msgid "Submit to Bing"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5214
+#: includes/modules/mcp/class-rest-map.php:5219
 msgid "Submits the sitemaps and recent addresses to Bing."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5228
+#: includes/modules/mcp/class-rest-map.php:5233
 msgid "Post a Business Profile update (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5229
+#: includes/modules/mcp/class-rest-map.php:5234
 msgid "Publishes an update (summary), optionally linking a post (post_id)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5243
+#: includes/modules/mcp/class-rest-map.php:5248
 msgid "Reply to a Google review (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5244
+#: includes/modules/mcp/class-rest-map.php:5249
 msgid "Posts a public reply (text) to one review (id)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5258
+#: includes/modules/mcp/class-rest-map.php:5263
 msgid "Read Google reviews (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5259
+#: includes/modules/mcp/class-rest-map.php:5264
 msgid "Lists the Business Profile's reviews (page: next page token)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5267
+#: includes/modules/mcp/class-rest-map.php:5272
 msgid "Read crawler visits (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5268
+#: includes/modules/mcp/class-rest-map.php:5273
 msgid "Lists search and AI crawler visits (bot, search) and crawl budget waste."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5276
+#: includes/modules/mcp/class-rest-map.php:5281
 msgid "Record crawler visits (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5277
+#: includes/modules/mcp/class-rest-map.php:5282
 msgid "Turns crawler logging on or off (on), with a sample rate (sample)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5291
+#: includes/modules/mcp/class-rest-map.php:5296
 msgid "Stop crawl waste (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5292
+#: includes/modules/mcp/class-rest-map.php:5297
 msgid "Turns one crawl budget fix (what) on or off (on)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5306
+#: includes/modules/mcp/class-rest-map.php:5311
 msgid "List pages losing clicks (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5307
+#: includes/modules/mcp/class-rest-map.php:5312
 msgid "Lists pages whose clicks are falling, to refresh (days)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5315
+#: includes/modules/mcp/class-rest-map.php:5320
 msgid "Disconnect Cloudflare (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5316
+#: includes/modules/mcp/class-rest-map.php:5321
 msgid "Disconnects Cloudflare and turns the edge features off."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5330
+#: includes/modules/mcp/class-rest-map.php:5335
 msgid "Read the Cloudflare connection (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5331
+#: includes/modules/mcp/class-rest-map.php:5336
 msgid "Returns whether Cloudflare is connected and which edge features are on."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5339
+#: includes/modules/mcp/class-rest-map.php:5344
 msgid "Connect Cloudflare (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5340
+#: includes/modules/mcp/class-rest-map.php:5345
 msgid "Connects Cloudflare with the owner's API token (token). The token is never returned."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5354
+#: includes/modules/mcp/class-rest-map.php:5359
 msgid "Run a Cloudflare action (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5355
+#: includes/modules/mcp/class-rest-map.php:5360
 msgid "Runs one edge action (what): purge, deploy the redirects or the crawler rules."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5369
+#: includes/modules/mcp/class-rest-map.php:5374
 #: src/search/Connect.js:389
 msgid "Disconnect Google"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5370
+#: includes/modules/mcp/class-rest-map.php:5375
 msgid "Disconnects Google Search Console and Analytics from this site."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5384
+#: includes/modules/mcp/class-rest-map.php:5389
 msgid "Read the Google connection"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5385
+#: includes/modules/mcp/class-rest-map.php:5390
 msgid "Says whether Google Search Console and Analytics are connected and which properties are used (choices: list the properties to choose from)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5393
+#: includes/modules/mcp/class-rest-map.php:5398
 msgid "Choose the Google properties"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5394
+#: includes/modules/mcp/class-rest-map.php:5399
 msgid "Chooses the Search Console property and Analytics stream this site reports on."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5400
+#: includes/modules/mcp/class-rest-map.php:5405
 msgid "The Search Console property, e.g. sc-domain:example.com."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5404
+#: includes/modules/mcp/class-rest-map.php:5409
 msgid "The Analytics property id."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5408
+#: includes/modules/mcp/class-rest-map.php:5413
 msgid "The Business Profile location id."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5425
+#: includes/modules/mcp/class-rest-map.php:5430
 msgid "Read Google index coverage"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5426
+#: includes/modules/mcp/class-rest-map.php:5431
 msgid "Returns which pages Google has indexed and why others are not (page)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5434
+#: includes/modules/mcp/class-rest-map.php:5439
 msgid "Check if Google indexed an address"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5435
+#: includes/modules/mcp/class-rest-map.php:5440
 msgid "Inspects one address in Search Console (url)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5449
+#: includes/modules/mcp/class-rest-map.php:5454
 msgid "Check the whole site's index"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5450
+#: includes/modules/mcp/class-rest-map.php:5455
 msgid "Starts, pauses, resumes or cancels inspecting every page in Search Console."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5464
+#: includes/modules/mcp/class-rest-map.php:5469
 msgid "Read Google indexing for jobs and live streams"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5465
+#: includes/modules/mcp/class-rest-map.php:5470
 msgid "Returns whether job and live stream pages are sent to Google's Indexing API."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5473
+#: includes/modules/mcp/class-rest-map.php:5478
 msgid "Send job and live stream pages to Google"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5474
+#: includes/modules/mcp/class-rest-map.php:5479
 msgid "Turns the Indexing API on or off (on) for these post types (types)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5488
+#: includes/modules/mcp/class-rest-map.php:5493
 msgid "Read business listings (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5489
+#: includes/modules/mcp/class-rest-map.php:5494
 msgid "Returns the Google Business Profile, Apple and Bing listings and their state."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5497
+#: includes/modules/mcp/class-rest-map.php:5502
 msgid "Read one business listing (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5498
+#: includes/modules/mcp/class-rest-map.php:5503
 msgid "Returns one listing's details (service)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5506
+#: includes/modules/mcp/class-rest-map.php:5511
 msgid "List search opportunities (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5507
+#: includes/modules/mcp/class-rest-map.php:5512
 msgid "Lists the biggest search wins available, with what to do."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5515
+#: includes/modules/mcp/class-rest-map.php:5520
 msgid "Read search performance"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5516
+#: includes/modules/mcp/class-rest-map.php:5521
 msgid "Returns clicks, impressions, average position and their change (days)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5524
+#: includes/modules/mcp/class-rest-map.php:5529
 msgid "Read a search report"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5525
+#: includes/modules/mcp/class-rest-map.php:5530
 msgid "Returns Search Console rows by page, query, country or device (dim, days)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5533
+#: includes/modules/mcp/class-rest-map.php:5538
 msgid "Rewrite a page for a query with AI (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5534
+#: includes/modules/mcp/class-rest-map.php:5539
 msgid "Writes a new title and description for a page (post_id) aimed at a query."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5548
+#: includes/modules/mcp/class-rest-map.php:5553
 msgid "Read submitted sitemaps"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5549
+#: includes/modules/mcp/class-rest-map.php:5554
 msgid "Lists the sitemaps Search Console knows, with errors."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5557
+#: includes/modules/mcp/class-rest-map.php:5562
 msgid "Submit the sitemaps"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5558
+#: includes/modules/mcp/class-rest-map.php:5563
 msgid "Submits the site's sitemaps to Search Console."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5572
+#: includes/modules/mcp/class-rest-map.php:5577
 msgid "Read real page speed"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5573
+#: includes/modules/mcp/class-rest-map.php:5578
 msgid "Returns the site's real-user Core Web Vitals (form: phone or desktop)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5581
+#: includes/modules/mcp/class-rest-map.php:5586
 msgid "Run a lab speed test"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5582
+#: includes/modules/mcp/class-rest-map.php:5587
 msgid "Runs a Lighthouse test of one address (url)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5596
+#: includes/modules/mcp/class-rest-map.php:5601
 msgid "Read a lab speed test"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5597
+#: includes/modules/mcp/class-rest-map.php:5602
 msgid "Returns a lab test's results."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5605
+#: includes/modules/mcp/class-rest-map.php:5610
 msgid "Read one page's speed"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5606
+#: includes/modules/mcp/class-rest-map.php:5611
 msgid "Returns one address's real-user Core Web Vitals (url, form)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5614
+#: includes/modules/mcp/class-rest-map.php:5619
 msgid "List almost-ranking searches (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5615
+#: includes/modules/mcp/class-rest-map.php:5620
 msgid "Lists queries where a page ranks just below the first page (days)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5623
+#: includes/modules/mcp/class-rest-map.php:5628
 msgid "List SEO title tests (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5624
+#: includes/modules/mcp/class-rest-map.php:5629
 msgid "Lists title and description tests with their results."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5632
+#: includes/modules/mcp/class-rest-map.php:5637
 msgid "Start an SEO title test (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5633
+#: includes/modules/mcp/class-rest-map.php:5638
 msgid "Starts a test of new titles or descriptions on pages (name, pages, phases, hours, keep)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5640
+#: includes/modules/mcp/class-rest-map.php:5645
 msgid "The test's name."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5645
+#: includes/modules/mcp/class-rest-map.php:5650
 msgid "The pages: {post_id, title_b, desc_b}."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5649
+#: includes/modules/mcp/class-rest-map.php:5654
 msgid "The phases (A then B) and their order."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5653
+#: includes/modules/mcp/class-rest-map.php:5658
 msgid "How long each phase runs."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5657
+#: includes/modules/mcp/class-rest-map.php:5662
 msgid "What to keep at the end: best, A or B."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5669
+#: includes/modules/mcp/class-rest-map.php:5674
 msgid "Find pages to test (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5670
+#: includes/modules/mcp/class-rest-map.php:5675
 msgid "Finds pages for a test (search)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5678
+#: includes/modules/mcp/class-rest-map.php:5683
 msgid "Move SEO tests on (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5679
+#: includes/modules/mcp/class-rest-map.php:5684
 msgid "Moves running tests to their next phase when it is due, and returns them."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5693
+#: includes/modules/mcp/class-rest-map.php:5698
 msgid "Delete an SEO test (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5694
+#: includes/modules/mcp/class-rest-map.php:5699
 msgid "Deletes a finished test's record."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5708
+#: includes/modules/mcp/class-rest-map.php:5713
 msgid "Stop an SEO test (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5709
+#: includes/modules/mcp/class-rest-map.php:5714
 msgid "Stops a test and keeps version A or B (keep)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5723
+#: includes/modules/mcp/class-rest-map.php:5728
 msgid "See which changes moved rankings (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5724
+#: includes/modules/mcp/class-rest-map.php:5729
 msgid "Returns SEO changes beside search performance over time (days, page)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5732
+#: includes/modules/mcp/class-rest-map.php:5737
 msgid "Mark a page to refresh or write (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5733
+#: includes/modules/mcp/class-rest-map.php:5738
 msgid "Marks a page (page) to refresh or write (kind), done or not, with a note."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5747
+#: includes/modules/mcp/class-rest-map.php:5752
 msgid "Read the topical map (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5748
+#: includes/modules/mcp/class-rest-map.php:5753
 msgid "Returns the site's topics and the gaps between them (days)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5756
+#: includes/modules/mcp/class-rest-map.php:5761
 msgid "Read .htaccess and Nginx rules (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5757
+#: includes/modules/mcp/class-rest-map.php:5762
 msgid "Returns the server rules file, its backups and whether it can be edited here."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5765
+#: includes/modules/mcp/class-rest-map.php:5770
 msgid "Change .htaccess rules (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5766
+#: includes/modules/mcp/class-rest-map.php:5771
 msgid "Saves new server rules (text) after a syntax check and a backup; the site is tested at once and the backup put back if it stops answering. accept_warnings saves despite warnings."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5772
+#: includes/modules/mcp/class-rest-map.php:5777
 msgid "True saves despite warnings (never despite errors)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5784
+#: includes/modules/mcp/class-rest-map.php:5789
 msgid "Read a server rules backup (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5785
+#: includes/modules/mcp/class-rest-map.php:5790
 msgid "Returns one backup's text."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5793
+#: includes/modules/mcp/class-rest-map.php:5798
 msgid "Check server rules (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5794
+#: includes/modules/mcp/class-rest-map.php:5799
 msgid "Checks draft server rules (text) without saving them."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5801
+#: includes/modules/mcp/class-rest-map.php:5806
 msgid "The draft rules."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5813
+#: includes/modules/mcp/class-rest-map.php:5818
 msgid "Put back a server rules backup (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5814
+#: includes/modules/mcp/class-rest-map.php:5819
 msgid "Restores one backup (backup) of the server rules."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5821
+#: includes/modules/mcp/class-rest-map.php:5826
 msgid "The backup's name (as the server rules list shows it)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5833
+#: includes/modules/mcp/class-rest-map.php:5838
 msgid "Read the SEO settings"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5834
+#: includes/modules/mcp/class-rest-map.php:5839
 msgid "Returns every site-wide SEO setting with its schema (type, default and allowed values)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5842
+#: includes/modules/mcp/class-rest-map.php:5847
 msgid "Change the SEO settings"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5843
+#: includes/modules/mcp/class-rest-map.php:5848
 msgid "Changes the settings you send (settings: key to value) and keeps the rest. Every value is checked as on the settings screen; nothing is stored when one is refused. The no-trace switch has its own tool."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5857
+#: includes/modules/mcp/class-rest-map.php:5862
 msgid "Export the SEO settings"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5858
+#: includes/modules/mcp/class-rest-map.php:5863
 msgid "Returns this site's settings as a file another site can import. Nothing secret is included."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5866
+#: includes/modules/mcp/class-rest-map.php:5871
 msgid "Import SEO settings"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5867
+#: includes/modules/mcp/class-rest-map.php:5872
 msgid "Imports a settings export from another site (document). With dry_run true (the default) it only lists what would change; with dry_run false it applies all of it, or nothing when a value is refused."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5875
+#: includes/modules/mcp/class-rest-map.php:5880
 msgid "Read the setup state"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5876
+#: includes/modules/mcp/class-rest-map.php:5881
 msgid "Returns each step of the guided setup (done, skipped or to do) and what it detected on the site: the kind of site, other SEO plugins, multilingual plugins, WooCommerce and whether search engines are discouraged."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5889
+#: includes/modules/mcp/class-rest-map.php:5894
 msgid "Clear the site search log"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5890
+#: includes/modules/mcp/class-rest-map.php:5895
 msgid "Deletes one entry (hash) or every entry (all)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5904
+#: includes/modules/mcp/class-rest-map.php:5909
 msgid "List what visitors search for"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5905
+#: includes/modules/mcp/class-rest-map.php:5910
 msgid "Lists searches made on the site, and those with no results (kind search0)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5913
+#: includes/modules/mcp/class-rest-map.php:5918
 msgid "Draft a page for a search"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5914
+#: includes/modules/mcp/class-rest-map.php:5919
 msgid "Creates a draft whose title and focus keyphrase are a phrase visitors searched for."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5928
+#: includes/modules/mcp/class-rest-map.php:5933
 msgid "Read the sitemaps"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5929
+#: includes/modules/mcp/class-rest-map.php:5934
 msgid "Returns the sitemap addresses, what they include and their state."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5937
+#: includes/modules/mcp/class-rest-map.php:5942
 msgid "List sitemap files"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5938
+#: includes/modules/mcp/class-rest-map.php:5943
 msgid "Lists every sitemap file with its address and entry count."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5946
+#: includes/modules/mcp/class-rest-map.php:5951
 msgid "Rebuild the sitemaps"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5947
+#: includes/modules/mcp/class-rest-map.php:5952
 msgid "Rebuilds every sitemap in the background."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5961
+#: includes/modules/mcp/class-rest-map.php:5966
 msgid "Read social card images (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5962
+#: includes/modules/mcp/class-rest-map.php:5967
 msgid "Says whether the server can draw social card images and the running job."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5970
+#: includes/modules/mcp/class-rest-map.php:5975
 msgid "Draw social card images (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5971
+#: includes/modules/mcp/class-rest-map.php:5976
 msgid "Draws a social card image for every post in the background."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5985
+#: includes/modules/mcp/class-rest-map.php:5990
 msgid "Preview a social card (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:5986
+#: includes/modules/mcp/class-rest-map.php:5991
 msgid "Draws one post's card with draft settings (post, settings)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6000
+#: includes/modules/mcp/class-rest-map.php:6005
 msgid "Read social link refresh"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6001
+#: includes/modules/mcp/class-rest-map.php:6006
 msgid "Returns whether shared links are refreshed on Facebook, the app id, how many pages wait and the last answers; the app secret is never returned."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6014
+#: includes/modules/mcp/class-rest-map.php:6019
 msgid "Refresh shared links now"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6015
+#: includes/modules/mcp/class-rest-map.php:6020
 msgid "Asks Facebook to read these pages of this site again so their shared card shows the latest title, text and image."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6023
+#: includes/modules/mcp/class-rest-map.php:6028
 msgid "Addresses on this site, up to 1,000."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6035
+#: includes/modules/mcp/class-rest-map.php:6040
 msgid "Read the spam page scan"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6036
+#: includes/modules/mcp/class-rest-map.php:6041
 msgid "Returns the last scan for spam pages, links and injected content."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6044
+#: includes/modules/mcp/class-rest-map.php:6049
 msgid "Mark a spam finding as normal"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6045
+#: includes/modules/mcp/class-rest-map.php:6050
 msgid "Marks one finding of the spam scan as normal for this site (key), so it is never shown or e-mailed again; restore shows every one again."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6059
+#: includes/modules/mcp/class-rest-map.php:6064
 msgid "Scan for spam pages"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6060
+#: includes/modules/mcp/class-rest-map.php:6065
 msgid "Scans the site's content for spam pages and injected links."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6074
+#: includes/modules/mcp/class-rest-map.php:6079
 msgid "Read title templates"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6075
+#: includes/modules/mcp/class-rest-map.php:6080
 msgid "Returns the title and description templates per post type, taxonomy and archive."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6083
+#: includes/modules/mcp/class-rest-map.php:6088
 msgid "Preview a title template"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6084
+#: includes/modules/mcp/class-rest-map.php:6089
 msgid "Renders a draft template (key, title, desc, sep) on a real example."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6098
+#: includes/modules/mcp/class-rest-map.php:6103
 msgid "List research tools"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6099
+#: includes/modules/mcp/class-rest-map.php:6104
 msgid "Lists every research tool (SERP, reviews, shopping, Amazon, YouTube, traffic, technology …) with its price in credits."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6107
+#: includes/modules/mcp/class-rest-map.php:6112
 msgid "Answer questions with AI (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6108
+#: includes/modules/mcp/class-rest-map.php:6113
 msgid "Writes answers to questions (questions) people ask about a phrase (phrase)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6115
+#: includes/modules/mcp/class-rest-map.php:6120
 msgid "The questions."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6119
+#: includes/modules/mcp/class-rest-map.php:6124
 msgid "The phrase they are about."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6131
+#: includes/modules/mcp/class-rest-map.php:6136
 msgid "Draft replies to reviews with AI (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6132
+#: includes/modules/mcp/class-rest-map.php:6137
 msgid "Drafts replies to reviews (reviews) in the business's voice (business)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6139
+#: includes/modules/mcp/class-rest-map.php:6144
 msgid "The reviews: {n, text, rating}."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6143
+#: includes/modules/mcp/class-rest-map.php:6148
 msgid "The business's name."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6155
+#: includes/modules/mcp/class-rest-map.php:6160
 msgid "Write a page from a brief (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6156
+#: includes/modules/mcp/class-rest-map.php:6161
 msgid "Creates a draft page from a content brief (brief)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6163
+#: includes/modules/mcp/class-rest-map.php:6168
 msgid "The content brief (from a toolbox brief run)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6175
+#: includes/modules/mcp/class-rest-map.php:6180
 msgid "Turn questions into an FAQ"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6176
+#: includes/modules/mcp/class-rest-map.php:6181
 msgid "Creates an FAQ block draft (items: question and answer; post_id or a new title)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6190
+#: includes/modules/mcp/class-rest-map.php:6195
 msgid "Find a business on the map"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6191
+#: includes/modules/mcp/class-rest-map.php:6196
 msgid "Finds businesses for the local tools (query, location, language, lat, lng)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6198
+#: includes/modules/mcp/class-rest-map.php:6203
 msgid "The business name or kind."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6202
+#: includes/modules/mcp/class-rest-map.php:6207
 msgid "A town or address."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6206
-#: includes/modules/mcp/class-rest-map.php:6487
+#: includes/modules/mcp/class-rest-map.php:6211
+#: includes/modules/mcp/class-rest-map.php:6492
 msgid "Language code, e.g. en."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6210
+#: includes/modules/mcp/class-rest-map.php:6215
 msgid "Latitude."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6214
+#: includes/modules/mcp/class-rest-map.php:6219
 msgid "Longitude."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6226
+#: includes/modules/mcp/class-rest-map.php:6231
 msgid "Read a research run"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6227
+#: includes/modules/mcp/class-rest-map.php:6232
 msgid "Returns one run's results."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6235
+#: includes/modules/mcp/class-rest-map.php:6240
 msgid "List research runs"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6236
+#: includes/modules/mcp/class-rest-map.php:6241
 msgid "Lists earlier runs (tool, watch)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6242
+#: includes/modules/mcp/class-rest-map.php:6247
 msgid "Only this tool's runs."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6246
+#: includes/modules/mcp/class-rest-map.php:6251
 msgid "Only this repeating run's runs."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6254
+#: includes/modules/mcp/class-rest-map.php:6259
 msgid "List repeating research"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6255
+#: includes/modules/mcp/class-rest-map.php:6260
 msgid "Lists tools set to run again every 1, 7 or 30 days."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6263
+#: includes/modules/mcp/class-rest-map.php:6268
 msgid "Repeat a research tool"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6264
+#: includes/modules/mcp/class-rest-map.php:6269
 msgid "Runs a tool (tool, params) again every 1, 7 or 30 days (every), on credits."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6278
+#: includes/modules/mcp/class-rest-map.php:6283
 msgid "Stop repeating research"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6279
+#: includes/modules/mcp/class-rest-map.php:6284
 msgid "Stops a repeating run."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6293
+#: includes/modules/mcp/class-rest-map.php:6298
 msgid "Change repeating research"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6294
+#: includes/modules/mcp/class-rest-map.php:6299
 msgid "Changes a repeating run (active, cadence_days, params)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6300
+#: includes/modules/mcp/class-rest-map.php:6305
 msgid "False pauses the repeat."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6309
+#: includes/modules/mcp/class-rest-map.php:6314
 msgid "The tool's values."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6321
+#: includes/modules/mcp/class-rest-map.php:6326
 msgid "Price a research tool run"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6322
+#: includes/modules/mcp/class-rest-map.php:6327
 msgid "Says what running a tool (tool) with these values (params) would cost. Nothing is spent."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6336
+#: includes/modules/mcp/class-rest-map.php:6341
 msgid "Run a research tool"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6337
+#: includes/modules/mcp/class-rest-map.php:6342
 msgid "Runs a tool (tool) with its values (params) on the site owner's Zinn® credits and returns the run."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6351
+#: includes/modules/mcp/class-rest-map.php:6356
 msgid "List the pay-per-use checks"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6352
+#: includes/modules/mcp/class-rest-map.php:6357
 msgid "Lists every check (rank, index, AI visibility, backlinks, audit, keywords, content gap, local, mentions) with its price, schedule and last result."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6360
+#: includes/modules/mcp/class-rest-map.php:6365
 msgid "List check alerts (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6361
+#: includes/modules/mcp/class-rest-map.php:6366
 msgid "Lists alerts from watched checks (ranking drops, lost links, mentions)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6369
+#: includes/modules/mcp/class-rest-map.php:6374
 msgid "Mark alerts read (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6370
+#: includes/modules/mcp/class-rest-map.php:6375
 msgid "Marks alerts read (ids)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6377
+#: includes/modules/mcp/class-rest-map.php:6382
 msgid "The alert ids."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6389
+#: includes/modules/mcp/class-rest-map.php:6394
 msgid "Read backlinks (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6390
+#: includes/modules/mcp/class-rest-map.php:6395
 msgid "Returns the site's backlinks, new and lost, and their quality."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6398
+#: includes/modules/mcp/class-rest-map.php:6403
 msgid "Draft a page for a keyword (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6399
+#: includes/modules/mcp/class-rest-map.php:6404
 msgid "Creates a draft from a keyword row (row), against a competitor (rival), as a post type (type)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6406
+#: includes/modules/mcp/class-rest-map.php:6411
 msgid "A keyword row as keyword research returns it."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6410
+#: includes/modules/mcp/class-rest-map.php:6415
 msgid "A competitor address to beat."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6414
+#: includes/modules/mcp/class-rest-map.php:6419
 msgid "The post type of the draft; post when omitted."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6426
+#: includes/modules/mcp/class-rest-map.php:6431
 msgid "Read the disavow list (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6427
+#: includes/modules/mcp/class-rest-map.php:6432
 msgid "Returns the domains and addresses to disavow."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6435
+#: includes/modules/mcp/class-rest-map.php:6440
 msgid "Change the disavow list (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6436
+#: includes/modules/mcp/class-rest-map.php:6441
 msgid "Replaces the domains and addresses to disavow (domains, urls)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6442
+#: includes/modules/mcp/class-rest-map.php:6447
 msgid "Domains to disavow."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6446
+#: includes/modules/mcp/class-rest-map.php:6451
 msgid "Single addresses to disavow."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6458
+#: includes/modules/mcp/class-rest-map.php:6463
 msgid "Make the disavow file (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6459
+#: includes/modules/mcp/class-rest-map.php:6464
 msgid "Returns the disavow file text for Google."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6467
+#: includes/modules/mcp/class-rest-map.php:6472
 msgid "Read a page's target market (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6468
+#: includes/modules/mcp/class-rest-map.php:6473
 msgid "Returns a page's keyword rows, brief and market."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6476
+#: includes/modules/mcp/class-rest-map.php:6481
 msgid "Set a page's target market (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6477
+#: includes/modules/mcp/class-rest-map.php:6482
 msgid "Sets a page's country, language and phrase for keyword research."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6483
+#: includes/modules/mcp/class-rest-map.php:6488
 msgid "Country code, e.g. gb."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6491
+#: includes/modules/mcp/class-rest-map.php:6496
 msgid "The phrase the page targets."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6503
+#: includes/modules/mcp/class-rest-map.php:6508
 msgid "Read index checks"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6504
+#: includes/modules/mcp/class-rest-map.php:6509
 msgid "Returns which pages Google has indexed according to the last checks."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6512
+#: includes/modules/mcp/class-rest-map.php:6517
 msgid "Check pages are indexed"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6513
+#: includes/modules/mcp/class-rest-map.php:6518
 msgid "Checks whether addresses (urls) are in Google's index, on credits."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6527
+#: includes/modules/mcp/class-rest-map.php:6532
 msgid "Read an index check run"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6528
+#: includes/modules/mcp/class-rest-map.php:6533
 msgid "Returns one index run's progress and results."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6536
+#: includes/modules/mcp/class-rest-map.php:6541
 msgid "Check every page is indexed"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6537
+#: includes/modules/mcp/class-rest-map.php:6542
 msgid "Starts, pauses, resumes or cancels an index check of every page, on credits."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6551
+#: includes/modules/mcp/class-rest-map.php:6556
 msgid "Stop local rank tracking (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6552
+#: includes/modules/mcp/class-rest-map.php:6557
 msgid "Stops tracking local rankings."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6566
+#: includes/modules/mcp/class-rest-map.php:6571
 msgid "Read local rank tracking (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6567
+#: includes/modules/mcp/class-rest-map.php:6572
 msgid "Returns the business and towns tracked for local rankings."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6575
+#: includes/modules/mcp/class-rest-map.php:6580
 msgid "Set up local rank tracking (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6576
+#: includes/modules/mcp/class-rest-map.php:6581
 msgid "Sets the business, keywords and towns for local rankings."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6583
+#: includes/modules/mcp/class-rest-map.php:6588
 msgid "The business: {name, cid, address, category, domain}."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6588
+#: includes/modules/mcp/class-rest-map.php:6593
 msgid "The searches to track."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6593
+#: includes/modules/mcp/class-rest-map.php:6598
 msgid "The towns: {geo_id, name, country, device}."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6605
+#: includes/modules/mcp/class-rest-map.php:6610
 msgid "Find the business for local tracking (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6606
+#: includes/modules/mcp/class-rest-map.php:6611
 msgid "Finds the business on the map to track."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6613
+#: includes/modules/mcp/class-rest-map.php:6618
 msgid "The business name."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6617
+#: includes/modules/mcp/class-rest-map.php:6622
 msgid "A town id, as the town search returns it."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6629
+#: includes/modules/mcp/class-rest-map.php:6634
 msgid "Search towns (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6630
+#: includes/modules/mcp/class-rest-map.php:6635
 msgid "Finds towns and areas in a country (country, q)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6638
+#: includes/modules/mcp/class-rest-map.php:6643
 msgid "List brand mentions (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6639
+#: includes/modules/mcp/class-rest-map.php:6644
 msgid "Lists mentions of the brand and copies of the content (phrase, tone; limit, offset)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6647
+#: includes/modules/mcp/class-rest-map.php:6652
 msgid "Set the phrases to watch (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6648
+#: includes/modules/mcp/class-rest-map.php:6653
 msgid "Sets the brand phrases watched for mentions (phrases)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6655
+#: includes/modules/mcp/class-rest-map.php:6660
 msgid "The brand phrases to watch."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6667
+#: includes/modules/mcp/class-rest-map.php:6672
 msgid "Watch a page for copies (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6668
+#: includes/modules/mcp/class-rest-map.php:6673
 msgid "Watches one page (post) for copies of its content on other sites, on the site owner's Zinn® credits."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6675
+#: includes/modules/mcp/class-rest-map.php:6680
 msgid "The page whose content is watched for copies."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6687
+#: includes/modules/mcp/class-rest-map.php:6692
 msgid "List pages for index checks"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6688
+#: includes/modules/mcp/class-rest-map.php:6693
 msgid "Lists pages with their last index check (search, state; before)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6696
+#: includes/modules/mcp/class-rest-map.php:6701
 msgid "Find keywords worth writing for (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6697
+#: includes/modules/mcp/class-rest-map.php:6702
 msgid "Finds keywords for a seed (seed, country, language), on credits."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6703
+#: includes/modules/mcp/class-rest-map.php:6708
 msgid "keywords (ideas for a seed) or gap (what a competitor ranks for)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6707
+#: includes/modules/mcp/class-rest-map.php:6712
 msgid "The seed phrase."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6711
+#: includes/modules/mcp/class-rest-map.php:6716
 msgid "A competitor domain (gap)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6715
+#: includes/modules/mcp/class-rest-map.php:6720
 msgid "A page to find keywords for."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6719
+#: includes/modules/mcp/class-rest-map.php:6724
 msgid "Country code."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6723
+#: includes/modules/mcp/class-rest-map.php:6728
 msgid "Language code."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6735
+#: includes/modules/mcp/class-rest-map.php:6740
 msgid "Track keywords (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6736
+#: includes/modules/mcp/class-rest-map.php:6741
 msgid "Adds keyword rows (rows) to rank tracking."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6743
+#: includes/modules/mcp/class-rest-map.php:6748
 msgid "Keyword rows as keyword research returns them."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6755
+#: includes/modules/mcp/class-rest-map.php:6760
 msgid "Read a check run"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6756
+#: includes/modules/mcp/class-rest-map.php:6761
 msgid "Returns one run's state and results."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6764
+#: includes/modules/mcp/class-rest-map.php:6769
 msgid "Change the site's check profile"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6765
+#: includes/modules/mcp/class-rest-map.php:6770
 msgid "Changes the brand, category, market and how often scheduled checks run (cadence_days)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6771
+#: includes/modules/mcp/class-rest-map.php:6776
 msgid "The brand name checks look for."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6775
+#: includes/modules/mcp/class-rest-map.php:6780
 msgid "What the business does."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6779
+#: includes/modules/mcp/class-rest-map.php:6784
 msgid "The country and language checked, e.g. gb-en."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6783
+#: includes/modules/mcp/class-rest-map.php:6788
 msgid "How often scheduled checks run, in days."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6795
+#: includes/modules/mcp/class-rest-map.php:6800
 msgid "Set what a check tracks"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6796
+#: includes/modules/mcp/class-rest-map.php:6801
 msgid "Sets the keywords, pages or competitors a check tracks (items)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6810
+#: includes/modules/mcp/class-rest-map.php:6815
 msgid "Read a check's results"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6811
+#: includes/modules/mcp/class-rest-map.php:6816
 msgid "Returns the latest results of one check (tool)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6819
+#: includes/modules/mcp/class-rest-map.php:6824
 msgid "Run a check now"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6820
+#: includes/modules/mcp/class-rest-map.php:6825
 msgid "Runs one check (tool: rank, index, ai, links, audit, keywords, gap …) on the site owner's Zinn® credits (seed, page_url where the check takes one). Each check's price is in the list of checks."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6834
+#: includes/modules/mcp/class-rest-map.php:6839
 msgid "Schedule a check"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6835
+#: includes/modules/mcp/class-rest-map.php:6840
 msgid "Turns a check's repeat schedule on or off (on)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6849
+#: includes/modules/mcp/class-rest-map.php:6854
 msgid "Let search engines index the site, or not"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6850
+#: includes/modules/mcp/class-rest-map.php:6855
 msgid "Changes WordPress's own Reading setting (public: true lets search engines index the site). Administrators only."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6864
+#: includes/modules/mcp/class-rest-map.php:6869
 msgid "Save a written draft as a post"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6865
+#: includes/modules/mcp/class-rest-map.php:6870
 msgid "Saves a reviewed draft as a draft post: draft holds title, excerpt, intro paragraphs, sections (heading and paragraphs), seo_title and seo_desc; options hold post_type, phrase and kwlist. Nothing is published."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6879
+#: includes/modules/mcp/class-rest-map.php:6884
 msgid "List the content plan (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6880
+#: includes/modules/mcp/class-rest-map.php:6885
 msgid "Lists the ideas in the content plan with their state (status; after: keyset)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6888
+#: includes/modules/mcp/class-rest-map.php:6893
 msgid "Add ideas to the content plan (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6889
+#: includes/modules/mcp/class-rest-map.php:6894
 msgid "Adds up to 100 ideas to the content plan. Each idea has a working title, and may have a phrase, an angle, a kind, a due date (YYYY-MM-DD), a keyword list, a length in words and a voice."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6903
+#: includes/modules/mcp/class-rest-map.php:6908
 msgid "Read the drafting job (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6904
+#: includes/modules/mcp/class-rest-map.php:6909
 msgid "Returns the progress of the background job writing drafts from the plan."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6912
+#: includes/modules/mcp/class-rest-map.php:6917
 msgid "Write drafts from planned ideas (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6913
+#: includes/modules/mcp/class-rest-map.php:6918
 msgid "Writes a draft post for each chosen idea (ids, up to 500) in the background, on the site owner's AI. Nothing is published."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6927
+#: includes/modules/mcp/class-rest-map.php:6932
 msgid "Delete an idea from the content plan (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6928
+#: includes/modules/mcp/class-rest-map.php:6933
 msgid "Deletes one idea from the plan; a draft already written from it stays."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6942
+#: includes/modules/mcp/class-rest-map.php:6947
 msgid "Change an idea in the content plan (Pro)"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6943
+#: includes/modules/mcp/class-rest-map.php:6948
 msgid "Changes one idea's working title, phrase, angle, kind, due date, keyword list, length or voice."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6949
+#: includes/modules/mcp/class-rest-map.php:6954
 msgid "The working title."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6953
+#: includes/modules/mcp/class-rest-map.php:6958
 msgid "The search phrase it targets."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6957
+#: includes/modules/mcp/class-rest-map.php:6962
 msgid "The angle: what makes this piece different."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6961
+#: includes/modules/mcp/class-rest-map.php:6966
 msgid "The kind of piece, e.g. guide, list or review."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6969
+#: includes/modules/mcp/class-rest-map.php:6974
 msgid "The keyword list it belongs to (0: none)."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6974
+#: includes/modules/mcp/class-rest-map.php:6979
 msgid "Length in words."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6979
+#: includes/modules/mcp/class-rest-map.php:6984
 msgid "The voice to write in."
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6991
+#: includes/modules/mcp/class-rest-map.php:6996
 msgid "Read what the writer knows about the site"
 msgstr ""
 
-#: includes/modules/mcp/class-rest-map.php:6992
+#: includes/modules/mcp/class-rest-map.php:6997
 msgid "Returns what the AI writer is told about the site when it suggests ideas: its name, its main categories and its recent post titles."
 msgstr ""
 
@@ -16836,28 +16836,28 @@ msgid "From the 404 list"
 msgstr ""
 
 #. translators: 1: an address, 2: number of visits, 3: the page that linked to it.
-#: includes/modules/notfound/class-notfound.php:230
+#: includes/modules/notfound/class-notfound.php:260
 #, php-format
 msgid "%1$s — %2$d visits%3$s"
 msgstr ""
 
 #. translators: %s: a page address.
-#: includes/modules/notfound/class-notfound.php:230
+#: includes/modules/notfound/class-notfound.php:260
 #, php-format
 msgid "linked from %s"
 msgstr ""
 
 #. translators: %s: the site's name.
-#: includes/modules/notfound/class-notfound.php:238
+#: includes/modules/notfound/class-notfound.php:268
 #, php-format
 msgid "[%s] Visitors looked for pages that do not exist this week"
 msgstr ""
 
-#: includes/modules/notfound/class-notfound.php:252
+#: includes/modules/notfound/class-notfound.php:282
 msgid "This week, visitors (or search engines) asked your site for these addresses and found nothing there, so they saw a \"page not found\" error. Usually a page was moved or renamed, or a link somewhere has a typing mistake."
 msgstr ""
 
-#: includes/modules/notfound/class-notfound.php:253
+#: includes/modules/notfound/class-notfound.php:283
 msgid "What to do: on the Redirects screen, send each address to the right page in one click, or fix the link that points to it. You can ignore an address nobody needs."
 msgstr ""
 
@@ -18040,12 +18040,12 @@ msgstr ""
 msgid "Writing the redirect index"
 msgstr ""
 
-#: includes/modules/redirects/class-redirects-rest.php:282
-#: includes/modules/redirects/class-redirects-rest.php:309
+#: includes/modules/redirects/class-redirects-rest.php:304
+#: includes/modules/redirects/class-redirects-rest.php:331
 msgid "There is no such source to import from."
 msgstr ""
 
-#: includes/modules/redirects/class-redirects-rest.php:335
+#: includes/modules/redirects/class-redirects-rest.php:357
 msgid "The file is empty."
 msgstr ""
 
@@ -19009,7 +19009,7 @@ msgstr ""
 #: src/admin/BulkScreen.js:400
 #: src/admin/p6/pure.js:63
 #: src/admin/x1a/ScheduledTab.js:27
-#: src/editor/index.js:479
+#: src/editor/index.js:480
 msgid "Title when shared"
 msgstr ""
 
@@ -19017,13 +19017,13 @@ msgstr ""
 #: src/admin/BulkScreen.js:407
 #: src/admin/p6/pure.js:64
 #: src/admin/x1a/ScheduledTab.js:28
-#: src/editor/index.js:486
+#: src/editor/index.js:487
 msgid "Text when shared"
 msgstr ""
 
 #: includes/modules/social/class-social.php:870
 #: src/admin/p6/pure.js:65
-#: src/editor/index.js:493
+#: src/editor/index.js:494
 msgid "Image when shared"
 msgstr ""
 
@@ -19032,7 +19032,7 @@ msgid "Best at 1200 × 630 pixels. Empty: the featured image, then the first ima
 msgstr ""
 
 #: includes/modules/social/class-social.php:875
-#: src/editor/index.js:500
+#: src/editor/index.js:501
 msgid "Title on X (optional)"
 msgstr ""
 
@@ -19045,22 +19045,22 @@ msgid "Image on X (optional)"
 msgstr ""
 
 #: includes/modules/social/class-social.php:887
-#: src/editor/index.js:507
+#: src/editor/index.js:508
 msgid "Card size on X"
 msgstr ""
 
 #: includes/modules/social/class-social.php:890
-#: src/editor/index.js:512
+#: src/editor/index.js:513
 msgid "The site’s card size"
 msgstr ""
 
 #: includes/modules/social/class-social.php:891
-#: src/editor/index.js:516
+#: src/editor/index.js:517
 msgid "Large picture"
 msgstr ""
 
 #: includes/modules/social/class-social.php:892
-#: src/editor/index.js:520
+#: src/editor/index.js:521
 msgid "Small square picture"
 msgstr ""
 
@@ -26425,7 +26425,7 @@ msgstr ""
 #: src/admin/p4/ContentScreen.js:445
 #: src/admin/p4/LinksScreen.js:334
 #: src/admin/p5/AddressTab.js:211
-#: src/admin/p5/NotfoundTab.js:456
+#: src/admin/p5/NotfoundTab.js:469
 #: src/admin/p5/ProtectionScreen.js:392
 #: src/admin/p5/RedirectsTab.js:958
 #: src/admin/p5/SiteSearchTab.js:202
@@ -27968,7 +27968,7 @@ msgid "A line every crawler can read, saying whether your pages may be used for 
 msgstr ""
 
 #: src/admin/discovery/CrawlersTab.js:265
-#: src/admin/p5/NotfoundTab.js:431
+#: src/admin/p5/NotfoundTab.js:444
 #: src/admin/p5/RedirectsTab.js:841
 #: src/copywriter/CopywriterTab.js:75
 #: src/offers/OrderFlow.js:235
@@ -28762,7 +28762,7 @@ msgid "Use this image"
 msgstr ""
 
 #: src/admin/ImagePicker.js:73
-#: src/editor/index.js:129
+#: src/editor/index.js:130
 msgid "Change image"
 msgstr ""
 
@@ -29401,7 +29401,7 @@ msgid "Broken links"
 msgstr ""
 
 #: src/admin/out1/OutboundTab.js:826
-#: src/admin/p5/NotfoundTab.js:410
+#: src/admin/p5/NotfoundTab.js:423
 msgid "Order"
 msgstr ""
 
@@ -30037,7 +30037,7 @@ msgid "Replace"
 msgstr ""
 
 #: src/admin/p4/LinksScreen.js:878
-#: src/admin/p5/NotfoundTab.js:342
+#: src/admin/p5/NotfoundTab.js:355
 msgid "Ignore"
 msgstr ""
 
@@ -30541,7 +30541,7 @@ msgid "What is counted"
 msgstr ""
 
 #: src/admin/p5/NotfoundTab.js:156
-#: src/admin/p5/NotfoundTab.js:402
+#: src/admin/p5/NotfoundTab.js:415
 msgid "Robots and crawlers"
 msgstr ""
 
@@ -30565,104 +30565,112 @@ msgstr ""
 msgid "E-mail me the new missing addresses every week"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:206
+#: src/admin/p5/NotfoundTab.js:198
+msgid "Send a \"page not found\" event to Google Analytics 4"
+msgstr ""
+
+#: src/admin/p5/NotfoundTab.js:202
+msgid "Uses the GA4 tag already on your site and adds an event, never a second page view. Nothing happens on pages without a GA4 tag."
+msgstr ""
+
+#: src/admin/p5/NotfoundTab.js:219
 #: src/admin/x1c/KeywordListsTab.js:115
 msgid "Save the list"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:255
+#: src/admin/p5/NotfoundTab.js:268
 msgid "Missing address"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:261
+#: src/admin/p5/NotfoundTab.js:274
 msgid "redirected now"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:269
+#: src/admin/p5/NotfoundTab.js:282
 msgid "Times asked"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:274
+#: src/admin/p5/NotfoundTab.js:287
 msgid "Last asked"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:279
+#: src/admin/p5/NotfoundTab.js:292
 msgid "Linked from"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:285
+#: src/admin/p5/NotfoundTab.js:298
 msgid "Typed or bookmarked"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:291
+#: src/admin/p5/NotfoundTab.js:304
 msgid "Probably meant"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:314
+#: src/admin/p5/NotfoundTab.js:327
 msgid "Redirect…"
 msgstr ""
 
 #. translators: %s: an address.
-#: src/admin/p5/NotfoundTab.js:328
+#: src/admin/p5/NotfoundTab.js:341
 #, js-format
 msgid "%s will not be counted again."
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:349
+#: src/admin/p5/NotfoundTab.js:362
 #: src/admin/p5/SiteSearchTab.js:177
 msgid "Forget"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:371
+#: src/admin/p5/NotfoundTab.js:384
 msgid "Each missing address is one counter — how often, when first and last, and the page that linked to it — never a row per visit, so the list cannot grow your database: it keeps the most recent 10,000 addresses."
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:379
+#: src/admin/p5/NotfoundTab.js:392
 msgid "Asked for by people"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:383
+#: src/admin/p5/NotfoundTab.js:396
 msgid "Asked for by robots"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:387
+#: src/admin/p5/NotfoundTab.js:400
 msgid "Kept at most"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:396
+#: src/admin/p5/NotfoundTab.js:409
 msgid "Asked for by"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:399
+#: src/admin/p5/NotfoundTab.js:412
 msgid "People"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:415
+#: src/admin/p5/NotfoundTab.js:428
 msgid "Most asked"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:419
+#: src/admin/p5/NotfoundTab.js:432
 msgid "Most recent"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:423
+#: src/admin/p5/NotfoundTab.js:436
 msgid "Newest"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:443
+#: src/admin/p5/NotfoundTab.js:456
 msgid "Missing addresses"
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:444
+#: src/admin/p5/NotfoundTab.js:457
 msgid "No missing address has been asked for yet."
 msgstr ""
 
-#: src/admin/p5/NotfoundTab.js:465
+#: src/admin/p5/NotfoundTab.js:478
 msgid "Forget this whole list"
 msgstr ""
 
 #. translators: %s: an address.
-#: src/admin/p5/NotfoundTab.js:480
+#: src/admin/p5/NotfoundTab.js:493
 #, js-format
 msgid "Redirect added for %s."
 msgstr ""
@@ -40330,61 +40338,61 @@ msgid "Zinn® SEO analysis"
 msgstr ""
 
 #. translators: 1: characters used, 2: characters search engines usually show.
-#: src/editor/index.js:202
+#: src/editor/index.js:203
 #: src/fields/index.js:80
 #, js-format
 msgid "%1$d of about %2$d characters"
 msgstr ""
 
-#: src/editor/index.js:260
+#: src/editor/index.js:261
 msgid "Could not load the SEO fields."
 msgstr ""
 
-#: src/editor/index.js:294
+#: src/editor/index.js:295
 msgid "The SEO fields were not saved."
 msgstr ""
 
-#: src/editor/index.js:364
+#: src/editor/index.js:365
 msgid "No description: search engines pick text from the page."
 msgstr ""
 
-#: src/editor/index.js:421
+#: src/editor/index.js:422
 msgid "Fewer options"
 msgstr ""
 
-#: src/editor/index.js:422
+#: src/editor/index.js:423
 msgid "More options"
 msgstr ""
 
-#: src/editor/index.js:527
+#: src/editor/index.js:528
 msgid "Ask Pinterest not to allow pins of this page"
 msgstr ""
 
-#: src/editor/index.js:540
+#: src/editor/index.js:541
 msgid "Ready for Google Discover"
 msgstr ""
 
-#: src/editor/index.js:541
+#: src/editor/index.js:542
 msgid "Google Discover: what is missing"
 msgstr ""
 
-#: src/editor/index.js:554
+#: src/editor/index.js:555
 msgid "Done:"
 msgstr ""
 
-#: src/editor/index.js:555
+#: src/editor/index.js:556
 msgid "To do:"
 msgstr ""
 
-#: src/editor/index.js:562
+#: src/editor/index.js:563
 msgid "Google's Discover guidance"
 msgstr ""
 
-#: src/editor/index.js:573
+#: src/editor/index.js:574
 msgid "Save the SEO fields"
 msgstr ""
 
-#: src/editor/index.js:614
+#: src/editor/index.js:621
 msgid "Schedule an SEO change"
 msgstr ""
 
@@ -40583,6 +40591,18 @@ msgstr ""
 
 #: src/editor/optimiser/OptimiserPanel.js:767
 msgid "The results could not be read."
+msgstr ""
+
+#. translators: %d: HTTP status code, for example 410.
+#: src/editor/RedirectedWarning.js:30
+#, js-format
+msgid "This address already has a redirect rule (%d), so visitors and search engines will not see this page here. Change the URL, or edit the rule under SEO > Redirects and 404."
+msgstr ""
+
+#. translators: 1: HTTP status code, for example 301, 2: the address visitors are sent to.
+#: src/editor/RedirectedWarning.js:39
+#, js-format
+msgid "This address is already redirected (%1$d) to %2$s, so visitors and search engines will not see this page here. Change the URL, or edit the redirect under SEO > Redirects and 404."
 msgstr ""
 
 #: src/editor/SchedulePanel.js:102

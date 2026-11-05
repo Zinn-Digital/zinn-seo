@@ -58,6 +58,36 @@ final class Notfound {
 	 */
 	public static function boot_front(): void {
 		add_action( 'template_redirect', array( self::class, 'note' ), 99 );
+		if ( Settings::get( 'notfound_ga4', false ) ) {
+			add_action( 'wp_footer', array( self::class, 'ga4_footer' ), 99 );
+		}
+	}
+
+	/**
+	 * On a real 404, tell Google Analytics 4 with an event (`notfound_ga4`, off by default).
+	 *
+	 * ⭐ An EVENT, never a page view: the site's own GA4 tag has already counted the view, so a
+	 * `page_view` or a second `config` call here would count every missing page twice. Nothing is
+	 * loaded and no tag is added: with no `gtag()` on the page the script does nothing.
+	 *
+	 * @return void
+	 */
+	public static function ga4_footer(): void {
+		if ( ! is_404() || 404 !== (int) http_response_code() ) {
+			return;
+		}
+		wp_print_inline_script_tag( self::ga4_script(), array( 'id' => 'zinn-seo-404-ga4' ) );
+	}
+
+	/**
+	 * The inline script: one `page_not_found` event through the page's own `gtag()`.
+	 *
+	 * @return string
+	 */
+	public static function ga4_script(): string {
+		return "(function(){if(typeof window.gtag!=='function'){return;}"
+			. "window.gtag('event','page_not_found',{page_location:window.location.href,"
+			. "page_referrer:document.referrer||'(direct)',non_interaction:true});})();";
 	}
 
 	/**
