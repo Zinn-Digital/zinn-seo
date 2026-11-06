@@ -43,6 +43,65 @@ final class Extra {
 	/** Every tool Zinn® offers (the Pro ones show what they do, and run with Pro). */
 	public const ALL = array( 'geo_grid', 'reviews', 'shopping', 'amazon', 'youtube', 'traffic', 'snapshot', 'sentiment', 'technology', 'questions', 'brief', 'domain_overview', 'visibility', 'trends' );
 
+	/** The review sites the free plugin reads; Pro adds its own through `zinn_seo_toolbox_review_sites`. */
+	public const REVIEW_SITES = array( 'google', 'tripadvisor' );
+
+	/**
+	 * The review sites an edition adds to the reviews tool, each with its words for the screen.
+	 *
+	 * ⛔ WordPress.org review (owner ruling 2026-11-06, gate D012 in scripts/wp-dotorg-standards.py):
+	 * a service the Plugins Team restricts is never named in the free plugin. Pro names its sites
+	 * in its own (premium-only) code through this filter; the free plugin adds none.
+	 *
+	 * @return array<int, array{key: string, name: string, label: string, help: string}>
+	 */
+	public static function review_sites(): array {
+		/**
+		 * More review sites for the reviews tool (Pro adds its own).
+		 *
+		 * @param array<int, array<string, string>> $sites Each `key`, `name`, `label`, `help`.
+		 */
+		$sites = (array) apply_filters( 'zinn_seo_toolbox_review_sites', array() );
+		$out   = array();
+		foreach ( $sites as $site ) {
+			$key = is_array( $site ) ? sanitize_key( (string) ( $site['key'] ?? '' ) ) : '';
+			if ( '' === $key || in_array( $key, self::REVIEW_SITES, true ) ) {
+				continue;
+			}
+			$out[] = array(
+				'key'   => $key,
+				'name'  => sanitize_text_field( (string) ( $site['name'] ?? $key ) ),
+				'label' => sanitize_text_field( (string) ( $site['label'] ?? '' ) ),
+				'help'  => sanitize_text_field( (string) ( $site['help'] ?? '' ) ),
+			);
+		}
+
+		return $out;
+	}
+
+	/**
+	 * Whether a reviews run reads only sites this edition offers. A site Pro adds is refused in
+	 * the free plugin, before anything is quoted or spent; other tools pass.
+	 *
+	 * @param string               $product Tool.
+	 * @param array<string, mixed> $params  Parameters.
+	 * @return true|\WP_Error
+	 */
+	public static function sites_allowed( string $product, array $params ) {
+		if ( 'reviews' !== $product ) {
+			return true;
+		}
+		$offered = array_merge( self::REVIEW_SITES, array_column( self::review_sites(), 'key' ) );
+		foreach ( (array) ( $params['profiles'] ?? array() ) as $profile ) {
+			$site = is_array( $profile ) ? sanitize_key( (string) ( $profile['platform'] ?? '' ) ) : '';
+			if ( ! in_array( $site, $offered, true ) ) {
+				return new \WP_Error( 'zinn_seo_toolbox_pro', __( 'This tool is part of Zinn® SEO Pro.', 'zinn-seo' ), array( 'status' => 403 ) );
+			}
+		}
+
+		return true;
+	}
+
 	/**
 	 * The tools this site may run.
 	 *
@@ -132,8 +191,9 @@ final class Extra {
 	public static function overview() {
 		if ( ! Connection::connected() ) {
 			return array(
-				'connected' => false,
-				'products'  => self::products(),
+				'connected'    => false,
+				'products'     => self::products(),
+				'review_sites' => self::review_sites(),
 			);
 		}
 		$catalogue = self::catalogue();
@@ -143,12 +203,13 @@ final class Extra {
 		$account = Credits::account();
 
 		return array(
-			'connected' => true,
-			'products'  => self::products(),
-			'catalogue' => $catalogue,
-			'balance'   => is_array( $account ) ? (int) ( $account['balance_micros'] ?? 0 ) : null,
-			'buy_url'   => is_array( $account ) ? Client::https( $account['buy_url'] ?? '' ) : '',
-			'can_spend' => Connection::can_spend(),
+			'connected'    => true,
+			'products'     => self::products(),
+			'review_sites' => self::review_sites(),
+			'catalogue'    => $catalogue,
+			'balance'      => is_array( $account ) ? (int) ( $account['balance_micros'] ?? 0 ) : null,
+			'buy_url'      => is_array( $account ) ? Client::https( $account['buy_url'] ?? '' ) : '',
+			'can_spend'    => Connection::can_spend(),
 		);
 	}
 
@@ -198,6 +259,10 @@ final class Extra {
 		if ( is_wp_error( $ok ) ) {
 			return $ok;
 		}
+		$ok = self::sites_allowed( $product, $params );
+		if ( is_wp_error( $ok ) ) {
+			return $ok;
+		}
 		$result = Connection::call( 'POST', '/v1/seo-connection/products/' . rawurlencode( $product ) . '/quote', array( 'params' => (object) self::clean( $params ) ) );
 
 		return $result['ok'] ? (array) $result['body'] : Client::as_error( $result );
@@ -213,6 +278,10 @@ final class Extra {
 	 */
 	public static function run( string $product, array $params, bool $any_edition = false ) {
 		$ok = self::allowed( $product, $any_edition );
+		if ( is_wp_error( $ok ) ) {
+			return $ok;
+		}
+		$ok = self::sites_allowed( $product, $params );
 		if ( is_wp_error( $ok ) ) {
 			return $ok;
 		}
@@ -330,6 +399,10 @@ final class Extra {
 	 */
 	public static function watch( string $product, array $params, int $every = 7 ) {
 		$ok = self::allowed( $product );
+		if ( is_wp_error( $ok ) ) {
+			return $ok;
+		}
+		$ok = self::sites_allowed( $product, $params );
 		if ( is_wp_error( $ok ) ) {
 			return $ok;
 		}

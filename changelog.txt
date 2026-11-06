@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.80 =
+* Reviews: the free plugin reads Google and Tripadvisor; more review sites are in Zinn® SEO Pro.
+
 = 0.17.79 =
 * New: News > "Invite readers to add you as a preferred source on Google" can now be a small popup on each story. It shows once per reader, after they have read half the story, and never again once closed; it links to Google's own page for your site.
 
@@ -370,7 +373,7 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 * Fix: Moz's key pair is sent as an Access ID and access secret, so the plugin package carries no field named like a licence secret.
 
 = 0.15.0 =
-* New: the research toolbox, paid per use from Zinn® credit. See where your business shows on Google Maps street by street, read your Google, Trustpilot and Tripadvisor reviews with alerts for new ones and a falling rating, see a competitor's traffic and top pages, and turn the questions people ask Google into an FAQ.
+* New: the research toolbox, paid per use from Zinn® credit. See where your business shows on Google Maps street by street, read your Google and Tripadvisor reviews with alerts for new ones and a falling rating, see a competitor's traffic and top pages, and turn the questions people ask Google into an FAQ.
 * New (Pro): your prices and position on Google Shopping and Amazon, YouTube rankings, dated snapshots of the results page saved in your media library, brand mood, technology lookup, content briefs from the top ten with a draft in one click, and AI drafts of review replies and FAQ answers.
 
 = 0.14.0 =
