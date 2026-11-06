@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zinn® SEO 0.17.78\n"
+"Project-Id-Version: Zinn® SEO 0.17.79\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zinn-seo\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-05T23:24:28+00:00\n"
+"POT-Creation-Date: 2026-11-06T04:08:59+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zinn-seo\n"
@@ -5422,7 +5422,7 @@ msgstr ""
 #: src/admin/blocks/CustomBlocksTab.js:81
 #: src/admin/schema/CustomTab.js:153
 #: src/admin/x1c/KeywordListsTab.js:84
-#: src/admin/x1c/RichResultsScreen.js:400
+#: src/admin/x1c/RichResultsScreen.js:410
 #: src/agency/AgencyScreen.js:481
 #: src/copywriter/CopywriterTab.js:261
 msgid "Name"
@@ -11697,6 +11697,7 @@ msgstr ""
 
 #: includes/modules/inspector/class-inspector.php:136
 #: includes/pro__premium_only/integrations/builders/class-panel.php:113
+#: includes/pro__premium_only/modules/news/class-news.php:419
 #: src/search/Connect.js:263
 msgid "Close"
 msgstr ""
@@ -23332,8 +23333,13 @@ msgstr ""
 msgid "See the days you changed your SEO and the days an alert fired on every score chart, so you can tell what moved your scores."
 msgstr ""
 
-#: includes/pro__premium_only/modules/news/class-news.php:336
+#: includes/pro__premium_only/modules/news/class-news.php:342
+#: includes/pro__premium_only/modules/news/class-news.php:417
 msgid "Add us as a preferred source on Google"
+msgstr ""
+
+#: includes/pro__premium_only/modules/news/class-news.php:418
+msgid "See more of our stories in Google search results, Top stories and Discover. It takes one click on Google's own page."
 msgstr ""
 
 #: includes/pro__premium_only/modules/news/meta.php:20
@@ -36330,109 +36336,121 @@ msgstr ""
 msgid "The page of each policy you have. With at least one, your organisation is described as a news organisation."
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:282
-msgid "Invite readers to add you as a preferred source on Google, after each story"
+#: src/admin/x1c/RichResultsScreen.js:283
+msgid "Invite readers to add you as a preferred source on Google"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:286
-msgid "A plain link to Google's own page for your site; no script. Or put [preferred_source] where you want it."
+#: src/admin/x1c/RichResultsScreen.js:287
+msgid "A link to Google's own page for your site. The popup shows once per reader, after they have read half the story, and never again once closed. Or put [preferred_source] where you want it."
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:315
+#: src/admin/x1c/RichResultsScreen.js:293
+msgid "Off"
+msgstr ""
+
+#: src/admin/x1c/RichResultsScreen.js:296
+msgid "A link after each story"
+msgstr ""
+
+#: src/admin/x1c/RichResultsScreen.js:300
+msgid "A small popup on each story"
+msgstr ""
+
+#: src/admin/x1c/RichResultsScreen.js:325
 msgid "Shop policies in search"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:317
+#: src/admin/x1c/RichResultsScreen.js:327
 msgid "Tell Google your returns, delivery and loyalty programme once, for the whole shop."
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:321
+#: src/admin/x1c/RichResultsScreen.js:331
 msgid "Read from your WooCommerce shipping zones and your returns settings."
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:344
+#: src/admin/x1c/RichResultsScreen.js:354
 msgid "Google reads a shop's returns, delivery and loyalty programme once for the whole shop. Delivery comes from your WooCommerce shipping zones and returns from Works with, Commerce; the loyalty programme from here."
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:352
+#: src/admin/x1c/RichResultsScreen.js:362
 msgid "WooCommerce is not active: only the returns and loyalty programme can be said."
 msgstr ""
 
 #. translators: %d: a number of shipping zones.
-#: src/admin/x1c/RichResultsScreen.js:362
+#: src/admin/x1c/RichResultsScreen.js:372
 #, js-format
 msgid "Shipping zones read: %d."
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:369
+#: src/admin/x1c/RichResultsScreen.js:379
 msgid "Tell search engines the shop's policies"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:378
+#: src/admin/x1c/RichResultsScreen.js:388
 msgid "Your policies page (besides the home page)"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:384
+#: src/admin/x1c/RichResultsScreen.js:394
 msgid "Home page only"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:395
+#: src/admin/x1c/RichResultsScreen.js:405
 msgid "Loyalty programme"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:406
+#: src/admin/x1c/RichResultsScreen.js:416
 msgid "What members get"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:415
+#: src/admin/x1c/RichResultsScreen.js:425
 msgid "Sign-up page"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:424
+#: src/admin/x1c/RichResultsScreen.js:434
 msgid "Tier name"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:430
+#: src/admin/x1c/RichResultsScreen.js:440
 msgid "Points per unit of money spent (empty: no points)"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:439
+#: src/admin/x1c/RichResultsScreen.js:449
 msgid "Members get special prices"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:448
+#: src/admin/x1c/RichResultsScreen.js:458
 msgid "Membership fee (empty: free)"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:460
+#: src/admin/x1c/RichResultsScreen.js:470
 msgid "Remove the tier"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:467
+#: src/admin/x1c/RichResultsScreen.js:477
 msgid "New tier"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:485
+#: src/admin/x1c/RichResultsScreen.js:495
 msgid "Add the tier"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:505
+#: src/admin/x1c/RichResultsScreen.js:515
 msgid "Some structured data belongs to one page and is set in that page's editor, under Search and social:"
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:512
+#: src/admin/x1c/RichResultsScreen.js:522
 msgid "Dataset — the data a research page offers, with its downloads (Pro)."
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:519
+#: src/admin/x1c/RichResultsScreen.js:529
 msgid "Math solver — a calculator or equation solver page (Pro)."
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:525
+#: src/admin/x1c/RichResultsScreen.js:535
 msgid "FAQ from accordions — switch \"Show as FAQ in search results\" on an accordion block, Elementor's \"FAQ Schema\", or the CSS class faq-schema on a Divi or Bricks accordion (Pro)."
 msgstr ""
 
-#: src/admin/x1c/RichResultsScreen.js:532
+#: src/admin/x1c/RichResultsScreen.js:542
 msgid "Quizzes of LearnDash, Tutor LMS and LifterLMS — switch them on under Works with, More (Pro)."
 msgstr ""
 

@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.78
+Stable tag: 0.17.79
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -834,6 +834,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.79 =
+* New: News > "Invite readers to add you as a preferred source on Google" can now be a small popup on each story. It shows once per reader, after they have read half the story, and never again once closed; it links to Google's own page for your site.
+
 = 0.17.78 =
 * Maintenance: packaging fix for the update channel; no change in behaviour.
 
@@ -861,6 +864,3 @@ They are answered before your theme loads, from small index files, so a redirect
 
 = 0.17.69 =
 * Dependency security update (Renovate).
-
-= 0.17.68 =
-* Fix (Pro, Site care): on a site whose folder has a long name with dashes and digits, error paths shown to the AI were hidden as "encoded text"; the site's folder is now removed first, so the AI still sees which plugin file failed.

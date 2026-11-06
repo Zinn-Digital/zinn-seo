@@ -277,20 +277,30 @@ function NewsTab( { form, data } ) {
 					/>
 				) ) }
 			</PanelBody>
-			<ToggleControl
+			<SelectControl
 				__nextHasNoMarginBottom
+				__next40pxDefaultSize
 				label={ __(
-					'Invite readers to add you as a preferred source on Google, after each story',
+					'Invite readers to add you as a preferred source on Google',
 					'zinn-seo'
 				) }
 				help={ __(
-					"A plain link to Google's own page for your site; no script. Or put [preferred_source] where you want it.",
+					"A link to Google's own page for your site. The popup shows once per reader, after they have read half the story, and never again once closed. Or put [preferred_source] where you want it.",
 					'zinn-seo'
 				) }
-				checked={ 'after' === form.value.news_source_link }
-				onChange={ ( on ) =>
-					form.change( { news_source_link: on ? 'after' : '' } )
-				}
+				value={ form.value.news_source_link || '' }
+				options={ [
+					{ value: '', label: __( 'Off', 'zinn-seo' ) },
+					{
+						value: 'after',
+						label: __( 'A link after each story', 'zinn-seo' ),
+					},
+					{
+						value: 'popup',
+						label: __( 'A small popup on each story', 'zinn-seo' ),
+					},
+				] }
+				onChange={ ( v ) => form.change( { news_source_link: v } ) }
 			/>
 			<SaveBar form={ form } />
 		</div>
