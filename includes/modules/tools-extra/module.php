@@ -1,7 +1,7 @@
 <?php
 /**
- * Module: more research tools on Zinn® credit — the local rank grid, reviews from Google and
- * Tripadvisor (Pro adds more review sites), competitor traffic, and "People also ask" questions turned into an
+ * Module: more research tools on Zinn® credit — the local rank grid, reviews from Google,
+ * Trustpilot and Tripadvisor, competitor traffic, and "People also ask" questions turned into an
  * FAQ (zs-520, zs-521, zs-523, zs-529). Pro adds Google Shopping and Amazon shelves, YouTube
  * rankings, results-page snapshots, brand sentiment, technology lookup and content briefs.
  *

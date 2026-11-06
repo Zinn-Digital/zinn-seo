@@ -1,11 +1,6 @@
 /**
- * Reviews (zs-521): the rating and the latest reviews from Google and Tripadvisor in one place, an
- * alert when new ones arrive or the rating drops, and (Pro) AI drafts of replies.
- *
- * ⛔ More review sites come from the server (`ctx.reviewSites`, PHP filter
- * `zinn_seo_toolbox_review_sites`), never from this file: WordPress.org's review asked that a
- * restricted service never be named in the free plugin (D012, owner 2026-11-06), so the ones Pro
- * adds live only in Pro's PHP, and this bundle (shared by both editions) names none of them.
+ * Reviews (zs-521): the rating and the latest reviews from Google, Trustpilot and Tripadvisor in
+ * one place, an alert when new ones arrive or the rating drops, and (Pro) AI drafts of replies.
  */
 import { __, sprintf } from '@wordpress/i18n';
 import { useState } from '@wordpress/element';
@@ -19,7 +14,7 @@ import {
 import { seoFetch } from '../../admin/api';
 import { Refusal, useAction } from '../../tools/parts';
 import { count, day } from '../../tools/pure';
-import { profilesOf, siteName, tripadvisorPage, unitsOf } from '../pure';
+import { domainOf, tripadvisorPage, unitsOf } from '../pure';
 import {
 	History,
 	RunMoney,
@@ -29,6 +24,12 @@ import {
 	useRuns,
 } from '../shared';
 import { PlaceFinder } from './GridTab';
+
+const NAMES = {
+	google: 'Google',
+	trustpilot: 'Trustpilot',
+	tripadvisor: 'Tripadvisor',
+};
 
 /**
  * AI reply drafts for one platform's reviews (Pro): suggestions to copy, edit and post.
@@ -117,10 +118,28 @@ function Replies( { ctx, reviews, business } ) {
 export default function ReviewsTab( { ctx } ) {
 	const runs = useRuns( 'reviews' );
 	const [ place, setPlace ] = useState( null );
-	const extra = ctx.reviewSites || [];
-	const [ values, setValues ] = useState( {} );
+	const [ trustpilot, setTrustpilot ] = useState( '' );
 	const [ tripadvisor, setTripadvisor ] = useState( '' );
-	const profiles = profilesOf( place, extra, values, tripadvisor );
+	const profiles = [];
+	if ( place && place.place_id ) {
+		profiles.push( {
+			platform: 'google',
+			profile_id: place.place_id,
+			name: place.name,
+		} );
+	}
+	if ( domainOf( trustpilot ) ) {
+		profiles.push( {
+			platform: 'trustpilot',
+			profile_id: domainOf( trustpilot ),
+		} );
+	}
+	if ( tripadvisorPage( tripadvisor ) ) {
+		profiles.push( {
+			platform: 'tripadvisor',
+			profile_id: tripadvisorPage( tripadvisor ),
+		} );
+	}
 	const params = { profiles, location: ctx.market.location || '' };
 	const units = unitsOf( 'reviews', params );
 	let why = '';
@@ -143,19 +162,17 @@ export default function ReviewsTab( { ctx } ) {
 				label={ __( 'Your business on Google', 'zinn-seo' ) }
 			/>
 			<div className="zseo-formrow">
-				{ extra.map( ( site ) => (
-					<TextControl
-						key={ site.key }
-						__nextHasNoMarginBottom
-						__next40pxDefaultSize
-						label={ site.label || site.name }
-						help={ site.help || '' }
-						value={ values[ site.key ] || '' }
-						onChange={ ( v ) =>
-							setValues( { ...values, [ site.key ]: v } )
-						}
-					/>
-				) ) }
+				<TextControl
+					__nextHasNoMarginBottom
+					__next40pxDefaultSize
+					label={ __( 'Your website on Trustpilot', 'zinn-seo' ) }
+					help={ __(
+						'The domain, such as example.com.',
+						'zinn-seo'
+					) }
+					value={ trustpilot }
+					onChange={ setTrustpilot }
+				/>
 				<TextControl
 					__nextHasNoMarginBottom
 					__next40pxDefaultSize
@@ -198,7 +215,7 @@ export default function ReviewsTab( { ctx } ) {
 									'%1$s rating fell from %2$s to %3$s.',
 									'zinn-seo'
 								),
-								siteName( a.platform, extra ),
+								NAMES[ a.platform ] || a.platform,
 								a.from,
 								a.to
 							)
@@ -209,7 +226,7 @@ export default function ReviewsTab( { ctx } ) {
 									'zinn-seo'
 								),
 								count( a.count ),
-								siteName( a.platform, extra ),
+								NAMES[ a.platform ] || a.platform,
 								count( a.poor )
 							) }
 				</Notice>
@@ -217,7 +234,7 @@ export default function ReviewsTab( { ctx } ) {
 			{ ( result.platforms || [] ).map( ( p ) => (
 				<section key={ p.platform } className="zseo-reviews">
 					<h3 className="zseo-card-title">
-						{ siteName( p.platform, extra ) }
+						{ NAMES[ p.platform ] || p.platform }
 						{ p.answered && p.found
 							? ` · ${ p.rating ?? '—' } ★ · ${ sprintf(
 									/* translators: %s: a number of reviews. */

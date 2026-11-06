@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zinn® SEO 0.17.80\n"
+"Project-Id-Version: Zinn® SEO 0.17.79\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zinn-seo\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-06T15:46:59+00:00\n"
+"POT-Creation-Date: 2026-11-06T04:08:59+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zinn-seo\n"
@@ -10062,8 +10062,8 @@ msgstr ""
 #: includes/modules/offers/class-offers.php:330
 #: includes/modules/offers/class-offers.php:628
 #: includes/modules/offers/class-offers.php:689
-#: includes/modules/tools-extra/class-extra.php:137
-#: includes/modules/tools-extra/class-extra.php:358
+#: includes/modules/tools-extra/class-extra.php:78
+#: includes/modules/tools-extra/class-extra.php:289
 #: src/agency/ReportsScreen.js:335
 msgid "Connect this site to a Zinn® account first."
 msgstr ""
@@ -16990,7 +16990,7 @@ msgid "Watch what customers say about you"
 msgstr ""
 
 #: includes/modules/offers/class-copy.php:63
-msgid "Your rating and newest reviews from Google and Tripadvisor in one place, checked every week, with the poor reviews you have not answered yet. Or watch what Google’s first page shows for your name, and hear the moment a complaint or bad review reaches it."
+msgid "Your rating and newest reviews from Google, Trustpilot and Tripadvisor in one place, checked every week, with the poor reviews you have not answered yet. Or watch what Google’s first page shows for your name, and hear the moment a complaint or bad review reaches it."
 msgstr ""
 
 #: includes/modules/offers/class-copy.php:64
@@ -19462,55 +19462,54 @@ msgstr ""
 msgid "Titles in search results"
 msgstr ""
 
-#: includes/modules/tools-extra/class-extra.php:98
-#: includes/modules/tools-extra/class-extra.php:134
-msgid "This tool is part of Zinn® SEO Pro."
-msgstr ""
-
-#: includes/modules/tools-extra/class-extra.php:131
-#: includes/modules/tools-extra/class-extra.php:338
+#: includes/modules/tools-extra/class-extra.php:72
+#: includes/modules/tools-extra/class-extra.php:269
 msgid "There is no tool with that name."
 msgstr ""
 
-#: includes/modules/tools-extra/class-extra.php:312
+#: includes/modules/tools-extra/class-extra.php:75
+msgid "This tool is part of Zinn® SEO Pro."
+msgstr ""
+
+#: includes/modules/tools-extra/class-extra.php:243
 msgid "That run does not exist."
 msgstr ""
 
-#: includes/modules/tools-extra/class-extra.php:362
+#: includes/modules/tools-extra/class-extra.php:293
 msgid "Type your business name."
 msgstr ""
 
-#: includes/modules/tools-extra/class-extra.php:431
-#: includes/modules/tools-extra/class-extra.php:459
+#: includes/modules/tools-extra/class-extra.php:358
+#: includes/modules/tools-extra/class-extra.php:386
 msgid "That schedule does not exist."
 msgstr ""
 
-#: includes/modules/tools-extra/class-extra.php:444
+#: includes/modules/tools-extra/class-extra.php:371
 msgid "Nothing to change."
 msgstr ""
 
-#: includes/modules/tools-extra/class-extra.php:533
+#: includes/modules/tools-extra/class-extra.php:460
 msgid "Search results snapshot"
 msgstr ""
 
-#: includes/modules/tools-extra/class-extra.php:621
-#: includes/pro__premium_only/modules/tools-extra-pro/class-extra-pro.php:96
+#: includes/modules/tools-extra/class-extra.php:548
+#: includes/pro__premium_only/modules/tools-extra-pro/class-extra-pro.php:76
 msgid "Choose at least one question."
 msgstr ""
 
-#: includes/modules/tools-extra/class-extra.php:626
+#: includes/modules/tools-extra/class-extra.php:553
 msgid "Sorry, you are not allowed to edit that page."
 msgstr ""
 
-#: includes/modules/tools-extra/class-extra.php:631
+#: includes/modules/tools-extra/class-extra.php:558
 msgid "That page is built with a page builder, so a FAQ added here would not show on it. Open it in its builder and add the FAQ with the \"SEO block\" element, or add it to a new draft."
 msgstr ""
 
-#: includes/modules/tools-extra/class-extra.php:642
+#: includes/modules/tools-extra/class-extra.php:569
 msgid "Sorry, you are not allowed to create pages."
 msgstr ""
 
-#: includes/modules/tools-extra/class-extra.php:648
+#: includes/modules/tools-extra/class-extra.php:575
 msgid "Frequently asked questions"
 msgstr ""
 
@@ -25409,31 +25408,23 @@ msgstr[1] ""
 msgid "Hand any problem to a colleague or a client with a due date: they get an e-mail, can comment and tick it off, and you see what is open and overdue in the Fix it inbox."
 msgstr ""
 
-#: includes/pro__premium_only/modules/tools-extra-pro/class-extra-pro.php:45
-msgid "Your website on Trustpilot"
-msgstr ""
-
-#: includes/pro__premium_only/modules/tools-extra-pro/class-extra-pro.php:46
-msgid "The domain, such as example.com."
-msgstr ""
-
-#: includes/pro__premium_only/modules/tools-extra-pro/class-extra-pro.php:74
+#: includes/pro__premium_only/modules/tools-extra-pro/class-extra-pro.php:54
 msgid "Answers for FAQ questions"
 msgstr ""
 
-#: includes/pro__premium_only/modules/tools-extra-pro/class-extra-pro.php:112
+#: includes/pro__premium_only/modules/tools-extra-pro/class-extra-pro.php:92
 msgid "Replies to reviews"
 msgstr ""
 
-#: includes/pro__premium_only/modules/tools-extra-pro/class-extra-pro.php:145
+#: includes/pro__premium_only/modules/tools-extra-pro/class-extra-pro.php:125
 msgid "Choose at least one review to answer."
 msgstr ""
 
-#: includes/pro__premium_only/modules/tools-extra-pro/class-extra-pro.php:218
+#: includes/pro__premium_only/modules/tools-extra-pro/class-extra-pro.php:198
 msgid "Set up AI first: use your own AI key, or Zinn® credits, on the AI screen."
 msgstr ""
 
-#: includes/pro__premium_only/modules/tools-extra-pro/class-extra-pro.php:357
+#: includes/pro__premium_only/modules/tools-extra-pro/class-extra-pro.php:337
 msgid "Run a brief first."
 msgstr ""
 
@@ -43795,85 +43786,93 @@ msgstr ""
 msgid "Check it automatically"
 msgstr ""
 
-#: src/toolbox/tabs/ReviewsTab.js:78
+#: src/toolbox/tabs/ReviewsTab.js:79
 msgid "Draft replies with AI"
 msgstr ""
 
-#: src/toolbox/tabs/ReviewsTab.js:83
+#: src/toolbox/tabs/ReviewsTab.js:84
 msgid "Edit each reply, copy it, and post it on the review site. Nothing is posted for you."
 msgstr ""
 
 #. translators: %s: a reviewer's name.
-#: src/toolbox/tabs/ReviewsTab.js:96
+#: src/toolbox/tabs/ReviewsTab.js:97
 #, js-format
 msgid "Reply to %s"
 msgstr ""
 
-#: src/toolbox/tabs/ReviewsTab.js:97
+#: src/toolbox/tabs/ReviewsTab.js:98
 msgid "this review"
 msgstr ""
 
-#: src/toolbox/tabs/ReviewsTab.js:128
+#: src/toolbox/tabs/ReviewsTab.js:147
 msgid "Add at least one review site."
 msgstr ""
 
-#: src/toolbox/tabs/ReviewsTab.js:130
+#: src/toolbox/tabs/ReviewsTab.js:149
 msgid "Paste the address of your Tripadvisor page, as it shows in the browser."
 msgstr ""
 
-#: src/toolbox/tabs/ReviewsTab.js:143
+#: src/toolbox/tabs/ReviewsTab.js:162
 msgid "Your business on Google"
 msgstr ""
 
-#: src/toolbox/tabs/ReviewsTab.js:162
+#: src/toolbox/tabs/ReviewsTab.js:168
+msgid "Your website on Trustpilot"
+msgstr ""
+
+#: src/toolbox/tabs/ReviewsTab.js:169
+msgid "The domain, such as example.com."
+msgstr ""
+
+#: src/toolbox/tabs/ReviewsTab.js:179
 msgid "Your Tripadvisor page"
 msgstr ""
 
-#: src/toolbox/tabs/ReviewsTab.js:163
+#: src/toolbox/tabs/ReviewsTab.js:180
 msgid "Paste its address."
 msgstr ""
 
-#: src/toolbox/tabs/ReviewsTab.js:173
+#: src/toolbox/tabs/ReviewsTab.js:190
 msgid "Read my reviews"
 msgstr ""
 
-#: src/toolbox/tabs/ReviewsTab.js:184
+#: src/toolbox/tabs/ReviewsTab.js:201
 msgid "Alert me to new reviews"
 msgstr ""
 
 #. translators: 1: review site, 2: old rating, 3: new rating.
-#: src/toolbox/tabs/ReviewsTab.js:197
+#: src/toolbox/tabs/ReviewsTab.js:214
 #, js-format
 msgid "%1$s rating fell from %2$s to %3$s."
 msgstr ""
 
 #. translators: 1: how many, 2: review site, 3: how many are poor.
-#: src/toolbox/tabs/ReviewsTab.js:207
+#: src/toolbox/tabs/ReviewsTab.js:224
 #, js-format
 msgid "%1$s new reviews on %2$s (%3$s poor)."
 msgstr ""
 
 #. translators: %s: a number of reviews.
-#: src/toolbox/tabs/ReviewsTab.js:224
+#: src/toolbox/tabs/ReviewsTab.js:241
 #, js-format
 msgid "%s reviews"
 msgstr ""
 
-#: src/toolbox/tabs/ReviewsTab.js:231
+#: src/toolbox/tabs/ReviewsTab.js:248
 msgid "Not read this time (refunded)."
 msgstr ""
 
-#: src/toolbox/tabs/ReviewsTab.js:239
+#: src/toolbox/tabs/ReviewsTab.js:256
 msgid "No profile was found there."
 msgstr ""
 
 #. translators: %s: a number of reviews.
-#: src/toolbox/tabs/ReviewsTab.js:247
+#: src/toolbox/tabs/ReviewsTab.js:264
 #, js-format
 msgid "%s poor reviews have no reply yet."
 msgstr ""
 
-#: src/toolbox/tabs/ReviewsTab.js:270
+#: src/toolbox/tabs/ReviewsTab.js:287
 msgid "replied"
 msgstr ""
 
@@ -44408,7 +44407,7 @@ msgid "See where your business shows on Google Maps from every street around you
 msgstr ""
 
 #: src/toolbox/ToolboxScreen.js:54
-msgid "Your Google and Tripadvisor reviews in one place, with an alert when a new one arrives or your rating slips."
+msgid "Your Google, Trustpilot and Tripadvisor reviews in one place, with an alert when a new one arrives or your rating slips."
 msgstr ""
 
 #: src/toolbox/ToolboxScreen.js:62
@@ -44499,17 +44498,17 @@ msgstr ""
 msgid "Connect this site to a Zinn® account to use the research toolbox. No subscription: each check shows its price first and costs only what you run."
 msgstr ""
 
-#: src/toolbox/ToolboxScreen.js:286
+#: src/toolbox/ToolboxScreen.js:285
 #: src/tools/ChecksScreen.js:169
 msgid "Credit:"
 msgstr ""
 
-#: src/toolbox/ToolboxScreen.js:292
+#: src/toolbox/ToolboxScreen.js:291
 #: src/tools/ChecksScreen.js:177
 msgid "Add credit, prices and notices"
 msgstr ""
 
-#: src/toolbox/ToolboxScreen.js:304
+#: src/toolbox/ToolboxScreen.js:303
 msgid "Country to search in"
 msgstr ""
 

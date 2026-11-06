@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.80
+Stable tag: 0.17.79
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -461,7 +461,6 @@ Google Docs™ is a trademark of Google LLC.
 * One-click rollback
 * No-trace mode
 * Accessible admin
-* Cookie consent banner
 
 **Services from Zinn®**
 
@@ -662,7 +661,6 @@ Pro adds these on top of everything above, from $49 a year for one site, with a 
 * More clicks from searches you already appear in
 * Ask your SEO data
 * AI costs and limits
-* AI copywriter
 * Copied-text check
 * Surfer, Clearscope and Frase guidelines
 * AI images
@@ -836,9 +834,6 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
-= 0.17.80 =
-* Reviews: the free plugin reads Google and Tripadvisor; more review sites are in Zinn® SEO Pro.
-
 = 0.17.79 =
 * New: News > "Invite readers to add you as a preferred source on Google" can now be a small popup on each story. It shows once per reader, after they have read half the story, and never again once closed; it links to Google's own page for your site.
 
@@ -867,4 +862,5 @@ They are answered before your theme loads, from small index files, so a redirect
 = 0.17.70 =
 * Cookie consent banner (off by default): separate analytics and advertising choices, Google Consent Mode v2 denied by default and updated on the visitor's choice, remembered, with a re-open link.
 
-The full history of every release is in changelog.txt, in the plugin's folder.
+= 0.17.69 =
+* Dependency security update (Renovate).

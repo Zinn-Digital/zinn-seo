@@ -52,7 +52,7 @@ export function toolboxTabs() {
 			name: 'reviews',
 			title: __( 'Reviews', 'zinn-seo' ),
 			pitch: __(
-				'Your Google and Tripadvisor reviews in one place, with an alert when a new one arrives or your rating slips.',
+				'Your Google, Trustpilot and Tripadvisor reviews in one place, with an alert when a new one arrives or your rating slips.',
 				'zinn-seo'
 			),
 		},
@@ -270,7 +270,6 @@ export default function ToolboxScreen( { data } ) {
 							!! overview.can_spend &&
 							!! ( data.extra || {} ).canSpend,
 						pro: ( overview.products || [] ).includes( 'brief' ),
-						reviewSites: overview.review_sites || [],
 						market: { country, ...market },
 						watches: ( watches.data && watches.data.watches ) || [],
 						siteName: data.siteName || '',
