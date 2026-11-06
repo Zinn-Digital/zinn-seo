@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.78 =
+* Maintenance: packaging fix for the update channel; no change in behaviour.
+
 = 0.17.77 =
 * Fix: no longer crashes on hosts that disable PHP functions such as set_time_limit or sys_getloadavg; each call is checked first and falls back safely.
 

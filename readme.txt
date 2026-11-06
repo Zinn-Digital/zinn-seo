@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.77
+Stable tag: 0.17.78
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -834,6 +834,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.78 =
+* Maintenance: packaging fix for the update channel; no change in behaviour.
+
 = 0.17.77 =
 * Fix: no longer crashes on hosts that disable PHP functions such as set_time_limit or sys_getloadavg; each call is checked first and falls back safely.
 
@@ -861,8 +864,3 @@ They are answered before your theme loads, from small index files, so a redirect
 
 = 0.17.68 =
 * Fix (Pro, Site care): on a site whose folder has a long name with dashes and digits, error paths shown to the AI were hidden as "encoded text"; the site's folder is now removed first, so the AI still sees which plugin file failed.
-
-= 0.17.67 =
-* Security: syncing WooCommerce pickup locations needs manage_options; listing server-rules backups no longer creates a folder; Bing disconnect only removes the plugin's own cached data; the AI-app "Disconnect" action checks a capability as well as the nonce.
-
-The full history of every release is in changelog.txt, in the plugin's folder.
