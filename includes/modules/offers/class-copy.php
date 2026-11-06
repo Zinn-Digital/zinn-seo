@@ -60,7 +60,7 @@ final class Copy {
 				break;
 			case 'reputation':
 				$title = $b ? __( 'Never miss a bad review again', 'zinn-seo' ) : __( 'Watch what customers say about you', 'zinn-seo' );
-				$body  = __( 'Your rating and newest reviews from Google, Trustpilot and Tripadvisor in one place, checked every week, with the poor reviews you have not answered yet. Or watch what Google’s first page shows for your name, and hear the moment a complaint or bad review reaches it.', 'zinn-seo' );
+				$body  = __( 'Your rating and newest reviews from Google and Tripadvisor in one place, checked every week, with the poor reviews you have not answered yet. Or watch what Google’s first page shows for your name, and hear the moment a complaint or bad review reaches it.', 'zinn-seo' );
 				$cta   = __( 'Watch my reputation', 'zinn-seo' );
 				break;
 			case 'citations':
