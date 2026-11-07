@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.80
+Stable tag: 0.17.81
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -836,6 +836,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.81 =
+* The AI agents (MCP) panel now says to add the connection address as a custom MCP server in ChatGPT; developer mode is no longer needed.
+
 = 0.17.80 =
 * Reviews: the free plugin reads Google and Tripadvisor; more review sites are in Zinn® SEO Pro.
 
@@ -863,8 +866,5 @@ They are answered before your theme loads, from small index files, so a redirect
 
 = 0.17.71 =
 * Fix (Pro): Bing's nocache is kept on sites where a theme or plugin uses Rank Math's robots filter; deleting a redirect also removes its visitor conditions; the visitor's country choice is sent as one cookie.
-
-= 0.17.70 =
-* Cookie consent banner (off by default): separate analytics and advertising choices, Google Consent Mode v2 denied by default and updated on the visitor's choice, remembered, with a re-open link.
 
 The full history of every release is in changelog.txt, in the plugin's folder.

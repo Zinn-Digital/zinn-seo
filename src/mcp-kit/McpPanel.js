@@ -158,7 +158,7 @@ export default function McpPanel( { path, initialOpen = true } ) {
 										</strong>
 										<br />
 										{ __(
-											'Add the connection address as a custom connector in Claude, or as an app in ChatGPT developer mode. They open this site so you can approve them; no password to copy.',
+											'Add the connection address as a custom connector in Claude, or as a custom MCP server in ChatGPT. They open this site so you can approve them; no password to copy.',
 											'zinn-seo'
 										) }
 									</p>

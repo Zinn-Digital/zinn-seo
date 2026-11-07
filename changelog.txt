@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.81 =
+* The AI agents (MCP) panel now says to add the connection address as a custom MCP server in ChatGPT; developer mode is no longer needed.
+
 = 0.17.80 =
 * Reviews: the free plugin reads Google and Tripadvisor; more review sites are in Zinn® SEO Pro.
 
