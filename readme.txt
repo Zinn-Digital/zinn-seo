@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.81
+Stable tag: 0.17.82
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -836,6 +836,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.82 =
+* Translation fix: Amharic, Burmese, Khmer and Hausa strings no longer end with a Chinese full stop.
+
 = 0.17.81 =
 * The AI agents (MCP) panel now says to add the connection address as a custom MCP server in ChatGPT; developer mode is no longer needed.
 
@@ -863,8 +866,5 @@ They are answered before your theme loads, from small index files, so a redirect
 
 = 0.17.72 =
 * Dependency security update (Renovate).
-
-= 0.17.71 =
-* Fix (Pro): Bing's nocache is kept on sites where a theme or plugin uses Rank Math's robots filter; deleting a redirect also removes its visitor conditions; the visitor's country choice is sent as one cookie.
 
 The full history of every release is in changelog.txt, in the plugin's folder.
