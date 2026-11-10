@@ -37,6 +37,9 @@ final class Fixit {
 	/** Cache key. */
 	private const CACHE = 'zseo_fixit';
 
+	/** Page IDs read per keyset page when an issue counts only the pages the sitemap lists. */
+	private const LISTED_CHUNK = 500;
+
 	/**
 	 * The issues "Fix it" on autopilot (Pro, zs-767) can fix by itself, for the way to it on every
 	 * edition (the Pro module's remedies are the source of truth on Pro; a unit test keeps this
@@ -429,9 +432,9 @@ final class Fixit {
 			);
 		}
 		// phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare, PluginCheck.Security.DirectDB.UnescapedDBParameter -- placeholders built above.
-		$bad = (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$wpdb->posts} p JOIN {$wpdb->postmeta} m ON m.post_id = p.ID AND m.meta_key = '_zseo_score' WHERE p.post_type IN ({$in}) AND p.post_status = 'publish' AND CAST(m.meta_value AS SIGNED) < 50{$own}", $types ) );
+		$bad = count( self::listed_rows( "SELECT p.ID AS id FROM {$wpdb->posts} p JOIN {$wpdb->postmeta} m ON m.post_id = p.ID AND m.meta_key = '_zseo_score' WHERE p.post_type IN ({$in}) AND p.post_status = 'publish' AND CAST(m.meta_value AS SIGNED) < 50{$own}", $types ) );
 		// phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare, PluginCheck.Security.DirectDB.UnescapedDBParameter -- placeholders built above.
-		$bad_tr               = '' === $theirs ? array() : (array) $wpdb->get_results( $wpdb->prepare( "SELECT zr.lang AS lang, COUNT(*) AS n FROM {$wpdb->posts} p JOIN {$wpdb->postmeta} m ON m.post_id = p.ID AND m.meta_key = '_zseo_score' {$theirs} WHERE p.post_type IN ({$in}) AND p.post_status = 'publish' AND CAST(m.meta_value AS SIGNED) < 50 GROUP BY zr.lang", $types ), ARRAY_A );
+		$bad_tr               = '' === $theirs ? array() : self::per_language( self::listed_rows( "SELECT p.ID AS id, MIN(zr.lang) AS lang FROM {$wpdb->posts} p JOIN {$wpdb->postmeta} m ON m.post_id = p.ID AND m.meta_key = '_zseo_score' {$theirs} WHERE p.post_type IN ({$in}) AND p.post_status = 'publish' AND CAST(m.meta_value AS SIGNED) < 50", $types, ' GROUP BY p.ID' ) );
 		list( $bad, $bad_tr ) = self::originals_first( $bad, $bad_tr );
 		if ( $bad > 0 ) {
 			$out[] = array(
@@ -506,6 +509,74 @@ final class Fixit {
 					'label' => __( 'See the pages', 'zinn-seo' ),
 				),
 			) + self::with_translations( $tr );
+		}
+
+		return $out;
+	}
+
+	/**
+	 * The rows of a page query whose pages the sitemap lists (Builder::post_listed()), read in
+	 * keyset pages of LISTED_CHUNK IDs with no cap.
+	 *
+	 * ⛔ WHY. "content-bad" counted every published page scoring under 50, including the ones
+	 * the site tells search engines not to index (noindex, left out of the sitemap, hidden in
+	 * the shop, canonical elsewhere): the inbox asked for SEO work on pages that are meant not to
+	 * be found (zinnhub, 2026-11-09). The sitemap's own test decides, so the two never disagree.
+	 *
+	 * @param string            $sql   A query selecting `p.ID AS id` (and any columns) from posts
+	 *                                 `p`, ending in its WHERE clause; placeholders for $args.
+	 * @param array<int, mixed> $args  The query's placeholder values.
+	 * @param string            $group A GROUP BY to add after the keyset condition, or ''.
+	 * @return array<int, array<string, mixed>> The rows of listed pages.
+	 */
+	public static function listed_rows( string $sql, array $args, string $group = '' ): array {
+		global $wpdb;
+		$builder = '\ZinnDigital\ZinnSEO\Sitemaps\Builder';
+		$out     = array();
+		$last    = 0;
+		do {
+			// phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber, PluginCheck.Security.DirectDB.UnescapedDBParameter -- built by the caller from prepared parts; admin only, cached with the inbox.
+			$rows = (array) $wpdb->get_results( $wpdb->prepare( $sql . ' AND p.ID > %d' . $group . ' ORDER BY p.ID LIMIT %d', array_merge( $args, array( $last, self::LISTED_CHUNK ) ) ), ARRAY_A );
+			if ( array() === $rows ) {
+				break;
+			}
+			$ids  = array_map( static fn( $r ): int => (int) ( is_array( $r ) ? ( $r['id'] ?? 0 ) : 0 ), $rows );
+			$last = max( $ids );
+			$keep = class_exists( $builder ) ? array_flip( $builder::listed_ids( $ids ) ) : array_flip( $ids );
+			foreach ( $rows as $i => $row ) {
+				if ( isset( $keep[ $ids[ $i ] ] ) ) {
+					$out[] = (array) $row;
+				}
+			}
+			if ( class_exists( $builder ) ) {
+				$builder::forget();
+			}
+			$more = self::LISTED_CHUNK === count( $rows );
+		} while ( $more );
+
+		return $out;
+	}
+
+	/**
+	 * Rows of `lang` and `n` (with_translations()) from listed rows carrying `lang`. Pure.
+	 *
+	 * @param array<int, array<string, mixed>> $rows Rows with `lang`.
+	 * @return array<int, array{lang: string, n: int}>
+	 */
+	public static function per_language( array $rows ): array {
+		$by = array();
+		foreach ( $rows as $row ) {
+			$lang = (string) ( $row['lang'] ?? '' );
+			if ( '' !== $lang ) {
+				$by[ $lang ] = ( $by[ $lang ] ?? 0 ) + 1;
+			}
+		}
+		$out = array();
+		foreach ( $by as $lang => $n ) {
+			$out[] = array(
+				'lang' => (string) $lang,
+				'n'    => $n,
+			);
 		}
 
 		return $out;

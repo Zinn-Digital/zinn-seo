@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.83 =
+* Fixit no longer asks for SEO work on a page search engines are told not to index: "pages need SEO work" now counts only the pages the sitemap lists (not noindex, not left out, not hidden in the shop, not pointing elsewhere).
+
 = 0.17.82 =
 * Translation fix: Amharic, Burmese, Khmer and Hausa strings no longer end with a Chinese full stop.
 

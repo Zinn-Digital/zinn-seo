@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.82
+Stable tag: 0.17.83
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -836,6 +836,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.83 =
+* Fixit no longer asks for SEO work on a page search engines are told not to index: "pages need SEO work" now counts only the pages the sitemap lists (not noindex, not left out, not hidden in the shop, not pointing elsewhere).
+
 = 0.17.82 =
 * Translation fix: Amharic, Burmese, Khmer and Hausa strings no longer end with a Chinese full stop.
 
@@ -862,9 +865,6 @@ They are answered before your theme loads, from small index files, so a redirect
 * New: the `zinn_seo_contents_headings` filter changes the headings the table of contents lists; headings printed by any block, third-party ones too, were already included.
 
 = 0.17.73 =
-* Dependency security update (Renovate).
-
-= 0.17.72 =
 * Dependency security update (Renovate).
 
 The full history of every release is in changelog.txt, in the plugin's folder.

@@ -1281,6 +1281,84 @@ final class Builder {
 	}
 
 	/**
+	 * Is this post one the sitemap offers to search engines? Not when the site listed it to leave
+	 * out, the shop hides it, it is set to noindex, it has no address, or it names another page
+	 * as the one to index (zs-048). ONE test, shared by the sitemap and the Fixit inbox, so the
+	 * inbox never asks for SEO work on a page search engines are told not to index.
+	 *
+	 * @param \WP_Post $post   The post (its meta and terms primed by the caller).
+	 * @param bool     $hidden The shop hides it (see listed_ids()).
+	 * @return bool
+	 */
+	public static function post_listed( \WP_Post $post, bool $hidden = false ): bool {
+		return '' !== self::listed_link( $post, $hidden );
+	}
+
+	/**
+	 * Which of these published posts the sitemap would list (post_listed()), with the caches
+	 * primed in one go. The caller pages through IDs; this takes one page.
+	 *
+	 * @param array<int, int> $ids Post IDs.
+	 * @return array<int, int> The listed IDs, in the order given.
+	 */
+	public static function listed_ids( array $ids ): array {
+		$ids = array_values( array_filter( array_map( 'intval', $ids ) ) );
+		if ( array() === $ids ) {
+			return array();
+		}
+		_prime_post_caches( $ids, false, true );
+		$out = array();
+		$by  = array();
+		foreach ( $ids as $id ) {
+			$post = get_post( $id );
+			if ( $post instanceof \WP_Post ) {
+				$by[ (string) $post->post_type ][] = $post;
+			}
+		}
+		foreach ( $by as $type => $posts ) {
+			$type_ids = wp_list_pluck( $posts, 'ID' );
+			if ( array() !== get_object_taxonomies( $type ) ) {
+				update_object_term_cache( $type_ids, $type );
+			}
+			$hide = 'product' === $type ? self::woo_hidden( array_map( 'intval', $type_ids ) ) : array();
+			foreach ( $posts as $post ) {
+				if ( self::post_listed( $post, isset( $hide[ $post->ID ] ) ) ) {
+					$out[] = (int) $post->ID;
+				}
+			}
+		}
+
+		return $out;
+	}
+
+	/**
+	 * The address post_listed() lists a post at, or '' when it is not listed.
+	 *
+	 * @param \WP_Post $post   The post.
+	 * @param bool     $hidden The shop hides it.
+	 * @return string
+	 */
+	private static function listed_link( \WP_Post $post, bool $hidden ): string {
+		if ( $hidden || in_array( (string) $post->ID, self::excluded_ids(), true ) ) {
+			return '';
+		}
+		$c = Context::for_post( $post );
+		if ( isset( Resolver::robots( $c )['noindex'] ) ) {
+			return '';
+		}
+		$link = (string) get_permalink( $post );
+		if ( '' === $link ) {
+			return '';
+		}
+		$canonical = (string) Resolver::own( $c, 'canonical' );
+		if ( '' !== $canonical && untrailingslashit( $canonical ) !== untrailingslashit( $link ) ) {
+			return ''; // zs-048: the page names another page as the one to index.
+		}
+
+		return $link;
+	}
+
+	/**
 	 * Post entries: permalinks, honest last-modified dates, images, translations.
 	 *
 	 * @param string             $unit Unit.
@@ -1308,23 +1386,11 @@ final class Builder {
 		$images = (bool) Settings::get( 'sitemap_images', true ) ? self::images( $posts ) : array();
 		$home   = (string) wp_parse_url( home_url(), PHP_URL_HOST );
 		$hide   = 'product' === $type ? self::woo_hidden( $ids ) : array();
-		$skip   = self::excluded_ids();
 		$out    = array();
 		foreach ( $posts as $i => $post ) {
-			if ( in_array( (string) $post->ID, $skip, true ) || isset( $hide[ $post->ID ] ) ) {
-				continue;
-			}
-			$c = Context::for_post( $post );
-			if ( isset( Resolver::robots( $c )['noindex'] ) ) {
-				continue;
-			}
-			$link = (string) get_permalink( $post );
+			$link = self::listed_link( $post, isset( $hide[ $post->ID ] ) );
 			if ( '' === $link ) {
 				continue;
-			}
-			$canonical = (string) Resolver::own( $c, 'canonical' );
-			if ( '' !== $canonical && untrailingslashit( $canonical ) !== untrailingslashit( $link ) ) {
-				continue; // zs-048: the page names another page as the one to index.
 			}
 			$entry = array(
 				'loc'     => $link,
@@ -1689,7 +1755,7 @@ final class Builder {
 	 *
 	 * @return void
 	 */
-	private static function forget(): void {
+	public static function forget(): void {
 		Resolver::flush();
 		if ( class_exists( '\ZinnDigital\Tranzly\Core\Relations' ) && method_exists( '\ZinnDigital\Tranzly\Core\Relations', 'reset_memo' ) ) {
 			\ZinnDigital\Tranzly\Core\Relations::reset_memo();
