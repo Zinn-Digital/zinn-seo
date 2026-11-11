@@ -4,9 +4,6 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
-= 0.17.87 =
-* Fix: Agent Ready now reads content signals from the robots.txt your site really serves. When a robots.txt file on the server overrides your settings, the check says so and links to the robots.txt screen instead of offering a switch that could not pass.
-
 = 0.17.86 =
 * Dependency security update (Renovate).
 
