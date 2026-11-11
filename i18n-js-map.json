@@ -132,6 +132,7 @@
 	"src/tools/ChecksScreen.js": [ "build/settings.js" ],
 	"src/tools/CreditSettings.js": [ "build/settings.js" ],
 	"src/tools/CreditsScreen.js": [ "build/settings.js" ],
+	"src/tools/MailboxFull.js": [ "build/settings.js" ],
 	"src/tools/KeywordFinder.js": [ "build/classic.js", "build/editor.js", "build/elementor.js" ],
 	"src/tools/issues.js": [ "build/settings.js" ],
 	"src/tools/labels.js": [ "build/settings.js" ],

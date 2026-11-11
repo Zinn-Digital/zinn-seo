@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zinn® SEO 0.17.88\n"
+"Project-Id-Version: Zinn® SEO 0.17.89\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zinn-seo\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-11T12:01:49+00:00\n"
+"POT-Creation-Date: 2026-11-11T20:04:57+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zinn-seo\n"
@@ -2444,7 +2444,7 @@ msgstr ""
 #: src/ai/parts.js:63
 #: src/ai/SettingsTab.js:161
 #: src/tools/CreditSettings.js:198
-#: src/tools/CreditsScreen.js:803
+#: src/tools/CreditsScreen.js:809
 #: src/tools/parts.js:121
 #: src/tools/parts.js:124
 #: src/tools/tabs/IndexTab.js:134
@@ -3960,7 +3960,7 @@ msgstr ""
 #: src/agency/Tasks.js:141
 #: src/editor/SchedulePanel.js:160
 #: src/toolbox/shared.js:220
-#: src/tools/CreditsScreen.js:372
+#: src/tools/CreditsScreen.js:378
 #: src/tools/KeywordFinder.js:308
 #: src/tools/tabs/IndexTab.js:225
 #: src/tools/tool.js:254
@@ -9994,7 +9994,7 @@ msgstr ""
 #: src/admin/p5/ImportTab.js:65
 #: src/admin/p5/RedirectsTab.js:172
 #: src/admin/p5/RedirectsTab.js:661
-#: src/tools/CreditsScreen.js:657
+#: src/tools/CreditsScreen.js:663
 msgid "To"
 msgstr ""
 
@@ -10451,16 +10451,16 @@ msgstr ""
 msgid "That could not be done. Check what you entered and try again."
 msgstr ""
 
-#: includes/modules/connect/class-connection.php:207
+#: includes/modules/connect/class-connection.php:231
 msgid "Enter the e-mail address your account should use."
 msgstr ""
 
-#: includes/modules/connect/class-connection.php:234
+#: includes/modules/connect/class-connection.php:258
 msgid "Tick the box to agree before connecting. Nothing is sent until you do."
 msgstr ""
 
-#: includes/modules/connect/class-connection.php:249
-#: includes/modules/connect/class-connection.php:308
+#: includes/modules/connect/class-connection.php:273
+#: includes/modules/connect/class-connection.php:333
 msgid "Zinn® answered, but not with something this plugin understands. Nothing was saved. Please try again."
 msgstr ""
 
@@ -10482,7 +10482,7 @@ msgstr ""
 
 #: includes/modules/consent/class-consent.php:155
 #: src/admin-kit/Support.js:129
-#: src/tools/CreditsScreen.js:157
+#: src/tools/CreditsScreen.js:158
 msgid "Privacy policy"
 msgstr ""
 
@@ -10549,7 +10549,7 @@ msgstr ""
 
 #: includes/modules/credits/module.php:16
 #: src/admin/index.js:532
-#: src/tools/CreditsScreen.js:747
+#: src/tools/CreditsScreen.js:753
 #: src/tools/labels.js:138
 #: src/tools/labels.js:139
 msgid "Credit"
@@ -17005,7 +17005,7 @@ msgstr ""
 
 #: includes/modules/notices/class-notices.php:600
 #: src/admin/p4/FixitScreen.js:218
-#: src/tools/CreditsScreen.js:555
+#: src/tools/CreditsScreen.js:561
 msgid "Dismiss"
 msgstr ""
 
@@ -19027,7 +19027,7 @@ msgstr ""
 
 #: includes/modules/social/class-rank-math-tags.php:88
 #: includes/pro__premium_only/modules/schema-pro/class-types.php:67
-#: src/tools/CreditsScreen.js:913
+#: src/tools/CreditsScreen.js:919
 msgid "Price"
 msgstr ""
 
@@ -20558,7 +20558,7 @@ msgstr ""
 
 #: src/admin-kit/Support.js:265
 #: src/admin-kit/Support.js:437
-#: src/tools/CreditsScreen.js:216
+#: src/tools/CreditsScreen.js:217
 msgid "Your name (optional)"
 msgstr ""
 
@@ -20632,7 +20632,7 @@ msgstr ""
 #: src/admin-kit/Support.js:500
 #: src/admin/discovery/IndexingTab.js:267
 #: src/agency/Tasks.js:365
-#: src/tools/CreditsScreen.js:632
+#: src/tools/CreditsScreen.js:638
 msgid "Send"
 msgstr ""
 
@@ -26976,7 +26976,7 @@ msgid "Not yet"
 msgstr ""
 
 #: src/admin/p7/IntegrationsScreen.js:1560
-#: src/tools/CreditsScreen.js:648
+#: src/tools/CreditsScreen.js:654
 msgid "Nothing"
 msgstr ""
 
@@ -27291,7 +27291,7 @@ msgstr ""
 #: src/admin/SchemaScreen.js:24
 #: src/admin/x1c/AffiliatesTab.js:266
 #: src/admin/x1c/ProofreadTab.js:289
-#: src/tools/CreditsScreen.js:904
+#: src/tools/CreditsScreen.js:910
 msgid "Check"
 msgstr ""
 
@@ -39218,7 +39218,7 @@ msgid "An alert when another site copies one of your pages."
 msgstr ""
 
 #: src/tools/ChecksScreen.js:123
-#: src/tools/CreditsScreen.js:93
+#: src/tools/CreditsScreen.js:94
 msgid "See where you rank, what Google has indexed and whether AI answers mention you"
 msgstr ""
 
@@ -39323,263 +39323,263 @@ msgid "Credit settings"
 msgstr ""
 
 #. translators: 1: the site's address, 2: plugin version, 3: WordPress version, 4: language code.
-#: src/tools/CreditsScreen.js:36
+#: src/tools/CreditsScreen.js:37
 #, js-format
 msgid "Connecting sends this site’s address (%1$s), the plugin version (%2$s), the WordPress version (%3$s) and its language (%4$s) to Zinn Digital®. Nothing about your visitors or your content is sent, and nothing at all is sent until you press a button below."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:99
+#: src/tools/CreditsScreen.js:100
 msgid "Connect this site to a Zinn® account and run the checks from right here. There is no subscription: you add credit and pay only for what you run, from a fraction of a cent per check."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:106
+#: src/tools/CreditsScreen.js:107
 msgid "Track your Google positions for the phrases that bring you customers"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:112
+#: src/tools/CreditsScreen.js:113
 msgid "Find the pages Google has not indexed, before they cost you visitors"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:118
+#: src/tools/CreditsScreen.js:119
 msgid "Know whether ChatGPT, Perplexity, Gemini and Claude recommend you"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:124
+#: src/tools/CreditsScreen.js:125
 msgid "Hear the day a backlink you earned disappears"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:130
+#: src/tools/CreditsScreen.js:131
 msgid "Audit the whole site and jump straight to the page that needs fixing"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:138
+#: src/tools/CreditsScreen.js:139
 msgid "This site was disconnected from its Zinn® account. Connect it again to carry on — your results and your credit are safe."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:147
+#: src/tools/CreditsScreen.js:148
 msgid "Only an administrator of this site can connect it, because connecting decides who pays for the checks."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:162
+#: src/tools/CreditsScreen.js:163
 msgid "I agree to connect this site to Zinn Digital®"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:179
+#: src/tools/CreditsScreen.js:180
 msgid "Connect my Zinn® account"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:189
+#: src/tools/CreditsScreen.js:190
 msgid "I am new — create a free account"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:202
+#: src/tools/CreditsScreen.js:203
 msgid "Your e-mail address"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:206
+#: src/tools/CreditsScreen.js:207
 msgid "We e-mail you a link to choose your password. No card is needed to create the account."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:241
+#: src/tools/CreditsScreen.js:242
 msgid "Create my account and connect"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:251
+#: src/tools/CreditsScreen.js:252
 msgid "I already have an account"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:326
+#: src/tools/CreditsScreen.js:327
 msgid "Check your e-mail to finish"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:327
+#: src/tools/CreditsScreen.js:328
 msgid "Approve this site in the tab that just opened"
 msgstr ""
 
 #. translators: %s: an e-mail address.
-#: src/tools/CreditsScreen.js:336
+#: src/tools/CreditsScreen.js:342
 #, js-format
 msgid "We sent a link to %s. Open it, choose your password, and this site connects by itself — you can leave this page open."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:346
+#: src/tools/CreditsScreen.js:352
 msgid "There is already a Zinn® account for that address. Sign in there and approve this site — no password is ever typed into WordPress."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:350
+#: src/tools/CreditsScreen.js:356
 msgid "Sign in to Zinn Digital®, check the code matches and choose which account pays. No password is ever typed into WordPress."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:358
+#: src/tools/CreditsScreen.js:364
 msgid "Your code"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:369
+#: src/tools/CreditsScreen.js:375
 msgid "Open the approval page"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:377
+#: src/tools/CreditsScreen.js:383
 msgid "Waiting for your approval…"
 msgstr ""
 
 #. translators: %s: a number of minutes.
-#: src/tools/CreditsScreen.js:381
+#: src/tools/CreditsScreen.js:387
 #, js-format
 msgid "The code works for %s more minute."
 msgid_plural "The code works for %s more minutes."
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/tools/CreditsScreen.js:406
+#: src/tools/CreditsScreen.js:412
 msgid "The request was declined. Nothing was connected."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:410
+#: src/tools/CreditsScreen.js:416
 msgid "The code ran out before it was approved. Start again when you are ready."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:433
+#: src/tools/CreditsScreen.js:439
 msgid "Some checks are paused because the credit ran out. Nothing is lost: add credit and they carry on by themselves, oldest first."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:441
+#: src/tools/CreditsScreen.js:447
 msgid "You are out of credit. Scheduled checks pause until you add more, then carry on by themselves."
 msgstr ""
 
 #. translators: %s: a date.
-#: src/tools/CreditsScreen.js:452
+#: src/tools/CreditsScreen.js:458
 #, js-format
 msgid "At your current pace your credit runs out on %s. Add credit before then and nothing pauses."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:458
+#: src/tools/CreditsScreen.js:464
 msgid "Your credit does not cover the next 30 days of scheduled checks. Add credit and nothing pauses."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:466
+#: src/tools/CreditsScreen.js:472
 msgid "Your credit is running low. Add some now and your checks keep running without a gap."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:474
+#: src/tools/CreditsScreen.js:480
 msgid "Your credit covers the next 30 days of scheduled checks."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:505
+#: src/tools/CreditsScreen.js:511
 msgid "Notices"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:516
+#: src/tools/CreditsScreen.js:522
 msgid "Nothing to report. You will hear here — and by e-mail — when credit runs low, a check pauses or resumes, a ranking falls or a link is lost."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:573
+#: src/tools/CreditsScreen.js:579
 msgid "Dismiss all"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:615
+#: src/tools/CreditsScreen.js:621
 msgid "E-mails from this site"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:618
+#: src/tools/CreditsScreen.js:624
 msgid "Zinn® e-mails the owner of the account. This site can also e-mail whoever looks after it, so they hear straight away when a check pauses or a problem is found — even when the account belongs to your agency."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:637
+#: src/tools/CreditsScreen.js:643
 msgid "The important ones (paused checks, problems found)"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:644
+#: src/tools/CreditsScreen.js:650
 msgid "Every notice"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:659
+#: src/tools/CreditsScreen.js:665
 msgid "Leave empty for the site’s admin address."
 msgstr ""
 
 #. translators: %s: the name of a Zinn account.
-#: src/tools/CreditsScreen.js:711
+#: src/tools/CreditsScreen.js:717
 #, js-format
 msgid "Credit of %s"
 msgstr ""
 
 #. translators: 1: the name of a check, 2: a date.
-#: src/tools/CreditsScreen.js:733
+#: src/tools/CreditsScreen.js:739
 #, js-format
 msgid "%1$s — paused since %2$s"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:757
+#: src/tools/CreditsScreen.js:763
 msgid "Scheduled checks, next 30 days"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:771
+#: src/tools/CreditsScreen.js:777
 msgid "This site, this month"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:785
+#: src/tools/CreditsScreen.js:791
 msgid "Monthly limit for this site"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:815
+#: src/tools/CreditsScreen.js:821
 msgid "I have added credit — refresh"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:822
+#: src/tools/CreditsScreen.js:828
 msgid "Adding credit opens your Zinn® account in a new tab; your card is never typed into WordPress. Checks that were paused start again by themselves a few minutes after the payment."
 msgstr ""
 
 #. translators: %s: an amount of money.
-#: src/tools/CreditsScreen.js:840
+#: src/tools/CreditsScreen.js:846
 #, js-format
 msgid "%s of credit"
 msgstr ""
 
 #. translators: %s: an amount of money.
-#: src/tools/CreditsScreen.js:853
+#: src/tools/CreditsScreen.js:859
 #, js-format
 msgid "includes %s extra"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:874
-#: src/tools/CreditsScreen.js:893
+#: src/tools/CreditsScreen.js:880
+#: src/tools/CreditsScreen.js:899
 msgid "What each check costs"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:880
+#: src/tools/CreditsScreen.js:886
 msgid "Go to the checks"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:887
+#: src/tools/CreditsScreen.js:893
 msgid "You always see the price before anything runs, and a check that cannot give an answer is refunded."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:934
+#: src/tools/CreditsScreen.js:940
 msgid "Connection"
 msgstr ""
 
 #. translators: 1: the site's address, 2: the name of a Zinn account, 3: a date.
-#: src/tools/CreditsScreen.js:939
+#: src/tools/CreditsScreen.js:945
 #, js-format
 msgid "%1$s is connected to the Zinn® account %2$s since %3$s."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:950
+#: src/tools/CreditsScreen.js:956
 msgid "This site is connected for viewing only: it shows results but cannot start paid checks. The owner of the Zinn® account can allow it."
 msgstr ""
 
-#: src/tools/CreditsScreen.js:965
+#: src/tools/CreditsScreen.js:971
 msgid "Disconnect this site"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:970
+#: src/tools/CreditsScreen.js:976
 msgid "Scheduled checks keep their history in your Zinn® account. Disconnect?"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:992
+#: src/tools/CreditsScreen.js:998
 msgid "Yes, disconnect"
 msgstr ""
 
-#: src/tools/CreditsScreen.js:998
+#: src/tools/CreditsScreen.js:1004
 msgid "Keep it connected"
 msgstr ""
 
@@ -40039,6 +40039,22 @@ msgstr ""
 
 #: src/tools/labels.js:171
 msgid "Did not finish"
+msgstr ""
+
+#. translators: 1: a mailbox provider such as Gmail, 2: an e-mail address.
+#: src/tools/MailboxFull.js:24
+#, js-format
+msgid "Your %1$s inbox for %2$s is full, so the e-mail with your link may not arrive. Make some space in it, then wait here, or use a different e-mail address."
+msgstr ""
+
+#. translators: %s: an e-mail address.
+#: src/tools/MailboxFull.js:33
+#, js-format
+msgid "The inbox for %s is full, so the e-mail with your link may not arrive. Make some space in it, then wait here, or use a different e-mail address."
+msgstr ""
+
+#: src/tools/MailboxFull.js:48
+msgid "Use a different e-mail address"
 msgstr ""
 
 #: src/tools/parts.js:116

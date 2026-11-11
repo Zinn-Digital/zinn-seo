@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.89 =
+* New: when you create a Zinn® account from the connect screen and that address's inbox is full, the screen now says so (naming Gmail, Outlook and other providers it recognises), so the e-mail with your link is not missed. Make some space and keep waiting, or use a different e-mail address.
+
 = 0.17.88 =
 * Emergency help offer: emergency support only; priority support is included free on every Zinn Digital® plan.
 

@@ -21,6 +21,7 @@ import { viewHref } from '../admin-kit/router';
 import { Loaded, NewTab, Refusal, Table, useAction, useLoad } from './parts';
 import { count, day, money, price } from './pure';
 import { TopUp } from './CreditSettings';
+import MailboxFull from './MailboxFull';
 import { noticeKind, toolName, unitName } from './labels';
 import './tools.scss';
 
@@ -329,6 +330,11 @@ function PendingCard( { connection, onChange } ) {
 								'zinn-seo'
 							) }
 				</h2>
+				<MailboxFull
+					warning={ pending.warning }
+					email={ pending.email }
+					onUseAnother={ cancel }
+				/>
 				{ 'created' === pending.account ? (
 					<p className="zseo-lead">
 						{ sprintf(

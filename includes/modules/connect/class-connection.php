@@ -161,10 +161,34 @@ final class Connection {
 				'method'     => (string) ( $pending['method'] ?? 'device' ),
 				'account'    => (string) ( $pending['account'] ?? '' ),
 				'email'      => (string) ( $pending['email'] ?? '' ),
+				'warning'    => self::email_warning( $pending['warning'] ?? null ),
 			);
 		}
 
 		return $out;
+	}
+
+	/**
+	 * The sign-up answer's `email_warning`, kept only in the one shape the API documents.
+	 *
+	 * MAILQUOTA (owner ruling 2026-11-11): an address whose inbox is FULL is never refused. Zinn®
+	 * creates the account and says so, because the set-password e-mail may bounce; the connect
+	 * screen tells the site owner to clear the inbox or use another address. Anything else the
+	 * API might send is dropped, so the screen never prints an unknown value.
+	 *
+	 * @param mixed $warning The API's `email_warning` (or what was stored from it).
+	 * @return array{code: string, provider: string}|null
+	 */
+	public static function email_warning( $warning ): ?array {
+		if ( ! is_array( $warning ) || 'mailbox_full' !== ( $warning['code'] ?? '' ) ) {
+			return null;
+		}
+		$provider = is_string( $warning['provider'] ?? null ) ? sanitize_text_field( $warning['provider'] ) : '';
+
+		return array(
+			'code'     => 'mailbox_full',
+			'provider' => mb_substr( $provider, 0, 40 ),
+		);
 	}
 
 	/**
@@ -259,6 +283,7 @@ final class Connection {
 			'method'      => $method,
 			'account'     => in_array( (string) ( $body['account'] ?? '' ), array( 'created', 'exists' ), true ) ? (string) $body['account'] : '',
 			'email'       => (string) ( $more['email'] ?? '' ),
+			'warning'     => self::email_warning( $body['email_warning'] ?? null ),
 			'next_poll'   => 0,
 		);
 		if ( 'active' !== $row['status'] ) {

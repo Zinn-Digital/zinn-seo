@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.88
+Stable tag: 0.17.89
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -837,6 +837,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.89 =
+* New: when you create a Zinn® account from the connect screen and that address's inbox is full, the screen now says so (naming Gmail, Outlook and other providers it recognises), so the e-mail with your link is not missed. Make some space and keep waiting, or use a different e-mail address.
+
 = 0.17.88 =
 * Emergency help offer: for an outage only. Support is free and 24/7 on every Zinn Digital® plan, and code changes and bug fixes go to our developer at the dev rate, through Custom development.
 
@@ -863,8 +866,5 @@ They are answered before your theme loads, from small index files, so a redirect
 
 = 0.17.80 =
 * Reviews: the free plugin reads Google and Tripadvisor; more review sites are in Zinn® SEO Pro.
-
-= 0.17.79 =
-* New: News > "Invite readers to add you as a preferred source on Google" can now be a small popup on each story. It shows once per reader, after they have read half the story, and never again once closed; it links to Google's own page for your site.
 
 The full history of every release is in changelog.txt, in the plugin's folder.
