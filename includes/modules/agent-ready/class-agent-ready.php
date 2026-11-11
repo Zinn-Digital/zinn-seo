@@ -82,7 +82,11 @@ final class Agent_Ready {
 			'answer_block'  => $blocked,
 			'answer_rules'  => $by_rules,
 			'crawlers_on'   => Modules::enabled( 'crawlers' ),
-			'signals'       => (bool) Settings::get( 'ai_signals', false ),
+			// What robots.txt SAYS, never the setting: a physical file the web server sends
+			// instead (a host's managed file, say) never carries the line the setting adds, and
+			// judging the setting passed a site that served no signal at all.
+			'signals'       => self::states_signals( $robots ),
+			'robots_file'   => is_readable( ABSPATH . 'robots.txt' ),
 			'llms'          => Modules::enabled( 'llms' ),
 			'llms_full'     => (bool) Settings::get( 'llms_full', true ),
 			'llms_summary'  => '' !== trim( (string) Settings::get( 'llms_summary', '' ) ),
@@ -165,11 +169,19 @@ final class Agent_Ready {
 				5,
 				! empty( $f['signals'] ),
 				__( 'How your content may be used is stated', 'zinn-seo' ),
-				__( 'robots.txt carries no content signals, so AI companies are not told whether your pages may be used for search, as answer input or for training.', 'zinn-seo' ),
-				! empty( $f['crawlers_on'] ) ? array(
+				! empty( $f['robots_file'] )
+					? __( 'A robots.txt file on the server overrides your robots.txt settings', 'zinn-seo' )
+					: __( 'robots.txt carries no content signals, so AI companies are not told whether your pages may be used for search, as answer input or for training.', 'zinn-seo' ),
+				// A server file wins over every setting, so a one-click switch could not pass
+				// this check: send the owner to the screen that imports the file or moves it aside.
+				! empty( $f['robots_file'] ) ? array(
+					'type'  => 'link',
+					'label' => __( 'Edit robots.txt', 'zinn-seo' ),
+					'url'   => admin_url( $discovery . 'robots' ),
+				) : ( ! empty( $f['crawlers_on'] ) ? array(
 					'type'  => 'auto',
 					'label' => __( 'State the usual choice (search and answers yes, training no)', 'zinn-seo' ),
-				) : self::module_fix()
+				) : self::module_fix() )
 			),
 			self::check(
 				'llms',
@@ -458,6 +470,23 @@ final class Agent_Ready {
 		$core   = "User-agent: *\n" . ( $public ? "Disallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n" : "Disallow: /\n" );
 
 		return (string) apply_filters( 'robots_txt', $core, $public ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- WordPress core's filter.
+	}
+
+	/**
+	 * Does robots.txt state a Content-Signal line (contentsignals.org) a crawler can read?
+	 *
+	 * @param string $text robots.txt.
+	 * @return bool
+	 */
+	public static function states_signals( string $text ): bool {
+		foreach ( preg_split( '/\R/', $text ) as $line ) {
+			$line = trim( (string) preg_replace( '/#.*$/', '', (string) $line ) );
+			if ( 1 === preg_match( '/^content-signal\s*:\s*\S/i', $line ) ) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	/**
