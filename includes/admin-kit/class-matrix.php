@@ -1158,7 +1158,7 @@ final class Matrix {
 			'zs-657'    => __( 'Done-for-you fixes', 'zinn-seo' ),
 			'zs-658'    => __( 'Zinn® CDN in one click', 'zinn-seo' ),
 			'zs-659'    => __( 'Backups before big changes', 'zinn-seo' ),
-			'zs-660'    => __( 'Priority and emergency help', 'zinn-seo' ),
+			'zs-660'    => __( 'Emergency help', 'zinn-seo' ),
 			'zs-210'    => __( 'AI assistants work on your site (MCP)', 'zinn-seo' ),
 			'zs-211'    => __( 'Every action is an AI tool', 'zinn-seo' ),
 			'zs-213'    => __( 'Checks an assistant can run', 'zinn-seo' ),

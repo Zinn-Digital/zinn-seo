@@ -126,7 +126,7 @@ final class Copy {
 				break;
 			case 'support':
 				$title = $b ? __( 'Get an expert on it now', 'zinn-seo' ) : __( 'Need help with this right away?', 'zinn-seo' );
-				$body  = __( 'Priority support puts you at the front of the queue; emergency support gets urgent, out-of-hours help when something is badly wrong.', 'zinn-seo' );
+				$body  = __( 'Site down right now? Emergency support puts an engineer on the outage straight away, out of hours if you need it. Support itself is free and 24/7; code changes and bug fixes go to our developer at the dev rate of €75 an hour excluding VAT, through Custom development.', 'zinn-seo' );
 				$cta   = __( 'Get help', 'zinn-seo' );
 				break;
 			// Stage X1B: the managed AI and agency extras (zs-655, zs-656, zs-661).
@@ -200,8 +200,7 @@ final class Copy {
 			'cdn:edge'             => __( 'Edge deploy', 'zinn-seo' ),
 			'backups:offsite'      => __( 'Backups to your own storage', 'zinn-seo' ),
 			'backups:external'     => __( 'Backups for a site hosted elsewhere', 'zinn-seo' ),
-			'support:priority'     => __( 'Priority support', 'zinn-seo' ),
-			'support:emergency'    => __( 'Emergency support', 'zinn-seo' ),
+			'support:emergency'    => __( 'Emergency support for an outage', 'zinn-seo' ),
 			'update_guard:check'   => __( 'AI Update Guard', 'zinn-seo' ),
 			'managed_ai:webmaster' => __( 'AI Webmaster site review', 'zinn-seo' ),
 			'managed_ai:chat'      => __( 'AI chat for your website', 'zinn-seo' ),

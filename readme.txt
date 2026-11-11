@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.87
+Stable tag: 0.17.88
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -486,7 +486,7 @@ Google Docs™ is a trademark of Google LLC.
 * Done-for-you fixes
 * Zinn® CDN in one click
 * Backups before big changes
-* Priority and emergency help
+* Emergency help
 
 **AI agents (MCP)**
 
@@ -837,6 +837,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.88 =
+* Emergency help offer: for an outage only. Support is free and 24/7 on every Zinn Digital® plan, and code changes and bug fixes go to our developer at the dev rate, through Custom development.
+
 = 0.17.87 =
 * Fix: Agent Ready now reads content signals from the robots.txt your site really serves. When a robots.txt file on the server overrides your settings, the check says so and links to the robots.txt screen instead of offering a switch that could not pass.
 
@@ -863,8 +866,5 @@ They are answered before your theme loads, from small index files, so a redirect
 
 = 0.17.79 =
 * New: News > "Invite readers to add you as a preferred source on Google" can now be a small popup on each story. It shows once per reader, after they have read half the story, and never again once closed; it links to Google's own page for your site.
-
-= 0.17.78 =
-* Maintenance: packaging fix for the update channel; no change in behaviour.
 
 The full history of every release is in changelog.txt, in the plugin's folder.

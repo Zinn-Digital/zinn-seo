@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zinn® SEO 0.17.87\n"
+"Project-Id-Version: Zinn® SEO 0.17.88\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zinn-seo\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-11T08:22:11+00:00\n"
+"POT-Creation-Date: 2026-11-11T12:01:49+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zinn-seo\n"
@@ -266,7 +266,6 @@ msgid "Feedback and feature-request button"
 msgstr ""
 
 #: includes/admin-kit/class-matrix.php:814
-#: includes/modules/offers/class-copy.php:203
 msgid "Priority support"
 msgstr ""
 
@@ -1719,7 +1718,7 @@ msgid "Small code fixes, made safe"
 msgstr ""
 
 #: includes/admin-kit/class-matrix.php:1139
-#: includes/modules/offers/class-copy.php:205
+#: includes/modules/offers/class-copy.php:204
 msgid "AI Update Guard"
 msgstr ""
 
@@ -1805,7 +1804,7 @@ msgid "Backups before big changes"
 msgstr ""
 
 #: includes/admin-kit/class-matrix.php:1161
-msgid "Priority and emergency help"
+msgid "Emergency help"
 msgstr ""
 
 #: includes/admin-kit/class-matrix.php:1162
@@ -2065,7 +2064,7 @@ msgstr ""
 
 #. translators: %s: a plugin's name.
 #: includes/admin-kit/class-promotions.php:250
-#: includes/modules/offers/class-copy.php:274
+#: includes/modules/offers/class-copy.php:273
 #, php-format
 msgid "Get %s"
 msgstr ""
@@ -17319,7 +17318,7 @@ msgid "Need help with this right away?"
 msgstr ""
 
 #: includes/modules/offers/class-copy.php:129
-msgid "Priority support puts you at the front of the queue; emergency support gets urgent, out-of-hours help when something is badly wrong."
+msgid "Site down right now? Emergency support puts an engineer on the outage straight away, out of hours if you need it. Support itself is free and 24/7; code changes and bug fixes go to our developer at the dev rate of €75 an hour excluding VAT, through Custom development."
 msgstr ""
 
 #: includes/modules/offers/class-copy.php:130
@@ -17515,83 +17514,83 @@ msgstr ""
 msgid "Backups for a site hosted elsewhere"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:204
-msgid "Emergency support"
+#: includes/modules/offers/class-copy.php:203
+msgid "Emergency support for an outage"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:206
+#: includes/modules/offers/class-copy.php:205
 msgid "AI Webmaster site review"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:207
+#: includes/modules/offers/class-copy.php:206
 msgid "AI chat for your website"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:208
+#: includes/modules/offers/class-copy.php:207
 msgid "Watch Google page 1 for your name"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:209
+#: includes/modules/offers/class-copy.php:208
 msgid "Your public status page"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:210
+#: includes/modules/offers/class-copy.php:209
 msgid "Reseller SEO data for 200 client sites"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:211
+#: includes/modules/offers/class-copy.php:210
 msgid "One more client site"
 msgstr ""
 
 #. translators: %s: a language, e.g. "German".
-#: includes/modules/offers/class-copy.php:232
+#: includes/modules/offers/class-copy.php:231
 #, php-format
 msgid "Translate this site into %s with Tranzly™"
 msgstr ""
 
 #. translators: %s: a language, e.g. "German".
-#: includes/modules/offers/class-copy.php:232
+#: includes/modules/offers/class-copy.php:231
 msgid "Translate this site with Tranzly™"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:233
+#: includes/modules/offers/class-copy.php:232
 msgid "Give these visitors pages in their own language, with translated addresses and SEO data, and every language gets its own sitemap."
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:238
+#: includes/modules/offers/class-copy.php:237
 msgid "Build fuller pages with Page Builder Sandwich"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:239
+#: includes/modules/offers/class-copy.php:238
 msgid "Ready-made sections — FAQs, comparisons, features, calls to action — turn a thin page into a complete one in minutes, with nothing slowing it down."
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:245
+#: includes/modules/offers/class-copy.php:244
 msgid "Serve pages faster with Zinn® Cache"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:246
+#: includes/modules/offers/class-copy.php:245
 msgid "A free page cache and object cache that answer repeat visits without waking WordPress, so pages arrive faster."
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:251
+#: includes/modules/offers/class-copy.php:250
 msgid "Answer your visitors while they are still on the page"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:252
+#: includes/modules/offers/class-copy.php:251
 msgid "Live chat for your site, with an AI agent that answers from your own pages day and night and hands over to you when a person is needed. Questions become customers instead of lost tabs."
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:258
+#: includes/modules/offers/class-copy.php:257
 msgid "Move your images to a fast CDN"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:259
+#: includes/modules/offers/class-copy.php:258
 msgid "Zinn® Media Offload moves the media library to object storage and serves it from a CDN, so your server stops carrying the weight."
 msgstr ""
 
 #. translators: %s: a plugin's name.
-#: includes/modules/offers/class-copy.php:267
+#: includes/modules/offers/class-copy.php:266
 #, php-format
 msgid "Install %s free"
 msgstr ""
