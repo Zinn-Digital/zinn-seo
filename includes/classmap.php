@@ -35,6 +35,8 @@ return array(
 	'ZinnDigital\\ZinnSEO\\AdminKit\\Screens' => 'includes/admin-kit/class-screens.php',
 	'ZinnDigital\\ZinnSEO\\AdminKit\\Support' => 'includes/admin-kit/class-support.php',
 	'ZinnDigital\\ZinnSEO\\Admin\\Admin' => 'includes/admin/class-admin.php',
+	'ZinnDigital\\ZinnSEO\\AgentReady\\Agent_Ready' => 'includes/modules/agent-ready/class-agent-ready.php',
+	'ZinnDigital\\ZinnSEO\\AgentReady\\Agent_Ready_Rest' => 'includes/modules/agent-ready/class-agent-ready-rest.php',
 	'ZinnDigital\\ZinnSEO\\AiCore\\Admin' => 'includes/ai-core/class-admin.php',
 	'ZinnDigital\\ZinnSEO\\AiCore\\Anthropic' => 'includes/ai-core/class-anthropic.php',
 	'ZinnDigital\\ZinnSEO\\AiCore\\Catalogue' => 'includes/ai-core/class-catalogue.php',

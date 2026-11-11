@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.85 =
+* New: Agent Ready. One score for how ready your site is for AI agents and answer engines (robots access, llms.txt, sitemaps, structured data and MCP), with a one-click fix for each failing check, under Sitemaps and AI. Also as two MCP abilities.
+
 = 0.17.84 =
 * Dependency security update (Renovate).
 

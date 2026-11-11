@@ -455,6 +455,13 @@
             "compare": true
         },
         {
+            "id": "zs-784",
+            "area": "AI visibility",
+            "title": "AI agent readiness score",
+            "min": "free",
+            "compare": true
+        },
+        {
             "id": "zs-060",
             "area": "Crawling and indexing",
             "title": "robots.txt editor with checks",

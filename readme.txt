@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.84
+Stable tag: 0.17.85
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -267,6 +267,7 @@ Google Docs™ is a trademark of Google LLC.
 * A language index for AI assistants
 * Choose which AI crawlers may read the site
 * Say how your content may be used
+* AI agent readiness score
 
 **Crawling and indexing**
 
@@ -835,6 +836,9 @@ They are answered before your theme loads, from small index files, so a redirect
 12. Every screen right to left in Arabic, and translated into 57 languages.
 
 == Changelog ==
+
+= 0.17.85 =
+* New: Agent Ready. One score for how ready your site is for AI agents and answer engines (robots access, llms.txt, sitemaps, structured data and MCP), with a one-click fix for each failing check, under Sitemaps and AI. Also as two MCP abilities.
 
 = 0.17.84 =
 * Dependency security update (Renovate).

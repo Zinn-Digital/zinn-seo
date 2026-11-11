@@ -154,6 +154,21 @@ final class Api {
 	}
 
 	/**
+	 * The Agent Ready report (zs-784): score 0-100, grade (ready, nearly, not_ready) and every
+	 * check with its fix. Page Builder Sandwich shows it on its settings screen.
+	 *
+	 * @return array<string, mixed>|null Null when the Agent Ready module is off.
+	 */
+	public function agent_ready(): ?array {
+		if ( ! Modules::enabled( 'agent-ready' ) ) {
+			return null;
+		}
+		Modules::load( 'agent-ready' );
+
+		return \ZinnDigital\ZinnSEO\AgentReady\Agent_Ready::report();
+	}
+
+	/**
 	 * Is the no-trace mode on?
 	 *
 	 * @return bool

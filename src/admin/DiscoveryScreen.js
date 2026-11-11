@@ -3,6 +3,7 @@ import { useState } from '@wordpress/element';
 import { Button, Notice, Spinner, TabPanel } from '@wordpress/components';
 
 import { errorText, useSettings } from './api';
+import AgentReadyTab from './discovery/AgentReadyTab';
 import SitemapsTab from './discovery/SitemapsTab';
 import RobotsTab from './discovery/RobotsTab';
 import CrawlersTab from './discovery/CrawlersTab';
@@ -17,6 +18,7 @@ import { ModuleGate } from './discovery/shared';
  */
 export function discoveryTabs() {
 	return [
+		{ name: 'agent', title: __( 'Agent Ready', 'zinn-seo' ) },
 		{ name: 'sitemaps', title: __( 'Sitemaps', 'zinn-seo' ) },
 		{ name: 'robots', title: __( 'robots.txt', 'zinn-seo' ) },
 		{ name: 'ai', title: __( 'AI crawlers', 'zinn-seo' ) },
@@ -94,7 +96,7 @@ export default function DiscoveryScreen( { data } ) {
 				initialTabName={
 					discoveryTabs().some( ( t ) => t.name === initial )
 						? initial
-						: 'sitemaps'
+						: 'agent'
 				}
 				onSelect={ ( name ) =>
 					window.history.replaceState( null, '', `#/${ name }` )
@@ -102,6 +104,19 @@ export default function DiscoveryScreen( { data } ) {
 			>
 				{ ( tab ) => {
 					switch ( tab.name ) {
+						case 'agent':
+							return (
+								<ModuleGate
+									id="agent-ready"
+									label={ __(
+										'Score how ready the site is for AI agents',
+										'zinn-seo'
+									) }
+									{ ...props }
+								>
+									<AgentReadyTab />
+								</ModuleGate>
+							);
 						case 'robots':
 							return (
 								<ModuleGate

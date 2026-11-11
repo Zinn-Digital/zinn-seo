@@ -35,6 +35,7 @@
 	"src/admin/blocks/IndexTab.js": [ "build/settings.js" ],
 	"src/admin/blocks/LibraryTab.js": [ "build/settings.js" ],
 	"src/admin/bulk/confirmBulk.js": [ "build/settings.js" ],
+	"src/admin/discovery/AgentReadyTab.js": [ "build/settings.js" ],
 	"src/admin/discovery/CrawlersTab.js": [ "build/settings.js" ],
 	"src/admin/discovery/IndexingTab.js": [ "build/settings.js" ],
 	"src/admin/discovery/LlmsTab.js": [ "build/settings.js" ],

@@ -678,6 +678,30 @@ final class Rest_Map {
 				),
 			),
 			array(
+				'method'      => 'GET',
+				'route'       => '/zinn-seo/v1/agent-ready',
+				'name'        => 'zinn-seo/get-agent-ready',
+				'label'       => __( 'Read the Agent Ready score', 'zinn-seo' ),
+				'description' => __( 'Returns how ready the site is for AI agents and answer engines: a score out of 100, a grade and every check (crawler access, llms.txt, sitemaps, structured data, Markdown, MCP) with its fix. live: true also fetches robots.txt and llms.txt over HTTP.', 'zinn-seo' ),
+				'edition'     => 'free',
+				'capability'  => 'the REST route\'s own per-item permission check',
+			),
+			array(
+				'method'      => 'POST',
+				'route'       => '/zinn-seo/v1/agent-ready/fix',
+				'name'        => 'zinn-seo/fix-agent-ready',
+				'label'       => __( 'Fix an Agent Ready check', 'zinn-seo' ),
+				'description' => __( 'Applies the one-click fix of one Agent Ready check (check: answer_bots, usage_signals, llms, llms_full, sitemaps, schema, mcp or markdown) and returns the new score.', 'zinn-seo' ),
+				'edition'     => 'free',
+				'capability'  => 'the REST route\'s own per-item permission check',
+				'args'        => array(
+					'dry_run' => array(
+						'type'        => 'boolean',
+						'description' => __( 'True: change nothing, and answer what this call would send and what the site holds now.', 'zinn-seo' ),
+					),
+				),
+			),
+			array(
 				'method' => 'GET',
 				'route'  => '/zinn-seo/v1/agents/activity',
 				'exempt' => 'the AI agents tab itself: an agent never changes its own access, reads the owner\'s review queue or approves its own change',

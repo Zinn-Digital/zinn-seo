@@ -1961,6 +1961,50 @@
             "mcp_tool": "zinn-seo-find-places"
         },
         {
+            "name": "zinn-seo/fix-agent-ready",
+            "label": "Fix an Agent Ready check",
+            "description": "Applies the one-click fix of one Agent Ready check (check: answer_bots, usage_signals, llms, llms_full, sitemaps, schema, mcp or markdown) and returns the new score.",
+            "edition": "free",
+            "capability": "the REST route's own per-item permission check",
+            "annotations": {
+                "readonly": false,
+                "destructive": false,
+                "idempotent": false
+            },
+            "input_schema": {
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                    "check": {
+                        "type": "string",
+                        "enum": [
+                            "answer_bots",
+                            "usage_signals",
+                            "llms",
+                            "llms_full",
+                            "sitemaps",
+                            "schema",
+                            "mcp",
+                            "markdown"
+                        ]
+                    },
+                    "dry_run": {
+                        "type": "boolean",
+                        "description": "True: change nothing, and answer what this call would send and what the site holds now."
+                    }
+                },
+                "required": [
+                    "check"
+                ]
+            },
+            "output_schema": {},
+            "rest": {
+                "method": "POST",
+                "path": "/wp-json/wp-abilities/v1/abilities/zinn-seo/fix-agent-ready/run"
+            },
+            "mcp_tool": "zinn-seo-fix-agent-ready"
+        },
+        {
             "name": "zinn-seo/fix-conflict",
             "label": "Fix an SEO conflict",
             "description": "Applies the fix for one conflict (id). It can be undone.",
@@ -2081,6 +2125,36 @@
                 "path": "/wp-json/wp-abilities/v1/abilities/zinn-seo/get-address-change/run"
             },
             "mcp_tool": "zinn-seo-get-address-change"
+        },
+        {
+            "name": "zinn-seo/get-agent-ready",
+            "label": "Read the Agent Ready score",
+            "description": "Returns how ready the site is for AI agents and answer engines: a score out of 100, a grade and every check (crawler access, llms.txt, sitemaps, structured data, Markdown, MCP) with its fix. live: true also fetches robots.txt and llms.txt over HTTP.",
+            "edition": "free",
+            "capability": "the REST route's own per-item permission check",
+            "annotations": {
+                "readonly": true,
+                "destructive": false,
+                "idempotent": true
+            },
+            "input_schema": {
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                    "live": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Also fetch robots.txt and llms.txt over HTTP and judge what the site really serves."
+                    }
+                },
+                "default": {}
+            },
+            "output_schema": {},
+            "rest": {
+                "method": "GET",
+                "path": "/wp-json/wp-abilities/v1/abilities/zinn-seo/get-agent-ready/run"
+            },
+            "mcp_tool": "zinn-seo-get-agent-ready"
         },
         {
             "name": "zinn-seo/get-ai-providers",
