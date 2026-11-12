@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 final class Promotions {
 
 	/** The kinds of card the copy table knows. */
-	public const KINDS = array( 'hosting', 'marketplace', 'platform', 'plugin', 'bundle', 'ads' );
+	public const KINDS = array( 'hosting', 'marketplace', 'platform', 'plugin', 'bundle', 'membership', 'ads' );
 
 	/**
 	 * Every card, resolved for the current site and host, including dismissed ones (the shell
@@ -45,7 +45,7 @@ final class Promotions {
 
 		/**
 		 * Filters the promotion registry before it is resolved. Add a row to promote another
-		 * product: `id`, `kind` (hosting|marketplace|platform|plugin|bundle|ads), `slot`
+		 * product: `id`, `kind` (hosting|marketplace|platform|plugin|bundle|membership|ads), `slot`
 		 * (promo|cross-sell), and `url` or (for a plugin) `name`, `site`, `main_files`.
 		 *
 		 * @param array<int, array<string, mixed>> $rows Registry rows.
@@ -88,6 +88,16 @@ final class Promotions {
 		if ( 'ads' === $kind ) {
 			// ⛔⛔ Never on a Footprint-Free (PBN) site (za-35, owner footprint rule).
 			if ( self::footprint_free() ) {
+				return null;
+			}
+			$locale      = function_exists( 'determine_locale' ) ? (string) determine_locale() : 'en_US';
+			$card['url'] = self::safe_url( self::localized_url( $card['url'], (array) ( $row['slugs'] ?? array() ), $locale ) );
+		}
+		if ( 'membership' === $kind ) {
+			// The Zinn® Pro Membership (owner 2026-11-11, idea 4): shown on the free AND the Pro
+			// build, because a site paying for one Pro plugin is the best reader of "every Pro
+			// plugin, one licence". No membership configured (no price) means no card.
+			if ( null === self::membership_from() ) {
 				return null;
 			}
 			$locale      = function_exists( 'determine_locale' ) ? (string) determine_locale() : 'en_US';
@@ -182,6 +192,22 @@ final class Promotions {
 	}
 
 	/**
+	 * The Zinn® Pro Membership's lowest yearly price as the card shows it (`$149`), from
+	 * products.json `membership.from_minor` (integer US cents), which
+	 * wp/tests/unit/AdminKitMembershipOfferTest.php holds equal to the Personal annual price of
+	 * `membership` in wp/freemius-plans.json. Null when no membership is configured.
+	 *
+	 * @return string|null
+	 */
+	public static function membership_from(): ?string {
+		$minor = (int) ( ( (array) ( Data::get( 'products' )['membership'] ?? array() ) )['from_minor'] ?? 0 );
+		if ( $minor <= 0 ) {
+			return null;
+		}
+		return '$' . ( 0 === $minor % 100 ? (string) intdiv( $minor, 100 ) : number_format( $minor / 100, 2, '.', '' ) );
+	}
+
+	/**
 	 * The translated copy for a card.
 	 *
 	 * @param string $kind  Card kind.
@@ -238,6 +264,20 @@ final class Promotions {
 						/* translators: %d: the largest saving, in whole percent. */
 						: sprintf( __( 'Both Pro plugins on the same plan and site limit, for up to %d%% less than buying them separately.', 'zinn-seo' ), $offer['percent'] ),
 					'cta'         => __( 'See the bundle', 'zinn-seo' ),
+					'activeTitle' => '',
+					'activeBody'  => '',
+				);
+			case 'membership':
+				$from = self::membership_from();
+				return null === $from ? null : array(
+					'brand'       => $brand,
+					'title'       => __( 'Every Zinn® Pro plugin, one licence', 'zinn-seo' ),
+					'body'        => sprintf(
+						/* translators: %s: the lowest yearly price with its currency sign, e.g. "$149". */
+						__( 'The Zinn® Pro Membership gives you the Pro versions of Page Builder Sandwich, Tranzly, Zinn® SEO, Zinn® Cache and Zinn® Backups, and every Pro plugin we release next, from %s a year. A second membership adds Zinn® Chat Pro.', 'zinn-seo' ),
+						$from
+					),
+					'cta'         => __( 'See the Pro Membership', 'zinn-seo' ),
 					'activeTitle' => '',
 					'activeBody'  => '',
 				);

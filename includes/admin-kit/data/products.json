@@ -8,6 +8,7 @@
 		"`in_bundle: false`: the host is not sold in the bundle, so its SDK init carries no bundle keys and its screens offer no bundle card. Absent means true.",
 		"`shared_exclude`: shared features (product `shared` in docs/plugins-overhaul/features.json) this host does not ship, so its Plans screen never lists them. Zinn® SEO gains the AI core in its stage P10 and removes those ids then.",
 		"`on_wordpress_org: false` (Zinn® SEO until stage D2, the WordPress.org switch-over): a search of the WordPress.org directory would not find the plugin, so its card offers no Install button and sends people to its own site (`site`), which says how to get it. wp/tests/unit/AdminKitPromotionsTest.php holds this equal to `dotorg_listed` in wp/plugins.json, so the day the plugin is listed the test asks for the flip. Absent means true.",
+		"`membership` is the Zinn® Pro Membership (owner 2026-11-11, idea 4): Freemius bundles 44611 (every Pro plugin except Zinn® Chat Pro) and 44612 (with it). `from_minor` is the lowest yearly price in US cents, the Personal annual price of `membership` in wp/freemius-plans.json; wp/tests/unit/AdminKitMembershipOfferTest.php fails when they differ. Promotions::membership_from() renders it on the membership card.",
 		"`docs_root` is where a help link goes when a screen has no guide of its own. It must be a page that answers 200 today (CLAUDE.md 2.41): scripts/wp-admin-kit-check.py --live asserts it."
 	],
 	"bundle": {
@@ -16,6 +17,11 @@
 		"license_auto_activation": true,
 		"saving_percent": 38,
 		"pricing_path": "pricing/"
+	},
+	"membership": {
+		"id": "44611",
+		"chat_id": "44612",
+		"from_minor": 14900
 	},
 	"products": {
 		"tranzly": {

@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.89
+Stable tag: 0.17.90
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -837,6 +837,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.90 =
+* Shows the Zinn® Pro Membership offer in the plugin's Zinn® panel.
+
 = 0.17.89 =
 * New: when you create a Zinn® account from the connect screen and that address's inbox is full, the screen now says so (naming Gmail, Outlook and other providers it recognises), so the e-mail with your link is not missed. Make some space and keep waiting, or use a different e-mail address.
 
@@ -863,8 +866,5 @@ They are answered before your theme loads, from small index files, so a redirect
 
 = 0.17.81 =
 * The AI agents (MCP) panel now says to add the connection address as a custom MCP server in ChatGPT; developer mode is no longer needed.
-
-= 0.17.80 =
-* Reviews: the free plugin reads Google and Tripadvisor; more review sites are in Zinn® SEO Pro.
 
 The full history of every release is in changelog.txt, in the plugin's folder.

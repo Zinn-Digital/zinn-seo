@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zinn® SEO 0.17.89\n"
+"Project-Id-Version: Zinn® SEO 0.17.90\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zinn-seo\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-11T20:04:57+00:00\n"
+"POT-Creation-Date: 2026-11-11T21:23:30+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zinn-seo\n"
@@ -1990,137 +1990,151 @@ msgid "AI agents (MCP)"
 msgstr ""
 
 #. translators: %s: a plugin's name.
-#: includes/admin-kit/class-promotions.php:154
+#: includes/admin-kit/class-promotions.php:164
 #, php-format
 msgid "See %s"
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:198
+#: includes/admin-kit/class-promotions.php:224
 msgid "Hosting built for fast, multilingual WordPress"
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:199
+#: includes/admin-kit/class-promotions.php:225
 msgid "Managed WordPress hosting from the team that makes this plugin, tuned for speed and for sites in many languages."
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:200
+#: includes/admin-kit/class-promotions.php:226
 msgid "See Zinn Digital® hosting"
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:207
+#: includes/admin-kit/class-promotions.php:233
 msgid "Hire a WordPress expert on ZinnHub"
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:208
+#: includes/admin-kit/class-promotions.php:234
 msgid "A freelance marketplace for WordPress design, development, translation and SEO work."
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:209
+#: includes/admin-kit/class-promotions.php:235
 msgid "Visit ZinnHub"
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:216
+#: includes/admin-kit/class-promotions.php:242
 msgid "Bulk site and PBN hosting"
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:217
+#: includes/admin-kit/class-promotions.php:243
 msgid "PBN.ltd is our platform for hosting and managing many sites at once."
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:218
+#: includes/admin-kit/class-promotions.php:244
 msgid "Visit PBN.ltd"
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:225
+#: includes/admin-kit/class-promotions.php:251
 msgid "Google Ads management that asks before it spends"
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:226
+#: includes/admin-kit/class-promotions.php:252
 msgid "Zinn® Ads audits your Google Ads account every day and fixes wasted spend, every change approved by you first. Its click-fraud shield is free with Zinn® hosting."
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:227
+#: includes/admin-kit/class-promotions.php:253
 msgid "See Zinn® Ads"
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:235
+#: includes/admin-kit/class-promotions.php:261
 msgid "Get Page Builder Sandwich Pro and Tranzly Pro together"
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:237
+#: includes/admin-kit/class-promotions.php:263
 msgid "The bundle costs less than buying both plugins separately, on the same plans and site limits."
 msgstr ""
 
 #. translators: %d: the largest saving, in whole percent.
-#: includes/admin-kit/class-promotions.php:239
+#: includes/admin-kit/class-promotions.php:265
 #, php-format
 msgid "Both Pro plugins on the same plan and site limit, for up to %d%% less than buying them separately."
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:240
+#: includes/admin-kit/class-promotions.php:266
 #: src/admin-kit/PlansScreen.js:245
 msgid "See the bundle"
 msgstr ""
 
+#: includes/admin-kit/class-promotions.php:274
+msgid "Every Zinn® Pro plugin, one licence"
+msgstr ""
+
+#. translators: %s: the lowest yearly price with its currency sign, e.g. "$149".
+#: includes/admin-kit/class-promotions.php:277
+#, php-format
+msgid "The Zinn® Pro Membership gives you the Pro versions of Page Builder Sandwich, Tranzly, Zinn® SEO, Zinn® Cache and Zinn® Backups, and every Pro plugin we release next, from %s a year. A second membership adds Zinn® Chat Pro."
+msgstr ""
+
+#: includes/admin-kit/class-promotions.php:280
+msgid "See the Pro Membership"
+msgstr ""
+
 #. translators: %s: a plugin's name.
-#: includes/admin-kit/class-promotions.php:250
+#: includes/admin-kit/class-promotions.php:290
 #: includes/modules/offers/class-copy.php:273
 #, php-format
 msgid "Get %s"
 msgstr ""
 
 #. translators: 1: this plugin's name, 2: the other plugin's name.
-#: includes/admin-kit/class-promotions.php:252
+#: includes/admin-kit/class-promotions.php:292
 #, php-format
 msgid "Integration active: %1$s and %2$s work together"
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:269
+#: includes/admin-kit/class-promotions.php:309
 msgid "Translate this site with Tranzly"
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:272
+#: includes/admin-kit/class-promotions.php:312
 msgid "Build pages visually with Page Builder Sandwich"
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:275
+#: includes/admin-kit/class-promotions.php:315
 msgid "Get this site professionally optimised for search with Zinn® SEO"
 msgstr ""
 
 #. translators: %s: a plugin's name.
-#: includes/admin-kit/class-promotions.php:279
+#: includes/admin-kit/class-promotions.php:319
 #, php-format
 msgid "%s, from Zinn Digital®"
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:291
+#: includes/admin-kit/class-promotions.php:331
 msgid "Publish every page in many languages, with translated addresses, SEO data and a language switcher. Works with the pages you build here."
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:294
+#: includes/admin-kit/class-promotions.php:334
 msgid "Design pages right in the editor with fast, footprint-free blocks. Everything you build translates with Tranzly."
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:297
+#: includes/admin-kit/class-promotions.php:337
 msgid "Titles, sitemaps, rich results, redirects and AI visibility from one guided setup, with nothing added to the pages your visitors load, so the site stays fast. Moving from Yoast or Rank Math takes a few clicks."
 msgstr ""
 
 #. translators: %s: a plugin's name.
-#: includes/admin-kit/class-promotions.php:301
+#: includes/admin-kit/class-promotions.php:341
 #, php-format
 msgid "%s is made by the same team and works alongside this plugin."
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:315
+#: includes/admin-kit/class-promotions.php:355
 msgid "Zinn® SEO is active on this site: search titles, descriptions and social text are translated with each page, and every language gets its own sitemap and llms.txt."
 msgstr ""
 
-#: includes/admin-kit/class-promotions.php:318
+#: includes/admin-kit/class-promotions.php:358
 msgid "Zinn® SEO is active on this site: its SEO blocks are in the block inserter, and the structured data of the pages you build joins one search graph."
 msgstr ""
 
 #. translators: %s: the other plugin's name.
-#: includes/admin-kit/class-promotions.php:323
+#: includes/admin-kit/class-promotions.php:363
 #, php-format
 msgid "%s is active on this site, so both plugins share one set of AI provider keys and one settings screen for them."
 msgstr ""
