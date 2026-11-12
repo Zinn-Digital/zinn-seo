@@ -21,7 +21,7 @@ import { viewHref } from '../admin-kit/router';
 import { Loaded, NewTab, Refusal, Table, useAction, useLoad } from './parts';
 import { count, day, money, price } from './pure';
 import { TopUp } from './CreditSettings';
-import MailboxFull from './MailboxFull';
+import MailboxFull, { withIsolated } from './MailboxFull';
 import { noticeKind, toolName, unitName } from './labels';
 import './tools.scss';
 
@@ -273,7 +273,7 @@ function ConnectCard( { data, connection, onChange } ) {
  * @param {Function} props.onChange   Called with the new state.
  * @return {Element} Card.
  */
-function PendingCard( { connection, onChange } ) {
+export function PendingCard( { connection, onChange } ) {
 	const pending = connection.pending || {};
 	const [ outcome, setOutcome ] = useState( '' );
 	const [ error, setError ] = useState( null );
@@ -337,7 +337,7 @@ function PendingCard( { connection, onChange } ) {
 				/>
 				{ 'created' === pending.account ? (
 					<p className="zseo-lead">
-						{ sprintf(
+						{ withIsolated(
 							/* translators: %s: an e-mail address. */
 							__(
 								'We sent a link to %s. Open it, choose your password, and this site connects by itself — you can leave this page open.',

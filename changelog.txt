@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.91 =
+* Fix: in Arabic and other right-to-left languages, an e-mail address that starts with a number (1111@example.com) on the connect screen ("We sent a link to …" and the full-inbox notice) no longer shows back to front (example.com@1111).
+
 = 0.17.90 =
 * Shows the Zinn® Pro Membership offer in the plugin's Zinn® panel.
 
