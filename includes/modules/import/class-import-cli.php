@@ -359,4 +359,27 @@ final class Import_Cli {
 		self::finish( Import::JOB_UNDO );
 		\WP_CLI::line( (string) wp_json_encode( Import::state()['undo'] ?? array() ) );
 	}
+
+	/**
+	 * Record our team's report of a done-for-you move: the screen then says the move is done and
+	 * links the ticket the report was sent on.
+	 *
+	 * ## OPTIONS
+	 *
+	 * --url=<url>
+	 * : The ticket on app.zinndigital.com.
+	 *
+	 * [--ticket=<ticket>]
+	 * : A plugin-support reference shown on the link, e.g. ZT-ABC123.
+	 *
+	 * @subcommand team-report
+	 * @param array<int, string>    $args  Arguments.
+	 * @param array<string, string> $assoc Options.
+	 * @return void
+	 */
+	public function team_report( array $args, array $assoc ): void { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundBeforeLastUsed -- WP-CLI's signature.
+		$result = Import::team_report( (string) ( $assoc['url'] ?? '' ), (string) ( $assoc['ticket'] ?? '' ) );
+		self::bail( $result );
+		\WP_CLI::success( 'The move report is linked: ' . ( is_array( $result ) ? (string) $result['url'] : '' ) );
+	}
 }

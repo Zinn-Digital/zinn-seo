@@ -144,9 +144,10 @@ final class Seopress extends Source {
 				'page'                    => '%pagenumber%',
 				'cpt_plural'              => '%posttype_plural%',
 				// It writes a month archive as "3 - 2026".
-				// It writes "month number - year" from the request: a day archive says its month, a
-				// year archive "0 - 2026" (month | day | year formats, as it prints each).
-				'archive_date'            => '%date(n - Y | n - Y | \\0 - Y)%',
+				// From SEOPress 10.4 it writes a day archive "1 - 3 - 2026" and a year archive "2026"
+				// (it wrote "3 - 2026" and "0 - 2026" before; the certification on 10.4 measured it,
+				// 2026-11-12). Formats are month | day | year, as it prints each.
+				'archive_date'            => '%date(n - Y | j - n - Y | Y)%',
 				'archive_date_month'      => '%date(n | n | \\0)%',
 				'archive_date_month_name' => '%date(F | F)%',
 				'archive_date_year'       => '%year%',

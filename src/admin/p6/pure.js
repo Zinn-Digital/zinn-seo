@@ -288,3 +288,34 @@ export function proven( state ) {
 		p.batch === state.applied.batch
 	);
 }
+
+/**
+ * Our team's report of a done-for-you move (owner ruling Q371(b), 2026-11-12): the report goes
+ * by ticket and the screen says the move is done, with how many SEO titles and redirects came
+ * over. Null unless a copy finished and our team linked its ticket on app.zinndigital.com.
+ *
+ * @param {Object|null} state The stored state of the move.
+ * @return {{titles: number, redirects: number, ticket: string, url: string}|null} Report.
+ */
+export function teamReport( state ) {
+	const applied = state && state.applied;
+	const team = state && state.team;
+	if ( ! applied || ! team || ! team.url ) {
+		return null;
+	}
+	if (
+		! /^https:\/\/app\.zinndigital\.com\/support\/[A-Za-z0-9/_-]+$/.test(
+			String( team.url )
+		)
+	) {
+		return null;
+	}
+	const counts = applied.counts || {};
+	const r = counts.redirects || {};
+	return {
+		titles: Number( ( counts.fields || {} ).title ) || 0,
+		redirects: ( Number( r.new ) || 0 ) + ( Number( r.replace ) || 0 ),
+		ticket: String( team.ticket || '' ),
+		url: String( team.url ),
+	};
+}

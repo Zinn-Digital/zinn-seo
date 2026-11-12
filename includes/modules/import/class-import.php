@@ -226,6 +226,7 @@ final class Import {
 			'preflight' => null,
 			'proof'     => null,
 			'switching' => null,
+			'team'      => null,
 		);
 	}
 
@@ -523,6 +524,7 @@ final class Import {
 			$batch                     = History::suspend();
 			$state                     = self::state();
 			$state['applied']          = null;
+			$state['team']             = null;
 			$state['batch']            = (string) ( $batch['id'] ?? '' );
 			$state['overwrite']        = $overwrite;
 			$state['redirects_before'] = self::redirects_max_id();
@@ -1216,6 +1218,7 @@ final class Import {
 							'switched'  => null,
 							'proof'     => null,
 							'switching' => null,
+							'team'      => null,
 							'batch'     => '',
 							'undo'      => array(
 								'restored'    => (int) $run['restored'],
@@ -1268,6 +1271,39 @@ final class Import {
 		$ids = array_map( 'intval', (array) $wpdb->get_col( $wpdb->prepare( 'SELECT id FROM %i WHERE id > %d AND origin = %s ORDER BY id ASC LIMIT 200', $store::table(), (int) $state['redirects_before'], self::origin( $source ) ) ) );
 
 		return array() === $ids ? 0 : (int) $store::delete( $ids );
+	}
+
+	/**
+	 * Our team's report of a done-for-you move (owner ruling Q371(b), 2026-11-12): the report
+	 * still goes by ticket, and the screen says the move is done and links that ticket. Only a
+	 * copy that finished can carry one; a new move or an undo starts a fresh state without it.
+	 *
+	 * @param string $url    The ticket on Zinn®: https://app.zinndigital.com/support/….
+	 * @param string $ticket Optional reference shown on the link: ZT- then 4 to 12 capitals or
+	 *                       digits (a customer's dashboard ticket has none, only its address).
+	 * @return array<string, mixed>|\WP_Error The stored report.
+	 */
+	public static function team_report( string $url, string $ticket = '' ) {
+		$state = self::state();
+		if ( ! is_array( $state['applied'] ) ) {
+			return new \WP_Error( 'zinn_seo_import_not_applied', __( 'Nothing was copied yet, so there is no move to report.', 'zinn-seo' ), array( 'status' => 409 ) );
+		}
+		$ticket = strtoupper( trim( $ticket ) );
+		if ( '' !== $ticket && 1 !== preg_match( '/^ZT-[A-Z0-9]{4,12}$/', $ticket ) ) {
+			return new \WP_Error( 'zinn_seo_import_ticket', __( 'The ticket reference must look like ZT-ABC123.', 'zinn-seo' ), array( 'status' => 400 ) );
+		}
+		$parts = wp_parse_url( trim( $url ) );
+		if ( ! is_array( $parts ) || 'https' !== ( $parts['scheme'] ?? '' ) || 'app.zinndigital.com' !== strtolower( (string) ( $parts['host'] ?? '' ) ) || isset( $parts['port'] ) || isset( $parts['user'] ) || 1 !== preg_match( '#^/support/[A-Za-z0-9/_-]+$#', (string) ( $parts['path'] ?? '' ) ) ) {
+			return new \WP_Error( 'zinn_seo_import_ticket_url', __( 'The ticket link must be the ticket on app.zinndigital.com.', 'zinn-seo' ), array( 'status' => 400 ) );
+		}
+		$state['team'] = array(
+			'ticket' => $ticket,
+			'url'    => 'https://app.zinndigital.com' . (string) $parts['path'],
+			'at'     => time(),
+		);
+		self::put( $state );
+
+		return $state['team'];
 	}
 
 	/**

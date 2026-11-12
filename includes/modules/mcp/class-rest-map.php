@@ -3105,6 +3105,11 @@ final class Rest_Map {
 				),
 			),
 			array(
+				'method' => 'POST',
+				'route'  => '/zinn-seo/v1/import/team-report',
+				'exempt' => 'Staff record of a done-for-you move: our team links the ticket its report went on after doing the move by hand (Q371(b), docs/1103 §4). Not an agent action: an agent saying a move is done would be a claim nobody made.',
+			),
+			array(
 				'method'      => 'POST',
 				'route'       => '/zinn-seo/v1/import/undo',
 				'name'        => 'zinn-seo/undo-import',

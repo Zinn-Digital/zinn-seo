@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.92
+Stable tag: 0.17.93
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -837,6 +837,10 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.93 =
+* After our team moves your site for you, the Move from another SEO plugin screen says the move is done (how many SEO titles and redirects came over) and links the ticket with our report.
+* Moving from SEOPress 10.4 now brings its year, month and day archive titles over exactly as SEOPress shows them.
+
 = 0.17.92 =
 * Pro licences include full enterprise-level 24/7 support in 50+ languages.
 * The Zinn® Pro Membership card now opens the membership page in your admin language.
@@ -864,8 +868,5 @@ They are answered before your theme loads, from small index files, so a redirect
 
 = 0.17.84 =
 * Dependency security update (Renovate).
-
-= 0.17.83 =
-* Fixit no longer asks for SEO work on a page search engines are told not to index: "pages need SEO work" now counts only the pages the sitemap lists (not noindex, not left out, not hidden in the shop, not pointing elsewhere).
 
 The full history of every release is in changelog.txt, in the plugin's folder.

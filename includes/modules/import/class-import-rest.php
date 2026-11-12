@@ -112,6 +112,23 @@ final class Import_Rest {
 		$post( '/import/accept', static fn() => Check::accept() );
 		$post( '/import/switch', static fn() => Switcher::off() );
 		$post( '/import/undo', static fn() => Import::undo() );
+		// Our team's report of a done-for-you move (Q371(b)): the ticket it was sent on.
+		$post(
+			'/import/team-report',
+			static fn( \WP_REST_Request $r ) => Import::team_report( (string) $r['url'], (string) $r['ticket'] ),
+			array(
+				'ticket' => array(
+					'type'    => 'string',
+					'default' => '',
+					'pattern' => '^(ZT-[A-Za-z0-9]{4,12})?$',
+				),
+				'url'    => array(
+					'type'     => 'string',
+					'required' => true,
+					'format'   => 'uri',
+				),
+			)
+		);
 		register_rest_route(
 			$ns,
 			'/import/differences',

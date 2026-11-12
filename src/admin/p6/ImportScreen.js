@@ -9,6 +9,7 @@ import {
 	Card,
 	CardBody,
 	CardHeader,
+	ExternalLink,
 	Modal,
 	Notice,
 	Spinner,
@@ -27,6 +28,7 @@ import {
 	sameCounts,
 	showValue,
 	stage,
+	teamReport,
 	total,
 } from './pure';
 import GuideLink from '../p7/GuideLink';
@@ -618,6 +620,7 @@ export default function ImportScreen( { data } ) {
 	// A count changes nothing, so it does not start a move: it is this plugin's when it names it.
 	const dry = state.dry && state.dry.source === id ? state.dry : null;
 	const applied = mine ? state.applied : null;
+	const report = mine ? teamReport( state ) : null;
 	const check = mine ? state.check : null;
 	const proof = mine ? state.proof : null;
 	const isProven = mine && proven( state );
@@ -655,6 +658,28 @@ export default function ImportScreen( { data } ) {
 			</div>
 			{ ! done && ! off && ! inMove && (
 				<TeamMove data={ data } source={ id } />
+			) }
+			{ report && (
+				<Notice status="success" isDismissible={ false }>
+					{ sprintf(
+						/* translators: 1: number of SEO titles moved, 2: number of redirects moved. */
+						__(
+							'Move done: %1$d SEO titles, %2$d redirects moved.',
+							'zinn-seo'
+						),
+						report.titles,
+						report.redirects
+					) }{ ' ' }
+					<ExternalLink href={ report.url }>
+						{ report.ticket
+							? sprintf(
+									/* translators: %s: the ticket reference, e.g. ZT-ABC123. */
+									__( "Our team's report: %s", 'zinn-seo' ),
+									report.ticket
+								)
+							: __( "Read our team's report", 'zinn-seo' ) }
+					</ExternalLink>
+				</Notice>
 			) }
 			{ error && (
 				<Notice status="error" onRemove={ () => setError( '' ) }>
