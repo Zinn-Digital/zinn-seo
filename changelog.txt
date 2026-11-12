@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.94 =
+* Dependency security update (Renovate).
+
 = 0.17.93 =
 * After our team moves your site for you, the Move from another SEO plugin screen says the move is done (how many SEO titles and redirects came over) and links the ticket with our report.
 * Moving from SEOPress 10.4 now brings its year, month and day archive titles over exactly as SEOPress shows them.
