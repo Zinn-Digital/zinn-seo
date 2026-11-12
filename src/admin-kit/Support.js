@@ -113,7 +113,7 @@ function Consent( { kit, onAgree } ) {
 					</li>
 					<li>
 						{ __(
-							'your licence ID, so paying customers get priority;',
+							'your licence ID, so we can confirm the support your licence includes;',
 							'zinn-seo'
 						) }
 					</li>
@@ -408,7 +408,7 @@ function TicketForm( { kit, mode } ) {
 						) }{ ' ' }
 						{ 'high' === result.priority &&
 							__(
-								'Your plan includes priority support.',
+								'Your licence includes full enterprise-level 24/7 support in 50+ languages.',
 								'zinn-seo'
 							) }
 					</Notice>

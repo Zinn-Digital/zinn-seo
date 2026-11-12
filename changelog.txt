@@ -4,6 +4,10 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.92 =
+* Pro licences include full enterprise-level 24/7 support in 50+ languages.
+* The Zinn® Pro Membership card now opens the membership page in your admin language.
+
 = 0.17.91 =
 * Fix: in Arabic and other right-to-left languages, an e-mail address that starts with a number (1111@example.com) on the connect screen ("We sent a link to …" and the full-inbox notice) no longer shows back to front (example.com@1111).
 

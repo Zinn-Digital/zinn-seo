@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * read by what the licence actually covers:
  *
  *     legacy licence, unlimited sites  -> agency   (every feature, white label included)
- *     legacy licence, more than 1 site -> business (every Pro feature, priority support)
+ *     legacy licence, more than 1 site -> business (every Pro feature)
  *     legacy licence, 1 site           -> personal (every Pro feature)
  *
  * ⭐ A bundle licence needs no rule of its own: the SDK activates the bundle's per-product

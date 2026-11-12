@@ -162,7 +162,7 @@ export default function Plans( { kit } ) {
 					{ licence.priority && (
 						<p className="zak-muted">
 							{ __(
-								'Your plan includes priority support.',
+								'Your licence includes full enterprise-level 24/7 support in 50+ languages.',
 								'zinn-seo'
 							) }
 						</p>
