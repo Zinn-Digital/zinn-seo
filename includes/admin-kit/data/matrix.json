@@ -2086,6 +2086,13 @@
             "compare": true
         },
         {
+            "id": "zs-785",
+            "area": "AI writing help",
+            "title": "SEO agent in the editor",
+            "min": "free",
+            "compare": true
+        },
+        {
             "id": "zs-721",
             "area": "AI writing help",
             "title": "Spelling, grammar and tone",

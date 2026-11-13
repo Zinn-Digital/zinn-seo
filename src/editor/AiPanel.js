@@ -16,6 +16,7 @@ import {
 import { seoFetch } from '../admin/api';
 import { AiFailure, PaidBy, firstFields, useRun } from '../ai/parts';
 import { linkFirst, plainText } from './analysis/pure';
+import AgentBox from './AgentBox';
 
 const boot = window.zinnSeoEditor || {};
 
@@ -228,6 +229,20 @@ export function AiBody() {
 					{ note }
 				</Notice>
 			) }
+			<AgentBox
+				postId={ postId }
+				current={
+					metaMode
+						? {
+								title: meta._zseo_title || '',
+								desc: meta._zseo_desc || '',
+								focus: meta._zseo_focus || '',
+							}
+						: {}
+				}
+				setFields={ setFields }
+				buyUrl={ ( ai.credits || {} ).buy_url }
+			/>
 			<Feature
 				title={ __( 'Title and description', 'zinn-seo' ) }
 				help={ __(

@@ -1,7 +1,7 @@
 <?php
 /**
  * Module: AI — on the site owner's own key or on Zinn® credits; every answer a suggestion a
- * person accepts (zs-190, zs-199, zs-200, zs-201, zs-433, zs-543, zs-545; credits zs-197).
+ * person accepts (zs-190, zs-199, zs-200, zs-201, zs-433, zs-543, zs-545, SEO agent zs-785; credits zs-197).
  *
  * @package ZinnDigital\ZinnSEO
  */
@@ -18,7 +18,7 @@ return array(
 	'description' => static fn() => __( 'Let AI write SEO titles, descriptions, image alt text and structured data, and explain any issue in plain words. Use your own OpenAI, Anthropic, Google Gemini or other key, or pay as you go with Zinn® credits. Nothing changes until you accept it.', 'zinn-seo' ),
 	'tier'        => 'free',
 	'area'        => 'ai',
-	'features'    => array( 'zs-190', 'zs-197', 'zs-199', 'zs-200', 'zs-201', 'zs-433', 'zs-543', 'zs-545' ),
+	'features'    => array( 'zs-190', 'zs-197', 'zs-199', 'zs-200', 'zs-201', 'zs-433', 'zs-543', 'zs-545', 'zs-785' ),
 	// Never on a visitor's page: AI runs only where a person asks for it.
 	'contexts'    => array( 'admin', 'rest', 'cli', 'cron' ),
 	'settings'    => array(
@@ -64,6 +64,8 @@ return array(
 		require_once __DIR__ . '/class-ai.php';
 		require_once __DIR__ . '/class-free-tasks.php';
 		\ZinnDigital\ZinnSEO\Ai\Free_Tasks::register();
+		require_once __DIR__ . '/class-agent.php';
+		\ZinnDigital\ZinnSEO\Ai\Agent::register();
 		/**
 		 * Fires when the AI tasks are registered: the Pro module adds its own here.
 		 */

@@ -57,6 +57,7 @@ return array(
 	'ZinnDigital\\ZinnSEO\\AiCore\\Store' => 'includes/ai-core/class-store.php',
 	'ZinnDigital\\ZinnSEO\\AiCore\\Tester' => 'includes/ai-core/class-tester.php',
 	'ZinnDigital\\ZinnSEO\\AiCore\\Zinn' => 'includes/ai-core/class-zinn.php', // brand-gate: allow — a PHP class name, not customer copy.
+	'ZinnDigital\\ZinnSEO\\Ai\\Agent' => 'includes/modules/ai/class-agent.php',
 	'ZinnDigital\\ZinnSEO\\Ai\\Ai' => 'includes/modules/ai/class-ai.php',
 	'ZinnDigital\\ZinnSEO\\Ai\\Ai_Cli' => 'includes/modules/ai/class-ai-cli.php',
 	'ZinnDigital\\ZinnSEO\\Ai\\Ai_Providers_Rest' => 'includes/modules/ai/class-ai-providers-rest.php',

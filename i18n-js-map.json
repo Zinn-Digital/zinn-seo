@@ -88,6 +88,7 @@
 	"src/blocks/index.js": [ "build/blocks.js" ],
 	"src/classic/analysis.js": [ "build/classic.js" ],
 	"src/classic/index.js": [ "build/classic.js" ],
+	"src/editor/AgentBox.js": [ "build/editor.js" ],
 	"src/editor/AiPanel.js": [ "build/editor.js" ],
 	"src/editor/AnalysisSidebar.js": [ "build/editor.js" ],
 	"src/editor/LockPanel.js": [ "build/editor.js" ],

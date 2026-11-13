@@ -83,7 +83,13 @@ final class Ai {
 		if ( ! self::allowed( $def ) ) {
 			return new \WP_Error( 'zinn_seo_ai_pro', __( 'This AI feature is part of Zinn® SEO Pro.', 'zinn-seo' ), array( 'status' => 403 ) );
 		}
-		$credits = self::on_credits( $def );
+		// A task that falls back to another provider (the SEO agent) names it; only a provider the
+		// site can use, never Zinn® credits by this route.
+		$forced = '';
+		if ( ! empty( $def['failover'] ) && isset( $opts['provider'] ) && is_string( $opts['provider'] ) && \ZinnDigital\ZinnSEO\AiCore\Zinn::ID !== $opts['provider'] && class_exists( \ZinnDigital\ZinnSEO\AiCore\Store::class ) && \ZinnDigital\ZinnSEO\AiCore\Store::configured( $opts['provider'] ) ) {
+			$forced = $opts['provider'];
+		}
+		$credits = '' === $forced && self::on_credits( $def );
 		$sees    = ! $credits && null !== $def['images'];
 		$out     = array();
 		$ready   = array();
@@ -152,6 +158,9 @@ final class Ai {
 				'max_tokens'  => min( 4096, max( 256, $pack * (int) $def['per_item'] ) ),
 				'temperature' => isset( $opts['temperature'] ) ? (float) $opts['temperature'] : 0.4,
 			);
+			if ( '' !== $forced ) {
+				$options['provider'] = $forced;
+			}
 			// A feature with a model of its own (the writer, spelling and tone): the person's
 			// choice for this run, else the feature's saved one, on the owner's own key only —
 			// on Zinn® credits Zinn® chooses the model for each job.

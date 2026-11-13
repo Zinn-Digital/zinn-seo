@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.95 =
+* New: the SEO agent in the editor's AI panel. Ask for help with the page in your own words; it answers and suggests a better SEO title, meta description or focus phrase, each with its own Apply. Nothing changes until you apply a suggestion and save the page. If your AI provider is down it asks the next provider you have a key for, and says which one answered.
+
 = 0.17.94 =
 * Dependency security update (Renovate).
 

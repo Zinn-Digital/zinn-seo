@@ -742,6 +742,21 @@ final class Rest_Map {
 			),
 			array(
 				'method'      => 'POST',
+				'route'       => '/zinn-seo/v1/ai/agent',
+				'name'        => 'zinn-seo/ask-seo-agent',
+				'label'       => __( 'Ask the SEO agent about a page', 'zinn-seo' ),
+				'description' => __( 'Asks the SEO agent about one post (id, ask). It answers with a reply and a proposed SEO title, meta description and focus phrase; nothing is changed. Falls back to the next AI provider with a key when the first is down.', 'zinn-seo' ),
+				'edition'     => 'free',
+				'capability'  => 'the REST route\'s own per-item permission check',
+				'args'        => array(
+					'dry_run' => array(
+						'type'        => 'boolean',
+						'description' => __( 'True: change nothing, and answer what this call would send and what the site holds now.', 'zinn-seo' ),
+					),
+				),
+			),
+			array(
+				'method'      => 'POST',
 				'route'       => '/zinn-seo/v1/ai/ask',
 				'name'        => 'zinn-seo/ask-seo-data',
 				'label'       => __( 'Ask your SEO data a question (Pro)', 'zinn-seo' ),

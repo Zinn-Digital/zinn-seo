@@ -150,6 +150,30 @@ final class Ai_Rest {
 		);
 		register_rest_route(
 			$ns,
+			'/ai/agent',
+			array(
+				'methods'             => \WP_REST_Server::CREATABLE,
+				'callback'            => array( self::class, 'agent' ),
+				'permission_callback' => static fn( \WP_REST_Request $r ): bool => self::can_use() && current_user_can( 'edit_post', (int) $r['id'] ),
+				'args'                => array(
+					'id'    => array(
+						'type'     => 'integer',
+						'required' => true,
+						'minimum'  => 1,
+					),
+					'ask'   => array(
+						'type'      => 'string',
+						'required'  => true,
+						'maxLength' => 2000,
+					),
+					'title' => array( 'type' => 'string' ),
+					'desc'  => array( 'type' => 'string' ),
+					'focus' => array( 'type' => 'string' ),
+				),
+			)
+		);
+		register_rest_route(
+			$ns,
 			'/ai/suggestions',
 			array(
 				'methods'             => \WP_REST_Server::READABLE,
@@ -317,6 +341,29 @@ final class Ai_Rest {
 		$error = Ai::as_error( $run );
 
 		return null !== $error ? $error : rest_ensure_response( $run );
+	}
+
+	/**
+	 * Ask the SEO agent about one post. It answers with PROPOSED changes only: nothing is written
+	 * until the person applies one in the editor (Agent).
+	 *
+	 * @param \WP_REST_Request $r Request.
+	 * @return \WP_REST_Response|\WP_Error
+	 */
+	public static function agent( \WP_REST_Request $r ) {
+		$def = Tasks::get( Agent::TASK );
+		if ( null !== $def && Ai::on_credits( $def ) && ! current_user_can( Capabilities::SPEND ) ) {
+			return new \WP_Error( 'zinn_seo_ai_spend', __( 'AI on this site is paid with Zinn® credits, and your account is not allowed to spend them. Ask the site\'s administrator.', 'zinn-seo' ), array( 'status' => 403 ) );
+		}
+		$opts = array( 'ask' => (string) $r['ask'] );
+		foreach ( array( 'title', 'desc', 'focus' ) as $name ) {
+			if ( null !== $r[ $name ] ) {
+				$opts[ $name ] = (string) $r[ $name ];
+			}
+		}
+		$out = Agent::ask( (int) $r['id'], $opts );
+
+		return is_wp_error( $out ) ? $out : rest_ensure_response( $out );
 	}
 
 	/**

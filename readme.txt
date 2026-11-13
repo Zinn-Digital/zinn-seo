@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.94
+Stable tag: 0.17.95
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -129,9 +129,9 @@ Your pages stay as fast as they were: no front-end script or stylesheet (a few h
 
 = AI that writes, you approve =
 
-* Use your own key (OpenAI, Anthropic, Google Gemini and more, or a model on your own server), or pay as you go with Zinn® credits.
-* Titles, descriptions, image alt text and structured data for any page. Nothing changes until you use it.
-* When AI fails you are told why, and what to do.
+* Use your own key (OpenAI, Anthropic, Gemini and more, or your own server's model), or use pay-as-you-go Zinn® credits.
+* Titles, descriptions, alt text and structured data for any page, and an SEO agent in the editor. Nothing changes until you press Apply.
+* When AI fails you are told why and what to do.
 * **Pro:** the whole site at once, FAQs, product copy, internal links, redirects for 404s and site moves, content briefs and "ask your SEO data".
 
 = Guided setup =
@@ -837,6 +837,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.95 =
+* New: the SEO agent in the editor's AI panel. Ask for help with the page in your own words; it answers and suggests a better SEO title, meta description or focus phrase, each with its own Apply. Nothing changes until you apply a suggestion and save the page. If your AI provider is down it asks the next provider you have a key for, and says which one answered.
+
 = 0.17.94 =
 * Dependency security update (Renovate).
 
@@ -865,8 +868,5 @@ They are answered before your theme loads, from small index files, so a redirect
 
 = 0.17.86 =
 * Dependency security update (Renovate).
-
-= 0.17.85 =
-* New: Agent Ready. One score for how ready your site is for AI agents and answer engines (robots access, llms.txt, sitemaps, structured data and MCP), with a one-click fix for each failing check, under Sitemaps and AI. Also as two MCP abilities.
 
 The full history of every release is in changelog.txt, in the plugin's folder.
