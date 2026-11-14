@@ -25,9 +25,15 @@ if ( ! defined( 'ABSPATH' ) ) {
  * - its Version is a public release number (digits and dots only: `2.4.9`, never `0.32.9-zhfix6`,
  *   `1.2-dev` or `3.0-custom`);
  * - the offer is newer than it;
- * - it comes from where the plugin says it updates from: an `Update URI` header names the host the
- *   offer must come from (and a plugin with its own Update URI never takes a WordPress.org offer);
- * - the offer's homepage, when both say one, is the plugin's own `Plugin URI` (same host);
+ * - it comes from where the plugin says it updates from: with an `Update URI` header (not
+ *   WordPress.org) the offer's package must be fetched over https from that host or a subdomain of
+ *   it, whatever the id or url say (an id or url naming the host is not enough; any other package,
+ *   or none, is a custom build), and such a plugin never takes a WordPress.org offer;
+ * - with no such Update URI, the offer's homepage, when both say one, is the plugin's own
+ *   `Plugin URI` (same host). The Update URI host is the authority when there is one: a vendor's
+ *   update service (Freemius: Plugin URI zinndigital.com, offer url wp.freemius.com, package
+ *   api.freemius.com) never shares the marketing homepage (0.17.96, CFCPU1114: every Pro copy of
+ *   Zinn SEO judged its own Freemius update a custom build and never updated);
  * - the offer's author, when it says one, is the plugin's `Author`.
  *
  * Anything else is a CUSTOM BUILD: the screens and e-mails say so and that its maintainer decides,
@@ -51,18 +57,29 @@ final class Update_Trust {
 		if ( '' === $want || ! version_compare( $want, $have, '>' ) ) {
 			return self::verdict( 'not_newer' );
 		}
-		$uri  = trim( (string) ( $header['UpdateURI'] ?? '' ) );
-		$id   = (string) ( $offer['id'] ?? '' );
-		$from = array_filter( array( self::host( $id ), self::host( (string) ( $offer['url'] ?? '' ) ), self::host( (string) ( $offer['package'] ?? '' ) ) ) );
+		$uri      = trim( (string) ( $header['UpdateURI'] ?? '' ) );
+		$id       = (string) ( $offer['id'] ?? '' );
+		$declared = false; // The offer's package comes from the host the Update URI names.
 		if ( '' !== $uri && ! in_array( self::host( $uri ), array( 'w.org', 'wordpress.org' ), true ) ) {
+			// Only the PACKAGE is what gets installed, so only it is bound: it must be fetched over
+			// https from the Update URI host or a dot-bounded subdomain of it, whatever the id or url
+			// say (VERIFY-ZST and VERIFY-ZST2, 0.17.97). A subdomain is the same owner, and a strict
+			// equality would break our own channel: every Zinn plugin declares Update URI
+			// zinndigital.com while the engine serves its package from api.zinndigital.com
+			// (engine/engine/api/plugin_views.py). An id or url naming the host vouches for nothing,
+			// a plain-http package can be swapped in transit, an offer with no package is not
+			// trusted, and the dot keeps `evilzinndigital.com` out. package_host() reads the
+			// authority strictly, so userinfo, `\` and empty labels cannot smuggle a host in.
 			$own = self::host( $uri );
-			if ( 0 === strpos( $id, 'w.org/' ) || ( array() !== $from && ! in_array( $own, $from, true ) ) ) {
+			$got = self::package_host( (string) ( $offer['package'] ?? '' ) );
+			if ( 0 === strpos( $id, 'w.org/' ) || '' === $own || ( $got !== $own && ! str_ends_with( $got, '.' . $own ) ) ) {
 				return self::verdict( 'other_source' );
 			}
+			$declared = true;
 		}
 		$home = self::host( (string) ( $header['PluginURI'] ?? $header['ThemeURI'] ?? '' ) );
 		$url  = self::host( (string) ( $offer['url'] ?? '' ) );
-		if ( '' !== $home && '' !== $url && 0 !== strpos( $id, 'w.org/' ) && $home !== $url ) {
+		if ( ! $declared && '' !== $home && '' !== $url && 0 !== strpos( $id, 'w.org/' ) && $home !== $url ) {
 			return self::verdict( 'other_source' );
 		}
 		$by = self::name( (string) ( $offer['author'] ?? '' ) );
@@ -71,6 +88,27 @@ final class Update_Trust {
 		}
 
 		return self::verdict( '' );
+	}
+
+	/**
+	 * The lower-cased host of an https package URL, or '' when its authority is anything but a
+	 * plain hostname. Pure.
+	 *
+	 * Strict on purpose: `https://`, then non-empty letter/digit/hyphen labels (none starting or
+	 * ending with a hyphen, no trailing dot), an optional port, then `/`, `?`, `#` or the end.
+	 * Userinfo (`a@b`), a backslash (a WHATWG parser reads `\` as `/`, so `https://evil\@ours`
+	 * downloads from `evil` while parse_url says `ours`), percent-escapes and empty labels are
+	 * refused rather than guessed at.
+	 *
+	 * @param string $package Package URL.
+	 * @return string
+	 */
+	public static function package_host( string $package ): string {
+		$label = '[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?';
+		if ( 1 !== preg_match( '#^https://(' . $label . '(?:\.' . $label . ')*)(?::[0-9]{1,5})?(?:[/?\#]|$)#i', $package, $m ) ) {
+			return '';
+		}
+		return strtolower( $m[1] );
 	}
 
 	/**

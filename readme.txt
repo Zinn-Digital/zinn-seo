@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.95
+Stable tag: 0.17.97
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -836,6 +836,12 @@ They are answered before your theme loads, from small index files, so a redirect
 12. Every screen right to left in Arabic, and translated into 57 languages.
 
 == Changelog ==
+
+= 0.17.97 =
+* Security: for a plugin with an Update URI, Safe updates trusts an update only when the download itself comes over https from that address or one of its subdomains. An update that merely names that address, a download from any other address (including a lookalike that only ends with the same letters), a plain-http download, or an offer with no download, is still held.
+
+= 0.17.96 =
+* Fix: Safe updates held Zinn® SEO Pro's own updates (and other plugins sold through an update service such as Freemius) as a "custom build", because the update service's address is not the plugin's homepage. An update that comes from the address the plugin names in its Update URI is now trusted, so Pro sites update again.
 
 = 0.17.95 =
 * New: the SEO agent in the editor's AI panel. Ask for help with the page in your own words; it answers and suggests a better SEO title, meta description or focus phrase, each with its own Apply. Nothing changes until you apply a suggestion and save the page. If your AI provider is down it asks the next provider you have a key for, and says which one answered.
