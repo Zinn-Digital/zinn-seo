@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.98 =
+* Ships package.json and package-lock.json beside the JavaScript sources, so npm ci && npm run build rebuilds the shipped build/ from the plugin folder; the readme links the public source repository.
+
 = 0.17.97 =
 * Security: for a plugin with an Update URI, Safe updates trusts an update only when the download itself comes over https from that address or one of its subdomains. An update that merely names that address, a download from any other address (including a lookalike that only ends with the same letters), a plain-http download, or an offer with no download, is still held.
 

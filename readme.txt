@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.97
+Stable tag: 0.17.98
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -207,6 +207,14 @@ Google Docs™ is a trademark of Google LLC.
 2. Open **SEO** in the admin menu. The guided setup starts on its own.
 
 == Frequently Asked Questions ==
+
+= How do I build the JavaScript from source? =
+
+The admin screens and editor scripts are built from the human-readable sources in `src/` with `@wordpress/scripts`. The `package.json` and `package-lock.json` that pin the build tools ship in the plugin folder; run this there:
+
+`npm ci && npm run build`
+
+The same source and build tools are public at https://github.com/Zinn-Digital/zinn-seo
 
 = What is in the free plugin? =
 
@@ -837,6 +845,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.98 =
+* Ships package.json and package-lock.json beside the JavaScript sources, so npm ci && npm run build rebuilds the shipped build/ from the plugin folder; the readme links the public source repository.
+
 = 0.17.97 =
 * Security: for a plugin with an Update URI, Safe updates trusts an update only when the download itself comes over https from that address or one of its subdomains. An update that merely names that address, a download from any other address (including a lookalike that only ends with the same letters), a plain-http download, or an offer with no download, is still held.
 
@@ -865,14 +876,5 @@ They are answered before your theme loads, from small index files, so a redirect
 
 = 0.17.89 =
 * New: when you create a Zinn® account from the connect screen and that address's inbox is full, the screen now says so (naming Gmail, Outlook and other providers it recognises), so the e-mail with your link is not missed. Make some space and keep waiting, or use a different e-mail address.
-
-= 0.17.88 =
-* Emergency help offer: for an outage only. Support is free and 24/7 on every Zinn Digital® plan, and code changes and bug fixes go to our developer at the dev rate, through Custom development.
-
-= 0.17.87 =
-* Fix: Agent Ready now reads content signals from the robots.txt your site really serves. When a robots.txt file on the server overrides your settings, the check says so and links to the robots.txt screen instead of offering a switch that could not pass.
-
-= 0.17.86 =
-* Dependency security update (Renovate).
 
 The full history of every release is in changelog.txt, in the plugin's folder.
