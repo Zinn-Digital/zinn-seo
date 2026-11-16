@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.99
+Stable tag: 0.17.100
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -845,6 +845,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.100 =
+* Dependency security update (Renovate).
+
 = 0.17.99 =
 * Dependency security update (Renovate).
 
@@ -873,8 +876,5 @@ They are answered before your theme loads, from small index files, so a redirect
 
 = 0.17.91 =
 * Fix: in Arabic and other right-to-left languages, an e-mail address that starts with a number (1111@example.com) on the connect screen ("We sent a link to …" and the full-inbox notice) no longer shows back to front (example.com@1111).
-
-= 0.17.90 =
-* Shows the Zinn® Pro Membership offer in the plugin's Zinn® panel.
 
 The full history of every release is in changelog.txt, in the plugin's folder.
