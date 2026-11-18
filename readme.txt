@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.101
+Stable tag: 0.17.102
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -845,6 +845,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.102 =
+* Dependency security update (Renovate).
+
 = 0.17.101 =
 * Dependency security update (Renovate).
 
@@ -872,9 +875,5 @@ They are answered before your theme loads, from small index files, so a redirect
 = 0.17.93 =
 * After our team moves your site for you, the Move from another SEO plugin screen says the move is done (how many SEO titles and redirects came over) and links the ticket with our report.
 * Moving from SEOPress 10.4 now brings its year, month and day archive titles over exactly as SEOPress shows them.
-
-= 0.17.92 =
-* Pro licences include full enterprise-level 24/7 support in 50+ languages.
-* The Zinn® Pro Membership card now opens the membership page in your admin language.
 
 The full history of every release is in changelog.txt, in the plugin's folder.
