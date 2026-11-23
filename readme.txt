@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.103
+Stable tag: 0.17.104
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -845,6 +845,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.104 =
+* Dependency security update (Renovate).
+
 = 0.17.103 =
 * Dependency security update (Renovate).
 
@@ -871,8 +874,5 @@ They are answered before your theme loads, from small index files, so a redirect
 
 = 0.17.95 =
 * New: the SEO agent in the editor's AI panel. Ask for help with the page in your own words; it answers and suggests a better SEO title, meta description or focus phrase, each with its own Apply. Nothing changes until you apply a suggestion and save the page. If your AI provider is down it asks the next provider you have a key for, and says which one answered.
-
-= 0.17.94 =
-* Dependency security update (Renovate).
 
 The full history of every release is in changelog.txt, in the plugin's folder.
