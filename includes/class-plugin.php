@@ -164,6 +164,8 @@ final class Plugin {
 		// restores them (premium package only: the free one has nothing to stop).
 		$lapse = dirname( $pro ) . '/class-lapse.php';
 		if ( is_readable( $lapse ) ) {
+			require_once dirname( $pro ) . '/class-pro-files.php';
+			Pro\Pro_Files::boot();
 			require_once $lapse;
 			Pro\Lapse::boot( $context, self::is_pro() );
 		}

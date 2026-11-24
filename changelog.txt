@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.110 =
+* WordPress.org review fixes: nothing is written into or removed from the must-use, plugins or themes folders by free code without your action, add-ons hook in through actions, and translated text is filtered for every role.
+
 = 0.17.109 =
 * An AI provider key saved by an older version is re-sealed from the admin screens only, never during a visitor's request; small admin screen fixes.
 

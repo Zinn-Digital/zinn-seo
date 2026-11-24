@@ -119,8 +119,6 @@ final class Redirects {
 		add_filter( 'zinn_seo_sitemap_entry', array( self::class, 'sitemap_entry' ), 5 );
 		add_filter( 'zinn_seo_fixit_sources', array( self::class, 'fixit_sources' ) );
 		add_action( 'zinn_seo_fixit_actions', array( self::class, 'fixit_actions' ) );
-		// Deactivation removes the Pro must-use file whatever the licence says by then.
-		add_action( 'deactivate_' . plugin_basename( ZINN_SEO_FILE ), array( self::class, 'remove_dropin' ) );
 		if ( 'admin' === $context ) {
 			self::orphan_dropin();
 			add_action( 'admin_post_' . self::EXPORT, array( self::class, 'download' ) );
@@ -136,7 +134,11 @@ final class Redirects {
 	 */
 	public static function orphan_dropin(): void {
 		if ( ! \ZinnDigital\ZinnSEO\Modules::enabled( 'redirects-pro' ) ) {
-			self::remove_dropin();
+			/**
+			 * Fires when Pro's fast-redirects module no longer runs here, so the premium package
+			 * removes the must-use file it wrote (the free plugin never touches that folder).
+			 */
+			do_action( 'zinn_seo_pro_files_orphaned' );
 			// The same for the rules Pro kept in .htaccess (§2.62): left there, the web server went on
 			// answering redirects the Redirects screen had changed or deleted since.
 			self::clear_htaccess();
@@ -163,18 +165,6 @@ final class Redirects {
 		}
 
 		return false !== file_put_contents( $file, str_replace( $m[0], '', $body ), LOCK_EX ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents -- see above.
-	}
-
-	/**
-	 * Remove the Pro must-use file (only the one this plugin wrote).
-	 *
-	 * @return void
-	 */
-	public static function remove_dropin(): void {
-		$file = trailingslashit( WPMU_PLUGIN_DIR ) . 'zd-redirects.php';
-		if ( file_exists( $file ) && false !== strpos( (string) file_get_contents( $file ), 'redirects-pro/early.php' ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- a small local file.
-			wp_delete_file( $file );
-		}
 	}
 
 	/**

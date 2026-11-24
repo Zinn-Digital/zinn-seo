@@ -79,13 +79,12 @@ final class Uninstall {
 				}
 			}
 		}
-		foreach ( array( trailingslashit( WP_PLUGIN_DIR ) . 'zinn-seo-guard-stage', trailingslashit( WPMU_PLUGIN_DIR ) . 'zinn-seo-guard' ) as $dir ) {
-			if ( is_dir( $dir ) ) {
-				self::remove_tree( $dir );
-			}
-		}
-		if ( is_file( trailingslashit( WPMU_PLUGIN_DIR ) . 'zinn-seo-guard.php' ) ) {
-			wp_delete_file( trailingslashit( WPMU_PLUGIN_DIR ) . 'zinn-seo-guard.php' );
+		// The files Pro keeps outside uploads (its staging folder, must-use loader, fast-redirects
+		// file) are removed by Pro itself: the free plugin never touches those folders (R003).
+		$pro_files = __DIR__ . '/pro__premium_only/class-pro-files.php';
+		if ( is_readable( $pro_files ) ) {
+			require_once $pro_files;
+			Pro\Pro_Files::uninstall();
 		}
 		$wpdb->query( $wpdb->prepare( "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s", $wpdb->esc_like( 'zseo_' ) . '%' ) );
 		$wpdb->query( $wpdb->prepare( "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s OR option_name LIKE %s", $wpdb->esc_like( '_transient_zseo_' ) . '%', $wpdb->esc_like( '_transient_timeout_zseo_' ) . '%' ) );
@@ -208,7 +207,7 @@ final class Uninstall {
 	 * @param string $dir Folder.
 	 * @return void
 	 */
-	private static function remove_tree( string $dir ): void {
+	public static function remove_tree( string $dir ): void {
 		foreach ( (array) scandir( $dir ) as $name ) {
 			if ( ! is_string( $name ) || '.' === $name || '..' === $name ) {
 				continue;
@@ -262,11 +261,6 @@ final class Uninstall {
 		// The redirect index: `zd-private/rd/<shard>.json`, `regex.json`.
 		$shapes['zd-private/rd'] = '/^(([a-f0-9]{3}|regex)\.json(\.[A-Za-z0-9]{6}\.tmp)?|index\.php)$/';
 		$shapes['zd-private']    = '/^([a-z0-9]{32}\.csv|index\.php|\.htaccess)$/';
-		// The Pro "fast redirects" must-use file (only ours).
-		$dropin = trailingslashit( WPMU_PLUGIN_DIR ) . 'zd-redirects.php';
-		if ( is_readable( $dropin ) && false !== strpos( (string) file_get_contents( $dropin ), 'redirects-pro/early.php' ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- a small local file.
-			wp_delete_file( $dropin );
-		}
 		// The Pro `.htaccess` block (between its own markers only).
 		$htaccess = ABSPATH . '.htaccess';
 		if ( is_readable( $htaccess ) && is_writable( $htaccess ) ) { // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_is_writable -- the site's own .htaccess.

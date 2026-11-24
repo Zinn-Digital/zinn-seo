@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.109
+Stable tag: 0.17.110
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -845,6 +845,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.110 =
+* WordPress.org review fixes: nothing is written into or removed from the must-use, plugins or themes folders by free code without your action, add-ons hook in through actions, and translated text is filtered for every role.
+
 = 0.17.109 =
 * An AI provider key saved by an older version is re-sealed from the admin screens only, never during a visitor's request; small admin screen fixes.
 
@@ -871,9 +874,6 @@ They are answered before your theme loads, from small index files, so a redirect
 * Dependency security update (Renovate).
 
 = 0.17.101 =
-* Dependency security update (Renovate).
-
-= 0.17.100 =
 * Dependency security update (Renovate).
 
 The full history of every release is in changelog.txt, in the plugin's folder.
