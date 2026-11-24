@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.106 =
+* Maintenance release.
+
 = 0.17.105 =
 * Dependency security update (Renovate).
 
