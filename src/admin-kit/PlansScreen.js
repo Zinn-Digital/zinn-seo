@@ -30,8 +30,8 @@ export default function Plans( { kit } ) {
 	const licence = kit.licence || {};
 	const paid = ( kit.plans || [] ).filter( ( p ) => 'free' !== p.id );
 
-	let extraNotice = null;
-	let extraAction = null;
+	// A property, not a `let`: the dotorg build strips the region that sets it (no-useless-assignment).
+	const extra = { notice: null, action: null };
 	// dotorg-omit:begin
 	// The in-place, no-card trial: self-hosted builds only. The wordpress.org build removes this
 	// region (bin/build-plugin.php, dotorg-omit) and shows only the "Compare plans" link.
@@ -67,12 +67,12 @@ export default function Plans( { kit } ) {
 			)
 			.finally( () => setBusy( false ) );
 	};
-	extraNotice = notice && (
+	extra.notice = notice && (
 		<Notice status={ notice.status } onRemove={ () => setNotice( null ) }>
 			{ notice.message }
 		</Notice>
 	);
-	extraAction = licence.trial && licence.trial.available && (
+	extra.action = licence.trial && licence.trial.available && (
 		<Button
 			variant="primary"
 			isBusy={ busy }
@@ -126,7 +126,7 @@ export default function Plans( { kit } ) {
 
 	return (
 		<div className="zak-stack">
-			{ extraNotice }
+			{ extra.notice }
 			<Card className="zak-card" data-zak-tour="licence">
 				<CardHeader>
 					<h2 className="zak-card__title">
@@ -222,7 +222,7 @@ export default function Plans( { kit } ) {
 							) ) }
 						</ul>
 						<p className="zak-actions">
-							{ extraAction }
+							{ extra.action }
 							{ licence.upgradeUrl && (
 								<Button
 									variant="secondary"
