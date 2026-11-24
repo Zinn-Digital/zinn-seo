@@ -95,7 +95,7 @@ final class Pbs {
 			return;
 		}
 		$post = is_singular() ? get_queried_object() : null;
-		if ( ! $post instanceof \WP_Post || false === strpos( (string) $post->post_content, 'wp:pbs/' ) || post_password_required( $post ) ) {
+		if ( ! $post instanceof \WP_Post || ( false === strpos( (string) $post->post_content, 'wp:pbsw/' ) && false === strpos( (string) $post->post_content, 'wp:pbs/' ) ) || post_password_required( $post ) ) {
 			return;
 		}
 		$url   = (string) get_permalink( $post );
@@ -103,7 +103,7 @@ final class Pbs {
 		foreach ( self::pbs_blocks( parse_blocks( (string) $post->post_content ) ) as $b ) {
 			$name  = (string) $b['blockName'];
 			$attrs = (array) ( $b['attrs'] ?? array() );
-			if ( 'pbs/accordion' === $name && ! empty( $attrs['faq'] ) ) {
+			if ( in_array( $name, array( 'pbsw/accordion', 'pbs/accordion' ), true ) && ! empty( $attrs['faq'] ) ) {
 				foreach ( self::inline_json( self::render_alone( $b ) ) as $node ) {
 					if ( 'FAQPage' === ( $node['@type'] ?? '' ) ) {
 						$node['@id'] = $url . '#faq';
@@ -183,7 +183,7 @@ final class Pbs {
 	 */
 	public static function strip_inline( $html, $block ): string {
 		$html = (string) $html;
-		if ( 'pbs/accordion' !== ( $block['blockName'] ?? '' ) || ! in_array( 'FAQPage', self::$absorbed, true ) || false === strpos( $html, 'application/ld+json' ) ) {
+		if ( ! in_array( $block['blockName'] ?? '', array( 'pbsw/accordion', 'pbs/accordion' ), true ) || ! in_array( 'FAQPage', self::$absorbed, true ) || false === strpos( $html, 'application/ld+json' ) ) {
 			return $html;
 		}
 
@@ -199,7 +199,7 @@ final class Pbs {
 	private static function pbs_blocks( array $blocks ): array {
 		$out = array();
 		foreach ( $blocks as $b ) {
-			if ( 0 === strpos( (string) ( $b['blockName'] ?? '' ), 'pbs/' ) ) {
+			if ( 1 === preg_match( '#^pbsw?/#', (string) ( $b['blockName'] ?? '' ) ) ) {
 				$out[] = $b;
 			}
 			if ( ! empty( $b['innerBlocks'] ) ) {

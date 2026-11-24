@@ -63,7 +63,7 @@
 
 		// The admin accent (#3858e9 by default) is 3.2:1 on the dark surface; links and
 		// tertiary/link buttons take a lighter tint of it so they stay above 4.5:1.
-		// `.button-link` is WordPress's own link-styled <button> (the AI agents panel's OAuth
+		// `.button-link` is WordPress's own link-styled <button> (the AI agents panel's connected-app
 		// "Disconnect", 2.48:1 — live axe on demo.tranzly.io, the one site with a connected app).
 		a,
 		.button-link,

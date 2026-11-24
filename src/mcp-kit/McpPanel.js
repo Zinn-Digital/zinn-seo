@@ -7,7 +7,7 @@
  * (`mcp` in the payload is McpKit\Server::describe() plus `saved`).
  */
 import { __, sprintf } from '@wordpress/i18n';
-import { useEffect, useState } from '@wordpress/element';
+import { RawHTML, useEffect, useState } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
 import {
 	ExternalLink,
@@ -147,89 +147,11 @@ export default function McpPanel( { path, initialOpen = true } ) {
 								onChange={ () => {} }
 								onFocus={ ( event ) => event.target.select() }
 							/>
-							{ mcp.oauth && mcp.oauth.available && (
-								<>
-									<p>
-										<strong>
-											{ __(
-												'Claude and ChatGPT: sign in instead',
-												'zinn-seo'
-											) }
-										</strong>
-										<br />
-										{ __(
-											'Add the connection address as a custom connector in Claude, or as a custom MCP server in ChatGPT. They open this site so you can approve them; no password to copy.',
-											'zinn-seo'
-										) }
-									</p>
-									{ mcp.oauth.apps.length > 0 && (
-										<>
-											<p>
-												{ __(
-													'AI apps connected to your account:',
-													'zinn-seo'
-												) }
-											</p>
-											<ul className="zd-mcp-panel__apps">
-												{ mcp.oauth.apps.map(
-													( app ) => (
-														<li key={ app.id }>
-															{ app.name }{ ' ' }
-															<form
-																method="post"
-																action={
-																	mcp.oauth
-																		.action
-																}
-																style={ {
-																	display:
-																		'inline',
-																} }
-															>
-																<input
-																	type="hidden"
-																	name="action"
-																	value="zinn_mcp_oauth_disconnect"
-																/>
-																<input
-																	type="hidden"
-																	name="app"
-																	value={
-																		app.id
-																	}
-																/>
-																<input
-																	type="hidden"
-																	name="_wpnonce"
-																	value={
-																		app.nonce
-																	}
-																/>
-																<button
-																	type="submit"
-																	className="button-link"
-																>
-																	{ __(
-																		'Disconnect',
-																		'zinn-seo'
-																	) }
-																</button>
-															</form>
-														</li>
-													)
-												) }
-											</ul>
-										</>
-									) }
-									<p>
-										<strong>
-											{ __(
-												'Other AI apps: an application password',
-												'zinn-seo'
-											) }
-										</strong>
-									</p>
-								</>
+							{ /* The AI-app sign-in block: HTML the server rendered and escaped (Server::sign_in()), '' in a build without it. */ }
+							{ mcp.sign_in && (
+								<RawHTML className="zd-mcp-panel__sign-in">
+									{ mcp.sign_in }
+								</RawHTML>
 							) }
 							<ol>
 								<li>

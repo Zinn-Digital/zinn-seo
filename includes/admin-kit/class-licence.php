@@ -223,6 +223,7 @@ final class Licence {
 	public static function tier(): string {
 		$tier = self::tier_from( Kit::fs() );
 
+		// dotorg-omit:begin
 		/**
 		 * Filters the plan tier the kit reports for this plugin (tests and staging; the licence
 		 * decides in production).
@@ -230,6 +231,7 @@ final class Licence {
 		 * @param string $tier `free`, `personal`, `business` or `agency`.
 		 */
 		$tier = (string) apply_filters( 'zseo_kit_tier', $tier );
+		// dotorg-omit:end
 
 		return isset( self::RANK[ $tier ] ) ? $tier : 'free';
 	}
@@ -292,6 +294,7 @@ final class Licence {
 		return $unlimited || ! isset( $licence->quota ) ? null : (int) $licence->quota;
 	}
 
+	// dotorg-omit:begin
 	/**
 	 * May this site use a feature?
 	 *
@@ -319,6 +322,8 @@ final class Licence {
 		return self::RANK[ $tier ] >= self::RANK[ $min ];
 	}
 
+	// dotorg-omit:end
+
 	/**
 	 * What the shell shows about the licence. No key, no secret: this is printed into the page.
 	 *
@@ -345,10 +350,12 @@ final class Licence {
 			),
 			'localhost'     => self::is_local_site(),
 			'freeLocalhost' => true,
-			'priority'      => self::tier_can( $tier, 'sh-r5' ),
-			'whiteLabel'    => self::tier_can( $tier, 'pbs-g3' ),
+			'priority'      => false,
+			'whiteLabel'    => false,
 			'upgradeUrl'    => '',
+			// dotorg-omit:begin
 			'trialUrl'      => '',
+			// dotorg-omit:end
 			'pricingUrl'    => '',
 			'accountUrl'    => '',
 			'renewal'       => null,
@@ -357,6 +364,12 @@ final class Licence {
 			'installId'     => '',
 			'licenceId'     => '',
 		);
+		// dotorg-omit:begin
+		// The plan gates for priority support and white label. The WordPress.org build has no
+		// per-feature plan gate at all, so both stay false there.
+		$out['priority']   = self::tier_can( $tier, 'sh-r5' );
+		$out['whiteLabel'] = self::tier_can( $tier, 'pbs-g3' );
+		// dotorg-omit:end
 		if ( null === $fs ) {
 			return $out;
 		}
@@ -383,15 +396,20 @@ final class Licence {
 		}
 
 		$out['trial']['active']    = self::call( $fs, 'is_trial' );
+		// No in-plugin trial in the WordPress.org package (review, 23 Nov): only the self-hosted build offers it.
+		// dotorg-omit:begin
 		$out['trial']['used']      = self::call( $fs, 'is_trial_utilized' );
-		$out['trial']['available'] = self::call( $fs, 'has_trial_plan' ) && ! $out['trial']['used'] && ! $out['trial']['active'] && ! self::call( $fs, 'is_paying' );
+		$out['trial']['available'] = self::offers_trial( $fs ) && self::call( $fs, 'has_trial_plan' ) && ! $out['trial']['used'] && ! $out['trial']['active'] && ! self::call( $fs, 'is_paying' );
+		// dotorg-omit:end
 		if ( $out['trial']['active'] && is_object( $site ) && ! empty( $site->trial_ends ) ) {
 			$out['trial']['endsAt'] = (string) $site->trial_ends;
 		}
 
 		if ( ! $out['premium'] ) {
 			$out['upgradeUrl'] = self::url( $fs, 'get_upgrade_url' );
+			// dotorg-omit:begin
 			$out['trialUrl']   = $out['trial']['available'] ? self::url( $fs, 'get_trial_url' ) : '';
+			// dotorg-omit:end
 		}
 		$out['pricingUrl'] = self::url( $fs, 'pricing_url' );
 		if ( $out['registered'] ) {
@@ -401,6 +419,7 @@ final class Licence {
 		return $out;
 	}
 
+	// dotorg-omit:begin
 	/**
 	 * Start the no-card trial (feature adm-7). The SDK can start it in place only for an
 	 * installation that is connected to the licensing service; otherwise the caller sends the
@@ -415,6 +434,13 @@ final class Licence {
 				'started' => false,
 				'url'     => '',
 				'message' => __( 'The licensing service is not available on this site.', 'zinn-seo' ),
+			);
+		}
+		if ( ! self::offers_trial( $fs ) ) {
+			return array(
+				'started' => false,
+				'url'     => '',
+				'message' => __( 'This edition has no trial.', 'zinn-seo' ),
 			);
 		}
 		if ( ! self::call( $fs, 'is_registered' ) || ! method_exists( $fs, 'start_trial' ) ) {
@@ -439,6 +465,18 @@ final class Licence {
 			'message' => is_string( $result ) && '' !== $result ? wp_strip_all_tags( $result ) : __( 'The trial could not be started here. Continue on the trial page instead.', 'zinn-seo' ),
 		);
 	}
+
+	/**
+	 * May this package offer the trial? A host that sets `no_free_trial` offers it only from its
+	 * premium package, because its free package is the WordPress.org one (guideline 5).
+	 *
+	 * @param object $fs The SDK instance.
+	 * @return bool
+	 */
+	private static function offers_trial( object $fs ): bool {
+		return '1' !== Kit::host( 'no_free_trial' ) || self::call( $fs, 'is_premium' );
+	}
+	// dotorg-omit:end
 
 	/**
 	 * Is this site a staging, local or development copy (feature sh-r1)?

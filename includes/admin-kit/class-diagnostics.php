@@ -141,7 +141,8 @@ final class Diagnostics {
 		$paths = array_filter(
 			array(
 				untrailingslashit( ABSPATH ),
-				defined( 'WP_CONTENT_DIR' ) ? untrailingslashit( WP_CONTENT_DIR ) : '',
+				untrailingslashit( dirname( get_theme_root() ) ),
+				untrailingslashit( (string) ( wp_upload_dir( null, false )['basedir'] ?? '' ) ),
 			),
 			static fn( string $path ): bool => strlen( $path ) > 1
 		);
@@ -161,10 +162,10 @@ final class Diagnostics {
 		if ( ! defined( 'WP_DEBUG_LOG' ) || ! WP_DEBUG_LOG ) {
 			return '';
 		}
-		if ( is_string( WP_DEBUG_LOG ) && '' !== WP_DEBUG_LOG && ! in_array( strtolower( WP_DEBUG_LOG ), array( '1', 'true' ), true ) ) {
-			return WP_DEBUG_LOG;
-		}
+		// wp_debug_mode() points PHP's error_log at the file WP_DEBUG_LOG names (the content folder's
+		// debug.log when it is just `true`), so ask PHP rather than rebuild the path from a constant.
+		$file = ini_get( 'error_log' );
 
-		return WP_CONTENT_DIR . '/debug.log';
+		return is_string( $file ) ? $file : '';
 	}
 }

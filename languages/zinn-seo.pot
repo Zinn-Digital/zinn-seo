@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zinn® SEO 0.17.106\n"
+"Project-Id-Version: Zinn® SEO 0.17.107\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/zinn-seo\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-14T11:08:03+00:00\n"
+"POT-Creation-Date: 2026-11-24T01:31:32+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zinn-seo\n"
@@ -191,31 +191,31 @@ msgstr ""
 msgid "The Zinn Digital® address this site is set to use is not a secure (https) address, so nothing was sent."
 msgstr ""
 
-#: includes/admin-kit/class-engine.php:92
+#: includes/admin-kit/class-engine.php:93
 msgid "Zinn Digital® could not be reached from this site. Check that the site can make outgoing connections, then try again."
 msgstr ""
 
-#: includes/admin-kit/class-engine.php:130
+#: includes/admin-kit/class-engine.php:131
 msgid "This site's connection to Zinn Digital® was revoked. Connect it again to continue."
 msgstr ""
 
-#: includes/admin-kit/class-engine.php:133
+#: includes/admin-kit/class-engine.php:134
 msgid "Zinn Digital® no longer recognises this site's connection. Connect it again to continue."
 msgstr ""
 
-#: includes/admin-kit/class-engine.php:136
+#: includes/admin-kit/class-engine.php:137
 msgid "Too many requests were sent from this site or address. Wait a little, then try again."
 msgstr ""
 
-#: includes/admin-kit/class-engine.php:139
+#: includes/admin-kit/class-engine.php:140
 msgid "Zinn Digital® could not accept this request. Check the email address and the message, then try again."
 msgstr ""
 
-#: includes/admin-kit/class-engine.php:142
+#: includes/admin-kit/class-engine.php:143
 msgid "Zinn Digital® could not handle the request just now. Try again in a few minutes."
 msgstr ""
 
-#: includes/admin-kit/class-legacy-support-users.php:108
+#: includes/admin-kit/class-legacy-support-users.php:112
 msgid "This temporary support access has expired."
 msgstr ""
 
@@ -223,7 +223,11 @@ msgstr ""
 msgid "The licensing service is not available on this site."
 msgstr ""
 
-#: includes/admin-kit/class-licence.php:439
+#: includes/admin-kit/class-licence.php:424
+msgid "This edition has no trial."
+msgstr ""
+
+#: includes/admin-kit/class-licence.php:446
 msgid "The trial could not be started here. Continue on the trial page instead."
 msgstr ""
 
@@ -1989,7 +1993,7 @@ msgid "Services from Zinn®"
 msgstr ""
 
 #: includes/admin-kit/class-matrix.php:1208
-#: includes/mcp-kit/class-server.php:322
+#: includes/mcp-kit/class-server.php:334
 #: includes/modules/mcp/module.php:22
 #: src/mcp-kit/McpPanel.js:96
 msgid "AI agents (MCP)"
@@ -2064,7 +2068,7 @@ msgid "Both Pro plugins on the same plan and site limit, for up to %d%% less tha
 msgstr ""
 
 #: includes/admin-kit/class-promotions.php:266
-#: src/admin-kit/PlansScreen.js:245
+#: src/admin-kit/PlansScreen.js:246
 msgid "See the bundle"
 msgstr ""
 
@@ -2140,16 +2144,22 @@ msgid "Zinn® SEO is active on this site: its SEO blocks are in the block insert
 msgstr ""
 
 #. translators: %s: the other plugin's name.
-#: includes/admin-kit/class-promotions.php:363
+#: includes/admin-kit/class-promotions.php:365
+#, php-format
+msgid "%s is active on this site and works alongside this plugin. Each plugin keeps its own AI provider keys."
+msgstr ""
+
+#. translators: %s: the other plugin's name.
+#: includes/admin-kit/class-promotions.php:368
 #, php-format
 msgid "%s is active on this site, so both plugins share one set of AI provider keys and one settings screen for them."
 msgstr ""
 
-#: includes/admin-kit/class-rest.php:215
+#: includes/admin-kit/class-rest.php:218
 msgid "Agree to connecting this site first."
 msgstr ""
 
-#: includes/admin-kit/class-rest.php:225
+#: includes/admin-kit/class-rest.php:228
 msgid "Enter a valid e-mail address."
 msgstr ""
 
@@ -2228,7 +2238,7 @@ msgid "One key for models from many different providers."
 msgstr ""
 
 #: includes/ai-core/class-admin.php:88
-msgid "Any service that works like OpenAI's API, including a model running on your own computer or server."
+msgid "Any service that works like OpenAI's API, including one you host yourself at a public address."
 msgstr ""
 
 #: includes/ai-core/class-admin.php:90
@@ -2252,25 +2262,29 @@ msgstr ""
 msgid "Code and CSS"
 msgstr ""
 
+#: includes/ai-core/class-admin.php:125
+msgid "These AI provider settings and keys belong to this plugin only."
+msgstr ""
+
 #. translators: %s: list of plugin names, e.g. "Tranzly, Page Builder Sandwich".
-#: includes/ai-core/class-admin.php:130
+#: includes/ai-core/class-admin.php:133
 #, php-format
 msgid "These settings are shared by every plugin that uses them: %s."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:133
+#: includes/ai-core/class-admin.php:137
 msgid "Your keys are encrypted in this site's database and are only ever sent to the provider you chose — never to us."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:160
+#: includes/ai-core/class-admin.php:164
 msgid "Step 1 of 2: choose an AI provider"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:161
+#: includes/ai-core/class-admin.php:165
 msgid "You bring your own key, so you pay the provider directly for what you use. Not sure? Any of these works well; you can add more later."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:171
+#: includes/ai-core/class-admin.php:175
 #: includes/freemius-strings.php:1570
 #: includes/freemius-strings.php:4580
 #: src/admin-kit/DataList.js:288
@@ -2280,51 +2294,51 @@ msgid "Next"
 msgstr ""
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:180
+#: includes/ai-core/class-admin.php:184
 #, php-format
 msgid "Step 2 of 2: connect %s"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:186
-#: includes/ai-core/class-admin.php:217
+#: includes/ai-core/class-admin.php:190
+#: includes/ai-core/class-admin.php:221
 msgid "← Choose a different provider"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:191
+#: includes/ai-core/class-admin.php:195
 msgid "Enter the address of your OpenAI-compatible service, ending in /v1. A key is only needed if the service asks for one."
 msgstr ""
 
 #. translators: %s: link to the provider's API key page.
-#: includes/ai-core/class-admin.php:196
+#: includes/ai-core/class-admin.php:200
 #, php-format
 msgid "Open %s and sign in (or create a free account)."
 msgstr ""
 
 #. translators: %s: AI provider name.
-#: includes/ai-core/class-admin.php:200
+#: includes/ai-core/class-admin.php:204
 #, php-format
 msgid "the %s API keys page"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:205
+#: includes/ai-core/class-admin.php:209
 msgid "Create a new key and copy it."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:206
+#: includes/ai-core/class-admin.php:210
 msgid "Paste it below and press \"Save and test\". We send one tiny request to check it works."
 msgstr ""
 
 #. translators: %s: link to the provider's billing page.
-#: includes/ai-core/class-admin.php:211
+#: includes/ai-core/class-admin.php:215
 #, php-format
 msgid "Most providers need a little credit on the account before a key works: %s."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:212
+#: includes/ai-core/class-admin.php:216
 msgid "add credit"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:235
+#: includes/ai-core/class-admin.php:239
 #: includes/freemius-strings.php:202
 #: includes/freemius-strings.php:3181
 #: includes/modules/sitemaps/class-xsl.php:36
@@ -2343,34 +2357,34 @@ msgid "Address"
 msgstr ""
 
 #. translators: %s: the last four characters of the saved key.
-#: includes/ai-core/class-admin.php:239
+#: includes/ai-core/class-admin.php:243
 #, php-format
 msgid "Saved key ends in …%s — paste a new one to replace it"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:241
+#: includes/ai-core/class-admin.php:245
 msgid "Key (optional)"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:241
+#: includes/ai-core/class-admin.php:245
 #: src/admin/x1c/ContentToolsTab.js:51
 msgid "API key"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:243
+#: includes/ai-core/class-admin.php:247
 msgid "Save and test"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:253
+#: includes/ai-core/class-admin.php:257
 msgid "Providers"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:255
-#: includes/ai-core/class-admin.php:492
+#: includes/ai-core/class-admin.php:259
+#: includes/ai-core/class-admin.php:496
 msgid "Provider"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:255
+#: includes/ai-core/class-admin.php:259
 #: includes/pro__premium_only/modules/schema-pro/class-types.php:201
 #: src/admin/BulkScreen.js:131
 #: src/admin/out1/OutboundTab.js:781
@@ -2379,7 +2393,7 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:255
+#: includes/ai-core/class-admin.php:259
 #: includes/freemius-strings.php:1252
 #: includes/freemius-strings.php:4341
 #: includes/pro__premium_only/modules/gdocs/class-gdocs.php:300
@@ -2387,19 +2401,19 @@ msgstr ""
 msgid "Key"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:266
+#: includes/ai-core/class-admin.php:270
 msgid "Get a key"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:271
+#: includes/ai-core/class-admin.php:275
 #: src/admin/discovery/RobotsTab.js:397
 #: src/admin/p5/RedirectsTab.js:295
 #: src/admin/x1a/Conditions.js:213
 msgid "Test"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:272
-#: includes/ai-core/class-admin.php:514
+#: includes/ai-core/class-admin.php:276
+#: includes/ai-core/class-admin.php:518
 #: includes/freemius-strings.php:2127
 #: includes/freemius-strings.php:4991
 #: includes/modules/head/class-editor.php:476
@@ -2428,38 +2442,38 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:290
+#: includes/ai-core/class-admin.php:294
 msgid "Not connected. Connect this site to a Zinn® account (free) and pay only for what you use."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:292
+#: includes/ai-core/class-admin.php:296
 #: src/ai/parts.js:99
 #: src/ai/SettingsTab.js:165
 #: src/editor/optimiser/OptimiserPanel.js:774
 msgid "Connect to Zinn®"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:297
+#: includes/ai-core/class-admin.php:301
 msgid "Connected for viewing only: this site cannot spend credit. The account's owner can allow it."
 msgstr ""
 
 #. translators: %s: the name of a Zinn account.
-#: includes/ai-core/class-admin.php:302
+#: includes/ai-core/class-admin.php:306
 #, php-format
 msgid "Connected to %s."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:303
+#: includes/ai-core/class-admin.php:307
 msgid "your Zinn® account"
 msgstr ""
 
 #. translators: %s: an amount of money in US dollars, e.g. "$4.20".
-#: includes/ai-core/class-admin.php:308
+#: includes/ai-core/class-admin.php:312
 #, php-format
 msgid "Credit: %s."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:314
+#: includes/ai-core/class-admin.php:318
 #: src/ai/parts.js:57
 #: src/ai/parts.js:63
 #: src/ai/SettingsTab.js:161
@@ -2472,170 +2486,170 @@ msgstr ""
 msgid "Add credit"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:328
+#: includes/ai-core/class-admin.php:332
 msgid "Saved by a newer plugin version: update this plugin, or enter the key again."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:330
+#: includes/ai-core/class-admin.php:334
 msgid "The saved key can no longer be opened (the site's security keys changed). Enter it again."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:333
+#: includes/ai-core/class-admin.php:337
 msgid "Not connected"
 msgstr ""
 
 #. translators: %s: date and time of the last successful test.
-#: includes/ai-core/class-admin.php:339
+#: includes/ai-core/class-admin.php:343
 #, php-format
 msgid "Connected — last test passed %s"
 msgstr ""
 
 #. translators: %s: why the last test failed.
-#: includes/ai-core/class-admin.php:345
+#: includes/ai-core/class-admin.php:349
 #, php-format
 msgid "Last test failed: %s"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:348
+#: includes/ai-core/class-admin.php:352
 msgid "Connected — not tested yet"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:357
+#: includes/ai-core/class-admin.php:361
 msgid "Which model to use"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:358
+#: includes/ai-core/class-admin.php:362
 msgid "★ marks our recommendation for that task. The list includes every model your key can use, read live from the provider."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:366
+#: includes/ai-core/class-admin.php:370
 msgid "— Recommended for the provider —"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:387
+#: includes/ai-core/class-admin.php:391
 msgid "Save models"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:389
+#: includes/ai-core/class-admin.php:393
 msgid "Refresh the model lists from the providers"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:409
+#: includes/ai-core/class-admin.php:413
 #: includes/modules/sitemaps/class-xsl.php:37
 #: src/admin/x1a/CleanupScreen.js:83
 #: src/toolbox/tabs/SearchTabs.js:316
 msgid "Images"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:411
+#: includes/ai-core/class-admin.php:415
 msgid "Connect OpenAI or Google Gemini to make images."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:415
+#: includes/ai-core/class-admin.php:419
 msgid "— The newest image model of the first connected provider —"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:444
+#: includes/ai-core/class-admin.php:448
 msgid "Site search (embeddings)"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:446
+#: includes/ai-core/class-admin.php:450
 msgid "Connect Google Gemini, OpenAI, Mistral or OpenRouter to build a search index of your site."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:450
+#: includes/ai-core/class-admin.php:454
 msgid "— The newest embedding model of the first connected provider —"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:459
+#: includes/ai-core/class-admin.php:463
 msgid "Changing this rebuilds the search index of every plugin that uses it."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:471
+#: includes/ai-core/class-admin.php:475
 msgid "best quality"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:473
+#: includes/ai-core/class-admin.php:477
 msgid "lowest cost"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:475
+#: includes/ai-core/class-admin.php:479
 msgid "fastest"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:487
+#: includes/ai-core/class-admin.php:491
 msgid "Add a model yourself"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:488
+#: includes/ai-core/class-admin.php:492
 msgid "A model came out today? Paste its exact name to use it straight away."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:499
+#: includes/ai-core/class-admin.php:503
 msgid "Model name"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:500
+#: includes/ai-core/class-admin.php:504
 msgid "Add model"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:530
+#: includes/ai-core/class-admin.php:534
 msgid "Recommended models list"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:533
+#: includes/ai-core/class-admin.php:537
 msgid "The recommended models list could not be verified, so no recommendations are shown. Reinstall the plugin, or turn on daily updates below."
 msgstr ""
 
 #. translators: %s: publication date.
-#: includes/ai-core/class-admin.php:536
+#: includes/ai-core/class-admin.php:540
 #, php-format
 msgid "The list in use was published on %s. Each plugin update brings a fresh one."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:543
+#: includes/ai-core/class-admin.php:547
 msgid "Also check Zinn Digital® once a day for an updated list."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:544
+#: includes/ai-core/class-admin.php:548
 msgid "Only a plain download request is sent: no key, no site address, nothing about your content. The list is signed, and a list that fails the signature check is ignored."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:547
+#: includes/ai-core/class-admin.php:551
 msgid "This site is connected to Zinn®, so the list is also checked once a day while it stays connected."
 msgstr ""
 
 #. translators: 1: date and time, 2: result such as "updated".
-#: includes/ai-core/class-admin.php:553
+#: includes/ai-core/class-admin.php:557
 #, php-format
 msgid "Last checked %1$s: %2$s."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:559
+#: includes/ai-core/class-admin.php:563
 msgid "Save, and check now if turned on"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:572
+#: includes/ai-core/class-admin.php:576
 msgid "a newer list was installed"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:574
+#: includes/ai-core/class-admin.php:578
 msgid "already up to date"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:576
+#: includes/ai-core/class-admin.php:580
 msgid "the download failed the signature check and was ignored"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:578
+#: includes/ai-core/class-admin.php:582
 msgid "Zinn Digital® could not be reached; the current list stays in use"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:581
+#: includes/ai-core/class-admin.php:585
 msgid "turned off"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:618
+#: includes/ai-core/class-admin.php:622
 #: src/agency/Tasks.js:446
 #: src/offers/OfferSlot.js:148
 #: src/search/BusinessTab.js:339
@@ -2643,24 +2657,24 @@ msgstr ""
 msgid "Open"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:661
+#: includes/ai-core/class-admin.php:665
 msgid "Check their status page"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:664
+#: includes/ai-core/class-admin.php:668
 msgid "Open your billing page"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:666
+#: includes/ai-core/class-admin.php:670
 msgid "Open your API keys page"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:669
+#: includes/ai-core/class-admin.php:673
 #: src/ai/parts.js:92
 msgid "Open the AI settings"
 msgstr ""
 
-#: includes/ai-core/class-admin.php:680
+#: includes/ai-core/class-admin.php:684
 #: includes/ai-core/pro__premium_only/class-pro-policy.php:312
 #: includes/modules/notices/class-notices.php:639
 #: includes/modules/redirects/class-redirects.php:187
@@ -2672,57 +2686,62 @@ msgstr ""
 msgid "Sorry, you are not allowed to do that."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:707
-#: includes/ai-core/class-admin.php:741
+#: includes/ai-core/class-admin.php:711
+#: includes/ai-core/class-admin.php:748
 msgid "Unknown provider."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:715
-msgid "Enter the address of your service, for example http://localhost:11434/v1."
+#: includes/ai-core/class-admin.php:719
+msgid "Enter the address of your service, for example https://ai.example.com/v1."
 msgstr ""
 
 #: includes/ai-core/class-admin.php:722
+#: includes/ai-core/class-http.php:55
+msgid "That address is on a private or local network. Use a public address."
+msgstr ""
+
+#: includes/ai-core/class-admin.php:729
 msgid "That does not look like an API key. Copy it again, without spaces."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:726
+#: includes/ai-core/class-admin.php:733
 msgid "Paste your API key first."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:790
+#: includes/ai-core/class-admin.php:797
 msgid "Key removed."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:835
+#: includes/ai-core/class-admin.php:842
 msgid "Models saved."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:849
+#: includes/ai-core/class-admin.php:856
 #: includes/modules/ai/class-ai-providers-rest.php:299
 msgid "Enter the model's exact name, for example as the provider's documentation writes it."
 msgstr ""
 
 #. translators: %s: model name.
-#: includes/ai-core/class-admin.php:873
+#: includes/ai-core/class-admin.php:880
 #, php-format
 msgid "Added %s. Choose it under \"Which model to use\"."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:902
+#: includes/ai-core/class-admin.php:909
 msgid "Model removed."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:929
+#: includes/ai-core/class-admin.php:936
 msgid "Daily updates are off. The list that came with the plugin is used."
 msgstr ""
 
 #. translators: %s: result of the check, such as "already up to date".
-#: includes/ai-core/class-admin.php:936
+#: includes/ai-core/class-admin.php:943
 #, php-format
 msgid "Checked: %s."
 msgstr ""
 
-#: includes/ai-core/class-admin.php:960
+#: includes/ai-core/class-admin.php:967
 msgid "Model lists refreshed."
 msgstr ""
 
@@ -2751,7 +2770,7 @@ msgid "No AI provider that can make images is connected. Add an OpenAI or Google
 msgstr ""
 
 #: includes/ai-core/class-client.php:265
-#: includes/ai-core/class-provider.php:341
+#: includes/ai-core/class-provider.php:331
 msgid "This AI provider cannot make images. Choose OpenAI or Google Gemini for images in the AI settings."
 msgstr ""
 
@@ -2768,7 +2787,7 @@ msgid "Your AI key cannot use any embedding model. Check the key's permissions w
 msgstr ""
 
 #: includes/ai-core/class-client.php:334
-#: includes/ai-core/class-provider.php:295
+#: includes/ai-core/class-provider.php:285
 msgid "This AI provider cannot build a search index. Connect Google Gemini, OpenAI, Mistral or a compatible service for site search."
 msgstr ""
 
@@ -2833,7 +2852,7 @@ msgstr ""
 msgid "Chosen by Zinn® for each job"
 msgstr ""
 
-#: includes/ai-core/class-provider.php:164
+#: includes/ai-core/class-provider.php:154
 msgid "The AI provider answered in a form this plugin could not read. Try again; if it keeps happening, choose another model or contact support."
 msgstr ""
 
@@ -4506,10 +4525,9 @@ msgstr ""
 
 #: includes/freemius-strings.php:868
 #: includes/freemius-strings.php:3739
-#: includes/mcp-kit/class-server.php:354
+#: includes/mcp-kit/class-oauth.php:1206
 #: src/admin-kit/Support.js:243
 #: src/agency/ReportsScreen.js:795
-#: src/mcp-kit/McpPanel.js:212
 msgid "Disconnect"
 msgstr ""
 
@@ -4755,7 +4773,7 @@ msgstr ""
 
 #: includes/freemius-strings.php:1052
 #: includes/freemius-strings.php:3912
-#: src/admin-kit/PlansScreen.js:143
+#: src/admin-kit/PlansScreen.js:165
 msgid "Expired"
 msgstr ""
 
@@ -6403,7 +6421,7 @@ msgstr ""
 
 #: includes/freemius-strings.php:2292
 #: includes/freemius-strings.php:5165
-#: src/admin-kit/PlansScreen.js:120
+#: src/admin-kit/PlansScreen.js:142
 msgid "Sites"
 msgstr ""
 
@@ -7882,53 +7900,69 @@ msgstr ""
 msgid "The action could not be completed. Try again, and if it keeps failing, contact the site administrator."
 msgstr ""
 
-#: includes/mcp-kit/class-oauth.php:726
-#: includes/mcp-kit/class-oauth.php:737
+#: includes/mcp-kit/class-oauth.php:727
+#: includes/mcp-kit/class-oauth.php:738
 msgid "Connect an AI app"
 msgstr ""
 
-#: includes/mcp-kit/class-oauth.php:739
-#: includes/mcp-kit/class-oauth.php:745
-#: includes/mcp-kit/class-oauth.php:786
+#: includes/mcp-kit/class-oauth.php:740
+#: includes/mcp-kit/class-oauth.php:746
+#: includes/mcp-kit/class-oauth.php:787
 msgid "This connection request has expired. Go back to the app and start connecting again."
 msgstr ""
 
 #. translators: 1: the AI app's name, 2: the plugin's MCP server name, 3: the WordPress user's display name.
-#: includes/mcp-kit/class-oauth.php:753
+#: includes/mcp-kit/class-oauth.php:754
 #, php-format
 msgid "%1$s is asking to use %2$s on this site as %3$s. It can do only what your WordPress account is allowed to do, and you can disconnect it at any time from the AI agents (MCP) settings."
 msgstr ""
 
 #. translators: 1: the AI app's name, 2: a domain name.
-#: includes/mcp-kit/class-oauth.php:756
+#: includes/mcp-kit/class-oauth.php:757
 #, php-format
 msgid "%1$s identified itself from %2$s."
 msgstr ""
 
 #. translators: 1: the AI app's name, 2: a domain name.
-#: includes/mcp-kit/class-oauth.php:759
+#: includes/mcp-kit/class-oauth.php:760
 #, php-format
 msgid "%1$s registered itself automatically. Only continue if you started this from %2$s."
 msgstr ""
 
-#: includes/mcp-kit/class-oauth.php:763
+#: includes/mcp-kit/class-oauth.php:764
 msgid "Your account cannot use these tools on this site. Ask an administrator."
 msgstr ""
 
 #. translators: %s: a domain name.
-#: includes/mcp-kit/class-oauth.php:766
+#: includes/mcp-kit/class-oauth.php:767
 #, php-format
 msgid "After you answer you will go back to %s."
 msgstr ""
 
 #. translators: %s: the AI app's name.
-#: includes/mcp-kit/class-oauth.php:771
+#: includes/mcp-kit/class-oauth.php:772
 #, php-format
 msgid "Allow %s"
 msgstr ""
 
-#: includes/mcp-kit/class-oauth.php:772
+#: includes/mcp-kit/class-oauth.php:773
 msgid "Do not allow"
+msgstr ""
+
+#: includes/mcp-kit/class-oauth.php:1194
+msgid "Claude and ChatGPT: sign in instead"
+msgstr ""
+
+#: includes/mcp-kit/class-oauth.php:1195
+msgid "Add the connection address as a custom connector in Claude, or as a custom MCP server in ChatGPT. They open this site so you can approve them; no password to copy."
+msgstr ""
+
+#: includes/mcp-kit/class-oauth.php:1197
+msgid "AI apps connected to your account:"
+msgstr ""
+
+#: includes/mcp-kit/class-oauth.php:1212
+msgid "Other AI apps: an application password"
 msgstr ""
 
 #: includes/mcp-kit/class-rest-bridge.php:351
@@ -7939,84 +7973,64 @@ msgstr ""
 msgid "The site refused the request."
 msgstr ""
 
-#: includes/mcp-kit/class-server.php:124
+#: includes/mcp-kit/class-server.php:131
 msgid "Unknown tool."
 msgstr ""
 
-#: includes/mcp-kit/class-server.php:323
+#: includes/mcp-kit/class-server.php:335
 #: src/mcp-kit/McpPanel.js:112
 msgid "Let AI assistants such as Claude, Cursor or VS Code work on this site for you through MCP (Model Context Protocol). They sign in as a WordPress user (Claude and ChatGPT by approving them here, others with an application password) and can do only what that user is allowed to do."
 msgstr ""
 
-#: includes/mcp-kit/class-server.php:325
+#: includes/mcp-kit/class-server.php:337
 #: src/mcp-kit/McpPanel.js:130
 msgid "AI agents need WordPress 6.9 or later. Update WordPress to use them."
 msgstr ""
 
-#: includes/mcp-kit/class-server.php:331
+#: includes/mcp-kit/class-server.php:343
 #: src/mcp-kit/McpPanel.js:119
 msgid "Allow AI agents (MCP)"
 msgstr ""
 
-#: includes/mcp-kit/class-server.php:333
+#: includes/mcp-kit/class-server.php:345
 #: src/mcp-kit/McpPanel.js:120
 msgid "Off: the tools below and their REST routes are not registered at all."
 msgstr ""
 
-#: includes/mcp-kit/class-server.php:338
+#: includes/mcp-kit/class-server.php:350
 #: src/mcp-kit/McpPanel.js:141
 msgid "Connection address (MCP endpoint)"
 msgstr ""
 
-#: includes/mcp-kit/class-server.php:342
-#: src/mcp-kit/McpPanel.js:154
-msgid "Claude and ChatGPT: sign in instead"
-msgstr ""
-
-#: includes/mcp-kit/class-server.php:343
-#: src/mcp-kit/McpPanel.js:160
-msgid "Add the connection address as a custom connector in Claude, or as a custom MCP server in ChatGPT. They open this site so you can approve them; no password to copy."
-msgstr ""
-
-#: includes/mcp-kit/class-server.php:345
-#: src/mcp-kit/McpPanel.js:168
-msgid "AI apps connected to your account:"
-msgstr ""
-
-#: includes/mcp-kit/class-server.php:360
-#: src/mcp-kit/McpPanel.js:226
-msgid "Other AI apps: an application password"
-msgstr ""
-
-#: includes/mcp-kit/class-server.php:362
-#: src/mcp-kit/McpPanel.js:237
+#: includes/mcp-kit/class-server.php:356
+#: src/mcp-kit/McpPanel.js:159
 msgid "Create an application password for your user"
 msgstr ""
 
-#: includes/mcp-kit/class-server.php:363
-#: src/mcp-kit/McpPanel.js:244
+#: includes/mcp-kit/class-server.php:357
+#: src/mcp-kit/McpPanel.js:166
 msgid "Add this to your AI app’s MCP settings, with your username and that password:"
 msgstr ""
 
-#: includes/mcp-kit/class-server.php:365
-#: src/mcp-kit/McpPanel.js:254
+#: includes/mcp-kit/class-server.php:359
+#: src/mcp-kit/McpPanel.js:176
 msgid "VS Code: put the same entry under \"servers\" in .vscode/mcp.json, not under \"mcpServers\"."
 msgstr ""
 
 #. translators: %d: how many tools an AI agent can use.
-#: includes/mcp-kit/class-server.php:369
-#: src/mcp-kit/McpPanel.js:262
+#: includes/mcp-kit/class-server.php:363
+#: src/mcp-kit/McpPanel.js:184
 #, php-format,js-format
 msgid "Tools an AI agent can use here (%d):"
 msgstr ""
 
-#: includes/mcp-kit/class-server.php:380
-#: src/mcp-kit/McpPanel.js:281
+#: includes/mcp-kit/class-server.php:374
+#: src/mcp-kit/McpPanel.js:203
 msgid "User guide: AI agents and MCP"
 msgstr ""
 
-#: includes/mcp-kit/class-server.php:383
-#: src/mcp-kit/McpPanel.js:291
+#: includes/mcp-kit/class-server.php:377
+#: src/mcp-kit/McpPanel.js:213
 msgid "Developer docs: abilities, REST and MCP"
 msgstr ""
 
@@ -19970,7 +19984,7 @@ msgstr ""
 
 #: includes/pro__premium_only/modules/blocks-pro/blocks/class-comparison.php:86
 #: includes/pro__premium_only/modules/blocks-pro/blocks/class-comparison.php:90
-#: src/admin-kit/PlansScreen.js:70
+#: src/admin-kit/PlansScreen.js:99
 msgid "Feature"
 msgstr ""
 
@@ -20280,7 +20294,7 @@ msgid "This site"
 msgstr ""
 
 #: src/admin-kit/Overview.js:89
-#: src/admin-kit/PlansScreen.js:116
+#: src/admin-kit/PlansScreen.js:138
 msgid "Edition"
 msgstr ""
 
@@ -20316,7 +20330,7 @@ msgid "Any number of sites"
 msgstr ""
 
 #: src/admin-kit/plans.js:48
-#: src/admin-kit/PlansScreen.js:123
+#: src/admin-kit/PlansScreen.js:145
 msgid "Unlimited sites"
 msgstr ""
 
@@ -20344,106 +20358,107 @@ msgstr ""
 msgid "%s trial"
 msgstr ""
 
-#: src/admin-kit/PlansScreen.js:45
+#: src/admin-kit/PlansScreen.js:52
 msgid "Your trial has started. Reload the page to see every Pro feature."
 msgstr ""
 
-#: src/admin-kit/PlansScreen.js:57
+#: src/admin-kit/PlansScreen.js:64
 msgid "The trial could not be started."
 msgstr ""
 
-#: src/admin-kit/PlansScreen.js:80
-msgid "Included"
-msgstr ""
-
-#: src/admin-kit/PlansScreen.js:87
-msgid "Not included"
-msgstr ""
-
-#: src/admin-kit/PlansScreen.js:111
-#: src/admin-kit/tours.js:60
-msgid "Your licence"
-msgstr ""
-
-#. translators: 1: sites in use, 2: sites allowed.
-#: src/admin-kit/PlansScreen.js:129
-#, js-format
-msgid "%1$d of %2$d in use"
-msgstr ""
-
-#: src/admin-kit/PlansScreen.js:144
-msgid "Renews"
-msgstr ""
-
-#: src/admin-kit/PlansScreen.js:156
-msgid "Staging, test and localhost copies of a site are free and never count toward your site limit."
-msgstr ""
-
-#: src/admin-kit/PlansScreen.js:164
-#: src/admin-kit/Support.js:410
-msgid "Your licence includes full enterprise-level 24/7 support in 50+ languages."
-msgstr ""
-
-#: src/admin-kit/PlansScreen.js:176
-msgid "Manage your licence and billing"
-msgstr ""
-
-#: src/admin-kit/PlansScreen.js:190
-msgid "Get more with Pro"
-msgstr ""
-
 #. translators: %d: number of days.
-#: src/admin-kit/PlansScreen.js:212
+#: src/admin-kit/PlansScreen.js:84
 #, js-format
 msgid "Start a free %d-day trial, no card needed"
 msgid_plural "Start a free %d-day trial, no card needed"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/admin-kit/PlansScreen.js:227
-msgid "See plans and prices"
+#: src/admin-kit/PlansScreen.js:109
+msgid "Included"
+msgstr ""
+
+#: src/admin-kit/PlansScreen.js:116
+msgid "Not included"
+msgstr ""
+
+#: src/admin-kit/PlansScreen.js:133
+#: src/admin-kit/tours.js:60
+msgid "Your licence"
+msgstr ""
+
+#. translators: 1: sites in use, 2: sites allowed.
+#: src/admin-kit/PlansScreen.js:151
+#, js-format
+msgid "%1$d of %2$d in use"
+msgstr ""
+
+#: src/admin-kit/PlansScreen.js:166
+msgid "Renews"
+msgstr ""
+
+#: src/admin-kit/PlansScreen.js:178
+msgid "Staging, test and localhost copies of a site are free and never count toward your site limit."
+msgstr ""
+
+#: src/admin-kit/PlansScreen.js:186
+#: src/admin-kit/Support.js:410
+msgid "Your licence includes full enterprise-level 24/7 support in 50+ languages."
+msgstr ""
+
+#: src/admin-kit/PlansScreen.js:198
+msgid "Manage your licence and billing"
+msgstr ""
+
+#: src/admin-kit/PlansScreen.js:212
+msgid "Get more with Pro"
+msgstr ""
+
+#: src/admin-kit/PlansScreen.js:231
+#: src/admin/RolesScreen.js:168
+msgid "Compare plans"
 msgstr ""
 
 #. translators: %d: the largest saving, in whole percent.
-#: src/admin-kit/PlansScreen.js:238
+#: src/admin-kit/PlansScreen.js:239
 #, js-format
 msgid "Use Tranzly and Page Builder Sandwich together? The bundle includes both Pro plugins for up to %d%% less."
 msgstr ""
 
-#: src/admin-kit/PlansScreen.js:251
+#: src/admin-kit/PlansScreen.js:252
 msgid "Use Tranzly and Page Builder Sandwich together? The bundle includes both Pro plugins for less."
 msgstr ""
 
-#: src/admin-kit/PlansScreen.js:264
+#: src/admin-kit/PlansScreen.js:265
 msgid "Your licence has expired. Renew it to keep getting updates and Pro features."
 msgstr ""
 
-#: src/admin-kit/PlansScreen.js:269
+#: src/admin-kit/PlansScreen.js:270
 msgid "Renew now"
 msgstr ""
 
-#: src/admin-kit/PlansScreen.js:277
+#: src/admin-kit/PlansScreen.js:278
 #: src/admin-kit/tours.js:76
 msgid "Compare the plans"
 msgstr ""
 
-#: src/admin-kit/PlansScreen.js:288
+#: src/admin-kit/PlansScreen.js:289
 msgid "Search features"
 msgstr ""
 
-#: src/admin-kit/PlansScreen.js:295
+#: src/admin-kit/PlansScreen.js:296
 msgid "Area"
 msgstr ""
 
-#: src/admin-kit/PlansScreen.js:304
+#: src/admin-kit/PlansScreen.js:305
 msgid "Included in"
 msgstr ""
 
-#: src/admin-kit/PlansScreen.js:314
+#: src/admin-kit/PlansScreen.js:315
 msgid "No feature matches."
 msgstr ""
 
-#: src/admin-kit/PlansScreen.js:318
+#: src/admin-kit/PlansScreen.js:319
 msgid "Features by plan"
 msgstr ""
 
@@ -20754,7 +20769,7 @@ msgid "Try Pro or upgrade"
 msgstr ""
 
 #: src/admin-kit/tours.js:69
-msgid "Start a free trial without a card, upgrade, or renew, all from here."
+msgid "Compare plans, upgrade or renew, all from here."
 msgstr ""
 
 #: src/admin-kit/tours.js:77
@@ -27327,10 +27342,6 @@ msgstr ""
 
 #: src/admin/RolesScreen.js:161
 msgid "With Zinn® SEO Pro you can give any role exactly the SEO permissions it needs, for example letting authors edit the SEO of their own posts."
-msgstr ""
-
-#: src/admin/RolesScreen.js:168
-msgid "Compare plans"
 msgstr ""
 
 #: src/admin/schema/CheckTab.js:56

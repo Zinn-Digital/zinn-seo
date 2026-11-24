@@ -71,6 +71,11 @@ final class Legacy_Support_Users {
 		if ( ! current_user_can( 'delete_users' ) ) {
 			return 0;
 		}
+		// Core loads this on all its admin_init paths; another plugin firing the hook elsewhere does
+		// not. Stop before touching anything, so the next real admin request does the whole clean-up.
+		if ( ! function_exists( 'wp_delete_user' ) ) {
+			return 0;
+		}
 		$ids     = get_users(
 			array(
 				'meta_key' => self::META_EXPIRES, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- usermeta is indexed on meta_key; a handful of users at most.
@@ -80,7 +85,6 @@ final class Legacy_Support_Users {
 		);
 		$deleted = 0;
 		if ( array() !== $ids ) {
-			require_once ABSPATH . 'wp-admin/includes/user.php';
 			foreach ( $ids as $id ) {
 				if ( get_current_user_id() !== (int) $id && wp_delete_user( (int) $id ) ) {
 					++$deleted;

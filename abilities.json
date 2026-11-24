@@ -7727,35 +7727,6 @@
             "mcp_tool": "zinn-seo-start-address-change"
         },
         {
-            "name": "zinn-seo/start-trial",
-            "label": "Start the free Pro trial",
-            "description": "Starts the 14-day Zinn® SEO Pro trial for this site (no payment needed).",
-            "edition": "free",
-            "capability": "manage_options (the REST route's own check)",
-            "annotations": {
-                "readonly": false,
-                "destructive": false,
-                "idempotent": false
-            },
-            "input_schema": {
-                "type": "object",
-                "additionalProperties": true,
-                "properties": {
-                    "dry_run": {
-                        "type": "boolean",
-                        "description": "True: change nothing, and answer what this call would send and what the site holds now."
-                    }
-                },
-                "default": {}
-            },
-            "output_schema": {},
-            "rest": {
-                "method": "POST",
-                "path": "/wp-json/wp-abilities/v1/abilities/zinn-seo/start-trial/run"
-            },
-            "mcp_tool": "zinn-seo-start-trial"
-        },
-        {
             "name": "zinn-seo/stop-import",
             "label": "Stop a move",
             "description": "Stops a running copy or comparison.",

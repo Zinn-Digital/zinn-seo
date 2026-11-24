@@ -182,11 +182,16 @@ final class Connection {
 		}
 		$plain = Crypto::open( (string) ( $row['token'] ?? '' ) );
 		if ( null === $plain ) {
-			// The salts changed, or the value is damaged: the site is no longer connected, and
+			// The key was lost, or the value is damaged: the site is no longer connected, and
 			// the card says why rather than sending a garbled token.
 			self::mark_revoked( 'unreadable' );
 
 			return '';
+		}
+		if ( Crypto::is_legacy( (string) $row['token'] ) ) {
+			// Sealed by an older kit with the salt-derived key: seal it again with the random key.
+			$row['token'] = Crypto::seal( $plain );
+			update_option( self::OPTION, $row, false );
 		}
 
 		return $plain;

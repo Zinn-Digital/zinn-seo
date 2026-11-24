@@ -1,6 +1,9 @@
 /* Generated from wp/packages/zinn-admin-kit/src/js/PlansScreen.js by wp/bin/build-admin-kit.php. Edit the package, never this copy. */
 import { __, _n, sprintf } from '@wordpress/i18n';
+// dotorg-omit:begin
 import { useState } from '@wordpress/element';
+import { kitFetch, errorMessage } from './api';
+// dotorg-omit:end
 import {
 	Button,
 	Card,
@@ -10,13 +13,12 @@ import {
 	Notice,
 } from '@wordpress/components';
 
-import { kitFetch, errorMessage } from './api';
 import { badgeText, includes, planName, planSites } from './plans';
 import DataList from './DataList';
 
 /**
  * Plans and licence (features adm-6, adm-7, adm-8, sh-r1, sh-r7): what this site runs, the
- * no-card trial, the upgrade and renewal offers, and the plan comparison — generated from the one
+ * upgrade and renewal offers, and the plan comparison — generated from the one
  * plan -> feature matrix (`class-matrix.php`), so a screen can never promise a tier the code does
  * not grant.
  *
@@ -26,10 +28,15 @@ import DataList from './DataList';
  */
 export default function Plans( { kit } ) {
 	const licence = kit.licence || {};
-	const [ notice, setNotice ] = useState( null );
-	const [ busy, setBusy ] = useState( false );
 	const paid = ( kit.plans || [] ).filter( ( p ) => 'free' !== p.id );
 
+	let extraNotice = null;
+	let extraAction = null;
+	// dotorg-omit:begin
+	// The in-place, no-card trial: self-hosted builds only. The wordpress.org build removes this
+	// region (bin/build-plugin.php, dotorg-omit) and shows only the "Compare plans" link.
+	const [ notice, setNotice ] = useState( null );
+	const [ busy, setBusy ] = useState( false );
 	const startTrial = () => {
 		setBusy( true );
 		setNotice( null );
@@ -54,15 +61,37 @@ export default function Plans( { kit } ) {
 					status: 'error',
 					message: errorMessage(
 						error,
-						__(
-							'The trial could not be started.',
-							'zinn-seo'
-						)
+						__( 'The trial could not be started.', 'zinn-seo' )
 					),
 				} )
 			)
 			.finally( () => setBusy( false ) );
 	};
+	extraNotice = notice && (
+		<Notice status={ notice.status } onRemove={ () => setNotice( null ) }>
+			{ notice.message }
+		</Notice>
+	);
+	extraAction = licence.trial && licence.trial.available && (
+		<Button
+			variant="primary"
+			isBusy={ busy }
+			disabled={ busy }
+			onClick={ startTrial }
+		>
+			{ sprintf(
+				/* translators: %d: number of days. */
+				_n(
+					'Start a free %d-day trial, no card needed',
+					'Start a free %d-day trial, no card needed',
+					licence.trial.days,
+					'zinn-seo'
+				),
+				licence.trial.days
+			) }
+		</Button>
+	);
+	// dotorg-omit:end
 
 	const fields = [
 		{
@@ -97,14 +126,7 @@ export default function Plans( { kit } ) {
 
 	return (
 		<div className="zak-stack">
-			{ notice && (
-				<Notice
-					status={ notice.status }
-					onRemove={ () => setNotice( null ) }
-				>
-					{ notice.message }
-				</Notice>
-			) }
+			{ extraNotice }
 			<Card className="zak-card" data-zak-tour="licence">
 				<CardHeader>
 					<h2 className="zak-card__title">
@@ -200,34 +222,13 @@ export default function Plans( { kit } ) {
 							) ) }
 						</ul>
 						<p className="zak-actions">
-							{ licence.trial && licence.trial.available && (
-								<Button
-									variant="primary"
-									isBusy={ busy }
-									disabled={ busy }
-									onClick={ startTrial }
-								>
-									{ sprintf(
-										/* translators: %d: number of days. */
-										_n(
-											'Start a free %d-day trial, no card needed',
-											'Start a free %d-day trial, no card needed',
-											licence.trial.days,
-											'zinn-seo'
-										),
-										licence.trial.days
-									) }
-								</Button>
-							) }
+							{ extraAction }
 							{ licence.upgradeUrl && (
 								<Button
 									variant="secondary"
 									href={ licence.upgradeUrl }
 								>
-									{ __(
-										'See plans and prices',
-										'zinn-seo'
-									) }
+									{ __( 'Compare plans', 'zinn-seo' ) }
 								</Button>
 							) }
 						</p>

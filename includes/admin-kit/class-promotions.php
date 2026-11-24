@@ -359,8 +359,15 @@ final class Promotions {
 			}
 		}
 
+		// The wordpress.org build keeps its AI keys in its own option, so it never claims to share them;
+		// only the self-hosted copies share one store (region below).
 		/* translators: %s: the other plugin's name. */
-		return sprintf( __( '%s is active on this site, so both plugins share one set of AI provider keys and one settings screen for them.', 'zinn-seo' ), $brand );
+		$body = __( '%s is active on this site and works alongside this plugin. Each plugin keeps its own AI provider keys.', 'zinn-seo' );
+		// dotorg-omit:begin
+		/* translators: %s: the other plugin's name. */
+		$body = __( '%s is active on this site, so both plugins share one set of AI provider keys and one settings screen for them.', 'zinn-seo' );
+		// dotorg-omit:end
+		return sprintf( $body, $brand );
 	}
 
 	/**
@@ -443,6 +450,13 @@ final class Promotions {
 	 * @return bool
 	 */
 	private static function is_installed( string $file ): bool {
-		return '' !== $file && file_exists( WP_PLUGIN_DIR . '/' . $file );
+		if ( '' === $file ) {
+			return false;
+		}
+		if ( ! function_exists( 'get_plugins' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
+
+		return array_key_exists( $file, get_plugins() );
 	}
 }

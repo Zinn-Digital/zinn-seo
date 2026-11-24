@@ -69,8 +69,7 @@ final class Engine {
 			return self::failure( 0, 'bad_base', __( 'The Zinn Digital® address this site is set to use is not a secure (https) address, so nothing was sent.', 'zinn-seo' ) );
 		}
 		$headers = array(
-			'Accept'     => 'application/json',
-			'User-Agent' => Kit::host( 'slug' ) . '/' . Kit::host( 'version' ) . '; ' . home_url(),
+			'Accept' => 'application/json',
 		);
 		if ( null !== $body ) {
 			$headers['Content-Type'] = 'application/json';
@@ -82,6 +81,8 @@ final class Engine {
 			$base . $path,
 			array(
 				'method'      => $method,
+				// The argument, not a header: WordPress's default value carries the site address.
+				'user-agent'  => Kit::host( 'slug' ),
 				'headers'     => $headers,
 				'body'        => null === $body ? null : wp_json_encode( $body ),
 				'timeout'     => 20,
