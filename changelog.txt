@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.109 =
+* An AI provider key saved by an older version is re-sealed from the admin screens only, never during a visitor's request; small admin screen fixes.
+
 = 0.17.108 =
 * Dependency security update (Renovate).
 
