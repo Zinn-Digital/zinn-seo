@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.108 =
+* Dependency security update (Renovate).
+
 = 0.17.107 =
 * WordPress.org review fixes and a shared admin kit update (diagnostics and promotions panels).
 * Shared AI and MCP code update: stored AI keys are sealed with a random key for each site, a private AI address needs an explicit setting in wp-config.php, and the WordPress.org version no longer carries the MCP sign-in.
