@@ -341,6 +341,7 @@ final class Licence {
 			'sites'         => null,
 			'activated'     => null,
 			'unlimited'     => false,
+			// dotorg-omit:begin
 			'trial'         => array(
 				'active'    => false,
 				'available' => false,
@@ -348,6 +349,7 @@ final class Licence {
 				'endsAt'    => '',
 				'days'      => (int) ( Data::get( 'plans' )['trial_days'] ?? 14 ),
 			),
+			// dotorg-omit:end
 			'localhost'     => self::is_local_site(),
 			'freeLocalhost' => true,
 			'priority'      => false,
@@ -395,20 +397,21 @@ final class Licence {
 			$out['installId'] = (string) $site->id;
 		}
 
-		$out['trial']['active']    = self::call( $fs, 'is_trial' );
-		// No in-plugin trial in the WordPress.org package (review, 23 Nov): only the self-hosted build offers it.
+		// No in-plugin trial in the WordPress.org package (review, 23 Nov): only the self-hosted
+		// build offers it, so the whole trial status block is left out there.
 		// dotorg-omit:begin
+		$out['trial']['active']    = self::call( $fs, 'is_trial' );
 		$out['trial']['used']      = self::call( $fs, 'is_trial_utilized' );
 		$out['trial']['available'] = self::offers_trial( $fs ) && self::call( $fs, 'has_trial_plan' ) && ! $out['trial']['used'] && ! $out['trial']['active'] && ! self::call( $fs, 'is_paying' );
-		// dotorg-omit:end
 		if ( $out['trial']['active'] && is_object( $site ) && ! empty( $site->trial_ends ) ) {
 			$out['trial']['endsAt'] = (string) $site->trial_ends;
 		}
+		// dotorg-omit:end
 
 		if ( ! $out['premium'] ) {
 			$out['upgradeUrl'] = self::url( $fs, 'get_upgrade_url' );
 			// dotorg-omit:begin
-			$out['trialUrl']   = $out['trial']['available'] ? self::url( $fs, 'get_trial_url' ) : '';
+			$out['trialUrl'] = $out['trial']['available'] ? self::url( $fs, 'get_trial_url' ) : '';
 			// dotorg-omit:end
 		}
 		$out['pricingUrl'] = self::url( $fs, 'pricing_url' );
