@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.113 =
+* Emergency Support is no longer sold, so the outage help offer is withdrawn; 24/7 support stays free and code changes go through Custom development.
+
 = 0.17.112 =
 * Dependency security update (Renovate).
 

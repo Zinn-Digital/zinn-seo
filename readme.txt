@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.112
+Stable tag: 0.17.113
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -844,6 +844,9 @@ They are answered before your theme loads, from small index files, so a redirect
 12. Every screen right to left in Arabic, and translated into 57 languages.
 
 == Changelog ==
+
+= 0.17.113 =
+* Emergency Support is no longer sold, so the outage help offer is withdrawn; 24/7 support stays free and code changes go through Custom development.
 
 = 0.17.112 =
 * Dependency security update (Renovate).

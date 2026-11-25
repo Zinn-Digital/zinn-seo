@@ -45,7 +45,6 @@
 		{ "id": "offer-services", "kind": "offer", "slot": "finding", "offer": "services", "ledger": "zs-657", "findings": ["offers-slow-server", "offers-no-https", "offers-other-languages"] },
 		{ "id": "offer-cdn", "kind": "offer", "slot": "finding", "offer": "cdn", "ledger": "zs-658", "findings": ["offers-slow-server", "offers-heavy-files"] },
 		{ "id": "offer-backups", "kind": "offer", "slot": "finding", "offer": "backups", "ledger": "zs-659", "findings": ["offers-bulk-change"] },
-		{ "id": "offer-support", "kind": "offer", "slot": "finding", "offer": "support", "ledger": "zs-660", "findings": ["offers-guard-incident"] },
 		{ "id": "offer-update-guard", "kind": "offer", "slot": "finding", "offer": "update_guard", "ledger": "zs-655", "findings": [] },
 		{ "id": "offer-managed-ai", "kind": "offer", "slot": "finding", "offer": "managed_ai", "ledger": "zs-656", "findings": [] },
 		{ "id": "offer-reseller-data", "kind": "offer", "slot": "finding", "offer": "reseller_data", "ledger": "zs-661", "findings": [] }

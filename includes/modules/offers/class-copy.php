@@ -124,11 +124,6 @@ final class Copy {
 				$body  = __( 'Daily backups stored encrypted away from your server, so a big change — or anything else — can always be undone.', 'zinn-seo' );
 				$cta   = __( 'Start backups', 'zinn-seo' );
 				break;
-			case 'support':
-				$title = $b ? __( 'Get an expert on it now', 'zinn-seo' ) : __( 'Need help with this right away?', 'zinn-seo' );
-				$body  = __( 'Site down right now? Support is free and 24/7 and puts an engineer on the outage straight away, out of hours if you need it; code changes and bug fixes go to our developer at the dev rate of €75 an hour excluding VAT, through Custom development.', 'zinn-seo' );
-				$cta   = __( 'Get help', 'zinn-seo' );
-				break;
 			// Stage X1B: the managed AI and agency extras (zs-655, zs-656, zs-661).
 			case 'update_guard':
 				$title = $b ? __( 'Know which updates are safe before you install them', 'zinn-seo' ) : __( 'Update without the worry', 'zinn-seo' );
@@ -200,7 +195,6 @@ final class Copy {
 			'cdn:edge'             => __( 'Edge deploy', 'zinn-seo' ),
 			'backups:offsite'      => __( 'Backups to your own storage', 'zinn-seo' ),
 			'backups:external'     => __( 'Backups for a site hosted elsewhere', 'zinn-seo' ),
-			'support:emergency'    => __( 'Help for an outage', 'zinn-seo' ),
 			'update_guard:check'   => __( 'AI Update Guard', 'zinn-seo' ),
 			'managed_ai:webmaster' => __( 'AI Webmaster site review', 'zinn-seo' ),
 			'managed_ai:chat'      => __( 'AI chat for your website', 'zinn-seo' ),
