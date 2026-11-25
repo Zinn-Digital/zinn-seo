@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-24T21:18:17+00:00\n"
+"POT-Creation-Date: 2026-11-25T09:18:23+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zinn-seo\n"
@@ -219,15 +219,15 @@ msgstr ""
 msgid "This temporary support access has expired."
 msgstr ""
 
-#: includes/admin-kit/class-licence.php:436
+#: includes/admin-kit/class-licence.php:439
 msgid "The licensing service is not available on this site."
 msgstr ""
 
-#: includes/admin-kit/class-licence.php:443
+#: includes/admin-kit/class-licence.php:446
 msgid "This edition has no trial."
 msgstr ""
 
-#: includes/admin-kit/class-licence.php:465
+#: includes/admin-kit/class-licence.php:468
 msgid "The trial could not be started here. Continue on the trial page instead."
 msgstr ""
 
@@ -1728,7 +1728,7 @@ msgid "Small code fixes, made safe"
 msgstr ""
 
 #: includes/admin-kit/class-matrix.php:1144
-#: includes/modules/offers/class-copy.php:204
+#: includes/modules/offers/class-copy.php:198
 msgid "AI Update Guard"
 msgstr ""
 
@@ -1745,7 +1745,7 @@ msgid "Links to a page"
 msgstr ""
 
 #: includes/admin-kit/class-matrix.php:1148
-#: includes/modules/offers/class-copy.php:170
+#: includes/modules/offers/class-copy.php:165
 msgid "Articles by a writer"
 msgstr ""
 
@@ -2088,7 +2088,7 @@ msgstr ""
 
 #. translators: %s: a plugin's name.
 #: includes/admin-kit/class-promotions.php:290
-#: includes/modules/offers/class-copy.php:273
+#: includes/modules/offers/class-copy.php:267
 #, php-format
 msgid "Get %s"
 msgstr ""
@@ -17375,288 +17375,264 @@ msgstr ""
 msgid "Start backups"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:128
-msgid "Get an expert on it now"
-msgstr ""
-
-#: includes/modules/offers/class-copy.php:128
-msgid "Need help with this right away?"
-msgstr ""
-
 #: includes/modules/offers/class-copy.php:129
-msgid "Site down right now? Support is free and 24/7 and puts an engineer on the outage straight away, out of hours if you need it; code changes and bug fixes go to our developer at the dev rate of €75 an hour excluding VAT, through Custom development."
-msgstr ""
-
-#: includes/modules/offers/class-copy.php:130
-#: src/admin-kit/Shell.js:63
-#: src/admin-kit/Wizard.js:90
-#: src/admin/index.js:302
-#: src/admin/nav/sections.js:131
-msgid "Get help"
-msgstr ""
-
-#: includes/modules/offers/class-copy.php:134
 msgid "Know which updates are safe before you install them"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:134
+#: includes/modules/offers/class-copy.php:129
 msgid "Update without the worry"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:135
+#: includes/modules/offers/class-copy.php:130
 msgid "Every plugin and theme on your site is checked against your WordPress and PHP, with a plain verdict for each and a one-click proposal for the safe ones."
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:136
+#: includes/modules/offers/class-copy.php:131
 msgid "Check my updates"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:139
+#: includes/modules/offers/class-copy.php:134
 msgid "Let AI look after the routine work"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:139
+#: includes/modules/offers/class-copy.php:134
 msgid "An AI webmaster and an AI chat for your visitors"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:140
+#: includes/modules/offers/class-copy.php:135
 msgid "The AI Webmaster reviews your site from its real measurements and hands you each fix ready to approve; the AI chat answers your visitors from your own pages."
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:141
+#: includes/modules/offers/class-copy.php:136
 #: src/admin/p7/IntegrationsScreen.js:1473
 #: src/care/CareScreen.js:481
 #: src/care/CareScreen.js:488
 msgid "Choose"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:144
+#: includes/modules/offers/class-copy.php:139
 msgid "Sell SEO data under your own brand"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:144
+#: includes/modules/offers/class-copy.php:139
 msgid "Resell Zinn® SEO data to your clients"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:145
+#: includes/modules/offers/class-copy.php:140
 msgid "One monthly price covers 200 client sites, under your brand; each extra client site adds a little more."
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:146
+#: includes/modules/offers/class-copy.php:141
 msgid "Start reselling"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:169
+#: includes/modules/offers/class-copy.php:164
 msgid "Guest posts and link placements"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:171
+#: includes/modules/offers/class-copy.php:166
 msgid "Register a new domain"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:172
+#: includes/modules/offers/class-copy.php:167
 msgid "Aged domains"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:173
+#: includes/modules/offers/class-copy.php:168
 msgid "Hosting to restore it on"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:174
+#: includes/modules/offers/class-copy.php:169
 msgid "One domain report"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:175
+#: includes/modules/offers/class-copy.php:170
 msgid "Reputation monitoring"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:176
+#: includes/modules/offers/class-copy.php:171
 msgid "Citation packages"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:177
+#: includes/modules/offers/class-copy.php:172
 msgid "Monitoring for 10 pages"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:178
+#: includes/modules/offers/class-copy.php:173
 msgid "WordPress hosting"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:179
+#: includes/modules/offers/class-copy.php:174
 msgid "We move the site for you"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:180
+#: includes/modules/offers/class-copy.php:175
 msgid "Monthly footprint check"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:181
+#: includes/modules/offers/class-copy.php:176
 msgid "Footprint-free hosting"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:182
+#: includes/modules/offers/class-copy.php:177
 msgid "Malware clean-up and repair"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:183
+#: includes/modules/offers/class-copy.php:178
 msgid "Off-site backups"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:184
+#: includes/modules/offers/class-copy.php:179
 msgid "Index watch for 50 pages"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:185
+#: includes/modules/offers/class-copy.php:180
 msgid "Expert SEO audit and fix plan"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:186
+#: includes/modules/offers/class-copy.php:181
 msgid "Monthly SEO done for you"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:187
+#: includes/modules/offers/class-copy.php:182
 msgid "Done-for-you move from Yoast, Rank Math or another SEO plugin"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:188
+#: includes/modules/offers/class-copy.php:183
 msgid "Your referral link"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:189
+#: includes/modules/offers/class-copy.php:184
 msgid "Resell under your brand"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:190
+#: includes/modules/offers/class-copy.php:185
 msgid "Rank tracking, backlinks and audits"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:191
+#: includes/modules/offers/class-copy.php:186
 msgid "Speed optimisation"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:192
+#: includes/modules/offers/class-copy.php:187
 msgid "Expert speed-up"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:193
+#: includes/modules/offers/class-copy.php:188
 msgid "AccelerateWP set-up"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:194
+#: includes/modules/offers/class-copy.php:189
 #: includes/pro__premium_only/modules/site-care/class-database.php:70
 #: src/care/CareScreen.js:1016
 msgid "Database clean-up"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:195
+#: includes/modules/offers/class-copy.php:190
 msgid "SSL certificate set-up"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:196
+#: includes/modules/offers/class-copy.php:191
 msgid "The site translated for you"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:197
+#: includes/modules/offers/class-copy.php:192
 msgid "Move from another platform"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:198
+#: includes/modules/offers/class-copy.php:193
 msgid "Zinn® CDN, on in one click"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:199
+#: includes/modules/offers/class-copy.php:194
 msgid "Managed CDN"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:200
+#: includes/modules/offers/class-copy.php:195
 msgid "Edge deploy"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:201
+#: includes/modules/offers/class-copy.php:196
 msgid "Backups to your own storage"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:202
+#: includes/modules/offers/class-copy.php:197
 msgid "Backups for a site hosted elsewhere"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:203
-msgid "Help for an outage"
-msgstr ""
-
-#: includes/modules/offers/class-copy.php:205
+#: includes/modules/offers/class-copy.php:199
 msgid "AI Webmaster site review"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:206
+#: includes/modules/offers/class-copy.php:200
 msgid "AI chat for your website"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:207
+#: includes/modules/offers/class-copy.php:201
 msgid "Watch Google page 1 for your name"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:208
+#: includes/modules/offers/class-copy.php:202
 msgid "Your public status page"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:209
+#: includes/modules/offers/class-copy.php:203
 msgid "Reseller SEO data for 200 client sites"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:210
+#: includes/modules/offers/class-copy.php:204
 msgid "One more client site"
 msgstr ""
 
 #. translators: %s: a language, e.g. "German".
-#: includes/modules/offers/class-copy.php:231
+#: includes/modules/offers/class-copy.php:225
 #, php-format
 msgid "Translate this site into %s with Tranzly™"
 msgstr ""
 
 #. translators: %s: a language, e.g. "German".
-#: includes/modules/offers/class-copy.php:231
+#: includes/modules/offers/class-copy.php:225
 msgid "Translate this site with Tranzly™"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:232
+#: includes/modules/offers/class-copy.php:226
 msgid "Give these visitors pages in their own language, with translated addresses and SEO data, and every language gets its own sitemap."
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:237
+#: includes/modules/offers/class-copy.php:231
 msgid "Build fuller pages with Page Builder Sandwich"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:238
+#: includes/modules/offers/class-copy.php:232
 msgid "Ready-made sections — FAQs, comparisons, features, calls to action — turn a thin page into a complete one in minutes, with nothing slowing it down."
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:244
+#: includes/modules/offers/class-copy.php:238
 msgid "Serve pages faster with Zinn® Cache"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:245
+#: includes/modules/offers/class-copy.php:239
 msgid "A free page cache and object cache that answer repeat visits without waking WordPress, so pages arrive faster."
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:250
+#: includes/modules/offers/class-copy.php:244
 msgid "Answer your visitors while they are still on the page"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:251
+#: includes/modules/offers/class-copy.php:245
 msgid "Live chat for your site, with an AI agent that answers from your own pages day and night and hands over to you when a person is needed. Questions become customers instead of lost tabs."
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:257
+#: includes/modules/offers/class-copy.php:251
 msgid "Move your images to a fast CDN"
 msgstr ""
 
-#: includes/modules/offers/class-copy.php:258
+#: includes/modules/offers/class-copy.php:252
 msgid "Zinn® Media Offload moves the media library to object storage and serves it from a CDN, so your server stops carrying the weight."
 msgstr ""
 
 #. translators: %s: a plugin's name.
-#: includes/modules/offers/class-copy.php:266
+#: includes/modules/offers/class-copy.php:260
 #, php-format
 msgid "Install %s free"
 msgstr ""
@@ -20498,6 +20474,13 @@ msgstr ""
 #: src/admin-kit/Shell.js:62
 #: src/admin/nav/sections.js:130
 msgid "Add-ons"
+msgstr ""
+
+#: src/admin-kit/Shell.js:63
+#: src/admin-kit/Wizard.js:90
+#: src/admin/index.js:302
+#: src/admin/nav/sections.js:131
+msgid "Get help"
 msgstr ""
 
 #: src/admin-kit/Shell.js:64
