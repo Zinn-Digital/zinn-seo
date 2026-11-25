@@ -4,6 +4,9 @@ Every release of Zinn® SEO, newest first. readme.txt lists the latest 10.
 
 == Changelog ==
 
+= 0.17.112 =
+* Dependency security update (Renovate).
+
 = 0.17.111 =
 * Plain, honest wording for the outage help offer: it is for a site that is down, and code changes go through Custom development.
 
