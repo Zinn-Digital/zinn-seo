@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.113
+Stable tag: 0.17.114
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -845,6 +845,9 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.114 =
+* Language packs manifest and translation template refreshed.
+
 = 0.17.113 =
 * Emergency Support is no longer sold, so the outage help offer is withdrawn; 24/7 support stays free and code changes go through Custom development.
 
@@ -871,12 +874,6 @@ They are answered before your theme loads, from small index files, so a redirect
 * Maintenance release.
 
 = 0.17.105 =
-* Dependency security update (Renovate).
-
-= 0.17.104 =
-* Dependency security update (Renovate).
-
-= 0.17.103 =
 * Dependency security update (Renovate).
 
 The full history of every release is in changelog.txt, in the plugin's folder.
