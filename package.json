@@ -14,19 +14,19 @@
 	},
 	"prettier": "@wordpress/prettier-config",
 	"dependencies": {
-		"@wordpress/api-fetch": "8.1.0",
-		"@wordpress/components": "44.0.0",
-		"@wordpress/compose": "9.1.0",
-		"@wordpress/data": "11.1.0",
-		"@wordpress/dom-ready": "5.1.0",
-		"@wordpress/element": "10.1.0",
-		"@wordpress/i18n": "7.1.0"
+		"@wordpress/api-fetch": "8.2.0",
+		"@wordpress/components": "45.0.0",
+		"@wordpress/compose": "9.2.0",
+		"@wordpress/data": "11.2.0",
+		"@wordpress/dom-ready": "5.2.0",
+		"@wordpress/element": "10.2.0",
+		"@wordpress/i18n": "7.2.0"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "37.1.0",
+		"@wordpress/scripts": "37.2.0",
 		"jsdom": "31.0.1",
 		"vite": "8.3.8",
-		"vitest": "5.1.0"
+		"vitest": "5.1.1"
 	},
 	"overrides": {
 		"copy-webpack-plugin": {
@@ -42,11 +42,11 @@
 		"postcss-selector-parser": "7.2.1",
 		"smol-toml": "1.9.1",
 		"shell-quote": "1.12.0",
-		"source-map-js": "1.2.2",
+		"source-map-js": "1.2.4",
 		"micromark-extension-math": {
 			"katex": "0.19.1"
 		},
-		"@wordpress/private-apis": "3.1.0",
+		"@wordpress/private-apis": "3.2.0",
 		"@typescript-eslint/typescript-estree": {
 			"minimatch": "11.0.9"
 		}

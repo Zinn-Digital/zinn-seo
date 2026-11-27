@@ -7,7 +7,7 @@ Tags: seo, search engine optimization, ai visibility, performance, schema
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.17.114
+Stable tag: 0.17.116
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -845,6 +845,12 @@ They are answered before your theme loads, from small index files, so a redirect
 
 == Changelog ==
 
+= 0.17.116 =
+* Dependency security update (Renovate).
+
+= 0.17.115 =
+* Dependency security update (Renovate).
+
 = 0.17.114 =
 * Language packs manifest and translation template refreshed.
 
@@ -869,11 +875,5 @@ They are answered before your theme loads, from small index files, so a redirect
 = 0.17.107 =
 * WordPress.org review fixes and a shared admin kit update (diagnostics and promotions panels).
 * Shared AI and MCP code update: stored AI keys are sealed with a random key for each site, a private AI address needs an explicit setting in wp-config.php, and the WordPress.org version no longer carries the MCP sign-in.
-
-= 0.17.106 =
-* Maintenance release.
-
-= 0.17.105 =
-* Dependency security update (Renovate).
 
 The full history of every release is in changelog.txt, in the plugin's folder.
